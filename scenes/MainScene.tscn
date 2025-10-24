@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dfb3nyvrfv6a7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
+
+[node name="LT-Shelf" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 68.0
+offset_right = 366.0
+offset_bottom = 292.0
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="LB-Shelf" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 358.0
+offset_right = 366.0
+offset_bottom = 593.0
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="RT-Shelf" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 68.0
+offset_right = 1112.0
+offset_bottom = 290.0
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="RB-Shelf" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 358.0
+offset_right = 1112.0
+offset_bottom = 593.0
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 398.0
+offset_top = 375.0
+offset_right = 751.0
+offset_bottom = 610.0
+text = "This is some text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextBox" type="ColorRect" parent="RichTextLabel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.22670749, 0.22670749, 0.22670746, 1)

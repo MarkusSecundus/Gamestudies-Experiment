@@ -1,0 +1,204 @@
+extends Object
+class_name NodeUtils
+
+enum LOOKUP_FLAGS{
+	NONE=0,
+	RECURSIVE=1,
+	REQUIRED=2,
+	INCLUDE_INTERNAL=4
+}
+	
+static func get_descendant_of_type(node: Node, child_type, flags := LOOKUP_FLAGS.RECURSIVE):
+		return get_child_of_type(node, child_type, flags | LOOKUP_FLAGS.RECURSIVE)
+
+
+static func get_child_of_type(node: Node, child_type, flags := LOOKUP_FLAGS.NONE):
+	var include_internal :bool = flags | LOOKUP_FLAGS.INCLUDE_INTERNAL
+	if node:
+		for i in range(node.get_child_count(include_internal)):
+			var child = node.get_child(i, include_internal)
+			if is_instance_of(child, child_type):
+				return child
+			if flags & LOOKUP_FLAGS.RECURSIVE:
+				var child_node = get_child_of_type(child, child_type, flags)
+				if child_node:
+					return child_node
+	if flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required component of type '{0}' on node '{1}'"
+			.format([child_type.get_path(),node.get_path()]));
+	return null
+
+static func get_ancestor_by_predicate(node: Node, predicate: Callable, flags := LOOKUP_FLAGS.NONE):
+	while node:
+		if predicate.call(node):
+			return node;
+		node = node.get_parent()
+		
+	if flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required ancestor of predicate '{0}' of node '{1}'"
+			.format([predicate, node.get_path()]));
+	return null;
+		
+
+static func get_ancestor_of_type(node: Node, parent_type, flags := LOOKUP_FLAGS.NONE):
+	while node:
+		if is_instance_of(node, parent_type):
+			return node;
+		node = node.get_parent()
+		
+	if flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required ancestor of type '{0}' of node '{1}'"
+			.format([parent_type.get_path(),node.get_path()]));
+	return null;
+		
+static func get_ancestor_component_of_type(node: Node, component_type, flags := LOOKUP_FLAGS.NONE):
+	if !node: return null;
+	while node.get_parent():
+		var found = get_sibling_of_type(node, component_type)
+		if found: return found
+		node = node.get_parent()
+		
+	if flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required component of type '{0}' in ancestors of node '{1}'"
+			.format([component_type.get_path(),node.get_path()]));
+	return null;
+
+static func get_descendants_of_type(node: Node, child_type, list: Array = [], flags := LOOKUP_FLAGS.RECURSIVE):
+		return get_children_of_type(node, child_type, list, flags | LOOKUP_FLAGS.RECURSIVE)
+
+static func get_children_by_predicate(node: Node, predicate: Callable, list: Array = [], flags := LOOKUP_FLAGS.NONE):
+	if !node: return [];
+	var include_internal :bool = flags | LOOKUP_FLAGS.INCLUDE_INTERNAL
+	
+	for i in range(node.get_child_count(include_internal)):
+		var child = node.get_child(i, include_internal)
+		if predicate.call(child):
+			list.append(child)
+		if flags & LOOKUP_FLAGS.RECURSIVE:
+			list = get_children_by_predicate(child, predicate,list, flags & ~LOOKUP_FLAGS.REQUIRED)
+			
+	if list.is_empty() && flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required component on node '{0}'"
+			.format([node.get_path()]));
+	return list
+	
+
+static func get_children_of_type(node: Node, child_type, list :Array = [], flags := LOOKUP_FLAGS.NONE):
+	if !node: return [];
+	var include_internal :bool = flags | LOOKUP_FLAGS.INCLUDE_INTERNAL
+	
+	for i in range(node.get_child_count(include_internal)):
+		var child = node.get_child(i, include_internal)
+		if is_instance_of(child, child_type):
+			list.append(child)
+		if flags & LOOKUP_FLAGS.RECURSIVE:
+			list = get_children_of_type(child, child_type,list, flags & ~LOOKUP_FLAGS.REQUIRED)
+			
+	if list.is_empty() && flags & LOOKUP_FLAGS.REQUIRED:
+		ErrorUtils.report_error("Did not find required component of type '{0}' on node '{1}'"
+			.format([child_type.get_path(),node.get_path()]));
+	return list
+
+static func get_sibling_of_type(node: Node, child_type, flags := LOOKUP_FLAGS.NONE):
+	if(!node): return null;
+	return get_child_of_type(node.get_parent(), child_type, flags);
+	
+static func get_siblings_of_type(node: Node, child_type, list :Array = [], flags := LOOKUP_FLAGS.NONE):
+	if(!node): return [];
+	return get_children_of_type(node.get_parent(), list, child_type, flags);
+	
+
+static func get_instances_of(arr: Array, child_type, ret: Array = [])->Array:
+	for elem in arr:
+		if is_instance_of(elem, child_type): 
+			ret.append(elem)
+	return ret
+	
+static func get_instance_of_indices(arr: Array, child_type, ret : PackedInt32Array = [])->PackedInt32Array:
+	var i : int = 0
+	while i < arr.size():
+		if is_instance_of(arr[i], child_type): 
+			ret.append(i)
+		i += 1
+	return ret
+	
+static func is_the_only_selected_node(node: Node)->bool:
+	var selection := EditorInterface.get_selection().get_selected_nodes()
+	return selection.size() == 1 and selection[0] == node
+	
+static func get_selected_nodes_of_type(type: Variant, ret : Array = []):
+	for n in EditorInterface.get_selection().get_selected_nodes():
+		if is_instance_of(n, type):
+			ret.append(n)
+	return ret
+
+static func set_selection(nodes: Array[Node])->void:
+	var selection := EditorInterface.get_selection()
+	selection.clear()
+	for n in nodes:
+		selection.add_node(n)
+
+static var _counter: int = 0;
+static func get_unique_id()->int: 
+	_counter += 1;
+	return _counter;
+
+static func instantiate_child(parent: Node, prefab: Resource)->Node:
+	var ret :Node = prefab.instantiate()
+	parent.add_child(ret)
+	ret.owner = parent.get_tree().edited_scene_root
+	return ret
+
+static func add_do_undo_child(unre: EditorUndoRedoManager, parent: Node, child: Node, idx:int = -1, new_edited_scene_root : Node=null)->Node:
+	# see: https://forum.godotengine.org/t/undoredomanager-add-and-remove-nodes-for-plugin/111380
+	unre.add_do_method(parent, 'add_child', child, true)
+	if !new_edited_scene_root: new_edited_scene_root = parent.get_tree().edited_scene_root
+	unre.add_do_method(child, 'set_owner', new_edited_scene_root)
+	if idx >= 0:
+		unre.add_do_method(parent, 'move_child', child, idx)
+	unre.add_do_reference(child)
+	unre.add_undo_method(parent, 'remove_child', child)
+	return child
+
+static func remove_do_undo_node(unre: EditorUndoRedoManager, node: Node)->Node:
+	var idx := node.get_index()
+	var parent := node.get_parent()
+
+	unre.add_do_method(parent, 'remove_child', node)
+
+	unre.add_undo_reference(node)
+	unre.add_undo_method(parent, 'add_child', node, true)
+	unre.add_undo_method(node, 'set_owner', parent.get_tree().edited_scene_root)
+	unre.add_undo_method(parent, 'move_child', node, idx)
+	return node
+
+static func relink_do_undo_node(unre: EditorUndoRedoManager, node: Node, new_parent: Node, new_idx: int = -1, new_edited_scene_root : Node=null)->Node:
+	var old_idx := node.get_index()
+	var old_parent := node.get_parent()
+
+	unre.add_do_reference(node)
+	unre.add_do_method(old_parent, 'remove_child', node)
+	unre.add_do_method(new_parent, 'add_child', node, true)
+	if !new_edited_scene_root: new_edited_scene_root = new_parent.get_tree().edited_scene_root
+	unre.add_do_method(node, 'set_owner', new_edited_scene_root)
+	if new_idx >= 0:
+		unre.add_do_method(new_parent, 'move_child', node, new_idx)
+	
+	unre.add_undo_reference(node)
+	unre.add_undo_method(new_parent, 'remove_child', node)
+	unre.add_undo_method(old_parent, 'add_child', node, true)
+	unre.add_undo_method(node, 'set_owner', old_parent.get_tree().edited_scene_root)
+	unre.add_undo_method(old_parent, 'move_child', node, old_idx)
+
+	return node
+
+
+static func try_send_message_to_typed_ancestor(this: Node, ancestor_type, message_name: String, arguments: Array):
+	var parent:Node = NodeUtils.get_ancestor_of_type(this.get_parent(), ancestor_type)
+	if ! parent: return null
+	return parent.callv(message_name, arguments) 
+
+static func try_send_message_to_ancestor(this: Node, message_name: String, arguments: Array):
+	var parent:Node = NodeUtils.get_ancestor_by_predicate(this.get_parent(), func(an:Node)->bool: return an.has_method(message_name))
+	if ! parent: return null
+	return parent.callv(message_name, arguments) 
