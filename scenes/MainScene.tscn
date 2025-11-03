@@ -1,4 +1,12 @@
-[gd_scene format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=8 format=3 uid="uid://dfb3nyvrfv6a7"]
+
+[ext_resource type="Texture2D" uid="uid://bphfek17423ri" path="res://art/Tiger_shop.png" id="1_echbf"]
+[ext_resource type="Script" uid="uid://cbk0knxj0hrv" path="res://scripts/HideChildrenOnStart.gd" id="2_1wiy7"]
+[ext_resource type="Texture2D" uid="uid://c3edvy14pqx2g" path="res://art/Eye_huma_1.png" id="2_ibiss"]
+[ext_resource type="Texture2D" uid="uid://g8ksyr1d7tim" path="res://art/iris_blank.png" id="3_c6dvc"]
+[ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/EyePartButton.gd" id="3_ygjfp"]
+[ext_resource type="Texture2D" uid="uid://sy7hqoegfsrm" path="res://art/iris_green.png" id="4_611at"]
+[ext_resource type="Texture2D" uid="uid://dpcgplywyxuv0" path="res://art/pupil_1.png" id="5_k24pf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -16,7 +24,14 @@ anchor_bottom = 1.0
 offset_right = -4.0820313
 color = Color(0, 0, 0, 1)
 
-[node name="LT-Shelf" type="ColorRect" parent="."]
+[node name="Old-Mockup" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_right = 1.0090001
+anchor_bottom = 1.0
+offset_right = 0.631958
+
+[node name="LT-Shelf" type="ColorRect" parent="Old-Mockup"]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 68.0
@@ -24,7 +39,7 @@ offset_right = 366.0
 offset_bottom = 292.0
 color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 
-[node name="LB-Shelf" type="ColorRect" parent="."]
+[node name="LB-Shelf" type="ColorRect" parent="Old-Mockup"]
 layout_mode = 0
 offset_left = 34.0
 offset_top = 358.0
@@ -32,7 +47,7 @@ offset_right = 366.0
 offset_bottom = 593.0
 color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 
-[node name="RT-Shelf" type="ColorRect" parent="."]
+[node name="RT-Shelf" type="ColorRect" parent="Old-Mockup"]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 68.0
@@ -40,7 +55,7 @@ offset_right = 1112.0
 offset_bottom = 290.0
 color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 
-[node name="RB-Shelf" type="ColorRect" parent="."]
+[node name="RB-Shelf" type="ColorRect" parent="Old-Mockup"]
 layout_mode = 0
 offset_left = 780.0
 offset_top = 358.0
@@ -48,7 +63,7 @@ offset_right = 1112.0
 offset_bottom = 593.0
 color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="Old-Mockup"]
 z_index = 1
 layout_mode = 0
 offset_left = 398.0
@@ -59,7 +74,7 @@ text = "This is some text"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextBox" type="ColorRect" parent="RichTextLabel"]
+[node name="TextBox" type="ColorRect" parent="Old-Mockup/RichTextLabel"]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -68,3 +83,171 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[node name="Mockup" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0090001
+anchor_bottom = 1.0
+offset_right = 0.631958
+texture = ExtResource("1_echbf")
+expand_mode = 1
+
+[node name="BigEyeShowcase" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 659.0
+offset_top = 81.0
+offset_right = -668.19995
+offset_bottom = -398.0
+
+[node name="EyeShapes" type="Control" parent="BigEyeShowcase"]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_right = -9.119995
+offset_bottom = -1.0
+script = ExtResource("2_1wiy7")
+
+[node name="EyeHuma1" type="Sprite2D" parent="BigEyeShowcase/EyeShapes"]
+position = Vector2(308.00003, 288)
+scale = Vector2(0.48984385, 0.48984385)
+texture = ExtResource("2_ibiss")
+
+[node name="Irises" type="Control" parent="BigEyeShowcase"]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_right = -9.119995
+offset_bottom = -1.0
+script = ExtResource("2_1wiy7")
+
+[node name="IrisBlank" type="Sprite2D" parent="BigEyeShowcase/Irises"]
+position = Vector2(194.99998, 414)
+scale = Vector2(0.21718746, 0.21718746)
+texture = ExtResource("3_c6dvc")
+
+[node name="IrisGreen" type="Sprite2D" parent="BigEyeShowcase/Irises"]
+position = Vector2(383.00003, 427)
+scale = Vector2(0.2125, 0.2125)
+texture = ExtResource("4_611at")
+
+[node name="Pupils" type="Control" parent="BigEyeShowcase"]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_right = -9.119995
+offset_bottom = -1.0
+script = ExtResource("2_1wiy7")
+
+[node name="Pupil1" type="Sprite2D" parent="BigEyeShowcase/Pupils"]
+position = Vector2(205.99998, 136.00002)
+scale = Vector2(0.2296875, 0.2296875)
+texture = ExtResource("5_k24pf")
+
+[node name="EyeShapes" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 88.0
+offset_top = 119.0
+offset_right = -1462.2
+offset_bottom = -605.0
+
+[node name="EyeHuma1" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("assigned_shape")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 28.0
+offset_top = 280.0
+offset_right = 86.0
+offset_bottom = 341.85315
+texture_normal = ExtResource("2_ibiss")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+assigned_shape = NodePath("../../BigEyeShowcase/EyeShapes/EyeHuma1")
+
+[node name="IrisColours" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 1430.0
+offset_top = 121.0
+offset_right = -117.19995
+offset_bottom = -601.0
+
+[node name="IrisBlank" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("assigned_shape")]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 285.0
+offset_right = 79.0
+offset_bottom = 346.85315
+texture_normal = ExtResource("3_c6dvc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+assigned_shape = NodePath("../../BigEyeShowcase/Irises/IrisBlank")
+
+[node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("assigned_shape")]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 285.0
+offset_right = 151.0
+offset_bottom = 346.85315
+texture_normal = ExtResource("4_611at")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+assigned_shape = NodePath("../../BigEyeShowcase/Irises/IrisGreen")
+
+[node name="PupilShapes" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 85.0
+offset_top = 623.0
+offset_right = -1463.2
+offset_bottom = -82.0
+
+[node name="Pupil1" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("assigned_shape")]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 291.0
+offset_right = 77.0
+offset_bottom = 352.85315
+texture_normal = ExtResource("5_k24pf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+assigned_shape = NodePath("../../BigEyeShowcase/Pupils/Pupil1")
+
+[node name="EyebrowShapes" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 1420.0
+offset_top = 627.0
+offset_right = -116.19995
+offset_bottom = -83.0
+
+[connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_pressed"]
