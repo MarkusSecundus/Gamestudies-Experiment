@@ -102,17 +102,27 @@ offset_top = 81.0
 offset_right = -668.19995
 offset_bottom = -398.0
 
+[node name="Background" type="ColorRect" parent="BigEyeShowcase"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
+
 [node name="EyeShapes" type="Control" parent="BigEyeShowcase"]
 layout_mode = 1
 anchor_right = 1.01
 anchor_bottom = 1.0
-offset_right = -9.119995
-offset_bottom = -1.0
+offset_left = -8.0
+offset_top = 6.0
+offset_right = -17.119995
+offset_bottom = 5.0
 script = ExtResource("2_1wiy7")
 
 [node name="EyeHuma1" type="Sprite2D" parent="BigEyeShowcase/EyeShapes"]
-position = Vector2(308.00003, 288)
-scale = Vector2(0.48984385, 0.48984385)
+position = Vector2(311, 302)
+scale = Vector2(0.84804684, 0.84804684)
 texture = ExtResource("2_ibiss")
 
 [node name="Irises" type="Control" parent="BigEyeShowcase"]
@@ -124,13 +134,13 @@ offset_bottom = -1.0
 script = ExtResource("2_1wiy7")
 
 [node name="IrisBlank" type="Sprite2D" parent="BigEyeShowcase/Irises"]
-position = Vector2(194.99998, 414)
-scale = Vector2(0.21718746, 0.21718746)
+position = Vector2(300, 306)
+scale = Vector2(0.53, 0.53)
 texture = ExtResource("3_c6dvc")
 
 [node name="IrisGreen" type="Sprite2D" parent="BigEyeShowcase/Irises"]
-position = Vector2(383.00003, 427)
-scale = Vector2(0.2125, 0.2125)
+position = Vector2(299.99997, 306.00003)
+scale = Vector2(0.5296875, 0.5296875)
 texture = ExtResource("4_611at")
 
 [node name="Pupils" type="Control" parent="BigEyeShowcase"]
@@ -142,8 +152,8 @@ offset_bottom = -1.0
 script = ExtResource("2_1wiy7")
 
 [node name="Pupil1" type="Sprite2D" parent="BigEyeShowcase/Pupils"]
-position = Vector2(205.99998, 136.00002)
-scale = Vector2(0.2296875, 0.2296875)
+position = Vector2(308.00003, 300)
+scale = Vector2(0.40488264, 0.40488264)
 texture = ExtResource("5_k24pf")
 
 [node name="EyeShapes" type="Control" parent="."]
@@ -155,12 +165,20 @@ offset_top = 119.0
 offset_right = -1462.2
 offset_bottom = -605.0
 
+[node name="Background" type="ColorRect" parent="EyeShapes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
+
 [node name="EyeHuma1" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("assigned_shape")]
 layout_mode = 1
 anchors_preset = -1
 offset_left = 28.0
-offset_top = 280.0
-offset_right = 86.0
+offset_top = 255.47202
+offset_right = 109.0
 offset_bottom = 341.85315
 texture_normal = ExtResource("2_ibiss")
 ignore_texture_size = true
@@ -177,12 +195,20 @@ offset_top = 121.0
 offset_right = -117.19995
 offset_bottom = -601.0
 
+[node name="Background" type="ColorRect" parent="IrisColours"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
+
 [node name="IrisBlank" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("assigned_shape")]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 285.0
-offset_right = 79.0
-offset_bottom = 346.85315
+offset_left = 9.0
+offset_top = 262.0
+offset_right = 93.0
+offset_bottom = 351.58044
 texture_normal = ExtResource("3_c6dvc")
 ignore_texture_size = true
 stretch_mode = 0
@@ -191,10 +217,10 @@ assigned_shape = NodePath("../../BigEyeShowcase/Irises/IrisBlank")
 
 [node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("assigned_shape")]
 layout_mode = 0
-offset_left = 93.0
-offset_top = 285.0
-offset_right = 151.0
-offset_bottom = 346.85315
+offset_left = 94.0
+offset_top = 260.0
+offset_right = 181.0
+offset_bottom = 352.77972
 texture_normal = ExtResource("4_611at")
 ignore_texture_size = true
 stretch_mode = 0
@@ -210,11 +236,19 @@ offset_top = 623.0
 offset_right = -1463.2
 offset_bottom = -82.0
 
+[node name="Background" type="ColorRect" parent="PupilShapes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
+
 [node name="Pupil1" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("assigned_shape")]
 layout_mode = 0
 offset_left = 19.0
-offset_top = 291.0
-offset_right = 77.0
+offset_top = 278.2028
+offset_right = 89.0
 offset_bottom = 352.85315
 texture_normal = ExtResource("5_k24pf")
 ignore_texture_size = true
@@ -230,6 +264,14 @@ offset_left = 1420.0
 offset_top = 627.0
 offset_right = -116.19995
 offset_bottom = -83.0
+
+[node name="Background" type="ColorRect" parent="EyebrowShapes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.013
+anchor_bottom = 1.0
+offset_right = -4.0820313
+color = Color(0, 0, 0, 1)
 
 [connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
 [connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
