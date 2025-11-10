@@ -1,14 +1,15 @@
 extends TextureButton
 
 
-@export var assigned_shape: CanvasItem
+@export var target: Sprite2D
 
 func _on_pressed() -> void:
-	var original_hidden_state = assigned_shape.visible
-	(assigned_shape.get_parent() as CanvasItem).show()
-	for ch in assigned_shape.get_parent().get_children():
-		(ch as CanvasItem).hide()
-	assigned_shape.visible = not original_hidden_state
+	var to_set := self.texture_normal
+	if target.texture == to_set:
+		target.visible = not target.visible
+	else:
+		target.visible = true
+		target.texture = to_set
 
 
 
