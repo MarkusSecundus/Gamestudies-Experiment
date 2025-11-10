@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=9 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://bphfek17423ri" path="res://art/Tiger_shop.png" id="1_echbf"]
+[ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/Higher res/eyebrows_1.png" id="2_cfq0f"]
 [ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/Higher res/iris_green_new.png" id="3_pjux3"]
 [ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/EyePartButton.gd" id="3_ygjfp"]
 [ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/Higher res/eyes_elegant.png" id="4_o3jky"]
 [ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/Higher res/pupil_normal.png" id="5_kp0ql"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
+radius = 266.0075
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -21,6 +26,7 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Mockup" type="TextureRect" parent="."]
@@ -29,6 +35,7 @@ anchors_preset = -1
 anchor_right = 1.0090001
 anchor_bottom = 1.0
 offset_right = 0.631958
+mouse_filter = 2
 texture = ExtResource("1_echbf")
 expand_mode = 1
 
@@ -40,6 +47,7 @@ offset_left = 659.0
 offset_top = 81.0
 offset_right = -668.19995
 offset_bottom = -398.0
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="BigEyeShowcase"]
 layout_mode = 1
@@ -47,34 +55,39 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="BigEye" type="Node2D" parent="BigEyeShowcase"]
+z_index = 500
 position = Vector2(321, 297)
+script = ExtResource("2_1wiy7")
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("3_pjux3")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
+
+[node name="Area2D" type="Area2D" parent="BigEyeShowcase/BigEye"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BigEyeShowcase/BigEye/Area2D"]
+position = Vector2(-17, 1)
+shape = SubResource("CircleShape2D_1wiy7")
 
 [node name="EyeShapes" type="Control" parent="."]
 layout_mode = 1
@@ -84,6 +97,7 @@ offset_left = 88.0
 offset_top = 119.0
 offset_right = -1462.2
 offset_bottom = -605.0
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="EyeShapes"]
 layout_mode = 1
@@ -91,6 +105,7 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="EyeHuma1" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
@@ -115,6 +130,7 @@ offset_left = 1430.0
 offset_top = 121.0
 offset_right = -117.19995
 offset_bottom = -601.0
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="IrisColours"]
 layout_mode = 1
@@ -122,6 +138,7 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
@@ -145,6 +162,7 @@ offset_left = 85.0
 offset_top = 623.0
 offset_right = -1463.2
 offset_bottom = -82.0
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="PupilShapes"]
 layout_mode = 1
@@ -152,6 +170,7 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Pupil1" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
@@ -175,6 +194,7 @@ offset_left = 1420.0
 offset_top = 627.0
 offset_right = -116.19995
 offset_bottom = -83.0
+mouse_filter = 2
 
 [node name="Background" type="ColorRect" parent="EyebrowShapes"]
 layout_mode = 1
@@ -182,6 +202,7 @@ anchors_preset = -1
 anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Eyebrow1" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
@@ -197,6 +218,9 @@ stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
 
+[connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_exited"]
 [connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
 [connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
 [connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]
