@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=7 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://bphfek17423ri" path="res://art/Tiger_shop.png" id="1_echbf"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/Higher res/eyebrows_1.png" id="2_cfq0f"]
-[ext_resource type="Texture2D" uid="uid://g8ksyr1d7tim" path="res://art/iris_blank.png" id="3_c6dvc"]
 [ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/Higher res/iris_green_new.png" id="3_pjux3"]
 [ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/EyePartButton.gd" id="3_ygjfp"]
 [ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/Higher res/eyes_elegant.png" id="4_o3jky"]
@@ -23,66 +22,6 @@ anchor_right = 1.013
 anchor_bottom = 1.0
 offset_right = -4.0820313
 color = Color(0, 0, 0, 1)
-
-[node name="Old-Mockup" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchor_right = 1.0090001
-anchor_bottom = 1.0
-offset_right = 0.631958
-
-[node name="LT-Shelf" type="ColorRect" parent="Old-Mockup"]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 68.0
-offset_right = 366.0
-offset_bottom = 292.0
-color = Color(0.22670749, 0.22670749, 0.22670746, 1)
-
-[node name="LB-Shelf" type="ColorRect" parent="Old-Mockup"]
-layout_mode = 0
-offset_left = 34.0
-offset_top = 358.0
-offset_right = 366.0
-offset_bottom = 593.0
-color = Color(0.22670749, 0.22670749, 0.22670746, 1)
-
-[node name="RT-Shelf" type="ColorRect" parent="Old-Mockup"]
-layout_mode = 0
-offset_left = 780.0
-offset_top = 68.0
-offset_right = 1112.0
-offset_bottom = 290.0
-color = Color(0.22670749, 0.22670749, 0.22670746, 1)
-
-[node name="RB-Shelf" type="ColorRect" parent="Old-Mockup"]
-layout_mode = 0
-offset_left = 780.0
-offset_top = 358.0
-offset_right = 1112.0
-offset_bottom = 593.0
-color = Color(0.22670749, 0.22670749, 0.22670746, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Old-Mockup"]
-z_index = 1
-layout_mode = 0
-offset_left = 398.0
-offset_top = 375.0
-offset_right = 751.0
-offset_bottom = 610.0
-text = "This is some text"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextBox" type="ColorRect" parent="Old-Mockup/RichTextLabel"]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 
 [node name="Mockup" type="TextureRect" parent="."]
 layout_mode = 1
@@ -114,21 +53,25 @@ color = Color(0, 0, 0, 1)
 position = Vector2(321, 297)
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("3_pjux3")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
@@ -157,6 +100,7 @@ offset_left = 28.0
 offset_top = 255.47202
 offset_right = 109.0
 offset_bottom = 341.85315
+pivot_offset = Vector2(40.5, 53.876)
 texture_normal = ExtResource("4_o3jky")
 ignore_texture_size = true
 stretch_mode = 0
@@ -180,24 +124,13 @@ anchor_bottom = 1.0
 offset_right = -4.0820313
 color = Color(0, 0, 0, 1)
 
-[node name="IrisBlank" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 262.0
-offset_right = 93.0
-offset_bottom = 351.58044
-texture_normal = ExtResource("3_c6dvc")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-
 [node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 260.0
-offset_right = 181.0
-offset_bottom = 352.77972
+offset_left = 20.0
+offset_top = 256.0
+offset_right = 107.0
+offset_bottom = 348.77972
+pivot_offset = Vector2(41.565, 57.28)
 texture_normal = ExtResource("3_pjux3")
 ignore_texture_size = true
 stretch_mode = 0
@@ -227,6 +160,7 @@ offset_left = 19.0
 offset_top = 278.2028
 offset_right = 89.0
 offset_bottom = 352.85315
+pivot_offset = Vector2(33.045, 46.52)
 texture_normal = ExtResource("5_kp0ql")
 ignore_texture_size = true
 stretch_mode = 0
@@ -256,6 +190,7 @@ offset_left = 43.0
 offset_top = 257.0
 offset_right = 113.0
 offset_bottom = 331.65036
+pivot_offset = Vector2(34.74, 22.305)
 texture_normal = ExtResource("2_cfq0f")
 ignore_texture_size = true
 stretch_mode = 0
@@ -267,11 +202,6 @@ target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
 [connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_exited"]
 [connection signal="pressed" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/IrisBlank" to="IrisColours/IrisBlank" method="_on_pressed"]
 [connection signal="button_down" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_down"]
 [connection signal="button_up" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_up"]
 [connection signal="mouse_entered" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_entered"]
