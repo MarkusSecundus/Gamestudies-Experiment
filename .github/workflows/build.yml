@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: MSBuild
+name: GodotBuild
 
 on:
   push:
@@ -14,22 +14,16 @@ on:
 jobs:
   Godot:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        platform: [win64]
     steps:
       - uses: actions/checkout@v2
         with:
           lfs: true
+      - name: Download Godot
+        run: curl "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=linux.x86_64.zip&platform=linux.64" --output ./godot
       - name: Build
-        id: build
-        uses: manleydev/build-godot-action@v1.5.0
-        with:
-          name: example
-          preset: ${{ matrix.platform }}
-          debugMode: "true"
+        run: godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Client - ${{ matrix.platform }}
+          name: Client - win64.exe
           path: ${{ github.workspace }}/${{ steps.build.outputs.build }}
