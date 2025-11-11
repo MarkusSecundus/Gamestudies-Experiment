@@ -64,21 +64,25 @@ position = Vector2(321, 297)
 script = ExtResource("2_1wiy7")
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("3_pjux3")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
