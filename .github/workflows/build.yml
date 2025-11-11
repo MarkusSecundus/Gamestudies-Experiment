@@ -37,3 +37,11 @@ jobs:
         with:
           name: Client - win64.exe
           path: ./win64.exe
+      - name: Create Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token:  "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "build"
+          prerelease: false
+          files: |
+            ./win64.exe
