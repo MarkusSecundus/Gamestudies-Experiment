@@ -21,7 +21,7 @@ jobs:
       - name: Download Godot
         run: curl "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=linux.x86_64.zip&platform=linux.64" --output ./godot
       - name: Build
-        run: godot --headless --verbose --export-release "win64" ./win64.exe
+        run: ./godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
