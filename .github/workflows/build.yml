@@ -26,6 +26,8 @@ jobs:
         run:  wget "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates"
       - name: Extract export templates
         run: ls -l ; unzip 'index.html?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates' -d "/home/runner/.local/share/godot/export_templates/4.5.1.stable"
+      - name: Debug print
+        run: ls -l "/home/runner/.local/share/godot/export_templates/4.5.1.stable/"
       - name: Build
         run: ./godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
