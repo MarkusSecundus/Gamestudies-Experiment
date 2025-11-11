@@ -20,6 +20,10 @@ jobs:
           lfs: true
       - name: Download Godot
         run: wget "https://github.com/MarkusSecundus/Gamestudies-Experiment/releases/download/godot-binary/godot"  ; chmod 777 ./godot
+      - name: Download export templates
+        run:  wget "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates"
+      - name: Extract export templates
+        run: unzip "Godot_v4.5.1-stable_export_templates.tpz" -d "/home/runner/.local/share/godot/export_templates"
       - name: Build
         run: ./godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
