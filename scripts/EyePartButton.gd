@@ -2,6 +2,7 @@ extends TextureButton
 
 
 @export var target: Sprite2D
+@export var hover_scale : float = 1.6
 
 func _on_pressed() -> void:
 	var to_set := self.texture_normal
@@ -13,13 +14,12 @@ func _on_pressed() -> void:
 
 
 
-const SCALE_CHANGE_ON_HOVER : float = 1.2
 const HOVER_EFFECT_BUILDUP_DURATION : float = 0.1 
 
 @onready var button_scale_tween := EffectsUtils.TweenWrapper.new(self)
 
 func _on_mouse_entered() -> void:
-	button_scale_tween.do_property(self, 'scale', Vector2.ONE * SCALE_CHANGE_ON_HOVER, HOVER_EFFECT_BUILDUP_DURATION)
+	button_scale_tween.do_property(self, 'scale', Vector2.ONE * hover_scale, HOVER_EFFECT_BUILDUP_DURATION)
 
 
 func _on_mouse_exited() -> void:
