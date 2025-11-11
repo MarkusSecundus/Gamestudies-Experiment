@@ -20,15 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
 [node name="Mockup" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
