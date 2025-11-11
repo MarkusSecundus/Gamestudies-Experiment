@@ -19,13 +19,13 @@ jobs:
         with:
           lfs: true
       - name: Make export templates directory
-        run: mkdir -p "/home/runner/.local/share/godot/export_templates"
+        run: mkdir -p "/home/runner/.local/share/godot/export_templates/4.5.1.stable"
       - name: Download Godot
         run: wget "https://github.com/MarkusSecundus/Gamestudies-Experiment/releases/download/godot-binary/godot"  ; chmod 777 ./godot
       - name: Download export templates
         run:  wget "https://downloads.godotengine.org/?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates"
       - name: Extract export templates
-        run: ls -l ; unzip 'index.html?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates' -d "/home/runner/.local/share/godot/export_templates"
+        run: ls -l ; unzip 'index.html?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates' -d "/home/runner/.local/share/godot/export_templates/4.5.1.stable"
       - name: Build
         run: ./godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
