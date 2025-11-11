@@ -28,6 +28,8 @@ jobs:
         run: ls -l ; unzip 'index.html?version=4.5.1&flavor=stable&slug=export_templates.tpz&platform=templates' -d "/home/runner/.local/share/godot/export_templates"
       - name: Rename export templates folder
         run: mv "/home/runner/.local/share/godot/export_templates/templates" "/home/runner/.local/share/godot/export_templates/4.5.1.stable/"
+      - name: Open the project
+        run: ./godot --headless --verbose --editor --quit
       - name: Build
         run: ./godot --headless --verbose --export-release "win64" ./win64.exe
       - name: Upload Artifact
