@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfb3nyvrfv6a7"]
 
-[ext_resource type="Texture2D" uid="uid://bphfek17423ri" path="res://art/Tiger_shop.png" id="1_echbf"]
+[ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/Tiger_shop.png" id="1_1wiy7"]
 [ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/Higher res/eyebrows_1.png" id="2_cfq0f"]
 [ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/Higher res/iris_green_new.png" id="3_pjux3"]
@@ -27,7 +27,7 @@ anchor_right = 1.0090001
 anchor_bottom = 1.0
 offset_right = 0.631958
 mouse_filter = 2
-texture = ExtResource("1_echbf")
+texture = ExtResource("1_1wiy7")
 expand_mode = 1
 
 [node name="BigEyeShowcase" type="Control" parent="."]
