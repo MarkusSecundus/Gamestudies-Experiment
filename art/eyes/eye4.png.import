@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dirlrh8gxhvwm"
-path="res://.godot/imported/pupil_normal.png-cbd760dcc192919b7fc0d4f1a1a73592.ctex"
+uid="uid://db412xs71ne0b"
+path="res://.godot/imported/eye4.png-f0577b5d7c30524d7eca2238c19073ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Higher res/pupil_normal.png"
-dest_files=["res://.godot/imported/pupil_normal.png-cbd760dcc192919b7fc0d4f1a1a73592.ctex"]
+source_file="res://art/eyes/eye4.png"
+dest_files=["res://.godot/imported/eye4.png-f0577b5d7c30524d7eca2238c19073ae.ctex"]
 
 [params]
 

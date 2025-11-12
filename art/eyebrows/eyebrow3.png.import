@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sy7hqoegfsrm"
-path="res://.godot/imported/iris_green.png-178257e71934189f9aa15a199cd043eb.ctex"
+uid="uid://b0or5ndj1r1fa"
+path="res://.godot/imported/eyebrow3.png-bea558baf5d135401f5e1989fa6963a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/iris_green.png"
-dest_files=["res://.godot/imported/iris_green.png-178257e71934189f9aa15a199cd043eb.ctex"]
+source_file="res://art/eyebrows/eyebrow3.png"
+dest_files=["res://.godot/imported/eyebrow3.png-bea558baf5d135401f5e1989fa6963a4.ctex"]
 
 [params]
 

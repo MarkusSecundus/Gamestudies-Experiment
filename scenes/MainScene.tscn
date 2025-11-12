@@ -1,12 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=29 format=3 uid="uid://dfb3nyvrfv6a7"]
 
-[ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/Tiger_shop.png" id="1_1wiy7"]
+[ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/OLD/Tiger_shop.png" id="1_1wiy7"]
 [ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
-[ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/Higher res/eyebrows_1.png" id="2_cfq0f"]
-[ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/Higher res/iris_green_new.png" id="3_pjux3"]
+[ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/eyebrows/eyebrows_1.png" id="2_cfq0f"]
+[ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/irises/iris_green_new.png" id="3_pjux3"]
 [ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/EyePartButton.gd" id="3_ygjfp"]
-[ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/Higher res/eyes_elegant.png" id="4_o3jky"]
-[ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/Higher res/pupil_normal.png" id="5_kp0ql"]
+[ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/eyes/eyes_elegant.png" id="4_o3jky"]
+[ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/pupils/pupil_normal.png" id="5_kp0ql"]
+[ext_resource type="Texture2D" uid="uid://s8ngnmoa0pq0" path="res://art/eyes/eye2.png" id="8_0ehpd"]
+[ext_resource type="Texture2D" uid="uid://cpbu7jpfm6s5g" path="res://art/eyebrows/eyebrow2.png" id="8_o3jky"]
+[ext_resource type="Texture2D" uid="uid://d1ycnltaajkgj" path="res://art/eyes/eye3.png" id="9_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://b0or5ndj1r1fa" path="res://art/eyebrows/eyebrow3.png" id="9_kp0ql"]
+[ext_resource type="Texture2D" uid="uid://d0d7237y688ps" path="res://art/eyebrows/eyebrow4.png" id="10_08o8g"]
+[ext_resource type="Texture2D" uid="uid://db412xs71ne0b" path="res://art/eyes/eye4.png" id="10_25dfr"]
+[ext_resource type="Texture2D" uid="uid://bgya2rntxgfo0" path="res://art/eyebrows/eyebrow5.png" id="11_0cxu4"]
+[ext_resource type="Texture2D" uid="uid://env08lefcovd" path="res://art/eyes/eye5.png" id="11_kjvyo"]
+[ext_resource type="Texture2D" uid="uid://480ml28wifbu" path="res://art/eyes/eye6.png" id="12_2phbr"]
+[ext_resource type="Texture2D" uid="uid://dq06sr4nb1gqa" path="res://art/eyebrows/eyebrow6.png" id="12_xnxdc"]
+[ext_resource type="Texture2D" uid="uid://nuskljiavvwo" path="res://art/irises/iris2.png" id="13_1ns3k"]
+[ext_resource type="Texture2D" uid="uid://cs0aaulk7d32e" path="res://art/pupils/pupil2.png" id="13_mkg2b"]
+[ext_resource type="Texture2D" uid="uid://bhfb5a0bj1cy4" path="res://art/pupils/pupil3.png" id="14_1ns3k"]
+[ext_resource type="Texture2D" uid="uid://cvrbvl5j0n6ev" path="res://art/irises/iris3.png" id="14_a7pbh"]
+[ext_resource type="Texture2D" uid="uid://1lv0jsd7727g" path="res://art/pupils/pupil4.png" id="15_a7pbh"]
+[ext_resource type="Texture2D" uid="uid://cohljy32cintq" path="res://art/irises/iris4.png" id="15_ye0jt"]
+[ext_resource type="Texture2D" uid="uid://dx4b3juobuf4j" path="res://art/irises/iris5.png" id="16_7wwop"]
+[ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
+[ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
+[ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
 radius = 266.0075
@@ -66,17 +86,17 @@ position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("3_pjux3")
 
-[node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("4_o3jky")
-
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
 visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
+
+[node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("4_o3jky")
 
 [node name="Area2D" type="Area2D" parent="BigEyeShowcase/BigEye"]
 
@@ -117,6 +137,76 @@ stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Eye")
 
+[node name="EyeHuma2" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 158.0
+offset_top = 256.0
+offset_right = 239.0
+offset_bottom = 342.38113
+pivot_offset = Vector2(40.5, 53.876)
+texture_normal = ExtResource("8_0ehpd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+
+[node name="EyeHuma3" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 294.0
+offset_top = 253.0
+offset_right = 375.0
+offset_bottom = 339.38113
+pivot_offset = Vector2(40.5, 53.876)
+texture_normal = ExtResource("9_8wjpf")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+
+[node name="EyeHuma4" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 32.0
+offset_top = 163.0
+offset_right = 113.0
+offset_bottom = 249.38113
+pivot_offset = Vector2(40.5, 53.876)
+texture_normal = ExtResource("10_25dfr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+
+[node name="EyeHuma5" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 162.0
+offset_top = 161.0
+offset_right = 243.0
+offset_bottom = 247.38113
+pivot_offset = Vector2(40.5, 53.876)
+texture_normal = ExtResource("11_kjvyo")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+
+[node name="EyeHuma6" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 301.0
+offset_top = 164.0
+offset_right = 382.0
+offset_bottom = 250.38113
+pivot_offset = Vector2(40.5, 53.876)
+texture_normal = ExtResource("12_2phbr")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+
 [node name="IrisColours" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.01
@@ -144,6 +234,71 @@ offset_right = 107.0
 offset_bottom = 348.77972
 pivot_offset = Vector2(41.565, 57.28)
 texture_normal = ExtResource("3_pjux3")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+
+[node name="Iris2" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 255.0
+offset_right = 237.0
+offset_bottom = 347.77972
+pivot_offset = Vector2(41.565, 57.28)
+texture_normal = ExtResource("13_1ns3k")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+
+[node name="Iris3" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 257.0
+offset_right = 386.0
+offset_bottom = 349.77972
+pivot_offset = Vector2(41.565, 57.28)
+texture_normal = ExtResource("14_a7pbh")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+
+[node name="Iris4" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 154.0
+offset_right = 107.0
+offset_bottom = 246.77972
+pivot_offset = Vector2(41.565, 57.28)
+texture_normal = ExtResource("15_ye0jt")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+
+[node name="Iris5" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 157.0
+offset_right = 241.0
+offset_bottom = 249.77972
+pivot_offset = Vector2(41.565, 57.28)
+texture_normal = ExtResource("16_7wwop")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+
+[node name="Iris6" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 158.0
+offset_right = 385.0
+offset_bottom = 250.77972
+pivot_offset = Vector2(41.565, 57.28)
+texture_normal = ExtResource("17_jcw2p")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
@@ -181,6 +336,71 @@ stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
 
+[node name="Pupil2" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 279.00003
+offset_right = 241.0
+offset_bottom = 353.6504
+pivot_offset = Vector2(33.045, 46.52)
+texture_normal = ExtResource("13_mkg2b")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+
+[node name="Pupil3" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 284.00003
+offset_right = 376.0
+offset_bottom = 358.6504
+pivot_offset = Vector2(33.045, 46.52)
+texture_normal = ExtResource("14_1ns3k")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+
+[node name="Pupil4" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 171.00003
+offset_right = 90.0
+offset_bottom = 245.65039
+pivot_offset = Vector2(33.045, 46.52)
+texture_normal = ExtResource("15_a7pbh")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+
+[node name="Pupil5" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 176.00003
+offset_right = 245.0
+offset_bottom = 250.65039
+pivot_offset = Vector2(33.045, 46.52)
+texture_normal = ExtResource("16_ye0jt")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+
+[node name="Pupil6" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 179.00003
+offset_right = 384.0
+offset_bottom = 253.65039
+pivot_offset = Vector2(33.045, 46.52)
+texture_normal = ExtResource("17_7wwop")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+
 [node name="EyebrowShapes" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.01
@@ -213,6 +433,71 @@ stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
 
+[node name="Eyebrow2" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 258.0
+offset_right = 241.0
+offset_bottom = 332.65036
+pivot_offset = Vector2(34.74, 22.305)
+texture_normal = ExtResource("8_o3jky")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
+[node name="Eyebrow3" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 261.0
+offset_right = 366.0
+offset_bottom = 335.65036
+pivot_offset = Vector2(34.74, 22.305)
+texture_normal = ExtResource("9_kp0ql")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
+[node name="Eyebrow4" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 133.0
+offset_right = 113.0
+offset_bottom = 207.65036
+pivot_offset = Vector2(34.74, 22.305)
+texture_normal = ExtResource("10_08o8g")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
+[node name="Eyebrow5" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 138.0
+offset_right = 234.0
+offset_bottom = 212.65036
+pivot_offset = Vector2(34.74, 22.305)
+texture_normal = ExtResource("11_0cxu4")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
+[node name="Eyebrow6" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 148.0
+offset_right = 373.0
+offset_bottom = 222.65036
+pivot_offset = Vector2(34.74, 22.305)
+texture_normal = ExtResource("12_xnxdc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_ygjfp")
+target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_exited"]
@@ -221,18 +506,118 @@ target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
 [connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_exited"]
 [connection signal="pressed" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_pressed"]
+[connection signal="button_down" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_pressed"]
+[connection signal="button_down" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_pressed"]
+[connection signal="button_down" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_pressed"]
+[connection signal="button_down" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_pressed"]
+[connection signal="button_down" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_button_down"]
+[connection signal="button_up" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_pressed"]
 [connection signal="button_down" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_down"]
 [connection signal="button_up" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_up"]
 [connection signal="mouse_entered" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_exited"]
 [connection signal="pressed" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_pressed"]
+[connection signal="button_down" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_button_down"]
+[connection signal="button_up" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_button_up"]
+[connection signal="mouse_entered" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_mouse_exited"]
+[connection signal="pressed" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_pressed"]
 [connection signal="button_down" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_down"]
 [connection signal="button_up" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_up"]
 [connection signal="mouse_entered" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_exited"]
 [connection signal="pressed" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_pressed"]
+[connection signal="button_down" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_button_down"]
+[connection signal="button_up" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_button_up"]
+[connection signal="mouse_entered" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_mouse_exited"]
+[connection signal="pressed" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_pressed"]
 [connection signal="button_down" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_button_down"]
 [connection signal="button_up" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_button_up"]
 [connection signal="mouse_entered" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_mouse_exited"]
 [connection signal="pressed" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_pressed"]
+[connection signal="button_down" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_button_down"]
+[connection signal="button_up" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_pressed"]
+[connection signal="button_down" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_button_down"]
+[connection signal="button_up" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_pressed"]
+[connection signal="button_down" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_button_down"]
+[connection signal="button_up" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_pressed"]
+[connection signal="button_down" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_button_down"]
+[connection signal="button_up" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_pressed"]
+[connection signal="button_down" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_button_down"]
+[connection signal="button_up" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_button_up"]
+[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_exited"]
+[connection signal="pressed" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci0je63rsgf6k"
-path="res://.godot/imported/eyes_elegant.png-867ff1becce5b77f3cce3d384aa89241.ctex"
+uid="uid://vkh8e3ac527q"
+path="res://.godot/imported/pupil5.png-a6e60ae1ab4c73614c324169cf39862f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Higher res/eyes_elegant.png"
-dest_files=["res://.godot/imported/eyes_elegant.png-867ff1becce5b77f3cce3d384aa89241.ctex"]
+source_file="res://art/pupils/pupil5.png"
+dest_files=["res://.godot/imported/pupil5.png-a6e60ae1ab4c73614c324169cf39862f.ctex"]
 
 [params]
 
