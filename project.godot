@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SoundManager="*res://scripts/sound/SoundManager.gd"
+TimeUtils="*res://scripts/util/TimeUtils.gd"
+SoundManager="*res://scenes/SoundManager.tscn"
 
 [display]
 

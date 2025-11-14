@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=37 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/OLD/Tiger_shop.png" id="1_1wiy7"]
 [ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
@@ -27,9 +27,20 @@
 [ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/PrettyTextBox.gd" id="28_i7ifx"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
+[ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="29_kwqb8"]
+[ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="30_y15d6"]
+[ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="31_u55b3"]
+[ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="32_wsqty"]
+[ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
 radius = 266.0075
+
+[sub_resource type="Theme" id="Theme_i7ifx"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 32
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -497,6 +508,39 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 618.0
+offset_top = 747.0
+offset_right = 1316.0
+offset_bottom = 1045.0
+script = ExtResource("28_i7ifx")
+sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
+
+[node name="Background" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i7ifx")
+text = "
+
+Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
+horizontal_alignment = 1
+visible_characters_behavior = 3
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
