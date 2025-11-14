@@ -15,6 +15,10 @@ run/main_scene="uid://dfb3nyvrfv6a7"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SoundManager="*res://scripts/sound/SoundManager.gd"
+
 [display]
 
 window/size/viewport_width=1920
