@@ -551,6 +551,7 @@ position = Vector2(350, 249)
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("question_box")]
 script = ExtResource("1_u55b3")
 question_box = NodePath("../QuestionsBox")
+_questions_path = "res://questions.txt"
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]

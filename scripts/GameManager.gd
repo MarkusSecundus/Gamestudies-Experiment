@@ -3,9 +3,9 @@ extends Node
 
 @export var question_box : PrettyTextBox
 
-const QUESTIONS_FILE_PATH : String = "res://questions.txt"
+@export_file("*.txt") var _questions_path : String
 
-@onready var _questions := _load_questions(QUESTIONS_FILE_PATH)
+@onready var _questions := _load_questions(_questions_path)
 
 var _active_question_idx : int = -1
 
@@ -41,7 +41,6 @@ func record_answers(answer:Answer)->void:
 static func _load_questions(path: String)->PackedStringArray:
 	var ret : PackedStringArray = []
 	var current : String = ""
-	
 	var f := FileAccess.open(path, FileAccess.READ)
 	
 	while not f.eof_reached():
