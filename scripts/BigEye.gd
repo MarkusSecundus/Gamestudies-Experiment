@@ -29,7 +29,7 @@ func get_distance_to_destination() -> float:
 func set_color(distance : float)->void:
 	var weight : float = (clamp(distance, color_distance_interval.y, color_distance_interval.x) - color_distance_interval.y) / (color_distance_interval.x - color_distance_interval.y)
 	self.modulate = lerp(Color.RED, Color.WHITE, weight)
-	print("distance: {0}, weight: {1}, mod: {2}".format([distance, weight, self.modulate]))
+	#print("distance: {0}, weight: {1}, mod: {2}".format([distance, weight, self.modulate]))
 
 var move_offset : Vector2 = Vector2.ZERO
 var is_being_dragged : bool = false

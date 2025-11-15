@@ -47,12 +47,12 @@ static func _load_questions(path: String)->PackedStringArray:
 	while not f.eof_reached():
 		var line := f.get_line()
 		if line.length() > 0 and line[0] == "-": 
-			if not current.is_empty():
+			if not current.strip_edges().is_empty():
 				ret.append(current)
 				current = ""
 		else:
 			current += "\n" + line
-	if not current.is_empty():
+	if not current.strip_edges().is_empty():
 		ret.append(current)
 		current = ""
 		
