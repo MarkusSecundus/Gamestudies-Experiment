@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="QuestionsList" load_steps=2 format=3 uid="uid://b26svdsm54pcb"]
+
+[ext_resource type="Script" uid="uid://ch7b7fpuped1b" path="res://scripts/QuestionsList.gd" id="1_f5yqw"]
+
+[resource]
+script = ExtResource("1_f5yqw")
+questions = PackedStringArray("After what I did, my family will never look into my eyes.\nPlease give me new ones, so that they forget.\n...so that I can forget.", "I lost my eyes serving my king and country.\nPlease, help me so that I can ride into battle once more.", "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!\nGive me some new ones - ones that are more deserving of me.", "I lost my left eye in a game of dice.\nSo... which of these are currently on sale?", "Hi, you won\'t believe it, this time I lost both my eyes playing cards with the mad god Azathoth himself (lol).\nSo, what eyes have you got in stock?\nGet me some powerful ones.", "Please, help me!\n\nI can\'t feed my family if I can\'t even see the turnip growing on my little field.", "Reading books is my whole life.\nBut now, my eyes are failing me.\nIs there possibly a chance you could save me from that future?", "I was once the grand vizier.\nThen the sultan decided I was becoming too powerful - he gouged my eyes and banished me.\nWith your help, I will finally get my revenge.", "Eyes, eyes, eyes, EYES, EEEYYYEEESSS...\n.............................\nI NEED MORE EYES!!!!!", "Yes, these look like fine specimens.\nPlease, have 500 kg of these eye samples delivered to this address by next monday.\nThe University will of course compensate you generously for your service.")
+metadata/_custom_type_script = "uid://ch7b7fpuped1b"

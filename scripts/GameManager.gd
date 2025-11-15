@@ -3,10 +3,10 @@ extends Node
 
 @export var question_box : PrettyTextBox
 
-@export_file("*.txt") var _questions_path : String
+@export var questions : QuestionsList
 
 #@onready var _questions := _load_questions(_questions_path)
-var _questions : PackedStringArray = ["Lorem ipsum dolor sit amet.\nConsectetuer adipiscing elit.."]
+@onready var _questions : PackedStringArray = self.questions.questions
 
 var _active_question_idx : int = -1
 

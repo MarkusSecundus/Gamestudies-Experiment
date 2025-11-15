@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=39 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/OLD/Tiger_shop.png" id="1_1wiy7"]
 [ext_resource type="Script" uid="uid://6tyv7v1ulak" path="res://scripts/GameManager.gd" id="1_u55b3"]
@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="31_u55b3"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="32_wsqty"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
+[ext_resource type="Resource" uid="uid://b26svdsm54pcb" path="res://questions.tres" id="36_u55b3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
 radius = 266.0075
@@ -551,7 +552,7 @@ position = Vector2(350, 249)
 [node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("question_box")]
 script = ExtResource("1_u55b3")
 question_box = NodePath("../QuestionsBox")
-_questions_path = "res://questions.txt"
+questions = ExtResource("36_u55b3")
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
