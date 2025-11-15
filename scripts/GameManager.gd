@@ -5,7 +5,8 @@ extends Node
 
 @export_file("*.txt") var _questions_path : String
 
-@onready var _questions := _load_questions(_questions_path)
+#@onready var _questions := _load_questions(_questions_path)
+var _questions : PackedStringArray = ["Lorem ipsum dolor sit amet.\nConsectetuer adipiscing elit.."]
 
 var _active_question_idx : int = -1
 
