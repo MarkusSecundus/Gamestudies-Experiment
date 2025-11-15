@@ -122,22 +122,7 @@ static func get_instance_of_indices(arr: Array, child_type, ret : PackedInt32Arr
 		i += 1
 	return ret
 	
-static func is_the_only_selected_node(node: Node)->bool:
-	var selection := EditorInterface.get_selection().get_selected_nodes()
-	return selection.size() == 1 and selection[0] == node
 	
-static func get_selected_nodes_of_type(type: Variant, ret : Array = []):
-	for n in EditorInterface.get_selection().get_selected_nodes():
-		if is_instance_of(n, type):
-			ret.append(n)
-	return ret
-
-static func set_selection(nodes: Array[Node])->void:
-	var selection := EditorInterface.get_selection()
-	selection.clear()
-	for n in nodes:
-		selection.add_node(n)
-
 static var _counter: int = 0;
 static func get_unique_id()->int: 
 	_counter += 1;
@@ -148,49 +133,6 @@ static func instantiate_child(parent: Node, prefab: Resource)->Node:
 	parent.add_child(ret)
 	ret.owner = parent.get_tree().edited_scene_root
 	return ret
-
-static func add_do_undo_child(unre: EditorUndoRedoManager, parent: Node, child: Node, idx:int = -1, new_edited_scene_root : Node=null)->Node:
-	# see: https://forum.godotengine.org/t/undoredomanager-add-and-remove-nodes-for-plugin/111380
-	unre.add_do_method(parent, 'add_child', child, true)
-	if !new_edited_scene_root: new_edited_scene_root = parent.get_tree().edited_scene_root
-	unre.add_do_method(child, 'set_owner', new_edited_scene_root)
-	if idx >= 0:
-		unre.add_do_method(parent, 'move_child', child, idx)
-	unre.add_do_reference(child)
-	unre.add_undo_method(parent, 'remove_child', child)
-	return child
-
-static func remove_do_undo_node(unre: EditorUndoRedoManager, node: Node)->Node:
-	var idx := node.get_index()
-	var parent := node.get_parent()
-
-	unre.add_do_method(parent, 'remove_child', node)
-
-	unre.add_undo_reference(node)
-	unre.add_undo_method(parent, 'add_child', node, true)
-	unre.add_undo_method(node, 'set_owner', parent.get_tree().edited_scene_root)
-	unre.add_undo_method(parent, 'move_child', node, idx)
-	return node
-
-static func relink_do_undo_node(unre: EditorUndoRedoManager, node: Node, new_parent: Node, new_idx: int = -1, new_edited_scene_root : Node=null)->Node:
-	var old_idx := node.get_index()
-	var old_parent := node.get_parent()
-
-	unre.add_do_reference(node)
-	unre.add_do_method(old_parent, 'remove_child', node)
-	unre.add_do_method(new_parent, 'add_child', node, true)
-	if !new_edited_scene_root: new_edited_scene_root = new_parent.get_tree().edited_scene_root
-	unre.add_do_method(node, 'set_owner', new_edited_scene_root)
-	if new_idx >= 0:
-		unre.add_do_method(new_parent, 'move_child', node, new_idx)
-	
-	unre.add_undo_reference(node)
-	unre.add_undo_method(new_parent, 'remove_child', node)
-	unre.add_undo_method(old_parent, 'add_child', node, true)
-	unre.add_undo_method(node, 'set_owner', old_parent.get_tree().edited_scene_root)
-	unre.add_undo_method(old_parent, 'move_child', node, old_idx)
-
-	return node
 
 
 static func try_send_message_to_typed_ancestor(this: Node, ancestor_type, message_name: String, arguments: Array):
