@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=38 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/OLD/Tiger_shop.png" id="1_1wiy7"]
+[ext_resource type="Script" uid="uid://6tyv7v1ulak" path="res://scripts/GameManager.gd" id="1_u55b3"]
 [ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/eyebrows/eyebrows_1.png" id="2_cfq0f"]
 [ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/irises/iris_green_new.png" id="3_pjux3"]
@@ -80,10 +81,12 @@ offset_right = -4.0820313
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="BigEye" type="Node2D" parent="BigEyeShowcase"]
+[node name="BigEye" type="Node2D" parent="BigEyeShowcase" node_paths=PackedStringArray("destination")]
 z_index = 500
 position = Vector2(321, 297)
 script = ExtResource("2_1wiy7")
+destination = NodePath("../../QuestionsBox/EyeDestination")
+color_distance_interval = Vector2(300, 40)
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
 visible = false
@@ -509,7 +512,7 @@ stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
 
-[node name="Control" type="Control" parent="."]
+[node name="QuestionsBox" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 618.0
 offset_top = 747.0
@@ -518,7 +521,7 @@ offset_bottom = 1045.0
 script = ExtResource("28_i7ifx")
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
 
-[node name="Background" type="ColorRect" parent="Control"]
+[node name="Background" type="ColorRect" parent="QuestionsBox"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -528,7 +531,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="RichTextLabel" parent="Control"]
+[node name="Label" type="RichTextLabel" parent="QuestionsBox"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -541,6 +544,13 @@ text = "
 Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
 horizontal_alignment = 1
 visible_characters_behavior = 3
+
+[node name="EyeDestination" type="Node2D" parent="QuestionsBox"]
+position = Vector2(350, 249)
+
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("question_box")]
+script = ExtResource("1_u55b3")
+question_box = NodePath("../QuestionsBox")
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
