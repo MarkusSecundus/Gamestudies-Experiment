@@ -13,6 +13,10 @@ config_version=5
 config/name="Gamestudies-Experiment"
 run/main_scene="uid://dfb3nyvrfv6a7"
 config/features=PackedStringArray("4.5", "Mobile")
+boot_splash/show_image=false
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/image="uid://ci0je63rsgf6k"
 config/icon="res://icon.svg"
 
 [autoload]
