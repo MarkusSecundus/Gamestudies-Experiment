@@ -520,6 +520,7 @@ offset_top = 747.0
 offset_right = 1316.0
 offset_bottom = 1045.0
 script = ExtResource("28_i7ifx")
+seconds_per_char = 0.02
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
 
 [node name="Background" type="ColorRect" parent="QuestionsBox"]
