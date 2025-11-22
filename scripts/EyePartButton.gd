@@ -4,13 +4,21 @@ extends TextureButton
 @export var target: Sprite2D
 @export var hover_scale : float = 1.6
 
+@export var additional_targets: Array[Sprite2D]
+@export var additional_textures: Array[Texture2D]
+
 func _on_pressed() -> void:
 	var to_set := self.texture_normal
 	if target.texture == to_set:
-		target.visible = not target.visible
+		var new_visibility = not target.visible
+		target.visible = new_visibility
+		for t in additional_targets: t.visible = new_visibility
 	else:
 		target.visible = true
 		target.texture = to_set
+		for i in additional_targets.size():
+			additional_targets[i].visible = true
+			additional_targets[i].texture = additional_textures[i]
 
 
 

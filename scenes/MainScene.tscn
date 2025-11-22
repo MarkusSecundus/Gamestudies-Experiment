@@ -1,13 +1,13 @@
-[gd_scene load_steps=39 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=40 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Texture2D" uid="uid://diws50xhrfn00" path="res://art/OLD/Tiger_shop.png" id="1_1wiy7"]
 [ext_resource type="Script" uid="uid://6tyv7v1ulak" path="res://scripts/GameManager.gd" id="1_u55b3"]
 [ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/BigEye.gd" id="2_1wiy7"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/eyebrows/eyebrows_1.png" id="2_cfq0f"]
-[ext_resource type="Texture2D" uid="uid://gb02phqwi3u7" path="res://art/irises/iris_green_new.png" id="3_pjux3"]
 [ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/EyePartButton.gd" id="3_ygjfp"]
 [ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/eyes/eyes_elegant.png" id="4_o3jky"]
 [ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/pupils/pupil_normal.png" id="5_kp0ql"]
+[ext_resource type="Texture2D" uid="uid://seqgy7i5i0t" path="res://art/irises/iris_blank.png" id="5_u55b3"]
 [ext_resource type="Texture2D" uid="uid://s8ngnmoa0pq0" path="res://art/eyes/eye2.png" id="8_0ehpd"]
 [ext_resource type="Texture2D" uid="uid://cpbu7jpfm6s5g" path="res://art/eyebrows/eyebrow2.png" id="8_o3jky"]
 [ext_resource type="Texture2D" uid="uid://d1ycnltaajkgj" path="res://art/eyes/eye3.png" id="9_8wjpf"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dq06sr4nb1gqa" path="res://art/eyebrows/eyebrow6.png" id="12_xnxdc"]
 [ext_resource type="Texture2D" uid="uid://nuskljiavvwo" path="res://art/irises/iris2.png" id="13_1ns3k"]
 [ext_resource type="Texture2D" uid="uid://cs0aaulk7d32e" path="res://art/pupils/pupil2.png" id="13_mkg2b"]
+[ext_resource type="Texture2D" uid="uid://dtcr1w0xsts4a" path="res://art/irises/iris_green.png" id="13_u55b3"]
 [ext_resource type="Texture2D" uid="uid://bhfb5a0bj1cy4" path="res://art/pupils/pupil3.png" id="14_1ns3k"]
 [ext_resource type="Texture2D" uid="uid://cvrbvl5j0n6ev" path="res://art/irises/iris3.png" id="14_a7pbh"]
 [ext_resource type="Texture2D" uid="uid://1lv0jsd7727g" path="res://art/pupils/pupil4.png" id="15_a7pbh"]
@@ -90,25 +91,26 @@ destination = NodePath("../../QuestionsBox/EyeDestination")
 color_distance_interval = Vector2(300, 40)
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("3_pjux3")
+texture = ExtResource("13_u55b3")
+
+[node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("5_u55b3")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
@@ -241,20 +243,22 @@ offset_right = -4.0820313
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 256.0
 offset_right = 107.0
 offset_bottom = 348.77972
 pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("3_pjux3")
+texture_normal = ExtResource("13_u55b3")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
-[node name="Iris2" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="Iris2" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 150.0
 offset_top = 255.0
@@ -266,8 +270,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
-[node name="Iris3" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="Iris3" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 299.0
 offset_top = 257.0
@@ -279,8 +285,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
-[node name="Iris4" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="Iris4" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 154.0
@@ -292,8 +300,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
-[node name="Iris5" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="Iris5" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 154.0
 offset_top = 157.0
@@ -305,8 +315,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
-[node name="Iris6" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target")]
+[node name="Iris6" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
 layout_mode = 0
 offset_left = 298.0
 offset_top = 158.0
@@ -318,6 +330,8 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_ygjfp")
 target = NodePath("../../BigEyeShowcase/BigEye/Iris")
+additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
+additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
 
 [node name="PupilShapes" type="Control" parent="."]
 layout_mode = 1
