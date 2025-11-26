@@ -47,6 +47,7 @@ func hide_all()->void:
 	$Eye.hide()
 	$Eyebrow.hide() 
 	$Iris.hide() 
+	$IrisLineart.hide() 
 	$Pupil.hide()
 
 func get_current_answer()->Answer:

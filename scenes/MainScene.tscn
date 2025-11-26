@@ -91,26 +91,31 @@ destination = NodePath("../../QuestionsBox/EyeDestination")
 color_distance_interval = Vector2(300, 40)
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("13_u55b3")
 
 [node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_u55b3")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
