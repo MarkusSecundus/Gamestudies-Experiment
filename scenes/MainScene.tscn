@@ -159,13 +159,6 @@ script = ExtResource("1_kik7w")
 [node name="Right" type="Node2D" parent="PlacementLocations/P14"]
 position = Vector2(321, 0)
 
-[node name="P15" type="Node2D" parent="PlacementLocations"]
-position = Vector2(1273, 742)
-script = ExtResource("1_kik7w")
-
-[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
-position = Vector2(395, 0)
-
 [node name="P16" type="Node2D" parent="PlacementLocations"]
 position = Vector2(1712, 742)
 script = ExtResource("1_kik7w")
@@ -208,6 +201,13 @@ script = ExtResource("1_kik7w")
 [node name="Right" type="Node2D" parent="PlacementLocations/P20"]
 position = Vector2(443, 0)
 
+[node name="P15" type="Node2D" parent="PlacementLocations"]
+position = Vector2(1273, 742)
+script = ExtResource("1_kik7w")
+
+[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
+position = Vector2(395, 0)
+
 [node name="Mockup" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -222,7 +222,7 @@ expand_mode = 1
 position = Vector2(476, 627)
 
 [node name="EyeHolder3" parent="." instance=ExtResource("39_f4jp2")]
-position = Vector2(201, 455)
+position = Vector2(188, 462)
 
 [node name="BigEyeShowcase" type="Control" parent="."]
 visible = false
@@ -749,7 +749,6 @@ region_enabled = true
 region_rect = Rect2(1376.6321, 969.89624, 1085.3711, 1069.0906)
 
 [node name="EyeHolder" parent="." instance=ExtResource("39_f4jp2")]
-visible = false
 position = Vector2(1477, 644)
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]

@@ -20,6 +20,7 @@ func do_place(g: Grabbable)->void:
 	var best_segment_idx : int = -1
 	var best_left : Vector2 = Vector2.ZERO
 	var best_right : Vector2 = Vector2.ZERO
+	var best_is_down : bool = false
 	
 	for loc in _locations:
 		for segment_idx in loc.segments.size():
@@ -31,6 +32,8 @@ func do_place(g: Grabbable)->void:
 			var closest_point_on_grabbable := closest_points[0]
 			var closest_point_on_segment := closest_points[1]
 			var distance := closest_point_on_grabbable.distance_to(closest_point_on_segment)
+			var current_is_down :bool = closest_point_on_grabbable.y >= closest_point_on_segment.y
+			if not current_is_down: distance += 30.0
 			if distance >= best_distance: continue
 			
 			var closest_left := Geometry2D.get_closest_point_to_segment(left, segment.left, segment.right)

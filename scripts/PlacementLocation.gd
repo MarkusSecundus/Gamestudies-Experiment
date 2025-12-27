@@ -41,7 +41,7 @@ class Segment:
 
 func place(obj: Grabbable, segment_idx: int, left: Vector2, right: Vector2)->void:
 	var og_segment := segments[segment_idx]
-	print("Placing {0} to interval <{1},{2}> of {3}".format([obj, left, right, og_segment]))
+	#print("Placing {0} to interval <{1},{2}> of {3}".format([obj, left, right, og_segment]))
 	if not og_segment.is_empty: ErrorUtils.report_error("{0}.. Attempting to populate a segment (<{1},{2}>) by {3}, but it's already occupied by {4}".format([self, left, right, obj, og_segment.inhabitant]))
 	if not GeometryUtils.epsilon_equals2D(left, og_segment.left):
 		segments.insert(segment_idx, Segment.new(self, og_segment.left, left, null))
