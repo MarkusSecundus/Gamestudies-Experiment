@@ -13,14 +13,16 @@ height = 100.0
 modulate = Color(0.760999, 0.76099914, 0.76099914, 1)
 script = ExtResource("1_xfwt3")
 
-[node name="EyeHolderMain" type="Sprite2D" parent="."]
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="EyeHolderMain" type="Sprite2D" parent="Visual"]
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
 texture = ExtResource("1_vac4u")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="."]
+[node name="EyeHolderHandle" type="Sprite2D" parent="Visual"]
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
 texture = ExtResource("2_xfwt3")
@@ -31,13 +33,13 @@ region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 script = ExtResource("4_xb2x5")
 
 [node name="Anchor1" type="Node2D" parent="ContentAnchors"]
-position = Vector2(-99, 74)
+position = Vector2(-99, 46)
 
 [node name="Anchor2" type="Node2D" parent="ContentAnchors"]
-position = Vector2(2, 74)
+position = Vector2(2, 46)
 
 [node name="Anchor3" type="Node2D" parent="ContentAnchors"]
-position = Vector2(101, 74)
+position = Vector2(101, 46)
 
 [node name="SelfAnchor" type="Node2D" parent="."]
 position = Vector2(-141, 100)
