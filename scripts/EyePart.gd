@@ -18,8 +18,12 @@ func _process(delta: float) -> void:
 	super._process(delta)
 		
 	var target_anchor := EyePiedestal.INSTANCE.get_anchor(self)
-	var distance_to_anchor := self.get_only_anchor().distance_to(target_anchor)
-	var t = clampf(distance_to_anchor, 0, EyePiedestal.INSTANCE.active_distance) / EyePiedestal.INSTANCE.active_distance
+	var distance_to_target_anchor := self.get_only_anchor().distance_to(target_anchor)
+	var distance_to_home_anchor := self.get_only_anchor().distance_to(_holder_anchor.global_position)
+	#var distance_between_home_and_target_anchor := target_anchor.distance_to(_holder_anchor.global_position)
+	var target_t = clampf(distance_to_target_anchor, 0, EyePiedestal.INSTANCE.active_distance) / EyePiedestal.INSTANCE.active_distance
+	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, EyePiedestal.INSTANCE.active_distance) / EyePiedestal.INSTANCE.active_distance)
+	var t = lerpf(home_t, target_t, distance_to_home_anchor / (distance_to_target_anchor + distance_to_home_anchor))
 	var scale_multiplier := lerpf(EyePiedestal.INSTANCE.max_scale, 1.0, t)
 	var new_scale := _original_scale * scale_multiplier
 	if new_scale.x > self.scale.x:

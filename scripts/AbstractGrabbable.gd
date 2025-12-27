@@ -19,14 +19,17 @@ func get_position_difference()->Vector2: return Vector2.ZERO
 func _process(delta: float) -> void:
 	const INTERPOLATION_FACTOR = 2
 	
+	var drag_was_performed = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if _is_being_grabbed:
 			self.global_position = get_viewport().get_mouse_position() + move_offset
+			drag_was_performed = true
 	else:
 		var was_being_grabbed = _is_being_grabbed
 		_is_being_grabbed = false
 		if was_being_grabbed:
 			on_drag_end()
+	if not drag_was_performed:
 		var position_difference = get_position_difference()
 		self.global_position += (position_difference * INTERPOLATION_FACTOR * delta)
 		
