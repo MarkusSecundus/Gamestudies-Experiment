@@ -34,6 +34,11 @@ class Wrapper:
 		self.value = value
 
 
+static func remove_interval(list, begin_idx_inclusive:int, end_idx_exclusive: int):
+	for i in Vector3i(end_idx_exclusive-1, begin_idx_inclusive-1, -1):
+		list.remove_at(i)
+	return list
+
 static func modify_in_place(list, modificator : Callable):
 	var i : int = 0
 	while i < list.size():

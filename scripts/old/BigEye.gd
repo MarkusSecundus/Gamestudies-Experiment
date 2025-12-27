@@ -31,15 +31,6 @@ func set_color(distance : float)->void:
 	self.modulate = lerp(Color.RED, Color.WHITE, weight)
 	#print("distance: {0}, weight: {1}, mod: {2}".format([distance, weight, self.modulate]))
 
-var move_offset : Vector2 = Vector2.ZERO
-var is_being_dragged : bool = false
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if not _is_finished(): return
-	var btn := event as InputEventMouseButton
-	if btn:
-		is_being_dragged = true
-		move_offset = self.global_position - btn.global_position
-
 func _is_finished()->bool:
 	return $Eye.visible and $Eyebrow.visible and $Iris.visible and $Pupil.visible
 
@@ -57,6 +48,15 @@ func get_current_answer()->Answer:
 	ret.iris = ($Iris.texture).resource_path
 	ret.pupil = ($Pupil.texture).resource_path
 	return ret
+
+var move_offset : Vector2 = Vector2.ZERO
+var is_being_dragged : bool = false
+func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if not _is_finished(): return
+	var btn := event as InputEventMouseButton
+	if btn:
+		is_being_dragged = true
+		move_offset = self.global_position - btn.global_position
 
 func _on_area_2d_mouse_entered() -> void:
 	if not _is_finished(): return

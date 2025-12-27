@@ -1,5 +1,7 @@
 class_name GeometryUtils
 
+const EPSILON = 0.001
+
 static func mult_members3(a: Vector3, b: Vector3)->Vector3:
 	return Vector3(a.x*b.x, a.y*b.y, a.z*b.z)
 
@@ -47,6 +49,11 @@ static func distance_sqr_from_line_segment(line_begin: Vector2, line_end: Vector
 static func distance_from_line_segment(line_begin: Vector2, line_end : Vector2, point: Vector2)->float:
 	return sqrt(distance_sqr_from_line_segment(line_begin, line_end, point))
 
+static func point_is_on_segment(point: Vector2, segment_begin : Vector2, segment_end : Vector2, epsilon:float = EPSILON)->bool:
+	return epsilon_equals2D(Geometry2D.get_closest_point_to_segment(point, segment_begin, segment_end), Geometry2D.get_closest_point_to_segment_uncapped(point, segment_begin, segment_end))
+
+static func epsilon_equals2D(v: Vector2, w: Vector2, epsilon:float = EPSILON)->bool:
+	return (abs(v.x - w.x) <= epsilon) && (abs(v.y - w.y) <= epsilon) 
 
 static func find_closest_point(v: Vector2, points: PackedVector2Array, blacklist: Dictionary[Vector2, bool] = {})->int:
 	var best_distance_sqr := INF
