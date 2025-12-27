@@ -218,11 +218,31 @@ mouse_filter = 2
 texture = ExtResource("1_wsqty")
 expand_mode = 1
 
-[node name="EyeHolder2" parent="." instance=ExtResource("39_f4jp2")]
-position = Vector2(476, 627)
+[node name="EyeHolders" type="Node2D" parent="."]
 
-[node name="EyeHolder3" parent="." instance=ExtResource("39_f4jp2")]
-position = Vector2(188, 462)
+[node name="Shapes1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(179, 98)
+
+[node name="Shapes2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(436, 267)
+
+[node name="Irises1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(166, 462)
+
+[node name="Irises2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(471, 638)
+
+[node name="Eyebrows1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(1774, 96)
+
+[node name="Eyebrows2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(1482, 266)
+
+[node name="Pupils1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(1774, 465)
+
+[node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
+position = Vector2(1477, 644)
 
 [node name="BigEyeShowcase" type="Control" parent="."]
 visible = false
@@ -747,9 +767,6 @@ scale = Vector2(0.40101224, 0.40101218)
 texture = ExtResource("38_oiest")
 region_enabled = true
 region_rect = Rect2(1376.6321, 969.89624, 1085.3711, 1069.0906)
-
-[node name="EyeHolder" parent="." instance=ExtResource("39_f4jp2")]
-position = Vector2(1477, 644)
 
 [connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
