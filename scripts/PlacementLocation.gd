@@ -19,7 +19,8 @@ class Segment:
 	
 	var is_empty: bool:
 		get: return self.inhabitant == null
-	
+		
+	@warning_ignore("shadowed_variable")
 	func _init(parent: PlacementLocation, left: Vector2, right: Vector2, inhabitant: Grabbable) -> void:
 		self.parent = parent
 		self.left = left
@@ -55,7 +56,6 @@ func place(obj: Grabbable, segment_idx: int, left: Vector2, right: Vector2)->voi
 	
 
 func remove(segment_idx: int)->void:
-	var segment := segments[segment_idx]
 	var range_begin_idx :int = segment_idx
 	var range_end_idx : int = segment_idx
 	while range_begin_idx > 0 and segments[range_begin_idx - 1].is_empty:

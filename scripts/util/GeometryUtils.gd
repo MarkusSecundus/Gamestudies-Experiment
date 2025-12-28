@@ -50,7 +50,7 @@ static func distance_from_line_segment(line_begin: Vector2, line_end : Vector2, 
 	return sqrt(distance_sqr_from_line_segment(line_begin, line_end, point))
 
 static func point_is_on_segment(point: Vector2, segment_begin : Vector2, segment_end : Vector2, epsilon:float = EPSILON)->bool:
-	return epsilon_equals2D(Geometry2D.get_closest_point_to_segment(point, segment_begin, segment_end), Geometry2D.get_closest_point_to_segment_uncapped(point, segment_begin, segment_end))
+	return epsilon_equals2D(Geometry2D.get_closest_point_to_segment(point, segment_begin, segment_end), Geometry2D.get_closest_point_to_segment_uncapped(point, segment_begin, segment_end), epsilon)
 
 static func epsilon_equals2D(v: Vector2, w: Vector2, epsilon:float = EPSILON)->bool:
 	return (abs(v.x - w.x) <= epsilon) && (abs(v.y - w.y) <= epsilon) 

@@ -15,21 +15,22 @@ static func _default_compare_lt(a,b): return a<b;
 static func find_min(list, selector: Callable, compare_lt: Callable = Callable()):
 	if !compare_lt: compare_lt = func(a,b): return a<b;
 	var is_first_iteration := true;
-	var min = null;
+	var minimum = null;
 	var min_comparable = null;
 	
 	for val in list:
 		var comparable = selector.call(val);
 		if is_first_iteration || compare_lt.call(comparable, min_comparable):
-			min = val;
+			minimum = val;
 			min_comparable = comparable;
 		is_first_iteration = false
 	
-	return min;
+	return minimum;
 
 class Wrapper:
 	var value;
 	
+	@warning_ignore("shadowed_variable")
 	func _init(value)->void:
 		self.value = value
 

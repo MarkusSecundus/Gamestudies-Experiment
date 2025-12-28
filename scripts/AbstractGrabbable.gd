@@ -2,7 +2,7 @@ class_name AbstractGrabbable
 extends Node2D
 
 @onready var _anchor_left : Node2D = $SelfAnchor
-@onready var _anchor_right : Node2D = $SelfAnchor/Right
+@onready var _anchor_right : Node2D = self.get_node_or_null("SelfAnchor/Right")
 
 func get_only_anchor()->Vector2: return get_left_anchor()
 func get_left_anchor()->Vector2: return _anchor_left.global_position
@@ -42,7 +42,7 @@ func _ready() -> void:
 	holder.input_event.connect(_on_area_2d_input_event)
 
 var move_offset : Vector2 = Vector2.ZERO
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	var btn := event as InputEventMouseButton
 	if btn:
 		_is_being_grabbed = true

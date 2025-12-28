@@ -20,7 +20,6 @@ func do_place(g: Grabbable)->void:
 	var best_segment_idx : int = -1
 	var best_left : Vector2 = Vector2.ZERO
 	var best_right : Vector2 = Vector2.ZERO
-	var best_is_down : bool = false
 	
 	for loc in _locations:
 		for segment_idx in loc.segments.size():

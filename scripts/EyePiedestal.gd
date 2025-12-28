@@ -9,7 +9,7 @@ static var INSTANCE : EyePiedestal
 
 @onready var _anchor : Node2D = $Anchor
 
-func get_anchor(eye_part: EyePart )->Vector2:
+func get_anchor(_eye_part: EyePart )->Vector2:
 	return _anchor.global_position
 
 func _ready() -> void:

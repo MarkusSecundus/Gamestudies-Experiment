@@ -17,8 +17,8 @@ func _ready():
 
 func _get_sound_player()->AudioStreamPlayer:
 	for c in _soundPool.get_children():
-		var str := c as AudioStreamPlayer
-		if !str.is_playing(): return str
+		var stream := c as AudioStreamPlayer
+		if !stream.is_playing(): return stream
 	var ret = AudioStreamPlayer.new();
 	_soundPool.add_child(ret);
 	return ret;

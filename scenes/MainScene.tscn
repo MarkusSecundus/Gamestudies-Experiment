@@ -45,7 +45,7 @@
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
-radius = 476.9634
+radius = 41.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
 radius = 266.0075
@@ -176,7 +176,14 @@ position = Vector2(3, 826)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/MainShelf"]
-position = Vector2(1934, 0)
+position = Vector2(760, 0)
+
+[node name="MainShelf2" type="Node2D" parent="PlacementLocations"]
+position = Vector2(1175, 826)
+script = ExtResource("1_kik7w")
+
+[node name="Right" type="Node2D" parent="PlacementLocations/MainShelf2"]
+position = Vector2(760, 0)
 
 [node name="P17" type="Node2D" parent="PlacementLocations"]
 position = Vector2(35, 1088)
@@ -228,62 +235,70 @@ expand_mode = 1
 [node name="Shapes1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(179, 98)
 
-[node name="Eye2" type="Sprite2D" parent="EyeHolders/Shapes1"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Shapes1"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye1"]
 z_index = 500
 z_as_relative = false
-position = Vector2(-96.999985, 52.999985)
-scale = Vector2(0.08179416, 0.081794165)
+scale = Vector2(0.082, 0.082)
 texture = ExtResource("8_0ehpd")
 region_enabled = true
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye1/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes1/Eye1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eye2" type="Node2D" parent="EyeHolders/Shapes1"]
+position = Vector2(1.0000002, 52.999985)
 script = ExtResource("6_doyhq")
 
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("9_8wjpf")
+region_enabled = true
+region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye2"]
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye2/Holder"]
-position = Vector2(-12.226, -24.451437)
 shape = SubResource("CircleShape2D_doyhq")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes1/Eye2"]
-position = Vector2(-36.67762, -24.451439)
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye3" type="Sprite2D" parent="EyeHolders/Shapes1"]
-z_index = 500
-z_as_relative = false
-position = Vector2(2.0000305, 52.999985)
-scale = Vector2(0.08179416, 0.081794165)
-texture = ExtResource("9_8wjpf")
-region_enabled = true
-region_rect = Rect2(270.92017, 494.84625, 780.84143, 696.26166)
+[node name="Eye3" type="Node2D" parent="EyeHolders/Shapes1"]
+position = Vector2(104.000015, 52.999985)
 script = ExtResource("6_doyhq")
 
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
+z_index = 500
+z_as_relative = false
+position = Vector2(2.0000134, -1.9999847)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("4_o3jky")
+region_enabled = true
+region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye3"]
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye3/Holder"]
-position = Vector2(-12.226, -24.451437)
 shape = SubResource("CircleShape2D_doyhq")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes1/Eye3"]
-position = Vector2(-36.67762, -24.451439)
-
-[node name="Eye4" type="Sprite2D" parent="EyeHolders/Shapes1"]
-z_index = 500
-z_as_relative = false
-position = Vector2(104.000046, 52.999985)
-scale = Vector2(0.0666666, 0.06666661)
-texture = ExtResource("4_o3jky")
-region_enabled = true
-region_rect = Rect2(155.4259, 494.84625, 1024.3835, 630.98236)
-script = ExtResource("6_doyhq")
-
-[node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye4/Holder"]
-position = Vector2(-12.226, -24.451437)
-shape = SubResource("CircleShape2D_doyhq")
-
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes1/Eye4"]
-position = Vector2(-36.67762, -24.451439)
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Shapes2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(436, 267)
