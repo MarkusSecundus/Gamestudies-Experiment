@@ -833,8 +833,11 @@ offset_left = 694.0
 offset_top = 71.0
 offset_right = 1242.0
 offset_bottom = 334.0
+script = ExtResource("28_i7ifx")
+sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
+print_on_start = true
 
-[node name="NinePatchRect" type="NinePatchRect" parent="TextBubble"]
+[node name="Frame" type="NinePatchRect" parent="TextBubble"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.667
