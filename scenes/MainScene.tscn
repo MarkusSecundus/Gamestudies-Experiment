@@ -43,16 +43,14 @@
 [ext_resource type="Texture2D" uid="uid://nny5p5oxacxb" path="res://art/shop/eye_piedestal.png" id="38_oiest"]
 [ext_resource type="PackedScene" uid="uid://dieqi7fura551" path="res://prefabs/eye_holder.tscn" id="39_f4jp2"]
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
+[ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="44_7yh6i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1wiy7"]
-radius = 266.0075
-
 [sub_resource type="Theme" id="Theme_i7ifx"]
 default_font = ExtResource("28_qavw1")
-default_font_size = 32
+default_font_size = 24
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -67,18 +65,18 @@ mouse_filter = 2
 script = ExtResource("1_4ikpr")
 
 [node name="P1" type="Node2D" parent="PlacementLocations"]
-position = Vector2(14, 212)
+position = Vector2(18, 203)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P1"]
-position = Vector2(310, 0)
+position = Vector2(305, 0)
 
 [node name="P2" type="Node2D" parent="PlacementLocations"]
-position = Vector2(389, 212)
+position = Vector2(389, 203)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P2"]
-position = Vector2(269, 0)
+position = Vector2(258, 0)
 
 [node name="P3" type="Node2D" parent="PlacementLocations"]
 position = Vector2(8, 372)
@@ -326,20 +324,12 @@ visible = false
 layout_mode = 1
 anchor_right = 1.01
 anchor_bottom = 1.0
-offset_left = 659.0
-offset_top = 81.0
-offset_right = -668.19995
-offset_bottom = -398.0
+offset_left = 783.0
+offset_top = 521.0
+offset_right = -544.19995
+offset_bottom = 42.0
+scale = Vector2(0.59539735, 0.59539735)
 mouse_filter = 2
-
-[node name="Background" type="ColorRect" parent="BigEyeShowcase"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.013
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="BigEye" type="Node2D" parent="BigEyeShowcase" node_paths=PackedStringArray("destination")]
 z_index = 500
@@ -349,40 +339,29 @@ destination = NodePath("../../QuestionsBox/EyeDestination")
 color_distance_interval = Vector2(300, 40)
 
 [node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("2_cfq0f")
 
 [node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("13_u55b3")
 
 [node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_u55b3")
 
 [node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("5_kp0ql")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("4_o3jky")
-
-[node name="Area2D" type="Area2D" parent="BigEyeShowcase/BigEye"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BigEyeShowcase/BigEye/Area2D"]
-position = Vector2(-17, 1)
-shape = SubResource("CircleShape2D_1wiy7")
 
 [node name="EyeShapes" type="Control" parent="."]
 visible = false
@@ -838,7 +817,7 @@ question_box = NodePath("../QuestionsBox")
 questions = ExtResource("36_u55b3")
 
 [node name="EyePiedestal" type="Sprite2D" parent="."]
-position = Vector2(966, 709)
+position = Vector2(966, 775.99994)
 scale = Vector2(0.40101224, 0.40101218)
 texture = ExtResource("38_oiest")
 region_enabled = true
@@ -848,9 +827,47 @@ active_distance = 600.0
 
 [node name="Anchor" type="Node2D" parent="EyePiedestal"]
 
-[connection signal="input_event" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="BigEyeShowcase/BigEye/Area2D" to="BigEyeShowcase/BigEye" method="_on_area_2d_mouse_exited"]
+[node name="TextBubble" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 694.0
+offset_top = 71.0
+offset_right = 1242.0
+offset_bottom = 334.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TextBubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.667
+anchor_bottom = 1.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("44_7yh6i")
+region_rect = Rect2(1540, 60, 761, 602)
+patch_margin_left = 115
+patch_margin_top = 112
+patch_margin_right = 118
+patch_margin_bottom = 110
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label" type="RichTextLabel" parent="TextBubble"]
+modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 37.0
+offset_right = -42.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i7ifx")
+text = "
+
+Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
+horizontal_alignment = 1
+visible_characters_behavior = 3
+
 [connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
 [connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
 [connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]

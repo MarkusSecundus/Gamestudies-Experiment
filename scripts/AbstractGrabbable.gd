@@ -16,13 +16,16 @@ func on_drag_start()->void: pass
 func on_drag_end()->void: pass
 func get_position_difference()->Vector2: return Vector2.ZERO
 
+func perform_drag(cursor_position: Vector2, _delta: float)->void:
+	self.global_position = cursor_position
+
 func _process(delta: float) -> void:
 	const INTERPOLATION_FACTOR = 2
 	
 	var drag_was_performed = false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if _is_being_grabbed:
-			self.global_position = get_viewport().get_mouse_position() + move_offset
+			perform_drag(get_viewport().get_mouse_position() + move_offset, delta)
 			drag_was_performed = true
 	else:
 		var was_being_grabbed = _is_being_grabbed
