@@ -1,4 +1,4 @@
-class_name EyeHolder
+class_name EyeCabinet
 extends Grabbable
 
 

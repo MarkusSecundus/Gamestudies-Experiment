@@ -45,11 +45,16 @@ func _ready() -> void:
 	holder.mouse_exited.connect(_on_area_2d_mouse_exited)
 	holder.input_event.connect(_on_area_2d_input_event)
 
+static var _last_frame_when_something_was_grabbed : int = -1
 var move_offset : Vector2 = Vector2.ZERO
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if not can_grab(): return
 	var btn := event as InputEventMouseButton
-	if btn:
+	if btn and btn.pressed and (btn.button_index == MOUSE_BUTTON_LEFT):
+		var current_frame_count := Engine.get_frames_drawn()
+		if _last_frame_when_something_was_grabbed == current_frame_count: return
+		_last_frame_when_something_was_grabbed = current_frame_count
+		
 		_is_being_grabbed = true
 		on_drag_start()
 		move_offset = self.global_position - btn.global_position

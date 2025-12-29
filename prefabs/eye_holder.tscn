@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dieqi7fura551"]
 
 [ext_resource type="Texture2D" uid="uid://5u4p88silywj" path="res://art/shop/eye_holder/eye_holder_main.png" id="1_vac4u"]
-[ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeHolder.gd" id="1_xfwt3"]
+[ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_xfwt3"]
 [ext_resource type="Texture2D" uid="uid://bjiuj3dlrodj4" path="res://art/shop/eye_holder/eye_holder_handle.png" id="2_xfwt3"]
 [ext_resource type="Script" uid="uid://cuko36hm8usx2" path="res://scripts/test.gd" id="4_xb2x5"]
 

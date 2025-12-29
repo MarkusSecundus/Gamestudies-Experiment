@@ -1144,8 +1144,6 @@ scale = Vector2(0.40101224, 0.40101218)
 texture = ExtResource("38_oiest")
 region_enabled = true
 region_rect = Rect2(1376.6321, 969.89624, 1085.3711, 1069.0906)
-script = ExtResource("43_2so2y")
-active_distance = 600.0
 
 [node name="Anchors" type="Node2D" parent="EyePiedestal"]
 

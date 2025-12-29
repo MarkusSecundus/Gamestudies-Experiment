@@ -25,7 +25,7 @@ func _ready() -> void:
 	super._ready()
 	self._original_scale = self.scale
 	await get_tree().process_frame
-	var holder := get_parent() as EyeHolder
+	var holder := get_parent() as EyeCabinet
 	if holder: holder.try_add_eye_part(self)
 
 
@@ -39,8 +39,6 @@ func _process(delta: float) -> void:
 	var target_t = clampf(distance_to_target_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance
 	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance)
 	var t = lerpf(home_t, target_t, distance_to_home_anchor / (distance_to_target_anchor + distance_to_home_anchor))
-	if _is_being_grabbed:
-		print("t: {0}".format([t]))
 	var new_scale := lerp(target_anchor.global_scale, _original_scale, t) as Vector2
 	var distance_from_active_anchor := get_position_difference().length()
 	var distance_from_the_cabinet := (_holder_anchor.global_position - self.get_only_anchor()).length()
@@ -61,8 +59,10 @@ func on_drag_end()->void:
 	var piedestal_anchor := _piedestal.get_anchor(self)
 	if piedestal_anchor.global_position.distance_to(self.global_position) < _piedestal.submit_distance:
 		_piedestal_anchor = piedestal_anchor
+		_piedestal.add_eye_part(self)
 	else:
 		_piedestal_anchor = null
+		_piedestal.remove_eye_part(self)
 
 
 func get_position_difference()->Vector2: 
