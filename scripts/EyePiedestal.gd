@@ -5,12 +5,16 @@ extends Node2D
 static var INSTANCE : EyePiedestal
 
 @export var active_distance : float = 200.0
-@export var max_scale : float = 5.0
+@export var submit_distance : float = 150.0
 
-@onready var _anchor : Node2D = $Anchor
+@onready var _anchor_parent : Node2D = $Anchors
+@onready var _generic_anchor : Node2D = $Anchors/Generic
 
-func get_anchor(_eye_part: EyePart )->Vector2:
-	return _anchor.global_position
+func get_anchor(eye_part: EyePart)->Node2D:
+	var personalised_anchor := _anchor_parent.get_node_or_null(NodePath(eye_part.name)) as Node2D
+	if personalised_anchor: 
+		return personalised_anchor
+	return _generic_anchor
 
 func _ready() -> void:
 	if INSTANCE: ErrorUtils.report_error("EyePiedestal already has active instance {0} while new instance {1} is being created!".format([INSTANCE, self]))

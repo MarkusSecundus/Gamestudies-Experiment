@@ -1,10 +1,25 @@
 class_name EyePart
 extends AbstractGrabbable
 
+enum PartType{
+	EyeShape, Eyebrow, Iris, Pupil
+}
+
+@export var type : PartType
 
 var _holder_anchor : Node2D
 
+var _piedestal_anchor : Node2D
+
+var _active_anchor : Node2D:
+	get:
+		if _piedestal_anchor: return _piedestal_anchor
+		return _holder_anchor
+
 var _original_scale : Vector2
+
+var _piedestal : EyePiedestal:
+	get: return EyePiedestal.INSTANCE
 
 func _ready() -> void:
 	super._ready()
@@ -17,17 +32,22 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	super._process(delta)
 		
-	var target_anchor := EyePiedestal.INSTANCE.get_anchor(self)
-	var distance_to_target_anchor := self.get_only_anchor().distance_to(target_anchor)
+	var target_anchor := _piedestal.get_anchor(self)
+	var distance_to_target_anchor := self.get_only_anchor().distance_to(target_anchor.global_position)
 	var distance_to_home_anchor := self.get_only_anchor().distance_to(_holder_anchor.global_position)
 	#var distance_between_home_and_target_anchor := target_anchor.distance_to(_holder_anchor.global_position)
-	var target_t = clampf(distance_to_target_anchor, 0, EyePiedestal.INSTANCE.active_distance) / EyePiedestal.INSTANCE.active_distance
-	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, EyePiedestal.INSTANCE.active_distance) / EyePiedestal.INSTANCE.active_distance)
+	var target_t = clampf(distance_to_target_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance
+	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance)
 	var t = lerpf(home_t, target_t, distance_to_home_anchor / (distance_to_target_anchor + distance_to_home_anchor))
-	var scale_multiplier := lerpf(EyePiedestal.INSTANCE.max_scale, 1.0, t)
-	var new_scale := _original_scale * scale_multiplier
-	if new_scale.x > self.scale.x:
-		if get_position_difference().length() < 40.0: return
+	if _is_being_grabbed:
+		print("t: {0}".format([t]))
+	var new_scale := lerp(target_anchor.global_scale, _original_scale, t) as Vector2
+	var distance_from_active_anchor := get_position_difference().length()
+	var distance_from_the_cabinet := (_holder_anchor.global_position - self.get_only_anchor()).length()
+	if distance_from_active_anchor <40.0 and (self.get_parent() != _active_anchor.get_parent().get_parent()):
+		self.reparent(_active_anchor.get_parent().get_parent())
+	if new_scale.x > self.scale.x: #if we are very close to the cabinet, we don't want to increase our size
+		if distance_from_the_cabinet < 40.0: return
 	self.scale = new_scale
 	
 
@@ -35,9 +55,17 @@ func set_anchor(new_anchor : Node2D)->void:
 	_holder_anchor = new_anchor
 
 
-func on_drag_start()->void: pass
-func on_drag_end()->void: pass
+func on_drag_start()->void: 
+	self.reparent(get_tree().root)
+func on_drag_end()->void: 
+	var piedestal_anchor := _piedestal.get_anchor(self)
+	if piedestal_anchor.global_position.distance_to(self.global_position) < _piedestal.submit_distance:
+		_piedestal_anchor = piedestal_anchor
+	else:
+		_piedestal_anchor = null
+
+
 func get_position_difference()->Vector2: 
-	if _holder_anchor: return _holder_anchor.global_position - self.get_only_anchor() 
+	if _active_anchor: return _active_anchor.global_position - self.get_only_anchor() 
 	print("No holder anchor: {0}".format([self.name]))
 	return Vector2.ZERO

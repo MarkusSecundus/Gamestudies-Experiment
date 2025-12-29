@@ -10,10 +10,10 @@ radius = 23.0
 height = 100.0
 
 [node name="EyeHolder" type="Node2D"]
-modulate = Color(0.760999, 0.76099914, 0.76099914, 1)
 script = ExtResource("1_xfwt3")
 
 [node name="Visual" type="Node2D" parent="."]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 
 [node name="EyeHolderMain" type="Sprite2D" parent="Visual"]
 position = Vector2(2.0000153, 17.940014)

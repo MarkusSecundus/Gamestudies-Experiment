@@ -304,11 +304,256 @@ position = Vector2(436, 267)
 [node name="Irises1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(166, 462)
 
+[node name="Iris1" type="Node2D" parent="EyeHolders/Irises1"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris1"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris1/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises1/Iris1/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises1/Iris1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Iris2" type="Node2D" parent="EyeHolders/Irises1"]
+position = Vector2(1.0000002, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_1ns3k")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris2/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises1/Iris2/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises1/Iris2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Iris3" type="Node2D" parent="EyeHolders/Irises1"]
+position = Vector2(104.000015, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris3"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("14_a7pbh")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris3/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris3"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises1/Iris3/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises1/Iris3"]
+scale = Vector2(1.0000001, 1.0000001)
+
 [node name="Irises2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(471, 638)
 
+[node name="Iris4" type="Node2D" parent="EyeHolders/Irises2"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris4"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris4/Sprite"]
+visible = false
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises2/Iris4/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises2/Iris4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Iris5" type="Node2D" parent="EyeHolders/Irises2"]
+position = Vector2(1.0000002, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris5"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("16_7wwop")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris5/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises2/Iris5/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises2/Iris5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Iris6" type="Node2D" parent="EyeHolders/Irises2"]
+position = Vector2(104.000015, 52.999985)
+script = ExtResource("6_doyhq")
+type = 2
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris6"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14271499)
+texture = ExtResource("17_jcw2p")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris6/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris6"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Irises2/Iris6/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Irises2/Iris6"]
+scale = Vector2(1.0000001, 1.0000001)
+
 [node name="Eyebrows1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 96)
+
+[node name="Eyebrow1" type="Node2D" parent="EyeHolders/Eyebrows1"]
+position = Vector2(-97, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("2_cfq0f")
+region_enabled = true
+region_rect = Rect2(101, 245, 1062, 360)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow1/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eyebrow2" type="Node2D" parent="EyeHolders/Eyebrows1"]
+position = Vector2(1, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("8_o3jky")
+region_enabled = true
+region_rect = Rect2(121, 110, 492, 533)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow2/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eyebrow3" type="Node2D" parent="EyeHolders/Eyebrows1"]
+position = Vector2(104, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
+z_index = 500
+z_as_relative = false
+position = Vector2(2.0000134, 0)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("9_kp0ql")
+region_enabled = true
+region_rect = Rect2(163.99994, 233, 1015.1999, 416)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow3/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1482, 266)
@@ -316,52 +561,75 @@ position = Vector2(1482, 266)
 [node name="Pupils1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 465)
 
+[node name="Pupil1" type="Node2D" parent="EyeHolders/Pupils1"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil1"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_kp0ql")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil1/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil1"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Pupil2" type="Node2D" parent="EyeHolders/Pupils1"]
+position = Vector2(1.0000002, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_mkg2b")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil2/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil2"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Pupil3" type="Node2D" parent="EyeHolders/Pupils1"]
+position = Vector2(104.000015, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil3"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.199)
+texture = ExtResource("14_1ns3k")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil3"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil3/Holder"]
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil3"]
+scale = Vector2(1.0000001, 1.0000001)
+
 [node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1477, 644)
-
-[node name="BigEyeShowcase" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 783.0
-offset_top = 521.0
-offset_right = -544.19995
-offset_bottom = 42.0
-scale = Vector2(0.59539735, 0.59539735)
-mouse_filter = 2
-
-[node name="BigEye" type="Node2D" parent="BigEyeShowcase" node_paths=PackedStringArray("destination")]
-z_index = 500
-position = Vector2(321, 297)
-script = ExtResource("2_1wiy7")
-destination = NodePath("../../QuestionsBox/EyeDestination")
-color_distance_interval = Vector2(300, 40)
-
-[node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("2_cfq0f")
-
-[node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("13_u55b3")
-
-[node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("5_u55b3")
-
-[node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("5_kp0ql")
-
-[node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("4_o3jky")
 
 [node name="EyeShapes" type="Control" parent="."]
 visible = false
@@ -816,8 +1084,62 @@ script = ExtResource("1_u55b3")
 question_box = NodePath("../QuestionsBox")
 questions = ExtResource("36_u55b3")
 
-[node name="EyePiedestal" type="Sprite2D" parent="."]
+[node name="BigEyeShowcase" type="Control" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.45490196)
+layout_mode = 1
+anchor_right = 1.01
+anchor_bottom = 1.0
+offset_left = 790.0
+offset_top = 587.0
+offset_right = -537.19995
+offset_bottom = 108.0
+scale = Vector2(0.59539735, 0.59539735)
+mouse_filter = 2
+
+[node name="BigEye" type="Node2D" parent="BigEyeShowcase" node_paths=PackedStringArray("destination")]
+z_index = 500
+position = Vector2(321, 297)
+script = ExtResource("2_1wiy7")
+destination = NodePath("../../QuestionsBox/EyeDestination")
+color_distance_interval = Vector2(300, 40)
+
+[node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("9_kp0ql")
+
+[node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("13_u55b3")
+
+[node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("5_u55b3")
+
+[node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("13_mkg2b")
+
+[node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
+visible = false
+position = Vector2(-12.533447, 2.4665222)
+scale = Vector2(0.49291644, 0.49291644)
+texture = ExtResource("8_0ehpd")
+
+[node name="EyePiedestal" type="Node2D" parent="."]
 position = Vector2(966, 775.99994)
+script = ExtResource("43_2so2y")
+active_distance = 600.0
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal"]
 scale = Vector2(0.40101224, 0.40101218)
 texture = ExtResource("38_oiest")
 region_enabled = true
@@ -825,7 +1147,271 @@ region_rect = Rect2(1376.6321, 969.89624, 1085.3711, 1069.0906)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
 
-[node name="Anchor" type="Node2D" parent="EyePiedestal"]
+[node name="Anchors" type="Node2D" parent="EyePiedestal"]
+
+[node name="Generic" type="Node2D" parent="EyePiedestal/Anchors"]
+scale = Vector2(3.5934708, 3.5934703)
+
+[node name="Eyebrow1" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+position = Vector2(5, -73.99994)
+scale = Vector2(3.565646, 3.5656462)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow1"]
+modulate = Color(1, 1, 1, 0.5764706)
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("2_cfq0f")
+region_enabled = true
+region_rect = Rect2(101, 245, 1062, 360)
+
+[node name="Eyebrow2" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5058824)
+position = Vector2(-73, -87.99994)
+scale = Vector2(3.254721, 3.2547212)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("8_o3jky")
+region_enabled = true
+region_rect = Rect2(121, 110, 492, 533)
+
+[node name="Eyebrow3" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5137255)
+position = Vector2(10, -68.99994)
+scale = Vector2(3.5779417, 3.5779417)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow3"]
+z_index = 500
+z_as_relative = false
+position = Vector2(2.0000134, 0)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("9_kp0ql")
+region_enabled = true
+region_rect = Rect2(163.99994, 233, 1015.1999, 416)
+
+[node name="Iris1" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris1"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris1/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Iris2" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris2/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Iris3" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris3"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris3/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Iris4" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris4"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris4/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Iris5" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris5"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris5/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Iris6" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(-1, 35.00006)
+scale = Vector2(2.085726, 2.085726)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Iris6"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.14256983, 0.14256983)
+texture = ExtResource("13_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Lineart" type="Sprite2D" parent="EyePiedestal/Anchors/Iris6/Sprite"]
+z_index = 500
+z_as_relative = false
+texture = ExtResource("5_u55b3")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Pupil1" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.34509805)
+position = Vector2(-1.4564819, 34.99994)
+scale = Vector2(1.4787648, 1.478765)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil1"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_mkg2b")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Pupil2" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.34509805)
+position = Vector2(-1.4564819, 34.99994)
+scale = Vector2(1.4787648, 1.478765)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil2"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_mkg2b")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Pupil3" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.34509805)
+position = Vector2(-1.4564819, 34.99994)
+scale = Vector2(1.4787648, 1.478765)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil3"]
+visible = false
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_mkg2b")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Eye1" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.6901961)
+position = Vector2(14, 58.00006)
+scale = Vector2(3.5934756, 3.5934753)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye1"]
+modulate = Color(1, 1, 1, 0.6901961)
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("8_0ehpd")
+region_enabled = true
+region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
+
+[node name="Eye2" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.4862745)
+position = Vector2(13, 58.00006)
+scale = Vector2(3.5678344, 3.5678349)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye2"]
+z_index = 500
+z_as_relative = false
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("9_8wjpf")
+region_enabled = true
+region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
+
+[node name="Eye3" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+position = Vector2(9.999939, 42.00006)
+scale = Vector2(3.5805511, 3.5805516)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye3"]
+modulate = Color(1, 1, 1, 0.5686275)
+z_index = 500
+z_as_relative = false
+position = Vector2(2.0000134, -1.9999847)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("4_o3jky")
+region_enabled = true
+region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
 
 [node name="TextBubble" type="Control" parent="."]
 anchors_preset = 0
