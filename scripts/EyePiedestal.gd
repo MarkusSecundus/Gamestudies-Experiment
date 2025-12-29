@@ -35,5 +35,3 @@ func add_eye_part(part: EyePart)->void:
 func remove_eye_part(part: EyePart)->void:
 	if _chosen_eye_parts[part.type] == part:
 		_chosen_eye_parts[part.type] = null
-	else:
-		ErrorUtils.report_error("This should not happen - Removing eye part {0} that is not selected ({1} is)".format([part.name, _chosen_eye_parts[part.type]]))

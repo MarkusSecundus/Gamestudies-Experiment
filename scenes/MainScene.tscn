@@ -241,8 +241,6 @@ position = Vector2(-96.999985, 52.999985)
 script = ExtResource("6_doyhq")
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye1"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("8_0ehpd")
 region_enabled = true
@@ -263,8 +261,6 @@ position = Vector2(1.0000002, 52.999985)
 script = ExtResource("6_doyhq")
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye2"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_8wjpf")
 region_enabled = true
@@ -284,8 +280,6 @@ position = Vector2(104.000015, 52.999985)
 script = ExtResource("6_doyhq")
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
-z_index = 500
-z_as_relative = false
 position = Vector2(2.0000134, -1.9999847)
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("4_o3jky")
@@ -313,16 +307,12 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris1"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14256983)
 texture = ExtResource("13_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris1/Sprite"]
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -343,16 +333,12 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris2"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14256983)
 texture = ExtResource("13_1ns3k")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris2/Sprite"]
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -372,16 +358,12 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises1/Iris3"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14256983)
 texture = ExtResource("14_a7pbh")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises1/Iris3/Sprite"]
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -404,8 +386,6 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris4"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14256983)
 texture = ExtResource("5_u55b3")
 region_enabled = true
@@ -413,8 +393,6 @@ region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris4/Sprite"]
 visible = false
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -435,16 +413,12 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris5"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14256983)
 texture = ExtResource("16_7wwop")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris5/Sprite"]
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -464,16 +438,12 @@ script = ExtResource("6_doyhq")
 type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris6"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.14256983, 0.14271499)
 texture = ExtResource("17_jcw2p")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris6/Sprite"]
-z_index = 500
-z_as_relative = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
@@ -496,8 +466,6 @@ script = ExtResource("6_doyhq")
 type = 1
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("2_cfq0f")
 region_enabled = true
@@ -519,8 +487,6 @@ script = ExtResource("6_doyhq")
 type = 1
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.089100756, 0.089100756)
 texture = ExtResource("8_o3jky")
 region_enabled = true
@@ -541,8 +507,6 @@ script = ExtResource("6_doyhq")
 type = 1
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
-z_index = 500
-z_as_relative = false
 position = Vector2(2.0000134, 0)
 scale = Vector2(0.082, 0.08265571)
 texture = ExtResource("9_kp0ql")
@@ -570,8 +534,6 @@ script = ExtResource("6_doyhq")
 type = 3
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil1"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_kp0ql")
 region_enabled = true
@@ -593,8 +555,6 @@ script = ExtResource("6_doyhq")
 type = 3
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil2"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("13_mkg2b")
 region_enabled = true
@@ -615,8 +575,6 @@ script = ExtResource("6_doyhq")
 type = 3
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil3"]
-z_index = 500
-z_as_relative = false
 scale = Vector2(0.2, 0.199)
 texture = ExtResource("14_1ns3k")
 region_enabled = true
@@ -1138,6 +1096,7 @@ scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("8_0ehpd")
 
 [node name="EyePiedestal" type="Node2D" parent="."]
+z_index = 5
 position = Vector2(966, 775.99994)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
