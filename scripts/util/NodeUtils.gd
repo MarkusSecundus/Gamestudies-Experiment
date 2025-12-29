@@ -8,6 +8,12 @@ enum LOOKUP_FLAGS{
 	INCLUDE_INTERNAL=4
 }
 	
+	
+static func get_node_or_default(this: Node, path: NodePath, default: Node)->Node:
+	var ret := this.get_node_or_null(path)
+	if ret: return ret
+	return default
+	
 static func get_descendant_of_type(node: Node, child_type, flags := LOOKUP_FLAGS.RECURSIVE):
 		return get_child_of_type(node, child_type, flags | LOOKUP_FLAGS.RECURSIVE)
 

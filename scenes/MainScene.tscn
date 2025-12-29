@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=48 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -51,6 +51,9 @@ radius = 41.0
 [sub_resource type="Theme" id="Theme_i7ifx"]
 default_font = ExtResource("28_qavw1")
 default_font_size = 24
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7yh6i"]
+radius = 220.0091
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1138,6 +1141,11 @@ texture = ExtResource("8_0ehpd")
 position = Vector2(966, 775.99994)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
+
+[node name="Holder" type="Area2D" parent="EyePiedestal"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyePiedestal/Holder"]
+shape = SubResource("CircleShape2D_7yh6i")
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal"]
 scale = Vector2(0.40101224, 0.40101218)

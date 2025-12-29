@@ -1,5 +1,5 @@
 class_name EyePiedestal
-extends Node2D
+extends AbstractGrabbable
 
 
 static var INSTANCE : EyePiedestal
@@ -17,8 +17,12 @@ func get_anchor(eye_part: EyePart)->Node2D:
 	return _generic_anchor
 
 func _ready() -> void:
+	super._ready()
 	if INSTANCE: ErrorUtils.report_error("EyePiedestal already has active instance {0} while new instance {1} is being created!".format([INSTANCE, self]))
 	INSTANCE = self
+
+
+func can_grab()->bool: return _chosen_eye_parts.size() == 4 and DatastructUtils.all(_chosen_eye_parts.values(), func(e)->bool: return !!e)
 
 var _chosen_eye_parts : Dictionary[EyePart.PartType, EyePart] = {EyePart.PartType.EyeShape: null, EyePart.PartType.Eyebrow: null, EyePart.PartType.Iris: null, EyePart.PartType.Pupil: null}
 

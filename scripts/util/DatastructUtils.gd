@@ -71,3 +71,8 @@ static func fill_array_with(arr: Array, value: Variant, count: int)->Array:
 		arr[t] = value
 		t += 1
 	return arr
+
+static func all(arr, predicate: Callable)->bool:
+	for e in arr:
+		if not predicate.call(e): return false
+	return true
