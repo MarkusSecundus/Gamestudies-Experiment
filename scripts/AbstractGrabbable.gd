@@ -69,7 +69,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 func _on_area_2d_mouse_entered() -> void:
 	if not can_grab(): return
 	if not _try_consume_input(self): return
-	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"))
+	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), 0, Vector2(0, 30))
 
 
 func _on_area_2d_mouse_exited() -> void:

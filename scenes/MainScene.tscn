@@ -1645,10 +1645,22 @@ region_rect = Rect2(412, 598, 394, 394)
 [node name="Pupil4" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
 modulate = Color(1, 1, 1, 0.7137255)
+position = Vector2(0, 39.00006)
+scale = Vector2(1.8265033, 1.8265033)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil4"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_a7pbh")
+region_enabled = true
+region_rect = Rect2(527, 670, 149, 280)
+
+[node name="Pupil4-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.7137255)
 position = Vector2(-4, 39.00006)
 scale = Vector2(1.472696, 1.472696)
 
-[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil4"]
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil4-og"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("15_a7pbh")
 region_enabled = true
@@ -1658,9 +1670,21 @@ region_rect = Rect2(527, 670, 149, 280)
 visible = false
 modulate = Color(1, 1, 1, 0.52156866)
 position = Vector2(-5.415, 36)
-scale = Vector2(1.4649297, 1.4649297)
+scale = Vector2(1.509491, 1.509491)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil5"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_ye0jt")
+region_enabled = true
+region_rect = Rect2(474, 708, 243, 183)
+
+[node name="Pupil5-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.52156866)
+position = Vector2(-5.415, 36)
+scale = Vector2(1.4649297, 1.4649297)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil5-og"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("16_ye0jt")
 region_enabled = true
@@ -1670,9 +1694,21 @@ region_rect = Rect2(474, 708, 243, 183)
 visible = false
 modulate = Color(1, 1, 1, 0.5372549)
 position = Vector2(-3.755, 34.325)
-scale = Vector2(1.4618834, 1.4618834)
+scale = Vector2(2.174464, 2.334459)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil6"]
+scale = Vector2(0.2, 0.199)
+texture = ExtResource("17_7wwop")
+region_enabled = true
+region_rect = Rect2(493, 709, 217, 170)
+
+[node name="Pupil6-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5372549)
+position = Vector2(-3.755, 34.325)
+scale = Vector2(1.4618834, 1.4618834)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil6-og"]
 scale = Vector2(0.2, 0.199)
 texture = ExtResource("17_7wwop")
 region_enabled = true
