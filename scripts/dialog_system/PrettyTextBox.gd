@@ -12,7 +12,16 @@ extends Control
 
 @onready var _lbl : RichTextLabel = $Label 
 
+@export var _fade_in_duration : float = 1.0
+@export var _fade_out_duration : float = 1.0
+@export var _print_while_fading_in : bool = false
+
+var _is_faded_out: bool:
+	get: return (not self.visible) or (self.modulate.a == 0)
+var _og_modulate : Color
+
 func _ready() -> void:
+	_og_modulate = self.modulate
 	if print_on_start: print_text(_lbl.text)
 
 func _input(event: InputEvent) -> void:
@@ -32,6 +41,7 @@ func finish_printing_immediately()->void:
 			_tw = null
 			_lbl.visible_characters = -1
 			if _on_finished: _on_finished.call()
+			_on_finished = Callable()
 			on_printing_finished.emit()
 
 func _process(delta: float) -> void:
@@ -53,6 +63,9 @@ func print_text(text:String, on_finished : Callable = Callable(), start_characte
 	#print("B.visible chars: %d (%f), start: %d"%[_lbl.visible_characters, _lbl.visible_ratio, start_character_count])
 	_lbl.text = text + UNICODE_ZERO_WIDTH_SPACE
 	_lbl.visible_characters = start_character_count
+	if _is_faded_out:
+		if _print_while_fading_in: do_fade_in()
+		else: await do_fade_in()
 	#print("A.visible chars: %d (%f), start: %d"%[_lbl.visible_characters, _lbl.visible_ratio, start_character_count])
 	var total_chars := _lbl.get_total_character_count()
 	assert(start_character_count <= total_chars, "Requesting start_character_count={0} when there are only {1} chars to print (text: '{2}')".format([start_character_count, total_chars, text]))
@@ -72,3 +85,23 @@ func append_text(to_append: String, on_finished: Callable = Callable())->void:
 	var new_text :String = _lbl.text + to_append
 	var start_character_count :int = _lbl.get_total_character_count()
 	print_text(new_text, on_finished, start_character_count)
+
+func do_fade_in():
+	if is_printing_in_progress():
+		finish_printing_immediately()
+	if not self.visible:
+		self.modulate.a = 0.0
+	self.visible = true
+	self._tw = create_tween()
+	var tweener := _tw.tween_property(self, "modulate", _og_modulate, _fade_in_duration)
+	await tweener.finished
+	
+
+func do_fade_out():
+	if is_printing_in_progress():
+		finish_printing_immediately()
+	var target_modulate := self.modulate
+	target_modulate.a = 0.0
+	self._tw = create_tween()
+	var tweener := _tw.tween_property(self, "modulate", target_modulate, _fade_out_duration)
+	await tweener.finished

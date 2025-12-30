@@ -6,6 +6,7 @@ extends IDialogAction
 @export_multiline var text : String
 @export var append: bool = false
 @export var text_box_override : PrettyTextBox = null
+@export var do_fade_out_after : bool = false
 
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
@@ -18,8 +19,10 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 				if Input.is_action_just_pressed("SkipDialog"):
 					print("got an input event")
 					break
+		if do_fade_out_after:
+			await text_box.do_fade_out()
 		_default_perform(ctx, on_finished)
-	if append: text_box.append_text("\n" + text, on_printing_finished)
+	if append: text_box.append_text(text, on_printing_finished)
 	else: text_box.print_text(text, on_printing_finished)
 	
 	

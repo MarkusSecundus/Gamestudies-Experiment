@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=69 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -51,13 +51,21 @@
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="45_pwxld"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="46_cw1g3"]
 [ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="47_q5chl"]
+[ext_resource type="Texture2D" uid="uid://dha4qyrdl0r40" path="res://art/customers/customer2.png" id="47_x1s54"]
+[ext_resource type="Script" uid="uid://drxrnydk5u6ee" path="res://scripts/util/SignalProvider.gd" id="50_7tuqu"]
+[ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="51_fupde"]
 [ext_resource type="Script" uid="uid://e6ngriff8i3t" path="res://scripts/dialog_system/DialogJump.gd" id="52_xuwja"]
+[ext_resource type="Script" uid="uid://ba7h0my7t55g3" path="res://scripts/dialog_system/DialogWaitForSignal.gd" id="53_g8282"]
+[ext_resource type="Script" uid="uid://40dv6k8givff" path="res://scripts/dialog_system/simple_actions/DialogAction_ChangeVisibility.gd" id="54_e65ta"]
+[ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="54_ell2e"]
+[ext_resource type="Script" uid="uid://b6x07h8jlg25h" path="res://scripts/dialog_system/simple_actions/DialogActionTween.gd" id="55_pou4m"]
+[ext_resource type="Texture2D" uid="uid://cex4atcdcr2di" path="res://art/customers/customer1.png" id="58_ep2w0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ha8j"]
-size = Vector2(66, 112)
+size = Vector2(44, 75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuwja"]
 size = Vector2(182, 77)
@@ -68,7 +76,14 @@ height = 136.0
 
 [sub_resource type="Theme" id="Theme_i7ifx"]
 default_font = ExtResource("28_qavw1")
-default_font_size = 24
+default_font_size = 22
+
+[sub_resource type="Gradient" id="Gradient_ep2w0"]
+offsets = PackedFloat32Array(0.2923077, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x1s54"]
+gradient = SubResource("Gradient_ep2w0")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7yh6i"]
 radius = 220.0091
@@ -302,7 +317,7 @@ position = Vector2(2.0000134, -1.9999847)
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("4_o3jky")
 region_enabled = true
-region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
+region_rect = Rect2(-17, 6, 1331, 1281)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye3"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -799,22 +814,22 @@ position = Vector2(64, 360)
 script = ExtResource("21_5ha8j")
 
 [node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion"]
-position = Vector2(-1.0000153, -51)
-scale = Vector2(0.29938006, 0.29938006)
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
 texture = ExtResource("23_xuwja")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
 [node name="SelfAnchor" type="Node2D" parent="Decoration/Potion"]
-position = Vector2(-22, 0)
+position = Vector2(-31, 2)
 
 [node name="Right" type="Node2D" parent="Decoration/Potion/SelfAnchor"]
-position = Vector2(43, 0)
+position = Vector2(33, 0)
 
 [node name="Holder" type="Area2D" parent="Decoration/Potion"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder"]
-position = Vector2(0, -46)
+position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
 
 [node name="Mask" type="Node2D" parent="Decoration"]
@@ -1366,11 +1381,49 @@ position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("10_25dfr")
 
-[node name="EyePiedestal" type="Node2D" parent="."]
+[node name="Customers" type="Node2D" parent="."]
+
+[node name="Customer1" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(963.99994, 505)
+scale = Vector2(0.3453294, 0.34532946)
+texture = ExtResource("58_ep2w0")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
+
+[node name="Customer1" type="Sprite2D" parent="Customers/Customer1"]
+position = Vector2(5.5848575, 385.1395)
+rotation = -1.5390388
+scale = Vector2(1.3784109, 1037.5371)
+texture = SubResource("GradientTexture1D_x1s54")
+region_rect = Rect2(-47, 0, 303, 0)
+
+[node name="CustomerKnight" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(963.99994, 502)
+scale = Vector2(0.3453294, 0.34532946)
+texture = ExtResource("47_x1s54")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
+
+[node name="Customer1" type="Sprite2D" parent="Customers/CustomerKnight"]
+position = Vector2(5.5848575, 385.1395)
+rotation = -1.5390388
+scale = Vector2(1.3784109, 1037.5371)
+texture = SubResource("GradientTexture1D_x1s54")
+region_rect = Rect2(-47, 0, 303, 0)
+
+[node name="EyePiedestalDestination" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.4745098)
+position = Vector2(954, 385)
+scale = Vector2(0.2, 0.2)
+
+[node name="EyePiedestal" type="Node2D" parent="." node_paths=PackedStringArray("submit_destination")]
 z_index = 5
-position = Vector2(966, 775.99994)
+position = Vector2(966, 851)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
+submit_destination = NodePath("../EyePiedestalDestination")
 
 [node name="Holder" type="Area2D" parent="EyePiedestal"]
 
@@ -1795,13 +1848,15 @@ region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 694.0
-offset_top = 71.0
+offset_top = 16.0
 offset_right = 1242.0
-offset_bottom = 334.0
+offset_bottom = 279.0
 script = ExtResource("28_i7ifx")
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
+is_skippable = false
 
 [node name="Frame" type="NinePatchRect" parent="TextBubble"]
 layout_mode = 1
@@ -1837,10 +1892,114 @@ Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
 horizontal_alignment = 1
 visible_characters_behavior = 3
 
-[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
+[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
 script = ExtResource("45_pwxld")
+default_start = NodePath("Fn_Main")
 run_on_start = true
 default_text_box = NodePath("../TextBubble")
+
+[node name="EyeWasSubmittedSignal" type="Node" parent="DialogSystem"]
+script = ExtResource("50_7tuqu")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem"]
+script = ExtResource("51_fupde")
+
+[node name="Tutorial" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "[Tutorial]
+Assemble an eye by clicking on the different eye parts.
+When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
+do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="Text2" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="Tutorial2" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+script = ExtResource("46_cw1g3")
+text = "Hello, I am yet another tutorial customer.
+Please create whatever eye you like and give it to me.
+Real customers will follow right after."
+do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+text = "After what I did, my family will never look into my eyes.
+Please give me new ones, so that they forget.
+...so that I can forget."
+do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="Vain" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Vain"]
+script = ExtResource("46_cw1g3")
+text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
+Give me some new ones - ones that are more deserving of me."
+do_fade_out_after = null
+
+[node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem"]
+script = ExtResource("51_fupde")
+
+[node name="EnablePiedestalCollider" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("targets")]
+script = ExtResource("54_e65ta")
+targets = [NodePath("../../../EyePiedestal/Holder")]
+mode = 1
+
+[node name="WaitForSubmission" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("provider")]
+script = ExtResource("53_g8282")
+provider = NodePath("../../EyeWasSubmittedSignal")
+
+[node name="DisablePiedestalCollider" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("targets")]
+script = ExtResource("54_e65ta")
+targets = [NodePath("../../../EyePiedestal/Holder")]
+mode = 2
 
 [node name="test" type="Node" parent="DialogSystem"]
 script = ExtResource("47_q5chl")
@@ -1849,58 +2008,17 @@ condition_holds = false
 [node name="Text" type="Node" parent="DialogSystem/test"]
 script = ExtResource("46_cw1g3")
 text = "This is a piece of text"
+do_fade_out_after = null
 
 [node name="Text2" type="Node" parent="DialogSystem/test"]
 script = ExtResource("46_cw1g3")
 text = "More text"
 append = true
+do_fade_out_after = null
 
 [node name="Jump" type="Node" parent="DialogSystem/test" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("..")
-
-[node name="Tutorial" type="Node" parent="DialogSystem"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/Tutorial"]
-script = ExtResource("46_cw1g3")
-text = "[Tutorial]
-Assemble an eye by clicking on the different eye parts.
-When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
-
-[node name="Tutorial2" type="Node" parent="DialogSystem"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/Tutorial2"]
-script = ExtResource("46_cw1g3")
-text = "Hello, I am yet another tutorial customer.
-Please create whatever eye you like and give it to me.
-Real customers will follow right after."
-
-[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/NeedsToForgetWhatHeDid"]
-script = ExtResource("46_cw1g3")
-text = "After what I did, my family will never look into my eyes.
-Please give me new ones, so that they forget.
-...so that I can forget."
-
-[node name="LoyalKnight" type="Node" parent="DialogSystem"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/LoyalKnight"]
-script = ExtResource("46_cw1g3")
-text = "I lost my eyes serving my king and country.
-Please, help me so that I can ride into battle once more."
-
-[node name="Vain" type="Node" parent="DialogSystem"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/Vain"]
-script = ExtResource("46_cw1g3")
-text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
-Give me some new ones - ones that are more deserving of me."
 
 [connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
 [connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
@@ -2022,3 +2140,4 @@ Give me some new ones - ones that are more deserving of me."
 [connection signal="mouse_entered" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_exited"]
 [connection signal="pressed" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_pressed"]
+[connection signal="on_submitted" from="EyePiedestal" to="DialogSystem/EyeWasSubmittedSignal" method="do_emit"]
