@@ -795,7 +795,7 @@ scale = Vector2(1.0000001, 1.0000001)
 [node name="Decoration" type="Node2D" parent="."]
 
 [node name="Potion" type="Node2D" parent="Decoration"]
-position = Vector2(101, 815)
+position = Vector2(64, 360)
 script = ExtResource("21_5ha8j")
 
 [node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion"]
@@ -818,7 +818,7 @@ position = Vector2(0, -46)
 shape = SubResource("RectangleShape2D_5ha8j")
 
 [node name="Mask" type="Node2D" parent="Decoration"]
-position = Vector2(287, 805)
+position = Vector2(544, 188)
 script = ExtResource("21_5ha8j")
 
 [node name="DecorMask" type="Sprite2D" parent="Decoration/Mask"]
@@ -841,7 +841,7 @@ position = Vector2(-20, -28.5)
 shape = SubResource("RectangleShape2D_xuwja")
 
 [node name="Glasses" type="Node2D" parent="Decoration"]
-position = Vector2(487, 805)
+position = Vector2(1756, 1063)
 script = ExtResource("21_5ha8j")
 
 [node name="DecorGlasses" type="Sprite2D" parent="Decoration/Glasses"]
@@ -1318,6 +1318,7 @@ question_box = NodePath("../QuestionsBox")
 questions = ExtResource("36_u55b3")
 
 [node name="BigEyeShowcase" type="Control" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.45490196)
 layout_mode = 1
 anchor_right = 1.01
@@ -1361,10 +1362,9 @@ scale = Vector2(0.49291644, 0.49291644)
 texture = ExtResource("17_7wwop")
 
 [node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
 position = Vector2(-12.533447, 2.4665222)
 scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("4_o3jky")
+texture = ExtResource("10_25dfr")
 
 [node name="EyePiedestal" type="Node2D" parent="."]
 z_index = 5
