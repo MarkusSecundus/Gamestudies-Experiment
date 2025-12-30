@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=71 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -52,6 +52,8 @@
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="46_cw1g3"]
 [ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="47_q5chl"]
 [ext_resource type="Texture2D" uid="uid://dha4qyrdl0r40" path="res://art/customers/customer2.png" id="47_x1s54"]
+[ext_resource type="Texture2D" uid="uid://c0717b17l4guh" path="res://art/customers/custom-questionmark.png" id="48_48gc8"]
+[ext_resource type="Texture2D" uid="uid://crey10du5l7ha" path="res://art/customers/custom-questionmark-dot.png" id="49_wu3oq"]
 [ext_resource type="Script" uid="uid://drxrnydk5u6ee" path="res://scripts/util/SignalProvider.gd" id="50_7tuqu"]
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="51_fupde"]
 [ext_resource type="Script" uid="uid://e6ngriff8i3t" path="res://scripts/dialog_system/DialogJump.gd" id="52_xuwja"]
@@ -1413,6 +1415,21 @@ scale = Vector2(1.3784109, 1037.5371)
 texture = SubResource("GradientTexture1D_x1s54")
 region_rect = Rect2(-47, 0, 303, 0)
 
+[node name="CustomerQuestionMark" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(964.00006, 442)
+scale = Vector2(0.24910125, 0.2491013)
+texture = ExtResource("48_48gc8")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
+
+[node name="CustomerQuestionMark2" type="Sprite2D" parent="Customers/CustomerQuestionMark"]
+position = Vector2(31.40895, 628.18195)
+scale = Vector2(0.8647507, 0.86475074)
+texture = ExtResource("49_wu3oq")
+region_enabled = true
+region_rect = Rect2(1786, 1399, 319, 310)
+
 [node name="EyePiedestalDestination" type="Node2D" parent="."]
 modulate = Color(1, 1, 1, 0.4745098)
 position = Vector2(954, 385)
@@ -2135,7 +2152,7 @@ script = ExtResource("47_q5chl")
 
 [node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
 end_value = Color(1, 1, 1, 1)
 duration = 2.0
@@ -2160,7 +2177,7 @@ do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
 end_value = Color(1, 1, 1, 0)
 duration = 2.0
