@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://blt81tg7f3baf"]
+[gd_scene load_steps=4 format=3 uid="uid://blt81tg7f3baf"]
 
 [ext_resource type="Script" uid="uid://bjjwnvcm03eos" path="res://scripts/sound/SoundManager.gd" id="1_p1llj"]
 [ext_resource type="Script" uid="uid://b0ata5kuqqdho" path="res://scripts/sound/SoundtrackPart.gd" id="1_rupev"]
+[ext_resource type="AudioStream" uid="uid://daklqr1vmakce" path="res://art/sounds/music/main-track.mp3" id="2_7h8s6"]
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_p1llj")
@@ -9,7 +10,11 @@ script = ExtResource("1_p1llj")
 [node name="SoundtrackLayers" type="Node" parent="."]
 
 [node name="Layer0" type="AudioStreamPlayer" parent="SoundtrackLayers"]
+stream = ExtResource("2_7h8s6")
+volume_db = -4.793
+autoplay = true
 script = ExtResource("1_rupev")
+decibels = Array[float]([0.0])
 
 [node name="Layer1" type="AudioStreamPlayer" parent="SoundtrackLayers"]
 script = ExtResource("1_rupev")

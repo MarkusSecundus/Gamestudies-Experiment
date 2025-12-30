@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="GrabbableOrderingConfiguration" load_steps=5 format=3 uid="uid://dlw4gfsgrs6id"]
+
+[ext_resource type="Script" uid="uid://c518pwdpvmpeo" path="res://scripts/GrabbableOrderingConfiguration.gd" id="1_twos7"]
+[ext_resource type="Script" uid="uid://c2cvcg2aq7xlp" path="res://scripts/OrderingConfiguration.gd" id="2_ud437"]
+
+[sub_resource type="Resource" id="Resource_twos7"]
+script = ExtResource("2_ud437")
+z_index = 54
+z_as_relative = false
+metadata/_custom_type_script = "uid://c2cvcg2aq7xlp"
+
+[sub_resource type="Resource" id="Resource_ud437"]
+script = ExtResource("2_ud437")
+z_index = 4
+metadata/_custom_type_script = "uid://c2cvcg2aq7xlp"
+
+[resource]
+script = ExtResource("1_twos7")
+when_stationary = SubResource("Resource_ud437")
+when_moving = SubResource("Resource_twos7")
+metadata/_custom_type_script = "uid://c518pwdpvmpeo"

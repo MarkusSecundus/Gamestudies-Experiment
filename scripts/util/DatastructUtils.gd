@@ -15,24 +15,30 @@ static func _default_compare_lt(a,b): return a<b;
 static func find_min(list, selector: Callable, compare_lt: Callable = Callable()):
 	if !compare_lt: compare_lt = func(a,b): return a<b;
 	var is_first_iteration := true;
-	var min = null;
+	var minimum = null;
 	var min_comparable = null;
 	
 	for val in list:
 		var comparable = selector.call(val);
 		if is_first_iteration || compare_lt.call(comparable, min_comparable):
-			min = val;
+			minimum = val;
 			min_comparable = comparable;
 		is_first_iteration = false
 	
-	return min;
+	return minimum;
 
 class Wrapper:
 	var value;
 	
+	@warning_ignore("shadowed_variable")
 	func _init(value)->void:
 		self.value = value
 
+
+static func remove_interval(list, begin_idx_inclusive:int, end_idx_exclusive: int):
+	for i in Vector3i(end_idx_exclusive-1, begin_idx_inclusive-1, -1):
+		list.remove_at(i)
+	return list
 
 static func modify_in_place(list, modificator : Callable):
 	var i : int = 0
@@ -65,3 +71,8 @@ static func fill_array_with(arr: Array, value: Variant, count: int)->Array:
 		arr[t] = value
 		t += 1
 	return arr
+
+static func all(arr, predicate: Callable)->bool:
+	for e in arr:
+		if not predicate.call(e): return false
+	return true

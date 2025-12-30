@@ -5,7 +5,6 @@ extends Node
 
 @export var questions : QuestionsList
 
-#@onready var _questions := _load_questions(_questions_path)
 @onready var _questions : PackedStringArray = self.questions.questions
 
 var _active_question_idx : int = -1
@@ -38,23 +37,3 @@ func record_answers(answer:Answer)->void:
 	f.seek_end()
 	f.store_line(to_append)
 	f.close()
-
-static func _load_questions(path: String)->PackedStringArray:
-	var ret : PackedStringArray = []
-	var current : String = ""
-	var f := FileAccess.open(path, FileAccess.READ)
-	
-	while not f.eof_reached():
-		var line := f.get_line()
-		if line.length() > 0 and line[0] == "-": 
-			if not current.strip_edges().is_empty():
-				ret.append(current)
-				current = ""
-		else:
-			current += "\n" + line
-	if not current.strip_edges().is_empty():
-		ret.append(current)
-		current = ""
-		
-	f.close()
-	return ret
