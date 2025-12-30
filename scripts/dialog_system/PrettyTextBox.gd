@@ -38,13 +38,22 @@ func _process(delta: float) -> void:
 	if not self.visible: return
 	#print("visible chars: %d (%f)"%[_lbl.visible_characters, _lbl.visible_ratio])
 
+const UNICODE_ZERO_WIDTH_SPACE = "\u200B"
 
 func print_text(text:String, on_finished : Callable = Callable(), start_character_count: int = 0):
 	if is_printing_in_progress():
 		ErrorUtils.report_error("Printing new text while printing process is still running (old: '{0}', new: '{1}')".format([_lbl.text, text]))
 		finish_printing_immediately()
-	_lbl.text = text
+	if start_character_count > 0:
+		while _lbl.visible_ratio >= 1.0:
+			#print("ratio is %f"%_lbl.visible_ratio)
+			_lbl.text = _lbl.text + UNICODE_ZERO_WIDTH_SPACE
+			_lbl.visible_characters = start_character_count - 1
+			await get_tree().process_frame
+	#print("B.visible chars: %d (%f), start: %d"%[_lbl.visible_characters, _lbl.visible_ratio, start_character_count])
+	_lbl.text = text + UNICODE_ZERO_WIDTH_SPACE
 	_lbl.visible_characters = start_character_count
+	#print("A.visible chars: %d (%f), start: %d"%[_lbl.visible_characters, _lbl.visible_ratio, start_character_count])
 	var total_chars := _lbl.get_total_character_count()
 	assert(start_character_count <= total_chars, "Requesting start_character_count={0} when there are only {1} chars to print (text: '{2}')".format([start_character_count, total_chars, text]))
 	_on_finished = on_finished
