@@ -95,6 +95,7 @@ func do_fade_in():
 	self._tw = create_tween()
 	var tweener := _tw.tween_property(self, "modulate", _og_modulate, _fade_in_duration)
 	await tweener.finished
+	self._tw = null
 	
 
 func do_fade_out():
@@ -105,3 +106,4 @@ func do_fade_out():
 	self._tw = create_tween()
 	var tweener := _tw.tween_property(self, "modulate", target_modulate, _fade_out_duration)
 	await tweener.finished
+	self._tw = null

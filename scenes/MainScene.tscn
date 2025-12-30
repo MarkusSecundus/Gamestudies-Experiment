@@ -1426,6 +1426,7 @@ active_distance = 600.0
 submit_destination = NodePath("../EyePiedestalDestination")
 
 [node name="Holder" type="Area2D" parent="EyePiedestal"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyePiedestal/Holder"]
 shape = SubResource("CircleShape2D_7yh6i")
