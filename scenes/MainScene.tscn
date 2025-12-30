@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=58 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -32,6 +32,10 @@
 [ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
+[ext_resource type="Script" uid="uid://nehem5xv6gy5" path="res://scripts/Grabbable.gd" id="21_5ha8j"]
+[ext_resource type="Texture2D" uid="uid://yvkpahw0lfte" path="res://art/shop/decor/decor_glasses.png" id="21_j2mks"]
+[ext_resource type="Texture2D" uid="uid://uw4vjgv02q4o" path="res://art/shop/decor/decor_mask.png" id="22_5ha8j"]
+[ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="23_xuwja"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="28_i7ifx"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="29_kwqb8"]
@@ -50,6 +54,16 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ha8j"]
+size = Vector2(66, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuwja"]
+size = Vector2(182, 77)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ha8j"]
+radius = 43.0
+height = 136.0
 
 [sub_resource type="Theme" id="Theme_i7ifx"]
 default_font = ExtResource("28_qavw1")
@@ -594,6 +608,78 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1477, 644)
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Potion" type="Node2D" parent="Decoration"]
+position = Vector2(101, 815)
+script = ExtResource("21_5ha8j")
+
+[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion"]
+position = Vector2(-1.0000153, -51)
+scale = Vector2(0.29938006, 0.29938006)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion"]
+position = Vector2(-22, 0)
+
+[node name="Right" type="Node2D" parent="Decoration/Potion/SelfAnchor"]
+position = Vector2(43, 0)
+
+[node name="Holder" type="Area2D" parent="Decoration/Potion"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder"]
+position = Vector2(0, -46)
+shape = SubResource("RectangleShape2D_5ha8j")
+
+[node name="Mask" type="Node2D" parent="Decoration"]
+position = Vector2(287, 805)
+script = ExtResource("21_5ha8j")
+
+[node name="DecorMask" type="Sprite2D" parent="Decoration/Mask"]
+position = Vector2(-19.999634, -27.000061)
+scale = Vector2(0.26437035, 0.26437035)
+texture = ExtResource("22_5ha8j")
+region_enabled = true
+region_rect = Rect2(567, 1203, 739, 342)
+
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Mask"]
+position = Vector2(-88, 0)
+
+[node name="Right" type="Node2D" parent="Decoration/Mask/SelfAnchor"]
+position = Vector2(144, 0)
+
+[node name="Holder" type="Area2D" parent="Decoration/Mask"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Mask/Holder"]
+position = Vector2(-20, -28.5)
+shape = SubResource("RectangleShape2D_xuwja")
+
+[node name="Glasses" type="Node2D" parent="Decoration"]
+position = Vector2(487, 805)
+script = ExtResource("21_5ha8j")
+
+[node name="DecorGlasses" type="Sprite2D" parent="Decoration/Glasses"]
+position = Vector2(1, -35.00006)
+scale = Vector2(0.31658533, 0.31658533)
+texture = ExtResource("21_j2mks")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Glasses"]
+position = Vector2(-48, 6)
+
+[node name="Right" type="Node2D" parent="Decoration/Glasses/SelfAnchor"]
+position = Vector2(100, 0)
+
+[node name="Holder" type="Area2D" parent="Decoration/Glasses"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Glasses/Holder"]
+position = Vector2(0, -33)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_5ha8j")
 
 [node name="EyeShapes" type="Control" parent="."]
 visible = false
