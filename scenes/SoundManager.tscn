@@ -11,7 +11,7 @@ script = ExtResource("1_p1llj")
 
 [node name="Layer0" type="AudioStreamPlayer" parent="SoundtrackLayers"]
 stream = ExtResource("2_7h8s6")
-volume_db = -80.0
+volume_db = -3.851
 autoplay = true
 script = ExtResource("1_rupev")
 decibels = Array[float]([0.0])
