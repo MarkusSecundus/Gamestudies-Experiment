@@ -1,5 +1,5 @@
 class_name PrettyTextBox
-extends Node
+extends Control
 
 
 @export var seconds_per_char := 0.05
@@ -34,25 +34,30 @@ func finish_printing_immediately()->void:
 			if _on_finished: _on_finished.call()
 			on_printing_finished.emit()
 
-func print_text(text:String, on_finished : Callable = Callable(), start_character_count: int = 0)->void:
+func _process(delta: float) -> void:
+	if not self.visible: return
+	#print("visible chars: %d (%f)"%[_lbl.visible_characters, _lbl.visible_ratio])
+
+
+func print_text(text:String, on_finished : Callable = Callable(), start_character_count: int = 0):
 	if is_printing_in_progress():
 		ErrorUtils.report_error("Printing new text while printing process is still running (old: '{0}', new: '{1}')".format([_lbl.text, text]))
 		finish_printing_immediately()
 	_lbl.text = text
 	_lbl.visible_characters = start_character_count
 	var total_chars := _lbl.get_total_character_count()
-	if start_character_count > total_chars:
-		ErrorUtils.report_error("Requesting start_character_count={0} when there are only {1} chars to print (text: '{2}')".format([start_character_count, total_chars, text]))
+	assert(start_character_count <= total_chars, "Requesting start_character_count={0} when there are only {1} chars to print (text: '{2}')".format([start_character_count, total_chars, text]))
 	_on_finished = on_finished
 	_tw = create_tween()
-	_tw.tween_method(func(i: int): 
+	var tweener := _tw.tween_method(func(i: int): 
 		_lbl.visible_characters = i
 		if randf() < char_sound_chance:
 			SoundManager.PlaySound(sounds_per_char.pick_random(), randf_range(sound_pitch_range.x, sound_pitch_range.y))
-		if i == total_chars:
-			if _on_finished: _on_finished.call()
-			on_printing_finished.emit()
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
+	await tweener.finished
+	_tw = null
+	if _on_finished: _on_finished.call()
+	on_printing_finished.emit()
 
 func append_text(to_append: String, on_finished: Callable = Callable())->void:
 	var new_text :String = _lbl.text + to_append

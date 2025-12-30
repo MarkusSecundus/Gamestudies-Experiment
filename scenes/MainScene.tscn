@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=51 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
-[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/old/PrettyTextBox.gd" id="28_i7ifx"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="28_i7ifx"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="29_kwqb8"]
 [ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="30_y15d6"]
@@ -44,6 +44,9 @@
 [ext_resource type="PackedScene" uid="uid://dieqi7fura551" path="res://prefabs/eye_holder.tscn" id="39_f4jp2"]
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="44_7yh6i"]
+[ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="45_pwxld"]
+[ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="46_cw1g3"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="47_q5chl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
@@ -1386,7 +1389,6 @@ offset_right = 1242.0
 offset_bottom = 334.0
 script = ExtResource("28_i7ifx")
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
-print_on_start = true
 
 [node name="Frame" type="NinePatchRect" parent="TextBubble"]
 layout_mode = 1
@@ -1421,6 +1423,54 @@ text = "
 Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
 horizontal_alignment = 1
 visible_characters_behavior = 3
+
+[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
+script = ExtResource("45_pwxld")
+run_on_start = true
+default_text_box = NodePath("../TextBubble")
+
+[node name="Tutorial1" type="Node" parent="DialogSystem"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Tutorial1"]
+script = ExtResource("46_cw1g3")
+text = "[Tutorial]
+Assemble an eye by clicking on the different eye parts.
+When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
+
+[node name="Tutorial2" type="Node" parent="DialogSystem"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Tutorial2"]
+script = ExtResource("46_cw1g3")
+text = "Hello, I am yet another tutorial customer.
+Please create whatever eye you like and give it to me.
+Real customers will follow right after."
+
+[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+text = "After what I did, my family will never look into my eyes.
+Please give me new ones, so that they forget.
+...so that I can forget."
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+
+[node name="Vain" type="Node" parent="DialogSystem"]
+script = ExtResource("47_q5chl")
+
+[node name="Text" type="Node" parent="DialogSystem/Vain"]
+script = ExtResource("46_cw1g3")
+text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
+Give me some new ones - ones that are more deserving of me."
 
 [connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
 [connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]

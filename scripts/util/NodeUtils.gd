@@ -128,17 +128,51 @@ static func get_instance_of_indices(arr: Array, child_type, ret : PackedInt32Arr
 		i += 1
 	return ret
 	
+static func is_the_only_selected_node(node: Node)->bool:
+	var selection := EditorInterface.get_selection().get_selected_nodes()
+	return selection.size() == 1 and selection[0] == node
+	
+static func get_selected_nodes_of_type(type: Variant, ret : Array = []):
+	for n in EditorInterface.get_selection().get_selected_nodes():
+		if is_instance_of(n, type):
+			ret.append(n)
+	return ret
+
+static func set_selection(nodes: Array[Node])->void:
+	var selection := EditorInterface.get_selection()
+	selection.clear()
+	for n in nodes:
+		selection.add_node(n)
+
 	
 static var _counter: int = 0;
 static func get_unique_id()->int: 
 	_counter += 1;
 	return _counter;
 
+static func instantiate_child_by_type(parent: Node, type: Variant)->Node:
+	var ret :Node = type.new()
+	parent.add_child(ret)
+	ret.owner = parent.get_tree().edited_scene_root
+	return ret
+
 static func instantiate_child(parent: Node, prefab: Resource)->Node:
 	var ret :Node = prefab.instantiate()
 	parent.add_child(ret)
 	ret.owner = parent.get_tree().edited_scene_root
 	return ret
+
+static func instantiate_child_and_select(parent: Node, prefab: Resource, name: String)->Node:
+	var child := instantiate_child(parent, prefab)
+	child.name = name
+	NodeUtils.set_selection([child])
+	return child
+
+static func instantiate_child_by_type_and_select(parent: Node, type: Variant, name: String)->Node:
+	var child := instantiate_child_by_type(parent, type)
+	child.name = name
+	NodeUtils.set_selection([child])
+	return child
 
 
 static func try_send_message_to_typed_ancestor(this: Node, ancestor_type, message_name: String, arguments: Array):
@@ -150,3 +184,14 @@ static func try_send_message_to_ancestor(this: Node, message_name: String, argum
 	var parent:Node = NodeUtils.get_ancestor_by_predicate(this.get_parent(), func(an:Node)->bool: return an.has_method(message_name))
 	if ! parent: return null
 	return parent.callv(message_name, arguments) 
+
+
+static func get_full_name(this : Node, separator : String = "::", is_stop: Callable = Callable())->String:
+	var ret : Array[String] = []
+	var node : Node= this
+	var tree_root := this.get_tree().edited_scene_root if Engine.is_editor_hint() else this.get_tree().root
+	while (node != null) and (node != tree_root) and (not is_stop or is_stop.call(node)):
+		ret.append(node.name)
+		node = node.get_parent()
+	ret.reverse()
+	return DatastructUtils.string_concat(ret, "::")

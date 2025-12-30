@@ -28,6 +28,7 @@ static func find_min(list, selector: Callable, compare_lt: Callable = Callable()
 	return minimum;
 
 class Wrapper:
+	extends RefCounted
 	var value;
 	
 	@warning_ignore("shadowed_variable")

@@ -4,5 +4,10 @@ extends Node
 
 @export var run: bool:
 	set(_val):
-		var arr : Dictionary[int, String] = {1:"abc", 2:"FDDD", 41: "Toto je text!"}		
-		for i in arr.values(): print(i)
+		var i := DatastructUtils.Wrapper.new(10)
+		var c : Callable = func(): 
+			i.value += 1
+			print(i.value)
+		c.call()
+		c.call()
+		c.call()
