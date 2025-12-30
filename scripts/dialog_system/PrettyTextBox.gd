@@ -71,12 +71,12 @@ func print_text(text:String, on_finished : Callable = Callable(), start_characte
 	assert(start_character_count <= total_chars, "Requesting start_character_count={0} when there are only {1} chars to print (text: '{2}')".format([start_character_count, total_chars, text]))
 	_on_finished = on_finished
 	_tw = create_tween()
-	var tweener := _tw.tween_method(func(i: int): 
+	_tw.tween_method(func(i: int): 
 		_lbl.visible_characters = i
 		if randf() < char_sound_chance:
 			SoundManager.PlaySound(sounds_per_char.pick_random(), randf_range(sound_pitch_range.x, sound_pitch_range.y))
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
-	await tweener.finished
+	await _tw.finished
 	_tw = null
 	if _on_finished: _on_finished.call()
 	on_printing_finished.emit()
@@ -93,8 +93,8 @@ func do_fade_in():
 		self.modulate.a = 0.0
 	self.visible = true
 	self._tw = create_tween()
-	var tweener := _tw.tween_property(self, "modulate", _og_modulate, _fade_in_duration)
-	await tweener.finished
+	_tw.tween_property(self, "modulate", _og_modulate, _fade_in_duration)
+	await _tw.finished
 	self._tw = null
 	
 
@@ -104,6 +104,6 @@ func do_fade_out():
 	var target_modulate := self.modulate
 	target_modulate.a = 0.0
 	self._tw = create_tween()
-	var tweener := _tw.tween_property(self, "modulate", target_modulate, _fade_out_duration)
-	await tweener.finished
+	_tw.tween_property(self, "modulate", target_modulate, _fade_out_duration)
+	await _tw.finished
 	self._tw = null

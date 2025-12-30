@@ -1799,7 +1799,7 @@ region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
 [node name="Eye3" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
-position = Vector2(9.999939, 42.00006)
+position = Vector2(-1, -16.000008)
 scale = Vector2(3.5805511, 3.5805516)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye3"]
@@ -1810,7 +1810,7 @@ position = Vector2(2.0000134, -1.9999847)
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("4_o3jky")
 region_enabled = true
-region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
+region_rect = Rect2(-17, 6, 1331, 1281)
 
 [node name="Eye4" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
@@ -1929,14 +1929,32 @@ do_fade_out_after = null
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="Text2" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 append = true
 do_fade_out_after = true
 
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
 [node name="Tutorial2" type="Node" parent="DialogSystem/Fn_Main"]
 script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
@@ -1949,21 +1967,32 @@ do_fade_out_after = null
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="LoyalKnight" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("47_q5chl")
-
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
-text = "I lost my eyes serving my king and country.
-Please, help me so that I can ride into battle once more."
-do_fade_out_after = null
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
-script = ExtResource("54_ell2e")
-callee = NodePath("../../../Fn_HandleEyeSubmittion")
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
 
 [node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem/Fn_Main"]
 script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("46_cw1g3")
@@ -1976,14 +2005,390 @@ do_fade_out_after = null
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
 [node name="Vain" type="Node" parent="DialogSystem/Fn_Main"]
 script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/Vain"]
 script = ExtResource("46_cw1g3")
 text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
 Give me some new ones - ones that are more deserving of me."
 do_fade_out_after = null
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Vain"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Gambler" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
+script = ExtResource("46_cw1g3")
+text = "I lost my left eye in a game of dice.
+So... which of these are currently on sale?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Warlock" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+text = "Hi, you won't believe it, this time I lost both my eyes playing cards with the mad god Azathoth himself (lol).
+So, what eyes have you got in stock?
+Get me some powerful ones."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="PoorPeasant" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+text = "Please, help me!
+
+I can't feed my family if I can't even see the turnip growing on my little field."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="BookEnjoyer" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Reading books is my whole life.
+But now, my eyes are failing me.
+Is there possibly a chance you could save me from that future?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="FormerVizier" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
+script = ExtResource("46_cw1g3")
+text = "I was once the grand vizier.
+Then the sultan decided I was becoming too powerful - he gouged my eyes and banished me.
+With your help, I will finally get my revenge."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="EyeObsessed" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed"]
+script = ExtResource("46_cw1g3")
+text = "Eyes, eyes, eyes, EYES, EEEYYYEEESSS...
+.............................
+I NEED MORE EYES!!!!!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Scientist" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
+script = ExtResource("46_cw1g3")
+text = "Yes, these look like fine specimens.
+Please, have 500 kg of these eye samples delivered to this address by next monday.
+The University will of course compensate you generously for your service."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Twoflower" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
+script = ExtResource("46_cw1g3")
+text = "Oh my goodness, are these actual eyes?!
+My colleagues at the bank won't believe this, it will be the bestest souvenir!
+
+Also could we possibly get a photograph together, pretty please?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
 
 [node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem"]
 script = ExtResource("51_fupde")
