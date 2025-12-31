@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dieqi7fura551"]
+[gd_scene load_steps=7 format=3 uid="uid://dieqi7fura551"]
 
 [ext_resource type="Texture2D" uid="uid://5u4p88silywj" path="res://art/shop/eye_holder/eye_holder_main.png" id="1_vac4u"]
 [ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_xfwt3"]
 [ext_resource type="Texture2D" uid="uid://bjiuj3dlrodj4" path="res://art/shop/eye_holder/eye_holder_handle.png" id="2_xfwt3"]
+[ext_resource type="Texture2D" uid="uid://7tb6b7kx1nw8" path="res://art/shop/eye_holder/eye_holder_handle-outline.png" id="4_v2h6w"]
 [ext_resource type="Script" uid="uid://cuko36hm8usx2" path="res://scripts/test.gd" id="4_xb2x5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfwt3"]
@@ -13,9 +14,9 @@ height = 100.0
 script = ExtResource("1_xfwt3")
 
 [node name="Visual" type="Node2D" parent="."]
-modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 
 [node name="EyeHolderMain" type="Sprite2D" parent="Visual"]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
 texture = ExtResource("1_vac4u")
@@ -23,11 +24,20 @@ region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
 [node name="EyeHolderHandle" type="Sprite2D" parent="Visual"]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
 texture = ExtResource("2_xfwt3")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
+
+[node name="Outline" type="Sprite2D" parent="Visual"]
+visible = false
+position = Vector2(2, -32)
+scale = Vector2(0.56, 0.5574567)
+texture = ExtResource("4_v2h6w")
+region_enabled = true
+region_rect = Rect2(882, 641, 173, 61)
 
 [node name="ContentAnchors" type="Node2D" parent="."]
 script = ExtResource("4_xb2x5")

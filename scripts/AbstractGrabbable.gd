@@ -4,6 +4,8 @@ extends Node2D
 @onready var _anchor_left : Node2D = NodeUtils.get_node_or_default(self, "SelfAnchor", self)
 @onready var _anchor_right : Node2D = self.get_node_or_null("SelfAnchor/Right")
 
+@onready var _outline : Node2D = NodeUtils.get_node_or_default(self, "Outline", self.get_node_or_null("Visual/Outline"))
+
 func get_only_anchor()->Vector2: return get_left_anchor()
 func get_left_anchor()->Vector2: return _anchor_left.global_position
 func get_right_anchor()->Vector2: return _anchor_right.global_position
@@ -67,12 +69,14 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		
 
 func _on_area_2d_mouse_entered() -> void:
+	if _outline: _outline.visible = true
 	if not can_grab(): return
 	if not _try_consume_input(self): return
 	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), 0, Vector2(0, 30))
 
 
 func _on_area_2d_mouse_exited() -> void:
+	if _outline: _outline.visible = false
 	if not _try_consume_input(self): return
 	if not _is_being_grabbed:
 		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))

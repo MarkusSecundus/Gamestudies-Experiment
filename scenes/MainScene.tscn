@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=71 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -41,6 +41,9 @@
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="31_u55b3"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="32_wsqty"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
+[ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="33_pou4m"]
+[ext_resource type="Texture2D" uid="uid://bj0llke1bgq4e" path="res://art/shop/decor/decor_mask-outline.png" id="35_48gc8"]
+[ext_resource type="Texture2D" uid="uid://bo0pisnk7aegw" path="res://art/shop/decor/decor_glasses-outline.png" id="37_wu3oq"]
 [ext_resource type="Texture2D" uid="uid://nny5p5oxacxb" path="res://art/shop/eye_piedestal.png" id="38_oiest"]
 [ext_resource type="PackedScene" uid="uid://dieqi7fura551" path="res://prefabs/eye_holder.tscn" id="39_f4jp2"]
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
@@ -819,6 +822,14 @@ texture = ExtResource("23_xuwja")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
+[node name="Outline" type="Sprite2D" parent="Decoration/Potion"]
+visible = false
+position = Vector2(-12, -27.000013)
+scale = Vector2(0.3284826, 0.3284826)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
 [node name="SelfAnchor" type="Node2D" parent="Decoration/Potion"]
 position = Vector2(-31, 2)
 
@@ -842,6 +853,14 @@ texture = ExtResource("22_5ha8j")
 region_enabled = true
 region_rect = Rect2(567, 1203, 739, 342)
 
+[node name="Outline" type="Sprite2D" parent="Decoration/Mask"]
+visible = false
+position = Vector2(-18.075, -29.47)
+scale = Vector2(0.26437035, 0.26437035)
+texture = ExtResource("35_48gc8")
+region_enabled = true
+region_rect = Rect2(503, 440, 762, 358)
+
 [node name="SelfAnchor" type="Node2D" parent="Decoration/Mask"]
 position = Vector2(-88, 0)
 
@@ -862,6 +881,14 @@ script = ExtResource("21_5ha8j")
 position = Vector2(1, -35.00006)
 scale = Vector2(0.31658533, 0.31658533)
 texture = ExtResource("21_j2mks")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="Outline" type="Sprite2D" parent="Decoration/Glasses"]
+visible = false
+position = Vector2(1, -34.61)
+scale = Vector2(0.31658533, 0.31658533)
+texture = ExtResource("37_wu3oq")
 region_enabled = true
 region_rect = Rect2(817, 807, 438, 367)
 
