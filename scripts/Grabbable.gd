@@ -12,8 +12,13 @@ var _placement : PlacementLocation.Segment = null
 func on_drag_start()->void: 
 	if _placement:
 		_placement =  _placement.do_leave()
+	var rb := self as Node2D as RigidBody2D
+	if rb: rb.freeze = true
 func on_drag_end()->void: 
-	PlacementLocations.INSTANCE.do_place(self)
+	if PlacementLocations.INSTANCE:
+		PlacementLocations.INSTANCE.do_place(self)
+	var rb := self as Node2D as RigidBody2D
+	if rb: rb.freeze = false
 func get_position_difference()->Vector2:
 	if not _placement: return Vector2.ZERO
 	return _placement.left - get_left_anchor()

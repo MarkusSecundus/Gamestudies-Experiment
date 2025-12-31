@@ -40,6 +40,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	super._process(delta)
+	if not _piedestal: return
 		
 	var target_anchor := _piedestal.get_anchor(self)
 	var distance_to_target_anchor := self.get_only_anchor().distance_to(target_anchor.global_position)

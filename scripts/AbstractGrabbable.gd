@@ -25,6 +25,8 @@ func perform_drag(cursor_position: Vector2, _delta: float)->void:
 func _process(delta: float) -> void:
 	const INTERPOLATION_FACTOR = 2
 	
+	var is_free_to_move := ((self as Node2D) is RigidBody2D)
+	
 	var drag_was_performed := false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		if _is_being_grabbed:
@@ -37,8 +39,19 @@ func _process(delta: float) -> void:
 			on_drag_end()
 	if not drag_was_performed:
 		var position_difference := get_position_difference()
-		self.global_position += (position_difference * INTERPOLATION_FACTOR * delta)
+		if not is_free_to_move:
+			self.global_position += (position_difference * INTERPOLATION_FACTOR * delta)
 		
+
+func _do_move_to_position(destination: Vector2)->void:
+	var rb := (self as Node2D) as RigidBody2D
+	if rb and (not rb.freeze):
+		var position_delta := destination - rb.global_position
+		var velocity_delta := position_delta - rb.linear_velocity
+		rb.apply_force(velocity_delta)
+		pass
+	else:
+		self.global_position = destination
 
 
 func _ready() -> void:
