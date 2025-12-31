@@ -40,7 +40,8 @@ func finish_printing_immediately()->void:
 		if _tw and _tw.is_running():
 			_tw.stop()
 			_tw = null
-			_lbl.visible_characters = -1
+			_lbl.visible_characters = _lbl.get_total_character_count()
+			do_fade_the_finish_marker(1.0)
 			if _on_finished: _on_finished.call()
 			_on_finished = Callable()
 			on_printing_finished.emit()

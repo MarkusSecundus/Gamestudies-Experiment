@@ -14,6 +14,7 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var on_printing_finished: Callable = func():
 		if wait_for_user_input:
 			print("{0} - awaiting user input...".format([self.name]))
+			await get_tree().process_frame
 			while true:
 				await get_tree().process_frame
 				if Input.is_action_just_pressed("SkipDialog"):
