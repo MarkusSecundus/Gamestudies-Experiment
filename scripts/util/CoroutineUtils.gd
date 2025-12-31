@@ -9,6 +9,9 @@ static func forget_and_fire_after_seconds(this: Node, seconds: float, callback: 
 	await wait_for_seconds(this, seconds);
 	callback.call()
 
+static func run_on_signal_once(the_signal, to_do: Callable):
+	await the_signal
+	to_do.call()
 
 class Generator:
 	var Current:

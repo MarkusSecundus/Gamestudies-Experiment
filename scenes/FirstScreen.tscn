@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dop62lglc6uq0"]
+[gd_scene load_steps=70 format=3 uid="uid://dop62lglc6uq0"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_kovtv"]
 [ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_pcypa"]
@@ -47,13 +47,14 @@
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="52_8qrjw"]
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="53_h5n0a"]
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="55_3bq6u"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="56_eshda"]
 
-[sub_resource type="Gradient" id="Gradient_f0hic"]
+[sub_resource type="Gradient" id="Gradient_inarv"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_fyhrx"]
-gradient = SubResource("Gradient_f0hic")
+gradient = SubResource("Gradient_inarv")
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfwt3"]
 radius = 23.0
@@ -130,7 +131,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Mockup" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0090001
@@ -3609,7 +3610,7 @@ patch_margin_bottom = 110
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_top = 218.0
 offset_right = 1938.0
@@ -3622,7 +3623,7 @@ theme = SubResource("Theme_hkpxx")
 bbcode_enabled = true
 text = "[center]EYE SHOP"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+[node name="PressSpace" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_top = 811.0
 offset_right = 1938.0
@@ -3684,7 +3685,11 @@ run_on_start = true
 [node name="Fn_Main" type="Node" parent="DialogSystem"]
 script = ExtResource("55_3bq6u")
 
-[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Condition" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("56_eshda")
+condition_holds = false
+
+[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main/Condition"]
 script = ExtResource("46_eb1j1")
 start_alpha = 1.0
 duration_seconds = 2.0

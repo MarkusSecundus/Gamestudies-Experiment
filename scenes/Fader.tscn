@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4nlofangeb5d"]
+[gd_scene load_steps=4 format=3 uid="uid://b4nlofangeb5d"]
+
+[ext_resource type="Script" uid="uid://b6mpur0kf6yqe" path="res://scripts/old/FaderSingleton.gd" id="1_cgpwj"]
 
 [sub_resource type="Gradient" id="Gradient_eb1j1"]
 offsets = PackedFloat32Array(0)
@@ -16,8 +18,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
+script = ExtResource("1_cgpwj")
 
 [node name="Fader" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.52156866)
 z_index = 500
 layout_mode = 1
 anchors_preset = -1

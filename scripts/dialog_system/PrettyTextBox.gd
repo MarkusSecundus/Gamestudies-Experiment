@@ -16,6 +16,8 @@ extends Control
 @export var _fade_out_duration : float = 1.0
 @export var _print_while_fading_in : bool = false
 
+@export var _dot_fade_duration : float = 0.2
+
 var _is_faded_out: bool:
 	get: return (not self.visible) or (self.modulate.a == 0)
 var _og_modulate : Color

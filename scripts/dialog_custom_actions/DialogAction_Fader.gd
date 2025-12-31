@@ -8,7 +8,8 @@ extends IDialogAction
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var tw := create_tween()
-	var fader : Control = Fader
+	var fader : CanvasItem = FaderSingleton.INSTANCE
+	fader.visible = true
 	var final_color = fader.modulate
 	final_color.a = end_alpha
 	fader.modulate.a = start_alpha
