@@ -21,7 +21,6 @@ mouse_behavior_recursive = 1
 script = ExtResource("1_cgpwj")
 
 [node name="Fader" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.52156866)
 z_index = 500
 layout_mode = 1
 anchors_preset = -1

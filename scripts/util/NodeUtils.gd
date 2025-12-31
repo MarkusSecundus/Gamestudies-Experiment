@@ -128,21 +128,26 @@ static func get_instance_of_indices(arr: Array, child_type, ret : PackedInt32Arr
 		i += 1
 	return ret
 	
+	
+static func _get_editor_interface()->Variant:
+	return Engine.get_singleton("EditorInterface")
+	
 static func is_the_only_selected_node(node: Node)->bool:
-	var selection := EditorInterface.get_selection().get_selected_nodes()
+	var selection = _get_editor_interface().get_selection().get_selected_nodes()
 	return selection.size() == 1 and selection[0] == node
 	
 static func get_selected_nodes_of_type(type: Variant, ret : Array = []):
-	for n in EditorInterface.get_selection().get_selected_nodes():
+	for n in _get_editor_interface().get_selection().get_selected_nodes():
 		if is_instance_of(n, type):
 			ret.append(n)
 	return ret
 
 static func set_selection(nodes: Array[Node])->void:
-	var selection := EditorInterface.get_selection()
+	var selection = _get_editor_interface().get_selection()
 	selection.clear()
 	for n in nodes:
 		selection.add_node(n)
+
 
 	
 static var _counter: int = 0;

@@ -3687,7 +3687,6 @@ script = ExtResource("55_3bq6u")
 
 [node name="Condition" type="Node" parent="DialogSystem/Fn_Main"]
 script = ExtResource("56_eshda")
-condition_holds = false
 
 [node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main/Condition"]
 script = ExtResource("46_eb1j1")
