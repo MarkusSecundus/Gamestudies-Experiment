@@ -1817,6 +1817,7 @@ region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 694.0
 offset_top = 20.0
