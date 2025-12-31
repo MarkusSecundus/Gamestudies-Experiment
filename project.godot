@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 TimeUtils="*res://scripts/util/TimeUtils.gd"
 SoundManager="*res://scenes/SoundManager.tscn"
+Fader="*res://scenes/Fader.tscn"
 
 [display]
 
