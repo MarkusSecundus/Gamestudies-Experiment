@@ -16,7 +16,6 @@ extends Control
 @export var _fade_out_duration : float = 1.0
 @export var _print_while_fading_in : bool = false
 
-@export var _dot_fade_duration : float = 0.2
 
 var _is_faded_out: bool:
 	get: return (not self.visible) or (self.modulate.a == 0)
@@ -56,6 +55,7 @@ func print_text(text:String, on_finished : Callable = Callable(), start_characte
 	if is_printing_in_progress():
 		ErrorUtils.report_error("Printing new text while printing process is still running (old: '{0}', new: '{1}')".format([_lbl.text, text]))
 		finish_printing_immediately()
+	do_fade_the_finish_marker(0.0)
 	if start_character_count > 0:
 		while _lbl.visible_ratio >= 1.0:
 			#print("ratio is %f"%_lbl.visible_ratio)
@@ -79,6 +79,7 @@ func print_text(text:String, on_finished : Callable = Callable(), start_characte
 			SoundManager.PlaySound(sounds_per_char.pick_random(), randf_range(sound_pitch_range.x, sound_pitch_range.y))
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
 	await _tw.finished
+	do_fade_the_finish_marker(1.0)
 	_tw = null
 	if _on_finished: _on_finished.call()
 	on_printing_finished.emit()
@@ -109,3 +110,14 @@ func do_fade_out():
 	_tw.tween_property(self, "modulate", target_modulate, _fade_out_duration)
 	await _tw.finished
 	self._tw = null
+
+
+@onready var _finish_marker_tween := EffectsUtils.TweenWrapper.new(self)
+@export var _dot_fade_duration : float = 0.2
+@onready var _finish_marker : CanvasItem = self.get_node_or_null("PrintFinishedMarker")
+func do_fade_the_finish_marker(alpha: float)->void:
+	if not _finish_marker: return
+	print("FADING THE DOT: %f"%alpha)
+	_finish_marker_tween.do_fade(_finish_marker, alpha, _dot_fade_duration)
+	
+	

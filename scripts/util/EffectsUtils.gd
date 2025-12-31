@@ -14,17 +14,24 @@ class TweenWrapper:
 	
 	func do_property(object: Object, property: NodePath, final_var: Variant, duration: float)->Tween:
 		if _tween and _tween.is_running():
-			_tween.stop()
+			_tween.kill()
 		_tween = _tree.create_tween()
 		_tween.tween_property(object, property, final_var, duration)
 		return _tween
+		
+	func do_fade(this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
+		if _tween and _tween.is_running():
+			_tween.kill()
+		_tween = this.create_tween()
+		return EffectsUtils.do_fade_with_tween(_tween, this, end_alpha, duration_seconds, start_alpha, hide_when_alpha_is_0)
 
-static func do_fade(this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
-	var tw := this.create_tween()
+static func do_fade_with_tween(tw: Tween, this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
 	var end_color := this.modulate
 	end_color.a = end_alpha
 	if start_alpha >= 0.0:
 		this.modulate.a = start_alpha
+	elif not this.visible:
+		this.modulate.a = 0.0
 	this.visible = true
 	var tweener = tw.tween_property(this, "modulate", end_color, duration_seconds)
 	if (end_alpha <= 0.0) and hide_when_alpha_is_0:
@@ -32,3 +39,7 @@ static func do_fade(this: CanvasItem, end_alpha: float, duration_seconds: float,
 			this.visible = false
 		)
 	return tweener
+
+
+static func do_fade(this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
+	return do_fade_with_tween(this.create_tween(), this, end_alpha, duration_seconds, start_alpha, hide_when_alpha_is_0)

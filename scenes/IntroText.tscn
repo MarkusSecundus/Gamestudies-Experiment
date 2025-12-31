@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ckd6lb1ga41sf"]
+[gd_scene load_steps=21 format=3 uid="uid://ckd6lb1ga41sf"]
 
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="1_fin6i"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="2_4en75"]
@@ -7,14 +7,13 @@
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="3_gutn5"]
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="4_1tgrv"]
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="4_5g2oq"]
-[ext_resource type="Script" uid="uid://dvjl0mt85krp1" path="res://scripts/dialog_system/simple_actions/DialogWaitForKeypress.gd" id="5_7b115"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="5_kd8v4"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="6_kh5rm"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="7_4vcsn"]
-[ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="8_aq5dq"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="8_mff2p"]
-[ext_resource type="PackedScene" uid="uid://dfb3nyvrfv6a7" path="res://scenes/MainScene.tscn" id="9_5g2oq"]
 [ext_resource type="Texture2D" uid="uid://crey10du5l7ha" path="res://art/customers/custom-questionmark-dot.png" id="9_aq5dq"]
+[ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="13_4en75"]
+[ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="16_5g2oq"]
 
 [sub_resource type="Gradient" id="Gradient_f0hic"]
 offsets = PackedFloat32Array(0)
@@ -26,6 +25,68 @@ gradient = SubResource("Gradient_f0hic")
 [sub_resource type="Theme" id="Theme_plw00"]
 default_font = ExtResource("7_4vcsn")
 default_font_size = 22
+
+[sub_resource type="Animation" id="Animation_aq5dq"]
+resource_name = "dot_jumping"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.61960787)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30)]
+}
+
+[sub_resource type="Animation" id="Animation_5g2oq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -21.678314)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5g2oq"]
+_data = {
+&"RESET": SubResource("Animation_5g2oq"),
+&"dot_jumping": SubResource("Animation_aq5dq")
+}
 
 [node name="IntroText" type="Control"]
 layout_mode = 3
@@ -40,32 +101,25 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0090001
 anchor_bottom = 1.0
-offset_right = 0.631958
+offset_left = -12468.0
+offset_top = -8924.0
+offset_right = 9818.72
+offset_bottom = 9797.0
 mouse_filter = 2
 texture = SubResource("GradientTexture1D_lg00b")
 expand_mode = 1
 
-[node name="TextBubble" type="Control" parent="."]
-z_index = 1
-anchors_preset = 0
-offset_top = -4.0
-offset_right = 1938.0
-offset_bottom = 1080.0
-script = ExtResource("1_fin6i")
-sounds_per_char = Array[AudioStream]([ExtResource("2_4en75"), ExtResource("3_aq5dq"), ExtResource("4_5g2oq"), ExtResource("5_kd8v4"), ExtResource("6_kh5rm")])
-
-[node name="Control" type="Control" parent="TextBubble"]
-z_index = -1
+[node name="FancyFrame" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 4.0
 offset_right = -18.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Frame" type="NinePatchRect" parent="TextBubble/Control"]
+[node name="Frame" type="NinePatchRect" parent="FancyFrame"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.667
@@ -80,6 +134,16 @@ patch_margin_bottom = 110
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="TextBubble" type="Control" parent="."]
+z_index = 1
+anchors_preset = 0
+offset_top = -4.0
+offset_right = 1938.0
+offset_bottom = 1080.0
+script = ExtResource("1_fin6i")
+sounds_per_char = Array[AudioStream]([ExtResource("2_4en75"), ExtResource("3_aq5dq"), ExtResource("4_5g2oq"), ExtResource("5_kd8v4"), ExtResource("6_kh5rm")])
+_dot_fade_duration = 0.1
+
 [node name="Label" type="RichTextLabel" parent="TextBubble"]
 self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
 z_index = 10
@@ -89,24 +153,33 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_left = 47.0
 offset_top = 142.0
-offset_right = -42.0
-offset_bottom = 1059.0
+offset_right = -49.0
+offset_bottom = 948.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
-text = "Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
 fit_content = true
 visible_characters_behavior = 3
 
-[node name="Dot" type="Sprite2D" parent="TextBubble"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
+root_node = NodePath("../PrintFinishedMarker")
+libraries = {
+&"": SubResource("AnimationLibrary_5g2oq")
+}
+autoplay = "dot_jumping"
+
+[node name="PrintFinishedMarker" type="Sprite2D" parent="TextBubble"]
+visible = false
 position = Vector2(1812, 1008)
 scale = Vector2(0.27338126, 0.2733813)
 texture = ExtResource("9_aq5dq")
+offset = Vector2(0, -21.678314)
 region_enabled = true
 region_rect = Rect2(1793, 1419, 314, 278)
 
-[node name="DialogSystem" type="Node" parent="."]
+[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("2_42d8r")
 run_on_start = true
+default_text_box = NodePath("../TextBubble")
 
 [node name="Fn_Main" type="Node" parent="DialogSystem"]
 script = ExtResource("3_gutn5")
@@ -118,20 +191,21 @@ duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="WaitForKeyPress" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("5_7b115")
-keys = Array[StringName]([&"Space"])
-
-[node name="FadeIn" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("4_1tgrv")
-end_alpha = 1.0
-duration_seconds = 3.0
-ease = 1
-transition = 4
-
-[node name="Transition" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("8_aq5dq")
-destination = ExtResource("9_5g2oq")
+[node name="Call" type="Node" parent="DialogSystem/Fn_Main" node_paths=PackedStringArray("callee")]
+script = ExtResource("13_4en75")
+callee = NodePath("../../Fn_Text")
 
 [node name="Fn_Text" type="Node" parent="DialogSystem"]
 script = ExtResource("3_gutn5")
+
+[node name="Text" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("16_5g2oq")
+text = "One can bump into many curious shops when exploring the shady back alleys of Old   1"
+
+[node name="Text2" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("16_5g2oq")
+text = "One can bump into many curious shops when exploring the shady back alleys of Old   2"
+
+[node name="Text3" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("16_5g2oq")
+text = "One can bump into many curious shops when exploring the shady back alleys of Old   3"
