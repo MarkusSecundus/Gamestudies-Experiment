@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=100 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -8,16 +8,21 @@
 [ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/pupils/pupil_normal.png" id="5_kp0ql"]
 [ext_resource type="Texture2D" uid="uid://seqgy7i5i0t" path="res://art/irises/iris_blank.png" id="5_u55b3"]
 [ext_resource type="Script" uid="uid://bhcb2bch8u75h" path="res://scripts/EyePart.gd" id="6_doyhq"]
+[ext_resource type="Texture2D" uid="uid://byk186ociwdvh" path="res://art/eyes/eye2-outline.png" id="7_vmuuw"]
 [ext_resource type="Texture2D" uid="uid://s8ngnmoa0pq0" path="res://art/eyes/eye2.png" id="8_0ehpd"]
 [ext_resource type="Texture2D" uid="uid://cpbu7jpfm6s5g" path="res://art/eyebrows/eyebrow2.png" id="8_o3jky"]
 [ext_resource type="Texture2D" uid="uid://d1ycnltaajkgj" path="res://art/eyes/eye3.png" id="9_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://bthgr8ecqe7lc" path="res://art/eyes/eye3-outline.png" id="9_dhx1h"]
 [ext_resource type="Texture2D" uid="uid://b0or5ndj1r1fa" path="res://art/eyebrows/eyebrow3.png" id="9_kp0ql"]
 [ext_resource type="Texture2D" uid="uid://d0d7237y688ps" path="res://art/eyebrows/eyebrow4.png" id="10_08o8g"]
 [ext_resource type="Texture2D" uid="uid://db412xs71ne0b" path="res://art/eyes/eye4.png" id="10_25dfr"]
 [ext_resource type="Texture2D" uid="uid://bgya2rntxgfo0" path="res://art/eyebrows/eyebrow5.png" id="11_0cxu4"]
 [ext_resource type="Texture2D" uid="uid://env08lefcovd" path="res://art/eyes/eye5.png" id="11_kjvyo"]
+[ext_resource type="Texture2D" uid="uid://fokk5gdhqit5" path="res://art/eyes/eye5-outline.png" id="11_w2e6h"]
+[ext_resource type="Texture2D" uid="uid://d3of0k8v4j044" path="res://art/eyes/eyes_elegant-outline.png" id="11_x2kui"]
 [ext_resource type="Texture2D" uid="uid://480ml28wifbu" path="res://art/eyes/eye6.png" id="12_2phbr"]
 [ext_resource type="Texture2D" uid="uid://dq06sr4nb1gqa" path="res://art/eyebrows/eyebrow6.png" id="12_xnxdc"]
+[ext_resource type="Texture2D" uid="uid://cny15qnb1kd71" path="res://art/eyes/eye4-outline.png" id="13_1icot"]
 [ext_resource type="Texture2D" uid="uid://nuskljiavvwo" path="res://art/irises/iris2.png" id="13_1ns3k"]
 [ext_resource type="Texture2D" uid="uid://cs0aaulk7d32e" path="res://art/pupils/pupil2.png" id="13_mkg2b"]
 [ext_resource type="Texture2D" uid="uid://dtcr1w0xsts4a" path="res://art/irises/iris_green.png" id="13_u55b3"]
@@ -28,24 +33,38 @@
 [ext_resource type="Texture2D" uid="uid://dx4b3juobuf4j" path="res://art/irises/iris5.png" id="16_7wwop"]
 [ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
+[ext_resource type="Texture2D" uid="uid://dxygi4atjxq43" path="res://art/eyes/eye6-outline.png" id="17_e3xpc"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
+[ext_resource type="Texture2D" uid="uid://cmojha3lwrixo" path="res://art/irises/iris-outline.png" id="20_ks3v5"]
 [ext_resource type="Script" uid="uid://nehem5xv6gy5" path="res://scripts/Grabbable.gd" id="21_5ha8j"]
 [ext_resource type="Texture2D" uid="uid://yvkpahw0lfte" path="res://art/shop/decor/decor_glasses.png" id="21_j2mks"]
 [ext_resource type="Texture2D" uid="uid://uw4vjgv02q4o" path="res://art/shop/decor/decor_mask.png" id="22_5ha8j"]
 [ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="23_xuwja"]
+[ext_resource type="Texture2D" uid="uid://bas0lw8wpebyy" path="res://art/eyebrows/eyebrows_1-outline.png" id="27_r2n46"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="28_i7ifx"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
+[ext_resource type="Texture2D" uid="uid://bp3erj86uoq45" path="res://art/eyebrows/eyebrow2-outline.png" id="29_fgeqo"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="29_kwqb8"]
 [ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="30_y15d6"]
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="31_u55b3"]
+[ext_resource type="Texture2D" uid="uid://bub6bn0apnq3t" path="res://art/eyebrows/eyebrow3-outline.png" id="31_wpp01"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="32_wsqty"]
+[ext_resource type="Texture2D" uid="uid://ovmqgumvdji5" path="res://art/pupils/pupil_normal-outline.png" id="33_7l3w6"]
+[ext_resource type="Texture2D" uid="uid://dpeqb2ugiauhd" path="res://art/eyebrows/eyebrow4-outline.png" id="33_h2fw1"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
 [ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="33_pou4m"]
 [ext_resource type="Texture2D" uid="uid://bj0llke1bgq4e" path="res://art/shop/decor/decor_mask-outline.png" id="35_48gc8"]
+[ext_resource type="Texture2D" uid="uid://cskbcld7rrhkn" path="res://art/eyebrows/eyebrow5-outline.png" id="35_ai8dq"]
+[ext_resource type="Texture2D" uid="uid://dtghk611hy6jb" path="res://art/pupils/pupil2-outline.png" id="35_projt"]
+[ext_resource type="Texture2D" uid="uid://bdovfubkemthr" path="res://art/pupils/pupil3-outline.png" id="37_8t55c"]
 [ext_resource type="Texture2D" uid="uid://bo0pisnk7aegw" path="res://art/shop/decor/decor_glasses-outline.png" id="37_wu3oq"]
+[ext_resource type="Texture2D" uid="uid://b2ab2hayylhp4" path="res://art/eyebrows/eyebrow6-outline.png" id="37_ygraj"]
 [ext_resource type="Texture2D" uid="uid://nny5p5oxacxb" path="res://art/shop/eye_piedestal.png" id="38_oiest"]
 [ext_resource type="PackedScene" uid="uid://dieqi7fura551" path="res://prefabs/eye_holder.tscn" id="39_f4jp2"]
+[ext_resource type="Texture2D" uid="uid://c0sr8rnxn20a2" path="res://art/pupils/pupil4-outline.png" id="39_vr51q"]
+[ext_resource type="Texture2D" uid="uid://cubvuu3f36wx7" path="res://art/pupils/pupil5-outline.png" id="41_d4kxf"]
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
+[ext_resource type="Texture2D" uid="uid://dl7dg2ec2xntx" path="res://art/pupils/pupil6-outline.png" id="43_npyg8"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="44_7yh6i"]
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="45_pwxld"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="46_cw1g3"]
@@ -65,6 +84,39 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tuspm"]
+radius = 17.0
+height = 88.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3eqb"]
+radius = 32.01562
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ygraj"]
+radius = 18.0
+height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8t1i"]
+radius = 14.0
+height = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ygraj"]
+radius = 27.018513
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hr6p2"]
+radius = 33.01515
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tuspm"]
+radius = 25.019993
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8t1i"]
+radius = 33.01515
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_te826"]
+radius = 30.066593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2a4qe"]
+radius = 29.274563
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ha8j"]
 size = Vector2(44, 75)
@@ -281,6 +333,15 @@ texture = ExtResource("8_0ehpd")
 region_enabled = true
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye1"]
+visible = false
+z_index = 60
+position = Vector2(-1.5258789e-05, -4.9999847)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("7_vmuuw")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 1017.81323, 692.3595)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye1"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -301,6 +362,15 @@ texture = ExtResource("9_8wjpf")
 region_enabled = true
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye2"]
+visible = false
+z_index = 60
+position = Vector2(1, -5.255)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("9_dhx1h")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 1017.81323, 692.3595)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye2"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -320,6 +390,15 @@ scale = Vector2(0.082, 0.082)
 texture = ExtResource("4_o3jky")
 region_enabled = true
 region_rect = Rect2(-17, 6, 1331, 1281)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
+visible = false
+z_index = 60
+position = Vector2(6, 9.000015)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("11_x2kui")
+region_enabled = true
+region_rect = Rect2(118.5275, 404.0517, 1158.539, 750.07684)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye3"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -343,6 +422,15 @@ texture = ExtResource("10_25dfr")
 region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye4"]
+visible = false
+z_index = 60
+position = Vector2(7.17, -4)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("13_1icot")
+region_enabled = true
+region_rect = Rect2(118.5275, 404.0517, 1158.539, 750.07684)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye4"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -363,6 +451,15 @@ texture = ExtResource("11_kjvyo")
 region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye5"]
+visible = false
+z_index = 60
+position = Vector2(-3, -2)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("11_w2e6h")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 835.51337, 692.3595)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye5"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -382,6 +479,15 @@ scale = Vector2(0.082, 0.082)
 texture = ExtResource("12_2phbr")
 region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye6"]
+visible = false
+z_index = 60
+position = Vector2(5.205, 3.11)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("17_e3xpc")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye6"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -412,6 +518,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris1"]
+visible = false
+z_index = 60
+position = Vector2(8.265, 8.07)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris1"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -438,6 +553,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris2"]
+visible = false
+z_index = 60
+position = Vector2(8.264999, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris2"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -462,6 +586,15 @@ region_rect = Rect2(412, 598, 394, 394)
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris3"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris3"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -491,6 +624,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris4"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris4"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -517,6 +659,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris5"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris5"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -542,6 +693,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris6"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris6"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -565,12 +725,21 @@ texture = ExtResource("2_cfq0f")
 region_enabled = true
 region_rect = Rect2(101, 245, 1062, 360)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
+visible = false
+position = Vector2(1, -0.415)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("27_r2n46")
+region_enabled = true
+region_rect = Rect2(101, 208.22824, 1098.2671, 427.10306)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow1/Holder"]
-position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow1/Holder"]
+position = Vector2(1.9999998, 0.9999999)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tuspm")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -586,11 +755,18 @@ texture = ExtResource("8_o3jky")
 region_enabled = true
 region_rect = Rect2(121, 110, 492, 533)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
+visible = false
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("29_fgeqo")
+region_enabled = true
+region_rect = Rect2(94.17609, 94.51112, 547.32996, 548.4889)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow2/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_g3eqb")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -607,11 +783,21 @@ texture = ExtResource("9_kp0ql")
 region_enabled = true
 region_rect = Rect2(163.99994, 233, 1015.1999, 416)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
+visible = false
+position = Vector2(1.51, 0.385)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("31_wpp01")
+region_enabled = true
+region_rect = Rect2(163.99994, 212.98177, 1015.1999, 468.3105)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow3/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+position = Vector2(0.9999999, 0.9999999)
+rotation = 1.8804066
+shape = SubResource("CapsuleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -630,12 +816,20 @@ texture = ExtResource("10_08o8g")
 region_enabled = true
 region_rect = Rect2(192, 193, 937, 326)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
+visible = false
+position = Vector2(-1.035, -0.21)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("33_h2fw1")
+region_enabled = true
+region_rect = Rect2(156.54224, 171.12207, 983.19324, 362.98126)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow4/Holder"]
-position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow4/Holder"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -651,11 +845,21 @@ texture = ExtResource("11_0cxu4")
 region_enabled = true
 region_rect = Rect2(86, 241, 1118, 360)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
+visible = false
+position = Vector2(0, -0.145)
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("35_ai8dq")
+region_enabled = true
+region_rect = Rect2(86, 241, 1118, 360)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow5/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+position = Vector2(7.1054274e-15, -1.9999998)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_e8t1i")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -672,11 +876,20 @@ texture = ExtResource("12_xnxdc")
 region_enabled = true
 region_rect = Rect2(146, 96, 984, 377)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
+visible = false
+position = Vector2(1.43, -0.405)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("37_ygraj")
+region_enabled = true
+region_rect = Rect2(130.35085, 85.67735, 999.6492, 387.32263)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow6/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -695,12 +908,19 @@ texture = ExtResource("5_kp0ql")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil1"]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("33_7l3w6")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil1"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil1/Holder"]
 position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -716,11 +936,19 @@ texture = ExtResource("13_mkg2b")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil2"]
+visible = false
+position = Vector2(0, -0.105)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("35_projt")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil2"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil2/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_hr6p2")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil2"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -736,11 +964,19 @@ texture = ExtResource("14_1ns3k")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil3"]
+visible = false
+position = Vector2(0, -0.175)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("37_8t55c")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil3/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_tuspm")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil3"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -759,12 +995,20 @@ texture = ExtResource("15_a7pbh")
 region_enabled = true
 region_rect = Rect2(527, 670, 149, 280)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil4"]
+visible = false
+position = Vector2(1.625, -3.25)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("39_vr51q")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil4"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil4/Holder"]
 position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_e8t1i")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil4"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -780,11 +1024,19 @@ texture = ExtResource("16_ye0jt")
 region_enabled = true
 region_rect = Rect2(474, 708, 243, 183)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil5"]
+visible = false
+position = Vector2(2.85, -1.245)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("41_d4kxf")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil5"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil5/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_te826")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil5"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -800,11 +1052,19 @@ texture = ExtResource("17_7wwop")
 region_enabled = true
 region_rect = Rect2(493, 709, 217, 170)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil6"]
+visible = false
+position = Vector2(1.665, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("43_npyg8")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil6"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil6/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_2a4qe")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil6"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -1458,9 +1718,6 @@ script = ExtResource("50_7tuqu")
 script = ExtResource("51_fupde")
 
 [node name="FadeIn" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("47_q5chl")
-
-[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main/FadeIn"]
 script = ExtResource("56_wu3oq")
 start_alpha = 1.0
 duration_seconds = 2.0
