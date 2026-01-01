@@ -36,12 +36,12 @@
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="46_eb1j1"]
 [ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="47_l82gj"]
 [ext_resource type="Script" uid="uid://c1w5ir0mx15un" path="res://scripts/dialog_custom_actions/DialogAction_PlaySound.gd" id="48_eb1j1"]
+[ext_resource type="PackedScene" uid="uid://ckd6lb1ga41sf" path="res://scenes/IntroText.tscn" id="48_f0hic"]
 [ext_resource type="Script" uid="uid://dvjl0mt85krp1" path="res://scripts/dialog_system/simple_actions/DialogWaitForKeypress.gd" id="48_i36mk"]
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="48_uqsie"]
 [ext_resource type="AudioStream" uid="uid://c3rp5bqbaawj8" path="res://art/sounds/thunder1.wav" id="49_3a6cf"]
 [ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="49_f0hic"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="49_yto75"]
-[ext_resource type="PackedScene" uid="uid://dfb3nyvrfv6a7" path="res://scenes/MainScene.tscn" id="50_eb1j1"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="50_tbdw8"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="51_e5edp"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="52_8qrjw"]
@@ -3717,4 +3717,4 @@ transition = 4
 
 [node name="Transition" type="Node" parent="DialogSystem/Fn_Main"]
 script = ExtResource("49_f0hic")
-destination = ExtResource("50_eb1j1")
+destination = ExtResource("48_f0hic")

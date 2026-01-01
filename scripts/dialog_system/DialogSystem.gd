@@ -44,7 +44,10 @@ class ActionRunner:
 		current = next
 		print("Performing node {0}".format([next.name]))
 		var next_iteration : Callable = func(n)->void: iteration(n)
-		current.do_perform(ctx, next_iteration)
+		if current.is_enabled:
+			current.do_perform(ctx, next_iteration)
+		else:
+			current._default_perform(ctx, next_iteration)
 
 
 static func get_default_next(a: Node, ctx: DialogContext)->IDialogAction:

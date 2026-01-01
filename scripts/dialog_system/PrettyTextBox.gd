@@ -52,7 +52,7 @@ func _process(delta: float) -> void:
 
 const UNICODE_ZERO_WIDTH_SPACE = "\u200B"
 
-func print_text(text:String, on_finished : Callable = Callable(), start_character_count: int = 0):
+func print_text(text:String, on_finished : Callable = Callable(), should_display_the_dot: bool = true, start_character_count: int = 0):
 	if is_printing_in_progress():
 		ErrorUtils.report_error("Printing new text while printing process is still running (old: '{0}', new: '{1}')".format([_lbl.text, text]))
 		finish_printing_immediately()
@@ -80,15 +80,15 @@ func print_text(text:String, on_finished : Callable = Callable(), start_characte
 			SoundManager.PlaySound(sounds_per_char.pick_random(), randf_range(sound_pitch_range.x, sound_pitch_range.y))
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
 	await _tw.finished
-	do_fade_the_finish_marker(1.0)
+	if should_display_the_dot: do_fade_the_finish_marker(1.0)
 	_tw = null
 	if _on_finished: _on_finished.call()
 	on_printing_finished.emit()
 
-func append_text(to_append: String, on_finished: Callable = Callable())->void:
+func append_text(to_append: String, on_finished: Callable = Callable(), should_display_the_dot: bool = true)->void:
 	var new_text :String = _lbl.text + to_append
 	var start_character_count :int = _lbl.get_total_character_count()
-	print_text(new_text, on_finished, start_character_count)
+	print_text(new_text, on_finished, should_display_the_dot, start_character_count)
 
 func do_fade_in():
 	if is_printing_in_progress():

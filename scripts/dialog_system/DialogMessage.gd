@@ -14,7 +14,7 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var on_printing_finished: Callable = func():
 		if wait_for_user_input:
 			print("{0} - awaiting user input...".format([self.name]))
-			await get_tree().process_frame
+			await get_tree().create_timer(0.2).timeout
 			while true:
 				await get_tree().process_frame
 				if Input.is_action_just_pressed("SkipDialog"):
@@ -23,7 +23,7 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 		if do_fade_out_after:
 			await text_box.do_fade_out()
 		_default_perform(ctx, on_finished)
-	if append: text_box.append_text(text, on_printing_finished)
-	else: text_box.print_text(text, on_printing_finished)
+	if append: text_box.append_text(text, on_printing_finished, wait_for_user_input)
+	else: text_box.print_text(text, on_printing_finished, wait_for_user_input)
 	
 	
