@@ -60,15 +60,12 @@ func _ready() -> void:
 	holder.mouse_exited.connect(_on_area_2d_mouse_exited)
 	holder.input_event.connect(_on_area_2d_input_event)
 
-static var _last_frame_when_input_was_consumed : int = -1
-static var _last_input_consumer : AbstractGrabbable = null
+
 static func _try_consume_input(this: AbstractGrabbable)->bool:
-		var current_frame_count := Engine.get_frames_drawn()
-		if _last_frame_when_input_was_consumed == current_frame_count: 
-			return (_last_input_consumer == this)
-		_last_frame_when_input_was_consumed = current_frame_count
-		_last_input_consumer = this
-		return true
+	for obj in _hover_stack:
+		if obj == this: return true
+		if obj: return false # if obj is valid, but not `this`, then fail
+	return false
 
 
 var move_offset : Vector2 = Vector2.ZERO
@@ -81,15 +78,36 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		move_offset = self.global_position - btn.global_position
 		
 
+func _set_outline_visibility(new_visible: bool)->void:
+	if _outline: _outline.visible = new_visible
+
+static var _hover_stack : Array[AbstractGrabbable] = []
+static func _register_hovered_over_object(object: AbstractGrabbable)->void:
+	if not object in _hover_stack:
+		_hover_stack.append(object)
+		_update_selection_visuals()
+	
+static func _unregister_hovered_over_object(object: AbstractGrabbable)->void:
+	_hover_stack.erase(object)
+	object._set_outline_visibility(false)
+	_update_selection_visuals()
+
+
+static func _update_selection_visuals()->void:
+	DatastructUtils.remove_all_falsy(_hover_stack)
+	for i in Vector2i(1, _hover_stack.size()): _hover_stack[i]._set_outline_visibility(false)
+	if _hover_stack.is_empty():
+		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))
+	else:
+		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), 0, Vector2(0, 30))
+		_hover_stack[0]._set_outline_visibility(true)
+		
+
+
 func _on_area_2d_mouse_entered() -> void:
-	if _outline: _outline.visible = true
 	if not can_grab(): return
-	if not _try_consume_input(self): return
-	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), 0, Vector2(0, 30))
+	_register_hovered_over_object(self)
 
 
 func _on_area_2d_mouse_exited() -> void:
-	if _outline: _outline.visible = false
-	if not _try_consume_input(self): return
-	if not _is_being_grabbed:
-		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))
+	_unregister_hovered_over_object(self)

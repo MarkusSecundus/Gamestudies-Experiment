@@ -77,3 +77,21 @@ static func all(arr, predicate: Callable)->bool:
 	for e in arr:
 		if not predicate.call(e): return false
 	return true
+
+static func remove_if(arr, predicate: Callable)->int:
+	var removed_count :int = 0
+	for i in Vector3i(arr.size()-1, -1, -1):
+		if not predicate.call(arr[i]):
+			arr.remove_at(i)
+			removed_count += 1
+	
+	return removed_count
+
+static func remove_all_falsy(arr)->int:
+	var removed_count :int = 0
+	for i in Vector3i(arr.size()-1, -1, -1):
+		if not arr[i]:
+			arr.remove_at(i)
+			removed_count += 1
+	
+	return removed_count
