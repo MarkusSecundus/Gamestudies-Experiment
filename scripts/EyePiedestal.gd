@@ -66,7 +66,7 @@ var _chosen_eye_parts : Dictionary[EyePart.PartType, EyePart] = {EyePart.PartTyp
 
 func add_eye_part(part: EyePart)->void:
 	var previous := _chosen_eye_parts[part.type]
-	if previous:
+	if previous and (previous != part):
 		previous._piedestal_anchor = null
 	_chosen_eye_parts[part.type] = part
 
