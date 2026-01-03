@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 	var target_t = clampf(distance_to_target_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance
 	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance)
 	var t = lerpf(home_t, target_t, distance_to_home_anchor / (distance_to_target_anchor + distance_to_home_anchor))
-	var new_scale := lerp(target_anchor.global_scale, _original_scale, t) as Vector2
+	var new_scale := lerp(target_anchor.scale, _original_scale, t) as Vector2
 	var distance_from_active_anchor := get_position_difference().length()
 	var distance_from_the_cabinet := (_holder_anchor.global_position - self.get_only_anchor()).length()
 	if (not _is_being_grabbed) and (distance_from_active_anchor < 40.0) and (self.get_parent() != _active_anchor.get_parent().get_parent()):
