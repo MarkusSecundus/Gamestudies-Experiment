@@ -17,17 +17,11 @@ extends Node
 const _low_alpha = 0.0
 
 func do_fade_in()->void:
-	print("DOING FADE ID")
 	var tw := _fade_tw.do_fade(_actual_target, _high_alpha, fade_in_duration_seconds )
 	tw.set_ease(fade_in_ease)
 	tw.set_trans(fade_transition)
-	await tw.finished
-	print("FADE IN FINISHED")
 
 func do_fade_out()->void:
-	print("DOING FADE OUT")
 	var tw := _fade_tw.do_fade(_actual_target, _low_alpha, fade_in_duration_seconds )
 	tw.set_ease(fade_out_ease)
 	tw.set_trans(fade_transition)
-	await tw.finished
-	print("FADE OUT FINISHED")

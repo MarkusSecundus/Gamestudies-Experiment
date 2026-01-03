@@ -14,7 +14,7 @@ signal on_unsuccess()
 func add(to_add: int)->void:
 	var original_success := (current_value >= desired_value)
 	current_value += to_add
-	print("adding {0} -> current: {1}".format([to_add, current_value ]))
+	#print("{2}... adding {0} -> current: {1}".format([to_add, current_value, self.name ]))
 	var new_success := (current_value >= desired_value)
 	if original_success == new_success: return
 	if original_success:
