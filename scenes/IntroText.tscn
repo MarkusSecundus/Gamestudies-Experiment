@@ -11,8 +11,8 @@
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="6_kh5rm"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="7_4vcsn"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="8_mff2p"]
-[ext_resource type="Texture2D" uid="uid://crey10du5l7ha" path="res://art/customers/custom-questionmark-dot.png" id="9_aq5dq"]
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="9_kd8v4"]
+[ext_resource type="Texture2D" uid="uid://bvg4onu7meubs" path="res://art/shop/text_bubble-dot.png" id="10_kh5rm"]
 [ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="13_4en75"]
 [ext_resource type="Script" uid="uid://mpunko578tq3" path="res://scripts/dialog_custom_actions/DialogAction_PlaySoundtrack.gd" id="15_kh5rm"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="16_5g2oq"]
@@ -166,8 +166,8 @@ offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "Standing in front of the Tiberius hospital, make your way south, through the Franz von Rotdorf boulevard.
-When you see a house with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
+text = "Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
+When you see a shop with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
 
 That is how customers usually find your shop.
 More than few unfortunate souls got their throat cut on the way.
@@ -176,11 +176,11 @@ For many, reward is well worth the risk.
 Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
 
 Nobody in their right mind would dare ask where your goods come from, however they don't seem to ever run out.
-Your pride is being able to find the one that is just right, for every single customer.
+Your pride is in being able to find the one that is just right, for every single customer.
 The price is whatever one can afford to give - you don't seek material wealth and live a very plain life without many expenses.
 
 
-You wake up in the morning after a good night's sleep.
+. . . You wake up in the morning after a good night's sleep.
 There are already a few customers lined up in front of your shop.
 
 It's time to go to work.
@@ -188,7 +188,6 @@ There are people in need of eyes, and you are the one to provide them."
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_kd8v4")
-enabled = false
 source = NodePath("../../DialogSystem/Fn_Text/Text")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
@@ -199,13 +198,12 @@ libraries = {
 autoplay = "dot_jumping"
 
 [node name="PrintFinishedMarker" type="Sprite2D" parent="TextBubble"]
-visible = false
-position = Vector2(1812, 1008)
-scale = Vector2(0.27338126, 0.2733813)
-texture = ExtResource("9_aq5dq")
+position = Vector2(1781.9999, 992)
+scale = Vector2(0.5497112, 0.5497113)
+texture = ExtResource("10_kh5rm")
 offset = Vector2(0, -21.678314)
 region_enabled = true
-region_rect = Rect2(1793, 1419, 314, 278)
+region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 
 [node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("2_42d8r")
@@ -249,13 +247,13 @@ script = ExtResource("3_gutn5")
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("16_5g2oq")
-text = "Standing in front of the Tiberius hospital, make your way south, through the Franz von Rotdorf boulevard.
+text = "Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
 "
 append = true
 
 [node name="Text2" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("16_5g2oq")
-text = "When you see a house with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
+text = "When you see a shop with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
 
 "
 append = true
@@ -294,7 +292,7 @@ append = true
 
 [node name="Text8" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("16_5g2oq")
-text = "Your pride is being able to find the one that is just right, for every single customer.
+text = "Your pride is in being able to find the one that is just right, for every single customer.
 "
 append = true
 
@@ -308,7 +306,7 @@ append = true
 
 [node name="Text10" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("16_5g2oq")
-text = "You wake up in the morning after a good night's sleep.
+text = ". . . You wake up in the morning after a good night's sleep.
 "
 append = true
 

@@ -31,9 +31,15 @@ func _ready() -> void:
 	if INSTANCE: ErrorUtils.report_error("EyePiedestal already has active instance {0} while new instance {1} is being created!".format([INSTANCE, self]))
 	INSTANCE = self
 
+var _last_can_grab :bool= false
 func _process(delta: float) -> void:
 	super._process(delta)
-	if not can_grab(): return
+	var can_grab := self.can_grab()
+	if _last_can_grab != can_grab:
+		if can_grab: $HolderHidingCondition.increment()
+		else: $HolderHidingCondition.decrement()
+	_last_can_grab = can_grab
+	if not can_grab: return
 	var distance_to_submit := self.global_position.distance_to(submit_destination.global_position)
 	var distance_to_origin := self.global_position.distance_to(_og_position)
 	var t:float = distance_to_origin / (distance_to_origin + distance_to_submit)

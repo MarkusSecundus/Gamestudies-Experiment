@@ -118,7 +118,6 @@ func do_fade_out():
 @onready var _finish_marker : CanvasItem = self.get_node_or_null("PrintFinishedMarker")
 func do_fade_the_finish_marker(alpha: float)->void:
 	if not _finish_marker: return
-	print("FADING THE DOT: %f"%alpha)
 	_finish_marker_tween.do_fade(_finish_marker, alpha, _dot_fade_duration)
 	
 	
