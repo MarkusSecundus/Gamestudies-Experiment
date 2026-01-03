@@ -64,7 +64,7 @@ func _ready() -> void:
 static func _try_consume_input(this: AbstractGrabbable)->bool:
 	for obj in _hover_stack:
 		if obj == this: return true
-		if obj: return false # if obj is valid, but not `this`, then fail
+		if obj and obj.can_grab(): return false # if obj is valid, but not `this`, then fail
 	return false
 
 
@@ -92,10 +92,6 @@ static func _unregister_hovered_over_object(object: AbstractGrabbable)->void:
 	object._set_outline_visibility(false)
 	_update_selection_visuals()
 
-func _exit_tree() -> void:
-	_unregister_hovered_over_object(self)
-	_update_selection_visuals()
-
 
 static func _update_selection_visuals()->void:
 	DatastructUtils.remove_all_falsy(_hover_stack)
@@ -108,8 +104,12 @@ static func _update_selection_visuals()->void:
 		
 
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_PREDELETE:
+		_unregister_hovered_over_object(self)
+		_update_selection_visuals()
+
 func _on_area_2d_mouse_entered() -> void:
-	if not can_grab(): return
 	_register_hovered_over_object(self)
 
 
