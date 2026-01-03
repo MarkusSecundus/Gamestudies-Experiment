@@ -92,6 +92,10 @@ static func _unregister_hovered_over_object(object: AbstractGrabbable)->void:
 	object._set_outline_visibility(false)
 	_update_selection_visuals()
 
+func _exit_tree() -> void:
+	_unregister_hovered_over_object(self)
+	_update_selection_visuals()
+
 
 static func _update_selection_visuals()->void:
 	DatastructUtils.remove_all_falsy(_hover_stack)
