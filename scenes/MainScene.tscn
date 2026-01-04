@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=112 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -36,7 +36,6 @@
 [ext_resource type="Texture2D" uid="uid://dxygi4atjxq43" path="res://art/eyes/eye6-outline.png" id="17_e3xpc"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
 [ext_resource type="Texture2D" uid="uid://cmojha3lwrixo" path="res://art/irises/iris-outline.png" id="20_ks3v5"]
-[ext_resource type="Script" uid="uid://nehem5xv6gy5" path="res://scripts/Grabbable.gd" id="21_5ha8j"]
 [ext_resource type="Texture2D" uid="uid://yvkpahw0lfte" path="res://art/shop/decor/decor_glasses.png" id="21_j2mks"]
 [ext_resource type="Texture2D" uid="uid://uw4vjgv02q4o" path="res://art/shop/decor/decor_mask.png" id="22_5ha8j"]
 [ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="23_xuwja"]
@@ -131,13 +130,6 @@ radius = 30.066593
 [sub_resource type="CircleShape2D" id="CircleShape2D_2a4qe"]
 radius = 29.274563
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ha8j"]
-size = Vector2(44, 75)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ha8j"]
-radius = 43.0
-height = 136.0
-
 [sub_resource type="Gradient" id="Gradient_ep2w0"]
 offsets = PackedFloat32Array(0.2923077, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -159,6 +151,10 @@ default_font_size = 80
 [sub_resource type="Theme" id="Theme_1acod"]
 default_font = ExtResource("28_qavw1")
 default_font_size = 16
+
+[sub_resource type="Theme" id="Theme_2qf71"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 32
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1088,69 +1084,6 @@ shape = SubResource("CircleShape2D_2a4qe")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Decoration" type="Node2D" parent="."]
-
-[node name="Potion" type="Node2D" parent="Decoration"]
-position = Vector2(64, 360)
-script = ExtResource("21_5ha8j")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("23_xuwja")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pou4m")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="Glasses" type="Node2D" parent="Decoration"]
-position = Vector2(1756, 1063)
-script = ExtResource("21_5ha8j")
-
-[node name="DecorGlasses" type="Sprite2D" parent="Decoration/Glasses"]
-position = Vector2(1, -35.00006)
-scale = Vector2(0.31658533, 0.31658533)
-texture = ExtResource("21_j2mks")
-region_enabled = true
-region_rect = Rect2(817, 807, 438, 367)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Glasses"]
-visible = false
-position = Vector2(1, -34.61)
-scale = Vector2(0.31658533, 0.31658533)
-texture = ExtResource("37_wu3oq")
-region_enabled = true
-region_rect = Rect2(817, 807, 438, 367)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Glasses"]
-position = Vector2(-48, 6)
-
-[node name="Right" type="Node2D" parent="Decoration/Glasses/SelfAnchor"]
-position = Vector2(100, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Glasses"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Glasses/Holder"]
-position = Vector2(0, -33)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_5ha8j")
 
 [node name="Customers" type="Node2D" parent="."]
 
@@ -2277,6 +2210,7 @@ destination = NodePath("..")
 script = ExtResource("87_1acod")
 current_balance = 10
 _balance_change_stay_seconds = 5.0
+_purchasable_unavailable_alpha = 0.4
 
 [node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
 z_index = 100
@@ -2333,14 +2267,14 @@ region_enabled = true
 region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
 
 [node name="ShopSeparator2" type="Sprite2D" parent="Economy/Shop/Separators"]
-position = Vector2(-811.7251, -36.066757)
+position = Vector2(-689.49915, -36.066757)
 scale = Vector2(1.056751, 1.056751)
 texture = ExtResource("90_aime7")
 region_enabled = true
 region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
 
 [node name="ShopSeparator3" type="Sprite2D" parent="Economy/Shop/Separators"]
-position = Vector2(-136.47461, -36.066757)
+position = Vector2(-246.67877, -36.066757)
 scale = Vector2(1.056751, 1.056751)
 texture = ExtResource("90_aime7")
 region_enabled = true
@@ -2354,7 +2288,21 @@ region_enabled = true
 region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
 
 [node name="ShopSeparator5" type="Sprite2D" parent="Economy/Shop/Separators"]
-position = Vector2(1099.8154, -36.066757)
+position = Vector2(1125.8641, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator6" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(825.3071, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator7" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(1442.4504, -36.066757)
 scale = Vector2(1.056751, 1.056751)
 texture = ExtResource("90_aime7")
 region_enabled = true
@@ -2382,9 +2330,284 @@ vertical_alignment = 1
 position = Vector2(-0.00012207031, 0)
 scale = Vector2(0.99999976, 0.99999976)
 
+[node name="Potion" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(-441.03857, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion2" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(713.09924, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion2/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion2/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion3" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(1009.64856, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion3/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion3/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion4" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(1316.2163, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion4/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion4/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion5" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(1632.8027, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion5"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion5/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion5"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion5/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion5"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion5"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion5/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion5/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
 [node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
 z_index = 1
-position = Vector2(-1046.1594, 22.040833)
+position = Vector2(-1014.10004, 22.040833)
 scale = Vector2(2.003711, 2.003711)
 script = ExtResource("92_2qf71")
 price = 50
@@ -2418,7 +2641,7 @@ offset_right = 75.0
 offset_bottom = 12.0
 
 [node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Mask"]
-position = Vector2(-51.00004, 44)
+position = Vector2(-41.000004, 44)
 scale = Vector2(2.0037098, 2.0037098)
 
 [node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Mask/PriceTag"]
@@ -2434,28 +2657,81 @@ offset_top = -17.966673
 offset_right = 190.2819
 offset_bottom = 18.699991
 theme = SubResource("Theme_1acod")
-text = "0"
+text = "50"
+vertical_alignment = 1
+
+[node name="Glasses" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(126.0118, 42.077953)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 120
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(1, -35.00006)
+scale = Vector2(0.31658533, 0.31658533)
+texture = ExtResource("21_j2mks")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Glasses/Visual"]
+visible = false
+position = Vector2(0, 1.2320862)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("37_wu3oq")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(-48, 6)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Glasses/SelfAnchor"]
+position = Vector2(100, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Glasses"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -66.0
+offset_top = -84.00001
+offset_right = 69.0
+offset_bottom = 15.0
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(-27.000002, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Glasses/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Glasses/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
 vertical_alignment = 1
 
 [node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
-visible = false
-modulate = Color(0.67646587, 0.6764658, 0.6764658, 1)
 position = Vector2(-1749.4608, 292.5417)
 scale = Vector2(2.0037098, 2.0037098)
 
 [node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
-position = Vector2(32.552002, -0.0625)
-scale = Vector2(0.305, 0.305)
+position = Vector2(32.552044, -0.062461376)
+scale = Vector2(0.30500063, 0.30500063)
 texture = ExtResource("86_2a4qe")
 region_enabled = true
 region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
 
 [node name="Label" type="Label" parent="Economy/Shop/BalanceChangeMarker"]
 offset_left = 66.9995
-offset_top = -17.999945
-offset_right = 241.99959
-offset_bottom = 18.666723
-theme = SubResource("Theme_1acod")
+offset_top = -20.999945
+offset_right = 272.227
+offset_bottom = 22.000082
+theme = SubResource("Theme_2qf71")
 text = "+ 10"
 vertical_alignment = 1
 
