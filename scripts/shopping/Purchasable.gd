@@ -17,6 +17,7 @@ var _economy: Economy:
 
 func _ready() -> void:
 	super._ready()
+	$PriceTag/Label.text = "%d"%price
 	await get_tree().process_frame
 	_economy.on_balance_change.connect(_on_balance_change)
 	_on_balance_change(true)	
@@ -27,6 +28,7 @@ func _perform_purchase()->void:
 	is_purchased = true
 	_economy.on_balance_change.disconnect(_on_balance_change)
 	_economy.spend_money(price)
+	EffectsUtils.do_fade($PriceTag, 0.0, 1.0)
 	self.reparent(get_tree().root)
 	
 func _should_place_on_start()->bool: return false
@@ -43,5 +45,5 @@ func _on_balance_change(force : bool = false)->void:
 	if (is_affordable != _previous_was_affordable) or force:
 		print("Balance change - recompute")
 		var desired_alpha := _economy._purchasable_available_alpha if is_affordable else _economy._purchasable_unavailable_alpha
-		tw.do_fade(self, desired_alpha, _economy._purchasable_fade_duration_seconds)
+		tw.do_fade($Visual, desired_alpha, _economy._purchasable_fade_duration_seconds)
 	_previous_was_affordable = is_affordable

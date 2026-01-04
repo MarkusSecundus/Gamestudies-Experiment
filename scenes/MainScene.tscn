@@ -158,7 +158,7 @@ default_font_size = 80
 
 [sub_resource type="Theme" id="Theme_1acod"]
 default_font = ExtResource("28_qavw1")
-default_font_size = 32
+default_font_size = 16
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -2277,7 +2277,6 @@ destination = NodePath("..")
 script = ExtResource("87_1acod")
 current_balance = 10
 _balance_change_stay_seconds = 5.0
-_purchasable_unavailable_alpha = 0.2
 
 [node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
 z_index = 100
@@ -2385,22 +2384,21 @@ scale = Vector2(0.99999976, 0.99999976)
 
 [node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
 z_index = 1
-position = Vector2(-1046.1594, 78.14475)
+position = Vector2(-1046.1594, 22.040833)
 scale = Vector2(2.003711, 2.003711)
 script = ExtResource("92_2qf71")
 price = 50
 
-[node name="DecorMask" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
 position = Vector2(-19.999634, -27.000061)
 scale = Vector2(0.26437035, 0.26437035)
 texture = ExtResource("22_5ha8j")
 region_enabled = true
 region_rect = Rect2(567, 1203, 739, 342)
 
-[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Mask/Visual"]
 visible = false
-position = Vector2(-18.075, -29.47)
-scale = Vector2(0.26437035, 0.26437035)
+position = Vector2(7.2800293, -9.342682)
 texture = ExtResource("35_48gc8")
 region_enabled = true
 region_rect = Rect2(503, 440, 762, 358)
@@ -2418,6 +2416,26 @@ offset_left = -110.0
 offset_top = -70.000015
 offset_right = 75.0
 offset_bottom = 12.0
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-51.00004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Mask/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Mask/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "0"
+vertical_alignment = 1
 
 [node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
 visible = false
