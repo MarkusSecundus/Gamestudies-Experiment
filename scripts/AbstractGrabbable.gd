@@ -124,10 +124,8 @@ func _notification(what: int) -> void:
 		_update_selection_visuals()
 
 func _on_area_2d_mouse_entered() -> void:
-	print("Enter {0}".format([self.name]))
 	_register_hovered_over_object(self)
 
 
 func _on_area_2d_mouse_exited() -> void:
-	print("exit {0}".format([self.name]))
 	_unregister_hovered_over_object(self)

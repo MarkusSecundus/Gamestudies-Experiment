@@ -93,6 +93,7 @@
 [ext_resource type="Texture2D" uid="uid://cwpcpue4wax7v" path="res://art/ui/shop-arrow_button.png" id="88_m330v"]
 [ext_resource type="Texture2D" uid="uid://ca0o5ivm8s36g" path="res://art/ui/shop-arrow_button-outline.png" id="89_3u7l0"]
 [ext_resource type="Texture2D" uid="uid://djhp0dp4qddyk" path="res://art/ui/shop-separator.png" id="90_aime7"]
+[ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="92_2qf71"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
@@ -132,9 +133,6 @@ radius = 29.274563
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ha8j"]
 size = Vector2(44, 75)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuwja"]
-size = Vector2(182, 77)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ha8j"]
 radius = 43.0
@@ -1121,37 +1119,6 @@ position = Vector2(33, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder"]
 position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="Mask" type="Node2D" parent="Decoration"]
-position = Vector2(544, 188)
-script = ExtResource("21_5ha8j")
-
-[node name="DecorMask" type="Sprite2D" parent="Decoration/Mask"]
-position = Vector2(-19.999634, -27.000061)
-scale = Vector2(0.26437035, 0.26437035)
-texture = ExtResource("22_5ha8j")
-region_enabled = true
-region_rect = Rect2(567, 1203, 739, 342)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Mask"]
-visible = false
-position = Vector2(-18.075, -29.47)
-scale = Vector2(0.26437035, 0.26437035)
-texture = ExtResource("35_48gc8")
-region_enabled = true
-region_rect = Rect2(503, 440, 762, 358)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Mask"]
-position = Vector2(-88, 0)
-
-[node name="Right" type="Node2D" parent="Decoration/Mask/SelfAnchor"]
-position = Vector2(144, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Mask"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Mask/Holder"]
-position = Vector2(-20, -28.5)
-shape = SubResource("RectangleShape2D_xuwja")
 
 [node name="Glasses" type="Node2D" parent="Decoration"]
 position = Vector2(1756, 1063)
@@ -2310,6 +2277,7 @@ destination = NodePath("..")
 script = ExtResource("87_1acod")
 current_balance = 10
 _balance_change_stay_seconds = 5.0
+_purchasable_unavailable_alpha = 0.2
 
 [node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
 z_index = 100
@@ -2317,9 +2285,6 @@ position = Vector2(959.1109, -113.00001)
 scale = Vector2(0.49907398, 0.49907398)
 script = ExtResource("88_dofa8")
 _open_position = NodePath("../ShopOpenedPosition")
-
-[node name="Goods" type="Node2D" parent="Economy/Shop"]
-scale = Vector2(0.9999999, 0.9999999)
 
 [node name="Body" type="NinePatchRect" parent="Economy/Shop"]
 offset_left = -1795.5461
@@ -2413,6 +2378,46 @@ theme = SubResource("Theme_aime7")
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Goods" type="Node2D" parent="Economy/Shop"]
+position = Vector2(-0.00012207031, 0)
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
+z_index = 1
+position = Vector2(-1046.1594, 78.14475)
+scale = Vector2(2.003711, 2.003711)
+script = ExtResource("92_2qf71")
+price = 50
+
+[node name="DecorMask" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-19.999634, -27.000061)
+scale = Vector2(0.26437035, 0.26437035)
+texture = ExtResource("22_5ha8j")
+region_enabled = true
+region_rect = Rect2(567, 1203, 739, 342)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
+visible = false
+position = Vector2(-18.075, -29.47)
+scale = Vector2(0.26437035, 0.26437035)
+texture = ExtResource("35_48gc8")
+region_enabled = true
+region_rect = Rect2(503, 440, 762, 358)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-88, 0)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Mask/SelfAnchor"]
+position = Vector2(144, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Mask"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -110.0
+offset_top = -70.000015
+offset_right = 75.0
+offset_bottom = 12.0
 
 [node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
 visible = false

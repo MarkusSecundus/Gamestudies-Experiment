@@ -13,6 +13,13 @@ extends Node
 @onready var _balance_change_label : Label = $Shop/BalanceChangeMarker/Label
 @onready var _big_balance_label : Label = $Shop/BalanceLabel
 
+@export_group("Purchasable Tweens")
+@export var _purchasable_available_alpha :float = 1.0
+@export var _purchasable_unavailable_alpha :float = 0.5
+@export var _purchasable_fade_duration_seconds : float = 0.5
+
+signal on_balance_change()
+
 var _big_balance_label_writer : int:
 	get: return _big_balance_label_writer
 	set(val):
@@ -41,6 +48,7 @@ var _balance_change_amount : int = 0
 
 func _internal_change_money_amount(delta : int)->void:
 	current_balance += delta
+	on_balance_change.emit()
 	_balance_change_amount += delta
 	_big_balance_label_tween.create_tween().tween_property(self, "_big_balance_label_writer", current_balance, _big_balance_label_tween_duration_seconds)
 	_balance_change_label_writer = _balance_change_amount

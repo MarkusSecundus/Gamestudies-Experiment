@@ -27,7 +27,10 @@ func place(location: PlacementLocation.Segment)->void:
 	self._placement = location
 
 
+func _should_place_on_start()->bool: return true
+
 func _ready() -> void:
 	super._ready()
-	await get_tree().process_frame
-	PlacementLocations.INSTANCE.do_place(self)
+	if _should_place_on_start():
+		await get_tree().process_frame
+		PlacementLocations.INSTANCE.do_place(self)
