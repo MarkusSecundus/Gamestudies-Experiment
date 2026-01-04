@@ -39,11 +39,9 @@ const _available_alpha :float = 1.0
 var _previous_was_affordable : bool = false
 var tw := EffectsUtils.TweenWrapper.new(self)
 func _on_balance_change(force : bool = false)->void:
-	print("Balance change")
 	if is_purchased: return
 	var is_affordable : bool = can_grab()
 	if (is_affordable != _previous_was_affordable) or force:
-		print("Balance change - recompute")
 		var desired_alpha := _economy._purchasable_available_alpha if is_affordable else _economy._purchasable_unavailable_alpha
 		tw.do_fade($Visual, desired_alpha, _economy._purchasable_fade_duration_seconds)
 	_previous_was_affordable = is_affordable

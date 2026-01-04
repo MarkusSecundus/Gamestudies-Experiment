@@ -90,7 +90,6 @@ func _set_outline_visibility(new_visible: bool)->void:
 
 static var _hover_stack : Array[AbstractGrabbable] = []
 static func _register_hovered_over_object(object: AbstractGrabbable)->void:
-	print("Register {0}".format([object.name]))
 	if not object in _hover_stack:
 		for i in _hover_stack.size():
 			if _hover_stack[i].z_index < object.z_index:
@@ -101,7 +100,6 @@ static func _register_hovered_over_object(object: AbstractGrabbable)->void:
 		_update_selection_visuals()
 	
 static func _unregister_hovered_over_object(object: AbstractGrabbable)->void:
-	print("unregister {0}".format([object.name]))
 	_hover_stack.erase(object)
 	object._set_outline_visibility(false)
 	_update_selection_visuals()

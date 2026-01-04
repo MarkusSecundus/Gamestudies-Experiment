@@ -146,7 +146,7 @@ default_font_size = 22
 
 [sub_resource type="Theme" id="Theme_aime7"]
 default_font = ExtResource("28_qavw1")
-default_font_size = 80
+default_font_size = 96
 
 [sub_resource type="Theme" id="Theme_1acod"]
 default_font = ExtResource("28_qavw1")
@@ -1621,8 +1621,7 @@ offset_bottom = 140.0
 grow_horizontal = 2
 mouse_filter = 2
 theme = SubResource("Theme_i7ifx")
-text = "Good morning
-
+text = "[Tutorial]
 Assemble an eye by clicking on the different eye parts.
 When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
 fit_content = true
@@ -1692,14 +1691,10 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
-script = ExtResource("83_e8t1i")
-
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
-text = "Good morning
-
+text = "[Tutorial]
 Assemble an eye by clicking on the different eye parts.
 When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
 
@@ -1707,11 +1702,14 @@ When all 4 eye parts are present and you are satisfied with  your creation, subm
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
+text = "Thanks.
+Here, take the money."
 do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+script = ExtResource("83_e8t1i")
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -1745,11 +1743,15 @@ Real customers will follow right after."
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
+text = "Thanks.
+Use this money to buy something from the shop.
+You can get to the shop by clicking the arrow on top of the screen."
 do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+script = ExtResource("83_e8t1i")
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -1782,6 +1784,9 @@ Please give me new ones, so that they forget.
 [node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("83_e8t1i")
 
 [node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("46_cw1g3")
@@ -2716,6 +2721,7 @@ text = "50"
 vertical_alignment = 1
 
 [node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
+visible = false
 position = Vector2(-1749.4608, 292.5417)
 scale = Vector2(2.0037098, 2.0037098)
 
@@ -2744,5 +2750,7 @@ scale = Vector2(0.49907398, 0.49907398)
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]
 [connection signal="on_unsuccess" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_out"]
 [connection signal="the_signal" from="DialogSystem/Fn_Main/Tutorial/AddMoney" to="Economy" method="add_money" binds= [50]]
+[connection signal="the_signal" from="DialogSystem/Fn_Main/Tutorial2/AddMoney" to="Economy" method="add_money" binds= [120]]
+[connection signal="the_signal" from="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid/AddMoney" to="Economy" method="add_money" binds= [15]]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]

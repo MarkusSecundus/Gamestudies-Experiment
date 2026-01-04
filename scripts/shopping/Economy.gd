@@ -55,7 +55,7 @@ func _internal_change_money_amount(delta : int)->void:
 	
 	var tw := _balance_change_tween.create_tween()
 	EffectsUtils.do_fade_with_tween(tw, _balance_change_marker, 1.0, _balance_change_fade_in_duration_seconds)
-	EffectsUtils.do_fade_with_tween(tw, _balance_change_marker, 0.0, _balance_change_fade_out_duration_seconds, 1.0).set_delay(_balance_change_stay_seconds)
+	EffectsUtils.do_fade_with_tween(tw, _balance_change_marker, 0.0, _balance_change_fade_out_duration_seconds).set_delay(_balance_change_stay_seconds)
 	await tw.finished
 	_balance_change_amount = 0
 	_balance_change_label_writer = 0
