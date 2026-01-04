@@ -8,22 +8,21 @@ static func do_particles_one_shot(particles: GPUParticles2D)->void:
 
 class TweenWrapper:
 	var _tween : Tween
-	var _tree : SceneTree
+	var obj : Node
 	func _init(obj: Node):
-		_tree = obj.get_tree()
+		self.obj = obj
 	
-	func do_property(object: Object, property: NodePath, final_var: Variant, duration: float)->Tween:
+	func create_tween()->Tween:
 		if _tween and _tween.is_running():
 			_tween.kill()
-		_tween = _tree.create_tween()
-		_tween.tween_property(object, property, final_var, duration)
+		_tween = obj.create_tween()
 		return _tween
+	
+	func do_property(object: Object, property: NodePath, final_var: Variant, duration: float)->PropertyTweener:
+		return create_tween().tween_property(object, property, final_var, duration)
 		
 	func do_fade(this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
-		if _tween and _tween.is_running():
-			_tween.kill()
-		_tween = this.create_tween()
-		return EffectsUtils.do_fade_with_tween(_tween, this, end_alpha, duration_seconds, start_alpha, hide_when_alpha_is_0)
+		return EffectsUtils.do_fade_with_tween(create_tween(), this, end_alpha, duration_seconds, start_alpha, hide_when_alpha_is_0)
 
 static func do_fade_with_tween(tw: Tween, this: CanvasItem, end_alpha: float, duration_seconds: float, start_alpha: float = -1, hide_when_alpha_is_0 : bool = true)->PropertyTweener:
 	var end_color := this.modulate

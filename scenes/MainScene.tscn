@@ -1792,6 +1792,9 @@ duration = 2.0
 ease = 0
 transition = 1
 
+[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+script = ExtResource("83_e8t1i")
+
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
@@ -2305,6 +2308,8 @@ destination = NodePath("..")
 
 [node name="Economy" type="Node" parent="."]
 script = ExtResource("87_1acod")
+current_balance = 10
+_balance_change_stay_seconds = 5.0
 
 [node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
 z_index = 100
@@ -2313,11 +2318,14 @@ scale = Vector2(0.49907398, 0.49907398)
 script = ExtResource("88_dofa8")
 _open_position = NodePath("../ShopOpenedPosition")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Economy/Shop"]
-offset_left = -1795.5471
-offset_top = -302.5603
-offset_right = 1795.1028
-offset_bottom = 248.46008
+[node name="Goods" type="Node2D" parent="Economy/Shop"]
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="Body" type="NinePatchRect" parent="Economy/Shop"]
+offset_left = -1795.5461
+offset_top = -302.56006
+offset_right = 1795.1038
+offset_bottom = 248.46033
 mouse_filter = 0
 texture = ExtResource("88_hhhsk")
 region_rect = Rect2(118.80051, 11.659119, 3603.2358, 534.7495)
@@ -2330,63 +2338,87 @@ axis_stretch_vertical = 1
 [node name="Holder" type="Control" parent="Economy/Shop"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -92.3927
-offset_top = 166.30798
-offset_right = 93.95227
-offset_bottom = 294.54547
-
-[node name="Body" type="Sprite2D" parent="Economy/Shop"]
-visible = false
-position = Vector2(0, 2.0037231)
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("88_hhhsk")
-region_enabled = true
-region_rect = Rect2(0, 0, 3840, 594.5365)
+offset_left = -92.392334
+offset_top = 166.30792
+offset_right = 93.95264
+offset_bottom = 294.5454
 
 [node name="ArrowButton" type="Sprite2D" parent="Economy/Shop"]
-position = Vector2(-0.22224236, 230.42668)
-scale = Vector2(0.8083933, 0.80839336)
+position = Vector2(-0.22216797, 230.42656)
+scale = Vector2(0.80839306, 0.8083931)
 texture = ExtResource("88_m330v")
 region_enabled = true
 region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
 
 [node name="Outline" type="Sprite2D" parent="Economy/Shop"]
 visible = false
-position = Vector2(-0.22224236, 230.42668)
-scale = Vector2(0.8083932, 0.8083933)
+position = Vector2(-0.22216797, 230.42656)
+scale = Vector2(0.80839294, 0.80839306)
 texture = ExtResource("89_3u7l0")
 region_enabled = true
 region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
 
-[node name="ShopSeparator" type="Sprite2D" parent="Economy/Shop"]
-position = Vector2(-1404.8228, -36.066742)
+[node name="Separators" type="Node2D" parent="Economy/Shop"]
+scale = Vector2(0.9999994, 0.9999994)
+
+[node name="ShopSeparator" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-1404.8228, -36.066757)
 scale = Vector2(1.0567511, 1.0567511)
 texture = ExtResource("90_aime7")
 region_enabled = true
 region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
 
+[node name="ShopSeparator2" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-811.7251, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator3" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-136.47461, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator4" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(502.70935, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator5" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(1099.8154, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
 [node name="CoinIcon" type="Sprite2D" parent="Economy/Shop"]
-position = Vector2(-1585.1566, 88.16328)
-scale = Vector2(1.1260856, 1.1260856)
+position = Vector2(-1585.1559, 88.16322)
+scale = Vector2(1.1260852, 1.1260852)
 texture = ExtResource("86_2a4qe")
 region_enabled = true
 region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
 
 [node name="BalanceLabel" type="Label" parent="Economy/Shop"]
 self_modulate = Color(1, 1, 1, 0.92156863)
-offset_left = -1745.4537
-offset_top = -118.21892
-offset_right = -1424.86
-offset_bottom = 2.0037384
+offset_left = -1745.4528
+offset_top = -118.21883
+offset_right = -1424.859
+offset_bottom = 2.00383
 theme = SubResource("Theme_aime7")
 text = "10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
+visible = false
 modulate = Color(0.67646587, 0.6764658, 0.6764658, 1)
-position = Vector2(-1749.4617, 292.5418)
-scale = Vector2(2.0037107, 2.0037107)
+position = Vector2(-1749.4608, 292.5417)
+scale = Vector2(2.0037098, 2.0037098)
 
 [node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
 position = Vector2(32.552002, -0.0625)
@@ -2396,13 +2428,12 @@ region_enabled = true
 region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
 
 [node name="Label" type="Label" parent="Economy/Shop/BalanceChangeMarker"]
-offset_left = -40.0
-offset_top = -48.0
-offset_right = 224.0
-offset_bottom = 51.0
+offset_left = 66.9995
+offset_top = -17.999945
+offset_right = 241.99959
+offset_bottom = 18.666723
 theme = SubResource("Theme_1acod")
 text = "+ 10"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ShopOpenedPosition" type="Node2D" parent="Economy"]
@@ -2413,5 +2444,6 @@ scale = Vector2(0.49907398, 0.49907398)
 [connection signal="on_submitted" from="EyePiedestal" to="DialogSystem/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]
 [connection signal="on_unsuccess" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_out"]
+[connection signal="the_signal" from="DialogSystem/Fn_Main/Tutorial/AddMoney" to="Economy" method="add_money" binds= [50]]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]
