@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=114 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -84,7 +84,15 @@
 [ext_resource type="Texture2D" uid="uid://iqq46r448l2i" path="res://art/shop/eye_piedestal-handles.png" id="62_tuspm"]
 [ext_resource type="Texture2D" uid="uid://bledvs74mxd4q" path="res://art/shop/eye_piedestal-handles-ouline.png" id="63_hr6p2"]
 [ext_resource type="Script" uid="uid://c1uuotoe1wldw" path="res://scripts/util/CounterCondition.gd" id="64_e8t1i"]
+[ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="74_te826"]
 [ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="83_e8t1i"]
+[ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="86_2a4qe"]
+[ext_resource type="Script" uid="uid://4dolsccd1d2g" path="res://scripts/shopping/Economy.gd" id="87_1acod"]
+[ext_resource type="Script" uid="uid://c2etq748frf4g" path="res://scripts/shopping/ShopTab.gd" id="88_dofa8"]
+[ext_resource type="Texture2D" uid="uid://bef6oeru7sdtj" path="res://art/ui/shop-body.png" id="88_hhhsk"]
+[ext_resource type="Texture2D" uid="uid://cwpcpue4wax7v" path="res://art/ui/shop-arrow_button.png" id="88_m330v"]
+[ext_resource type="Texture2D" uid="uid://ca0o5ivm8s36g" path="res://art/ui/shop-arrow_button-outline.png" id="89_3u7l0"]
+[ext_resource type="Texture2D" uid="uid://djhp0dp4qddyk" path="res://art/ui/shop-separator.png" id="90_aime7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
@@ -145,6 +153,14 @@ size = Vector2(44, 122)
 [sub_resource type="Theme" id="Theme_i7ifx"]
 default_font = ExtResource("28_qavw1")
 default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_aime7"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 80
+
+[sub_resource type="Theme" id="Theme_1acod"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 32
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1680,16 +1696,18 @@ region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
 visible = false
+z_index = 10
 anchors_preset = 0
 offset_left = 694.0
 offset_top = 20.0
 offset_right = 1242.0
 offset_bottom = 283.0
+mouse_filter = 2
 script = ExtResource("28_i7ifx")
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
 is_skippable = false
 
-[node name="Label" type="RichTextLabel" parent="TextBubble"]
+[node name="Label" type="RichTextLabel" parent="TextBubble" node_paths=PackedStringArray("source")]
 self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
 z_index = 10
 clip_contents = false
@@ -1701,12 +1719,18 @@ offset_top = 37.0
 offset_right = -42.0
 offset_bottom = 140.0
 grow_horizontal = 2
+mouse_filter = 2
 theme = SubResource("Theme_i7ifx")
-text = "Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
+text = "Good morning
+
+Assemble an eye by clicking on the different eye parts.
+When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
+script = ExtResource("74_te826")
+source = NodePath("../../DialogSystem/Fn_Main/Tutorial/Text")
 
 [node name="Control" type="Control" parent="TextBubble/Label"]
 z_index = -1
@@ -1720,6 +1744,7 @@ offset_right = 42.0
 offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control"]
 layout_mode = 1
@@ -1770,7 +1795,8 @@ transition = 1
 [node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
-text = "[Tutorial]
+text = "Good morning
+
 Assemble an eye by clicking on the different eye parts.
 When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
 
@@ -2276,6 +2302,113 @@ append = true
 [node name="Jump" type="Node" parent="DialogSystem/test" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("..")
+
+[node name="Economy" type="Node" parent="."]
+script = ExtResource("87_1acod")
+
+[node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
+z_index = 100
+position = Vector2(959.1109, -113.00001)
+scale = Vector2(0.49907398, 0.49907398)
+script = ExtResource("88_dofa8")
+_open_position = NodePath("../ShopOpenedPosition")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Economy/Shop"]
+offset_left = -1795.5471
+offset_top = -302.5603
+offset_right = 1795.1028
+offset_bottom = 248.46008
+mouse_filter = 0
+texture = ExtResource("88_hhhsk")
+region_rect = Rect2(118.80051, 11.659119, 3603.2358, 534.7495)
+patch_margin_left = 64
+patch_margin_right = 62
+patch_margin_bottom = 67
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Holder" type="Control" parent="Economy/Shop"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -92.3927
+offset_top = 166.30798
+offset_right = 93.95227
+offset_bottom = 294.54547
+
+[node name="Body" type="Sprite2D" parent="Economy/Shop"]
+visible = false
+position = Vector2(0, 2.0037231)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("88_hhhsk")
+region_enabled = true
+region_rect = Rect2(0, 0, 3840, 594.5365)
+
+[node name="ArrowButton" type="Sprite2D" parent="Economy/Shop"]
+position = Vector2(-0.22224236, 230.42668)
+scale = Vector2(0.8083933, 0.80839336)
+texture = ExtResource("88_m330v")
+region_enabled = true
+region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop"]
+visible = false
+position = Vector2(-0.22224236, 230.42668)
+scale = Vector2(0.8083932, 0.8083933)
+texture = ExtResource("89_3u7l0")
+region_enabled = true
+region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
+
+[node name="ShopSeparator" type="Sprite2D" parent="Economy/Shop"]
+position = Vector2(-1404.8228, -36.066742)
+scale = Vector2(1.0567511, 1.0567511)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop"]
+position = Vector2(-1585.1566, 88.16328)
+scale = Vector2(1.1260856, 1.1260856)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="BalanceLabel" type="Label" parent="Economy/Shop"]
+self_modulate = Color(1, 1, 1, 0.92156863)
+offset_left = -1745.4537
+offset_top = -118.21892
+offset_right = -1424.86
+offset_bottom = 2.0037384
+theme = SubResource("Theme_aime7")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
+modulate = Color(0.67646587, 0.6764658, 0.6764658, 1)
+position = Vector2(-1749.4617, 292.5418)
+scale = Vector2(2.0037107, 2.0037107)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(32.552002, -0.0625)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/BalanceChangeMarker"]
+offset_left = -40.0
+offset_top = -48.0
+offset_right = 224.0
+offset_bottom = 51.0
+theme = SubResource("Theme_1acod")
+text = "+ 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShopOpenedPosition" type="Node2D" parent="Economy"]
+z_index = 600
+position = Vector2(959.1109, 87.99998)
+scale = Vector2(0.49907398, 0.49907398)
 
 [connection signal="on_submitted" from="EyePiedestal" to="DialogSystem/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]

@@ -55,10 +55,16 @@ func _do_move_to_position(destination: Vector2)->void:
 
 
 func _ready() -> void:
-	var holder := $Holder as Area2D
-	holder.mouse_entered.connect(_on_area_2d_mouse_entered)
-	holder.mouse_exited.connect(_on_area_2d_mouse_exited)
-	holder.input_event.connect(_on_area_2d_input_event)
+	var holder_area := $Holder as Area2D
+	if holder_area:
+		holder_area.mouse_entered.connect(_on_area_2d_mouse_entered)
+		holder_area.mouse_exited.connect(_on_area_2d_mouse_exited)
+		holder_area.input_event.connect(_on_area_2d_input_event)
+	var holder_control := $Holder as Control
+	if holder_control:
+		holder_control.mouse_entered.connect(_on_area_2d_mouse_entered)
+		holder_control.mouse_exited.connect(_on_area_2d_mouse_exited)
+		holder_control.gui_input.connect(_on_collider_input_event)
 
 
 static func _try_consume_input(this: AbstractGrabbable)->bool:
@@ -69,7 +75,8 @@ static func _try_consume_input(this: AbstractGrabbable)->bool:
 
 
 var move_offset : Vector2 = Vector2.ZERO
-func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void: _on_collider_input_event(event)
+func _on_collider_input_event(event: InputEvent) -> void:
 	if not can_grab(): return
 	var btn := event as InputEventMouseButton
 	if btn and btn.pressed and (btn.button_index == MOUSE_BUTTON_LEFT) and _try_consume_input(self):
@@ -83,11 +90,18 @@ func _set_outline_visibility(new_visible: bool)->void:
 
 static var _hover_stack : Array[AbstractGrabbable] = []
 static func _register_hovered_over_object(object: AbstractGrabbable)->void:
+	print("Register {0}".format([object.name]))
 	if not object in _hover_stack:
+		for i in _hover_stack.size():
+			if _hover_stack[i].z_index < object.z_index:
+				_hover_stack.insert(i, object)
+				_update_selection_visuals()
+				return
 		_hover_stack.append(object)
 		_update_selection_visuals()
 	
 static func _unregister_hovered_over_object(object: AbstractGrabbable)->void:
+	print("unregister {0}".format([object.name]))
 	_hover_stack.erase(object)
 	object._set_outline_visibility(false)
 	_update_selection_visuals()
@@ -110,8 +124,10 @@ func _notification(what: int) -> void:
 		_update_selection_visuals()
 
 func _on_area_2d_mouse_entered() -> void:
+	print("Enter {0}".format([self.name]))
 	_register_hovered_over_object(self)
 
 
 func _on_area_2d_mouse_exited() -> void:
+	print("exit {0}".format([self.name]))
 	_unregister_hovered_over_object(self)

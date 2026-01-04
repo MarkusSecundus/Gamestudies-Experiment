@@ -69,11 +69,13 @@ func on_drag_start()->void:
 	_ordering_config.when_moving.apply(self)
 func on_drag_end()->void: 
 	var piedestal_anchor := _piedestal.get_anchor(self)
-	if piedestal_anchor.global_position.distance_to(self.global_position) < _piedestal.submit_distance:
-		_piedestal_anchor = piedestal_anchor
+	var distance_to_piedestal := piedestal_anchor.global_position.distance_to(self.global_position)
+	print("piedestal distance: {0} (required {1})".format([distance_to_piedestal, _piedestal.submit_distance]))
+	if distance_to_piedestal < _piedestal.submit_distance:
+		self._piedestal_anchor = piedestal_anchor
 		_piedestal.add_eye_part(self)
 	else:
-		_piedestal_anchor = null
+		self._piedestal_anchor = null
 		_piedestal.remove_eye_part(self)
 
 
