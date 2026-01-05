@@ -12,7 +12,13 @@ func get_right_anchor()->Vector2: return _anchor_right.global_position
 
 func get_length()->float: return get_left_anchor().distance_to(get_right_anchor())
 
-var _is_being_grabbed :bool = false
+@export var _alpha_when_grabbed := 1.0
+
+var _is_being_grabbed :bool = false:
+	get: return _is_being_grabbed
+	set(val):
+		_is_being_grabbed = val
+		if _outline: _outline.modulate.a = _alpha_when_grabbed if val else 1.0
 
 func on_drag_start()->void: pass
 func on_drag_end()->void: pass
