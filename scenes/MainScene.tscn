@@ -1595,6 +1595,7 @@ region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
+visible = false
 z_index = 10
 anchors_preset = 0
 offset_left = 694.0
@@ -1607,7 +1608,6 @@ sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y
 is_skippable = false
 
 [node name="Label" type="RichTextLabel" parent="TextBubble" node_paths=PackedStringArray("source")]
-visible = false
 self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
 z_index = 10
 clip_contents = false
