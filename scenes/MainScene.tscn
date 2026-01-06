@@ -412,8 +412,8 @@ position = Vector2(104.000015, 52.999985)
 script = ExtResource("6_doyhq")
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
-position = Vector2(2.0000134, -1.9999847)
-scale = Vector2(0.082, 0.082)
+position = Vector2(-1.9999866, -11.999985)
+scale = Vector2(0.072451584, 0.072451584)
 texture = ExtResource("4_o3jky")
 region_enabled = true
 region_rect = Rect2(-17, 6, 1331, 1281)
@@ -421,13 +421,14 @@ region_rect = Rect2(-17, 6, 1331, 1281)
 [node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
 visible = false
 z_index = 60
-position = Vector2(6, 9.000015)
-scale = Vector2(0.082, 0.082)
+position = Vector2(2, -2.5947416)
+scale = Vector2(0.0724516, 0.0724516)
 texture = ExtResource("11_x2kui")
 region_enabled = true
 region_rect = Rect2(118.5275, 404.0517, 1158.539, 750.07684)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye3"]
+position = Vector2(-2.4290009, -2.9999847)
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye3/Holder"]
@@ -1558,15 +1559,12 @@ region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
 [node name="Eye3" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
-position = Vector2(-1, -16.000008)
-scale = Vector2(3.5805511, 3.5805516)
+position = Vector2(15.000002, 25)
+scale = Vector2(4.0698104, 4.0698104)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye3"]
-modulate = Color(1, 1, 1, 0.5686275)
-z_index = 500
-z_as_relative = false
-position = Vector2(2.0000134, -1.9999847)
-scale = Vector2(0.082, 0.082)
+position = Vector2(-1.9999866, -11.999985)
+scale = Vector2(0.072451584, 0.072451584)
 texture = ExtResource("4_o3jky")
 region_enabled = true
 region_rect = Rect2(-17, 6, 1331, 1281)
