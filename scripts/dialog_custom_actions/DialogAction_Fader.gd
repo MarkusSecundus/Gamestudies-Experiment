@@ -7,6 +7,7 @@ extends IDialogAction
 @export var duration_seconds : float
 @export var ease : Tween.EaseType = Tween.EaseType.EASE_IN_OUT
 @export var transition : Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
+@export var wait_for_finish : bool = true
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var tw := create_tween()
@@ -18,6 +19,7 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var tweener := tw.tween_property(fader, "modulate", final_color, duration_seconds)
 	tweener.set_ease(ease)
 	tweener.set_trans(transition)
-	await tw.finished
+	if wait_for_finish:
+		await tw.finished
 	
 	_default_perform(ctx, on_finished)

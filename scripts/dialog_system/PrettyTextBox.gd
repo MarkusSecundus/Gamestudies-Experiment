@@ -81,6 +81,7 @@ func print_text(text:String, on_finished : Callable = Callable(), should_display
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
 	await _tw.finished
 	if should_display_the_dot: do_fade_the_finish_marker(1.0)
+	else: do_fade_the_finish_marker(0.0)
 	_tw = null
 	if _on_finished: _on_finished.call()
 	on_printing_finished.emit()

@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="8_do2vo"]
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="9_larrf"]
 [ext_resource type="Texture2D" uid="uid://bvg4onu7meubs" path="res://art/shop/text_bubble-dot.png" id="10_wufyc"]
+[ext_resource type="Script" uid="uid://dj65i8h1vxjyr" path="res://scripts/util/RichTextUrlOpener.gd" id="11_1epfi"]
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="11_kelb6"]
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="12_ngi55"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="13_ijnjj"]
@@ -93,10 +94,6 @@ _data = {
 &"dot_jumping": SubResource("Animation_aq5dq")
 }
 
-[sub_resource type="Theme" id="Theme_1epfi"]
-default_font = ExtResource("8_do2vo")
-default_font_size = 32
-
 [node name="IntroText" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -161,14 +158,35 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_left = 116.0
-offset_top = 111.0
+offset_top = 138.0
 offset_right = -280.0
 offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "As today's last customer disappears into the darkness of night, you let out 
-. . ."
+text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
+You put the sign saying CLOSED on the door.
+You cook a few eggs for dinner.
+Then you go to sleep.
+
+Tomorrow, you need to be fresh for work.
+Same as all the other days.
+
+
+
+
+
+
+
+
+[font size=32]
+Thank you for playing!
+[/font][font size=28]
+To complete the experiment, please, fill out this questionaire:     [url] A link will be provided later[/url]
+[/font][font size=24]
+
+[color=dark_gray]
+Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_larrf")
@@ -189,14 +207,8 @@ offset = Vector2(0, -21.678314)
 region_enabled = true
 region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 
-[node name="LinkButton" type="LinkButton" parent="."]
-layout_mode = 0
-offset_left = 919.0
-offset_top = 968.0
-offset_right = 1561.0
-offset_bottom = 1015.0
-theme = SubResource("Theme_1epfi")
-text = "Here will be a link to the questionaire"
+[node name="UrlOpener" type="Node" parent="TextBubble"]
+script = ExtResource("11_1epfi")
 
 [node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("11_kelb6")
@@ -226,24 +238,60 @@ script = ExtResource("12_ngi55")
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("13_ijnjj")
-text = "As today's last customer disappears into the darkness of night, you let out "
+text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
+"
 append = true
 
 [node name="Text2" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("13_ijnjj")
-text = "
-. . ."
+text = "You put the sign saying CLOSED on the door.
+"
 append = true
 
-[node name="HideTheDot" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text4" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "You cook a few eggs for dinner.
+"
+append = true
+
+[node name="Text5" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "Then you go to sleep.
+"
+append = true
+
+[node name="Text6" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "
+Tomorrow, you need to be fresh for work."
+append = true
+
+[node name="Text7" type="Node" parent="DialogSystem/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "
+Same as all the other days."
+append = true
+
+[node name="Text8" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("13_ijnjj")
 wait_for_user_input = false
+text = "
+
+
+
+
+
+
+
+
+[font size=32]
+Thank you for playing!
+[/font][font size=28]
+To complete the experiment, please, fill out this questionaire:     [url] A link will be provided later[/url]
+[/font][font size=24]
+
+[color=dark_gray]
+Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
 append = true
 
-[node name="Text3" type="Node" parent="DialogSystem/Fn_Text" node_paths=PackedStringArray("target")]
-script = ExtResource("14_k8jjf")
-target = NodePath("../../../LinkButton")
-end_alpha = 1.0
-duration_seconds = 1.0
-ease = 0
-transition = 4
+[connection signal="meta_clicked" from="TextBubble/Label" to="TextBubble/UrlOpener" method="_on_meta_clicked"]
