@@ -32,5 +32,9 @@ func _should_place_on_start()->bool: return true
 func _ready() -> void:
 	super._ready()
 	if _should_place_on_start():
+		if not self.is_visible_in_tree():
+			while true:
+				await self.visibility_changed
+				if self.is_visible_in_tree(): break
 		await get_tree().process_frame
 		PlacementLocations.INSTANCE.do_place(self)

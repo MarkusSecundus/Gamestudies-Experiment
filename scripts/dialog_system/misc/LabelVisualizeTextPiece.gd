@@ -1,4 +1,5 @@
 @tool
+class_name LabelVisualizeTextPiece
 extends Control
 
 @export var enabled : bool = true

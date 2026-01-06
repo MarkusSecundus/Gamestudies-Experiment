@@ -8,6 +8,11 @@ extends IDialogAction
 @export var text_box_override : PrettyTextBox = null
 @export var do_fade_out_after : bool = false
 
+@export_tool_button("Preview") var _preview_tool_btn = func():
+	var text_box := text_box_override if text_box_override else (NodeUtils.get_ancestor_of_type(self, DialogSystem, NodeUtils.LOOKUP_FLAGS.INCLUDE_INTERNAL) as DialogSystem).default_text_box
+	var previewable := NodeUtils.get_descendant_of_type(text_box, LabelVisualizeTextPiece) as LabelVisualizeTextPiece
+	if previewable: 
+		previewable.source = self
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var text_box := text_box_override if text_box_override else ctx.default_text_box
