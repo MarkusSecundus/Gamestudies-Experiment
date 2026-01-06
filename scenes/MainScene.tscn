@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=123 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -96,6 +96,7 @@
 [ext_resource type="Texture2D" uid="uid://bef6oeru7sdtj" path="res://art/ui/shop-body.png" id="88_hhhsk"]
 [ext_resource type="Texture2D" uid="uid://cwpcpue4wax7v" path="res://art/ui/shop-arrow_button.png" id="88_m330v"]
 [ext_resource type="Texture2D" uid="uid://ca0o5ivm8s36g" path="res://art/ui/shop-arrow_button-outline.png" id="89_3u7l0"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="89_dhgue"]
 [ext_resource type="Texture2D" uid="uid://djhp0dp4qddyk" path="res://art/ui/shop-separator.png" id="90_aime7"]
 [ext_resource type="Script" uid="uid://blxdhs427af1o" path="res://scripts/dialog_custom_actions/DialogAction_AddMoney.gd" id="91_2qf71"]
 [ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="92_2qf71"]
@@ -1640,7 +1641,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
 script = ExtResource("74_te826")
-source = NodePath("../../DialogSystem/Fn_Main/Tutorial/Text")
+source = NodePath("../../DialogSystem_Main/Fn_Main/Tutorial/Text")
 
 [node name="Control" type="Control" parent="TextBubble/Label"]
 z_index = -1
@@ -2214,29 +2215,32 @@ pitch_min = 0.9
 pitch_max = 1.2
 volume_db = -12.0
 
-[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
+[node name="DialogSystem_Main" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
 script = ExtResource("45_pwxld")
 default_start = NodePath("Fn_Main")
 run_on_start = true
 default_text_box = NodePath("../TextBubble")
 
-[node name="EyeWasSubmittedSignal" type="Node" parent="DialogSystem"]
+[node name="PlayRecorder" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("89_dhgue")
+
+[node name="EyeWasSubmittedSignal" type="Node" parent="DialogSystem_Main"]
 script = ExtResource("50_7tuqu")
 
-[node name="Fn_Main" type="Node" parent="DialogSystem"]
+[node name="Fn_Main" type="Node" parent="DialogSystem_Main"]
 script = ExtResource("51_fupde")
 
-[node name="FadeIn" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="FadeIn" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("56_wu3oq")
 start_alpha = 1.0
 duration_seconds = 2.0
 ease = 0
 transition = 4
 
-[node name="Tutorial" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2245,28 +2249,28 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "[Tutorial]
 Assemble an eye by dragging different eye parts on the piedestal.
 When all 4 eye parts are present and you are satisfied with your creation, submit it to the customer by dragging the piedestal onto him."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
 text = "Thanks.
 Here is your pay."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
 script = ExtResource("91_2qf71")
 amount = 11
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2275,10 +2279,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Tutorial2" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Tutorial2" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2287,18 +2291,18 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Hello, I am yet another tutorial customer.
 Please create whatever eye you like and give it to me.
 Real customers will follow right after."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
 text = "Oh, I really like this one!
 Here's your pay, plus a tip.
@@ -2307,11 +2311,11 @@ Here's your pay, plus a tip.
 Open the decoration shop by clicking the arrow above this bubble.]"
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Tutorial2"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
 script = ExtResource("91_2qf71")
 amount = 35
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2320,10 +2324,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2332,28 +2336,28 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "After what I did, my family will never look into my eyes.
 Please give me new ones, so that they forget.
 ...so that I can forget."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("46_cw1g3")
 text = "Thank you. 
 Really."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("91_2qf71")
 amount = 7
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2362,10 +2366,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="LoyalKnight" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="LoyalKnight" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/CustomerKnight")
 property = &"modulate"
@@ -2374,26 +2378,26 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "I lost my eyes serving my king and country.
 Please, help me so that I can ride into battle once more."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
 script = ExtResource("46_cw1g3")
 text = "Sir, you have my utmost gratitude!"
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
 script = ExtResource("91_2qf71")
 amount = 45
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/CustomerKnight")
 property = &"modulate"
@@ -2402,10 +2406,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Vain" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Vain" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2414,17 +2418,17 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Vain"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
 Give me some new ones - ones that are more deserving of me."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Vain"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
 script = ExtResource("46_cw1g3")
 text = "These eyes are abhorrent!
 . . . Well, whatever.
@@ -2432,11 +2436,11 @@ text = "These eyes are abhorrent!
 (She still takes them)"
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Vain"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
 script = ExtResource("91_2qf71")
 amount = 1
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2445,10 +2449,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Gambler" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Gambler" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2457,28 +2461,28 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "I lost my left eye in a game of dice.
 So... which of these are currently on sale?"
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
 script = ExtResource("46_cw1g3")
 text = "Oh. . . yes, yes.
 This one is nice.
 Nice and cheap."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
 script = ExtResource("91_2qf71")
 amount = 6
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2487,10 +2491,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Warlock" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Warlock" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
@@ -2499,60 +2503,60 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Hi, you won't believe it, this time I lost both my eyes playing cards with the mad god Azathoth himself (lol).
 So, what eyes have you got in stock?
 Get me some powerful ones."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Muhahahaha!"
 
-[node name="Wait" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("92_grpki")
 delay_seconds = 1.0
 
-[node name="T_GiveMoney2" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="T_GiveMoney2" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "
 Muhahaha!"
 append = true
 
-[node name="Wait2" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("92_grpki")
 delay_seconds = 2.0
 
-[node name="T_GiveMoney3" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="T_GiveMoney3" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "
 Ha!"
 append = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("91_2qf71")
 amount = 66
 
-[node name="Wait3" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("92_grpki")
 delay_seconds = 1.0
 
-[node name="T_GiveMoney4" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
+[node name="T_GiveMoney4" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
 text = "
 Just wait 'till he sees this."
 append = true
 do_fade_out_after = true
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
@@ -2561,10 +2565,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="PoorPeasant" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="PoorPeasant" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2573,29 +2577,29 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Please, help me!
 
 I can't feed my family if I can't even see the turnip growing on my little field."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
 script = ExtResource("46_cw1g3")
 text = "Thank you, mister.
 
 I am forever in your debt."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
 script = ExtResource("91_2qf71")
 amount = 3
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2604,10 +2608,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="BookEnjoyer" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="BookEnjoyer" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2616,29 +2620,29 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Reading books is my whole life.
 But now, my eyes are failing me.
 Is there possibly a chance you could save me from that future?"
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
 script = ExtResource("46_cw1g3")
 text = "Honestly, something about these eyes doesn't feel right.
 But what other options do I have?
 Here. Your pay."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
 script = ExtResource("91_2qf71")
 amount = 14
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2647,10 +2651,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="FormerVizier" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="FormerVizier" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2659,28 +2663,28 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "I was once the grand vizier.
 Then the sultan decided I was becoming too powerful - he gouged my eyes and banished me.
 With your help, I will finally get my revenge."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
 script = ExtResource("46_cw1g3")
 text = "Very well.
 I shall pay you even more generously once I get back what's mine."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
 script = ExtResource("91_2qf71")
 amount = 25
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2689,10 +2693,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="EyeObsessed" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="EyeObsessed" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2701,25 +2705,25 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/EyeObsessed"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Eyes, eyes, eyes, EYES, EEEYYYEEESSS...
 .............................
 I NEED MORE EYES!!!!!"
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/EyeObsessed" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/EyeObsessed"]
 script = ExtResource("46_cw1g3")
 text = "Heheeee
 
 Eyes!"
 do_fade_out_after = true
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2728,10 +2732,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Scientist" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Scientist" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2740,7 +2744,7 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Yes, these look like fine specimens.
@@ -2749,22 +2753,22 @@ Please, have 500 kg of these eye samples delivered to this address by next monda
 
 The University will of course compensate you generously for your service."
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist"]
 script = ExtResource("46_cw1g3")
 text = "Very well. I knew we can rely on you.
 After all, you are a highly trained professional.
 Here is the advance pay.  The remaining 100 000 groschen will be paid on delivery."
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist"]
 script = ExtResource("91_2qf71")
 amount = 1000
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2773,10 +2777,10 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Twoflower" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Twoflower" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2785,7 +2789,7 @@ duration = 2.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "Oh my goodness, are these actual eyes?!
@@ -2793,21 +2797,21 @@ My colleagues at the bank won't believe this, it will be the bestest souvenir!
 
 Also could we possibly get a photograph together, pretty please?"
 
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower"]
 script = ExtResource("46_cw1g3")
 text = "Wow, this is so cool.
 (He gives you a huge coin made of pure gold)"
 do_fade_out_after = true
 
-[node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower"]
 script = ExtResource("91_2qf71")
 amount = 2500
 
-[node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
@@ -2816,54 +2820,55 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Wait" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("92_grpki")
 delay_seconds = 5.0
 
-[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="FadeOut" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("56_wu3oq")
 end_alpha = 1.0
 duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="Transition" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Transition" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("93_8h2n0")
 destination = ExtResource("94_qb1n5")
 
-[node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem"]
+[node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem_Main"]
 script = ExtResource("51_fupde")
 
-[node name="EnablePiedestalCollider" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion"]
+[node name="EnablePiedestalCollider" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion"]
 script = ExtResource("83_e8t1i")
 
-[node name="WaitForSubmission" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("provider")]
+[node name="WaitForSubmission" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("provider")]
 script = ExtResource("53_g8282")
 provider = NodePath("../../EyeWasSubmittedSignal")
 
-[node name="DisablePiedestalCollider" type="Node" parent="DialogSystem/Fn_HandleEyeSubmittion"]
+[node name="DisablePiedestalCollider" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion"]
 script = ExtResource("83_e8t1i")
 
-[node name="test" type="Node" parent="DialogSystem"]
+[node name="test" type="Node" parent="DialogSystem_Main"]
 script = ExtResource("47_q5chl")
 condition_holds = false
 
-[node name="Text" type="Node" parent="DialogSystem/test"]
+[node name="Text" type="Node" parent="DialogSystem_Main/test"]
 script = ExtResource("46_cw1g3")
 text = "This is a piece of text"
 
-[node name="Text2" type="Node" parent="DialogSystem/test"]
+[node name="Text2" type="Node" parent="DialogSystem_Main/test"]
 script = ExtResource("46_cw1g3")
 text = "More text"
 append = true
 
-[node name="Jump" type="Node" parent="DialogSystem/test" node_paths=PackedStringArray("destination")]
+[node name="Jump" type="Node" parent="DialogSystem_Main/test" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("..")
 
-[connection signal="on_submitted" from="EyePiedestal" to="DialogSystem/EyeWasSubmittedSignal" method="do_emit"]
+[connection signal="on_submitted" from="EyePiedestal" to="DialogSystem_Main/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]
 [connection signal="on_unsuccess" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_out"]
 [connection signal="on_balance_change" from="Economy" to="Economy/CoinSound" method="play"]
-[connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
-[connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]
+[connection signal="before_node_is_performed" from="DialogSystem_Main" to="DialogSystem_Main/PlayRecorder" method="do_record"]
+[connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
+[connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]

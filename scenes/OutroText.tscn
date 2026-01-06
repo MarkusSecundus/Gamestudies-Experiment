@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cfh2elbhj280b"]
+[gd_scene load_steps=25 format=3 uid="uid://cfh2elbhj280b"]
 
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="1_7cenv"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="2_l8b4j"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="11_kelb6"]
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="12_ngi55"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="13_ijnjj"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="13_rohoa"]
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="14_k8jjf"]
 [ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="16_p07gd"]
 
@@ -190,7 +191,7 @@ Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=htt
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_larrf")
-source = NodePath("../../DialogSystem/Fn_Text/Text")
+source = NodePath("../../DialogSystem_Outro/Fn_Text/Text")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
 root_node = NodePath("../PrintFinishedMarker")
@@ -210,69 +211,72 @@ region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 [node name="UrlOpener" type="Node" parent="TextBubble"]
 script = ExtResource("11_1epfi")
 
-[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
+[node name="DialogSystem_Outro" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("11_kelb6")
 run_on_start = true
 default_text_box = NodePath("../TextBubble")
 
-[node name="Fn_Main" type="Node" parent="DialogSystem"]
+[node name="PlayRecorder" type="Node" parent="DialogSystem_Outro"]
+script = ExtResource("13_rohoa")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_Outro"]
 script = ExtResource("12_ngi55")
 
-[node name="TextReset" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="TextReset" type="Node" parent="DialogSystem_Outro/Fn_Main"]
 script = ExtResource("13_ijnjj")
 wait_for_user_input = false
 
-[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="FadeOut" type="Node" parent="DialogSystem_Outro/Fn_Main"]
 script = ExtResource("14_k8jjf")
 start_alpha = 1.0
 duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="PrintText" type="Node" parent="DialogSystem/Fn_Main" node_paths=PackedStringArray("callee")]
+[node name="PrintText" type="Node" parent="DialogSystem_Outro/Fn_Main" node_paths=PackedStringArray("callee")]
 script = ExtResource("16_p07gd")
 callee = NodePath("../../Fn_Text")
 
-[node name="Fn_Text" type="Node" parent="DialogSystem"]
+[node name="Fn_Text" type="Node" parent="DialogSystem_Outro"]
 script = ExtResource("12_ngi55")
 
-[node name="Text" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
 "
 append = true
 
-[node name="Text2" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text2" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "You put the sign saying CLOSED on the door.
 "
 append = true
 
-[node name="Text4" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text4" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "You cook a few eggs for dinner.
 "
 append = true
 
-[node name="Text5" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text5" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "Then you go to sleep.
 "
 append = true
 
-[node name="Text6" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text6" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "
 Tomorrow, you need to be fresh for work."
 append = true
 
-[node name="Text7" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text7" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 text = "
 Same as all the other days."
 append = true
 
-[node name="Text8" type="Node" parent="DialogSystem/Fn_Text"]
+[node name="Text8" type="Node" parent="DialogSystem_Outro/Fn_Text"]
 script = ExtResource("13_ijnjj")
 wait_for_user_input = false
 text = "
@@ -295,3 +299,4 @@ Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=htt
 append = true
 
 [connection signal="meta_clicked" from="TextBubble/Label" to="TextBubble/UrlOpener" method="_on_meta_clicked"]
+[connection signal="before_node_is_performed" from="DialogSystem_Outro" to="DialogSystem_Outro/PlayRecorder" method="do_record"]

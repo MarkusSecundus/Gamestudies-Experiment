@@ -64,13 +64,19 @@ func can_grab()->bool: return _chosen_eye_parts.size() == 4 and DatastructUtils.
 
 var _chosen_eye_parts : Dictionary[EyePart.PartType, EyePart] = {EyePart.PartType.EyeShape: null, EyePart.PartType.Eyebrow: null, EyePart.PartType.Iris: null, EyePart.PartType.Pupil: null}
 
+static func _get_eye_part_name(part: EyePart)->String:
+	if not part: return "<nil>"
+	return part.name
+
 func add_eye_part(part: EyePart)->void:
+	write_record({"type": "add_part", "part": _get_eye_part_name(part)})
 	var previous := _chosen_eye_parts[part.type]
 	if previous and (previous != part):
 		previous._piedestal_anchor = null
 	_chosen_eye_parts[part.type] = part
 
-func remove_eye_part(part: EyePart)->void:
+func remove_eye_part(part: EyePart, suppress_report: bool = false)->void:
+	if not suppress_report: write_record({"type": "remove_part", "part": _get_eye_part_name(part)})
 	if _chosen_eye_parts[part.type] == part:
 		_chosen_eye_parts[part.type] = null
 
@@ -103,7 +109,7 @@ func _do_submit_visual_effect()->void:
 	for eye_part_raw in _chosen_eye_parts.values():
 		var eye_part := eye_part_raw as EyePart
 		eye_part._piedestal_anchor = null
-		remove_eye_part(eye_part)
+		remove_eye_part(eye_part, true)
 		eye_part.global_position = eye_part._holder_anchor.global_position
 		var part_og_modulate := eye_part.modulate
 		eye_part.modulate.a = 0
@@ -112,16 +118,26 @@ func _do_submit_visual_effect()->void:
 
 func _record_answer()->void:
 	var answer : Dictionary[String, Variant]
+	answer.type = "submit_answer"
 	answer.question_idx = _question_idx
 	answer.eye_shape = _chosen_eye_parts[EyePart.PartType.EyeShape].name
 	answer.eyebrow = _chosen_eye_parts[EyePart.PartType.Eyebrow].name
 	answer.iris = _chosen_eye_parts[EyePart.PartType.Iris].name
 	answer.pupil = _chosen_eye_parts[EyePart.PartType.Pupil].name
-	
+	write_record(answer)
+
+
+static func write_record(record: Dictionary[String, Variant])->void:
+	record["timestamp"] = Time.get_time_string_from_system()
 	const ANSWERS_PATH = "answers.txt"
-	var to_append := JSON.stringify(answer, "\t")
+	var is_append :bool = true
+	var to_append := JSON.stringify(record, "\t")
 	var f := FileAccess.open(ANSWERS_PATH, FileAccess.READ_WRITE)
-	if not f: f = FileAccess.open(ANSWERS_PATH, FileAccess.WRITE)
+	if not f: 
+		f = FileAccess.open(ANSWERS_PATH, FileAccess.WRITE)
+		is_append = false
+	if is_append:
+		to_append = ", " + to_append
 	f.seek_end()
 	f.store_line(to_append)
 	f.close()

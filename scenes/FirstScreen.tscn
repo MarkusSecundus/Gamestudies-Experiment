@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dop62lglc6uq0"]
+[gd_scene load_steps=72 format=3 uid="uid://dop62lglc6uq0"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_kovtv"]
 [ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_pcypa"]
@@ -31,6 +31,7 @@
 [ext_resource type="Script" uid="uid://nehem5xv6gy5" path="res://scripts/Grabbable.gd" id="31_dfuxg"]
 [ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="32_rxrsw"]
 [ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="33_pxaeo"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="41_f0hic"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="45_dvhea"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="46_7uff2"]
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="46_eb1j1"]
@@ -3680,41 +3681,46 @@ position = Vector2(-5.75, -251.50006)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ceh8e")
 
-[node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_start")]
+[node name="DialogSystem_FirstScreen" type="Node" parent="." node_paths=PackedStringArray("default_start")]
 script = ExtResource("53_h5n0a")
 default_start = NodePath("Fn_Main")
 run_on_start = true
 
-[node name="Fn_Main" type="Node" parent="DialogSystem"]
+[node name="PlayRecorder" type="Node" parent="DialogSystem_FirstScreen"]
+script = ExtResource("41_f0hic")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_FirstScreen"]
 script = ExtResource("55_3bq6u")
 
-[node name="Condition" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Condition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
 script = ExtResource("56_eshda")
 
-[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main/Condition"]
+[node name="FadeOut" type="Node" parent="DialogSystem_FirstScreen/Fn_Main/Condition"]
 script = ExtResource("46_eb1j1")
 start_alpha = 1.0
 duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="WaitForKeyPress" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="WaitForKeyPress" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
 script = ExtResource("48_i36mk")
 keys = Array[StringName]([&"Space"])
 
-[node name="ThunderSound" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="ThunderSound" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
 script = ExtResource("48_eb1j1")
 stream = ExtResource("49_3a6cf")
 pitch_min = 0.9
 pitch_max = 0.0
 
-[node name="FadeIn" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="FadeIn" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
 script = ExtResource("46_eb1j1")
 end_alpha = 1.0
 duration_seconds = 3.0
 ease = 1
 transition = 4
 
-[node name="Transition" type="Node" parent="DialogSystem/Fn_Main"]
+[node name="Transition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
 script = ExtResource("49_f0hic")
 destination = ExtResource("48_f0hic")
+
+[connection signal="before_node_is_performed" from="DialogSystem_FirstScreen" to="DialogSystem_FirstScreen/PlayRecorder" method="do_record"]

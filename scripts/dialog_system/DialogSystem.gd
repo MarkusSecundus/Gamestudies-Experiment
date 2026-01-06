@@ -6,6 +6,8 @@ extends SomeDialogContainer
 @export var run_on_start : bool = false
 @export var default_text_box : PrettyTextBox
 
+signal before_node_is_performed(node: IDialogAction)
+
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	if run_on_start: do_run(default_start)
@@ -15,6 +17,7 @@ func do_run(start: IDialogAction = null, on_everything_finished: Callable = Call
 	assert(start, "No starting dialog action was found for dialog system {0}".format([self.name]))
 	
 	var ctx := DialogContext.new()
+	ctx._dialog_system = self
 	ctx.default_text_box = default_text_box
 	do_run_subtree(start, ctx, on_everything_finished)
 	
@@ -45,6 +48,7 @@ class ActionRunner:
 		print("Performing node {0}".format([next.name]))
 		var next_iteration : Callable = func(n)->void: iteration(n)
 		if current.is_enabled:
+			if ctx._dialog_system: ctx._dialog_system.before_node_is_performed.emit(current)
 			current.do_perform(ctx, next_iteration)
 		else:
 			current._default_perform(ctx, next_iteration)

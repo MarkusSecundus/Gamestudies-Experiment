@@ -11,6 +11,7 @@ var _temporary_variables : Dictionary[String, Variant] = {}
 var _call_stack : Array[StackFrame] = []
 
 var default_text_box : PrettyTextBox
+var _dialog_system : DialogSystem
 
 func push_stack_frame(caller: IDialogAction)->StackFrame:
 	var ret := StackFrame.new(caller)

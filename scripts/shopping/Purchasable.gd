@@ -25,6 +25,7 @@ func _ready() -> void:
 	
 func _perform_purchase()->void:
 	if is_purchased: return
+	EyePiedestal.write_record({"type": "purchase", "what": self.name, "balance_before_purchase": _economy.current_balance, "price": self.price})
 	is_purchased = true
 	_economy.on_balance_change.disconnect(_on_balance_change)
 	_economy.spend_money(price)

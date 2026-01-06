@@ -62,7 +62,9 @@ func _internal_change_money_amount(delta : int)->void:
 	
 
 func add_money(amount_to_add : int)->void:
+	var original_balance := self.current_balance
 	_internal_change_money_amount(amount_to_add)
+	EyePiedestal.write_record({"type": "add_money", "amount": amount_to_add, "original_balance": original_balance, "new_balance": self.current_balance})
 	
 
 func can_spend_money(amount_to_spend: int)->bool:
