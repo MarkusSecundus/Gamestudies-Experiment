@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfh2elbhj280b"]
+[gd_scene load_steps=24 format=3 uid="uid://cfh2elbhj280b"]
 
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="1_7cenv"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="2_l8b4j"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="12_ngi55"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="13_ijnjj"]
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="14_k8jjf"]
-[ext_resource type="Script" uid="uid://mpunko578tq3" path="res://scripts/dialog_custom_actions/DialogAction_PlaySoundtrack.gd" id="15_pd113"]
 [ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="16_p07gd"]
 
 [sub_resource type="Gradient" id="Gradient_f0hic"]
@@ -168,7 +167,7 @@ offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "As today's last customer disappears 
+text = "As today's last customer disappears into the darkness of night, you let out 
 . . ."
 fit_content = true
 visible_characters_behavior = 3
@@ -192,9 +191,9 @@ region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 
 [node name="LinkButton" type="LinkButton" parent="."]
 layout_mode = 0
-offset_left = 611.0
+offset_left = 919.0
 offset_top = 968.0
-offset_right = 1253.0
+offset_right = 1561.0
 offset_bottom = 1015.0
 theme = SubResource("Theme_1epfi")
 text = "Here will be a link to the questionaire"
@@ -218,9 +217,6 @@ duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="StartMusic" type="Node" parent="DialogSystem/Fn_Main"]
-script = ExtResource("15_pd113")
-
 [node name="PrintText" type="Node" parent="DialogSystem/Fn_Main" node_paths=PackedStringArray("callee")]
 script = ExtResource("16_p07gd")
 callee = NodePath("../../Fn_Text")
@@ -230,7 +226,7 @@ script = ExtResource("12_ngi55")
 
 [node name="Text" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("13_ijnjj")
-text = "As today's last customer disappears "
+text = "As today's last customer disappears into the darkness of night, you let out "
 append = true
 
 [node name="Text2" type="Node" parent="DialogSystem/Fn_Text"]
@@ -243,3 +239,11 @@ append = true
 script = ExtResource("13_ijnjj")
 wait_for_user_input = false
 append = true
+
+[node name="Text3" type="Node" parent="DialogSystem/Fn_Text" node_paths=PackedStringArray("target")]
+script = ExtResource("14_k8jjf")
+target = NodePath("../../../LinkButton")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 4

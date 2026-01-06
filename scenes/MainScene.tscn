@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=122 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -85,8 +85,13 @@
 [ext_resource type="Script" uid="uid://c1uuotoe1wldw" path="res://scripts/util/CounterCondition.gd" id="64_e8t1i"]
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="74_te826"]
 [ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="83_e8t1i"]
+[ext_resource type="Script" uid="uid://bymsueargorsq" path="res://scripts/sound/PlaySound.gd" id="83_iawhq"]
+[ext_resource type="AudioStream" uid="uid://bhhvpaj7s45up" path="res://art/sounds/coin/276159__littlerobotsoundfactory__coins_few_12.wav" id="84_opqqa"]
+[ext_resource type="AudioStream" uid="uid://dbfr2i5sj87ot" path="res://art/sounds/coin/276191__littlerobotsoundfactory__coins_several_16.wav" id="85_dhgue"]
 [ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="86_2a4qe"]
+[ext_resource type="AudioStream" uid="uid://i40qqk1evxgi" path="res://art/sounds/coin/276195__littlerobotsoundfactory__coins_several_12.wav" id="86_vwitv"]
 [ext_resource type="Script" uid="uid://4dolsccd1d2g" path="res://scripts/shopping/Economy.gd" id="87_1acod"]
+[ext_resource type="AudioStream" uid="uid://bbe1l1kafe6bf" path="res://art/sounds/coin/276197__littlerobotsoundfactory__coins_several_18.wav" id="87_m27th"]
 [ext_resource type="Script" uid="uid://c2etq748frf4g" path="res://scripts/shopping/ShopTab.gd" id="88_dofa8"]
 [ext_resource type="Texture2D" uid="uid://bef6oeru7sdtj" path="res://art/ui/shop-body.png" id="88_hhhsk"]
 [ext_resource type="Texture2D" uid="uid://cwpcpue4wax7v" path="res://art/ui/shop-arrow_button.png" id="88_m330v"]
@@ -2204,6 +2209,13 @@ z_index = 600
 position = Vector2(959.1109, 87.99998)
 scale = Vector2(0.49907398, 0.49907398)
 
+[node name="CoinSound" type="Node" parent="Economy"]
+script = ExtResource("83_iawhq")
+stream_variants = Array[AudioStream]([ExtResource("84_opqqa"), ExtResource("85_dhgue"), ExtResource("86_vwitv"), ExtResource("87_m27th")])
+pitch_min = 0.9
+pitch_max = 1.2
+volume_db = -12.0
+
 [node name="DialogSystem" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
 script = ExtResource("45_pwxld")
 default_start = NodePath("Fn_Main")
@@ -2854,5 +2866,6 @@ destination = NodePath("..")
 [connection signal="on_submitted" from="EyePiedestal" to="DialogSystem/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]
 [connection signal="on_unsuccess" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_out"]
+[connection signal="on_balance_change" from="Economy" to="Economy/CoinSound" method="play"]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
 [connection signal="the_signal" from="DialogSystem/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]
