@@ -1634,15 +1634,15 @@ offset_bottom = 140.0
 grow_horizontal = 2
 mouse_filter = 2
 theme = SubResource("Theme_i7ifx")
-text = "Very well. I knew we can rely on you.
-After all, you are a highly trained professional.
-Here is the advance pay.  The remaining 100 000 groschen will be paid on delivery."
+text = "[Tutorial]
+Assemble an eye by dragging different eye parts on the piedestal.
+When all 4 eye parts are present and you are satisfied with your creation, submit it to the customer by dragging the piedestal onto him."
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
 script = ExtResource("74_te826")
-source = NodePath("../../DialogSystem/Fn_Main/Scientist/T_GiveMoney")
+source = NodePath("../../DialogSystem/Fn_Main/Tutorial/Text")
 
 [node name="Control" type="Control" parent="TextBubble/Label"]
 z_index = -1
@@ -2251,8 +2251,8 @@ transition = 1
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
 text = "[Tutorial]
-Assemble an eye by clicking on the different eye parts.
-When all 4 eye parts are present and you are satisfied with  your creation, submit it to the customer by dragging it onto this text bubble."
+Assemble an eye by dragging different eye parts on the piedestal.
+When all 4 eye parts are present and you are satisfied with your creation, submit it to the customer by dragging the piedestal onto him."
 
 [node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem/Fn_Main/Tutorial" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
