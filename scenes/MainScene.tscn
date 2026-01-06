@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=117 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -95,6 +95,8 @@
 [ext_resource type="Script" uid="uid://blxdhs427af1o" path="res://scripts/dialog_custom_actions/DialogAction_AddMoney.gd" id="91_2qf71"]
 [ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="92_2qf71"]
 [ext_resource type="Script" uid="uid://bsehpor25dn6p" path="res://scripts/dialog_system/DialogWait.gd" id="92_grpki"]
+[ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="93_8h2n0"]
+[ext_resource type="PackedScene" uid="uid://cfh2elbhj280b" path="res://scenes/OutroText.tscn" id="94_qb1n5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
@@ -1601,6 +1603,7 @@ region_enabled = true
 region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
+visible = false
 z_index = 10
 anchors_preset = 0
 offset_left = 694.0
@@ -2217,7 +2220,7 @@ script = ExtResource("51_fupde")
 script = ExtResource("56_wu3oq")
 start_alpha = 1.0
 duration_seconds = 2.0
-ease = 1
+ease = 0
 transition = 4
 
 [node name="Tutorial" type="Node" parent="DialogSystem/Fn_Main"]
@@ -2340,12 +2343,6 @@ do_fade_out_after = true
 script = ExtResource("91_2qf71")
 amount = 7
 
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
-
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
@@ -2385,12 +2382,6 @@ do_fade_out_after = true
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
 script = ExtResource("91_2qf71")
 amount = 45
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2435,12 +2426,6 @@ do_fade_out_after = true
 script = ExtResource("91_2qf71")
 amount = 1
 
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Vain"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
-
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Vain" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
@@ -2482,12 +2467,6 @@ do_fade_out_after = true
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
 script = ExtResource("91_2qf71")
 amount = 6
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Gambler"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2561,11 +2540,6 @@ script = ExtResource("46_cw1g3")
 text = "
 Just wait 'till he sees this."
 append = true
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Warlock"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
 do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
@@ -2605,16 +2579,11 @@ script = ExtResource("46_cw1g3")
 text = "Thank you, mister.
 
 I am forever in your debt."
+do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
 script = ExtResource("91_2qf71")
 amount = 3
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2653,16 +2622,11 @@ script = ExtResource("46_cw1g3")
 text = "Honestly, something about these eyes doesn't feel right.
 But what other options do I have?
 Here. Your pay."
+do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
 script = ExtResource("91_2qf71")
 amount = 14
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2700,16 +2664,11 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 script = ExtResource("46_cw1g3")
 text = "Very well.
 I shall pay you even more generously once I get back what's mine."
+do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
 script = ExtResource("91_2qf71")
 amount = 25
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/FormerVizier"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "Very well."
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2748,11 +2707,6 @@ script = ExtResource("46_cw1g3")
 text = "Heheeee
 
 Eyes!"
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
 do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/EyeObsessed" node_paths=PackedStringArray("target")]
@@ -2794,16 +2748,11 @@ script = ExtResource("46_cw1g3")
 text = "Very well. I knew we can rely on you.
 After all, you are a highly trained professional.
 Here is the advance pay.  The remaining 100 000 groschen will be paid on delivery."
+do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
 script = ExtResource("91_2qf71")
 amount = 1000
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Scientist"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Scientist" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2841,17 +2790,12 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 [node name="T_GiveMoney" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
 script = ExtResource("46_cw1g3")
 text = "Wow, this is so cool.
-(He gives you a huge golden coin)"
+(He gives you a huge coin made of pure gold)"
+do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
 script = ExtResource("91_2qf71")
 amount = 2500
-
-[node name="DoFadeout" type="Node" parent="DialogSystem/Fn_Main/Twoflower"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-append = true
-do_fade_out_after = true
 
 [node name="HideFigure" type="Node" parent="DialogSystem/Fn_Main/Twoflower" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2861,6 +2805,21 @@ end_value = Color(1, 1, 1, 0)
 duration = 2.0
 ease = 1
 transition = 1
+
+[node name="Wait" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("92_grpki")
+delay_seconds = 5.0
+
+[node name="FadeOut" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("56_wu3oq")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="Transition" type="Node" parent="DialogSystem/Fn_Main"]
+script = ExtResource("93_8h2n0")
+destination = ExtResource("94_qb1n5")
 
 [node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem"]
 script = ExtResource("51_fupde")

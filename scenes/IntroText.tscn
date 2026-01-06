@@ -331,3 +331,4 @@ append = true
 [node name="HideTheDot" type="Node" parent="DialogSystem/Fn_Text"]
 script = ExtResource("16_5g2oq")
 wait_for_user_input = false
+append = true

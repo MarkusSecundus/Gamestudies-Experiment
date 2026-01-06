@@ -29,7 +29,7 @@ func _perform_purchase()->void:
 	_economy.on_balance_change.disconnect(_on_balance_change)
 	_economy.spend_money(price)
 	EffectsUtils.do_fade($PriceTag, 0.0, 1.0)
-	self.reparent(get_tree().root)
+	self.reparent(get_tree().current_scene)
 	
 func _should_place_on_start()->bool: return false
 	
