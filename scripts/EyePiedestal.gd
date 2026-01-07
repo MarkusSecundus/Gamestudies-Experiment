@@ -7,6 +7,9 @@ static var INSTANCE : EyePiedestal
 @export var active_distance : float = 200.0
 @export var submit_destination : Node2D
 @export var submit_distance : float = 100.0
+@export var customer_image : CanvasItem
+@export var customer_triggered_alpha = 1.3
+@onready var _customer_base_alpha :float = customer_image.modulate.a
 
 @onready var _anchor_parent : Node2D = $Anchors
 @onready var _generic_anchor : Node2D = $Anchors/Generic
@@ -39,12 +42,16 @@ func _process(delta: float) -> void:
 		if can_grab: $HolderHidingCondition.increment()
 		else: $HolderHidingCondition.decrement()
 	_last_can_grab = can_grab
-	if not can_grab: return
+	if not can_grab: 
+		if customer_image: customer_image.modulate.a = _customer_base_alpha
+		return
 	var distance_to_submit := self.global_position.distance_to(submit_destination.global_position)
 	var distance_to_origin := self.global_position.distance_to(_og_position)
 	var t:float = distance_to_origin / (distance_to_origin + distance_to_submit)
 	self.scale = lerp(_og_scale, submit_destination.scale, t) as Vector2
 	self.modulate = lerp(_og_modulate, submit_destination.modulate, t) as Color
+	if customer_image:
+		customer_image.modulate.a = customer_triggered_alpha if (distance_to_submit <= self.submit_distance and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) else _customer_base_alpha
 
 
 func on_drag_start()->void: pass

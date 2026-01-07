@@ -1161,13 +1161,14 @@ modulate = Color(1, 1, 1, 0.4745098)
 position = Vector2(954, 385)
 scale = Vector2(0.2, 0.2)
 
-[node name="EyePiedestal" type="Node2D" parent="." node_paths=PackedStringArray("submit_destination")]
+[node name="EyePiedestal" type="Node2D" parent="." node_paths=PackedStringArray("submit_destination", "customer_image")]
 z_index = 5
 position = Vector2(966, 851)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
 submit_destination = NodePath("../EyePiedestalDestination")
 submit_distance = 200.0
+customer_image = NodePath("../Customers")
 
 [node name="Holder" type="Area2D" parent="EyePiedestal"]
 visible = false
