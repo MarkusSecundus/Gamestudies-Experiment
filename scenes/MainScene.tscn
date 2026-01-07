@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=124 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -86,6 +86,7 @@
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="74_te826"]
 [ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="83_e8t1i"]
 [ext_resource type="Script" uid="uid://bymsueargorsq" path="res://scripts/sound/PlaySound.gd" id="83_iawhq"]
+[ext_resource type="Texture2D" uid="uid://dfmbpva5lngvx" path="res://art/ui/small_background.png" id="83_vwitv"]
 [ext_resource type="AudioStream" uid="uid://bhhvpaj7s45up" path="res://art/sounds/coin/276159__littlerobotsoundfactory__coins_few_12.wav" id="84_opqqa"]
 [ext_resource type="AudioStream" uid="uid://dbfr2i5sj87ot" path="res://art/sounds/coin/276191__littlerobotsoundfactory__coins_several_16.wav" id="85_dhgue"]
 [ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="86_2a4qe"]
@@ -350,6 +351,7 @@ expand_mode = 1
 
 [node name="Shapes1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(179, 98)
+_label_text = "Shapes"
 
 [node name="Eye1" type="Node2D" parent="EyeHolders/Shapes1"]
 position = Vector2(-96.999985, 52.999985)
@@ -440,6 +442,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Shapes2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(436, 267)
+_label_text = "Shapes"
 
 [node name="Eye4" type="Node2D" parent="EyeHolders/Shapes2"]
 position = Vector2(-96.999985, 52.999985)
@@ -530,6 +533,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Irises1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(166, 462)
+_label_text = "Irises"
 
 [node name="Iris1" type="Node2D" parent="EyeHolders/Irises1"]
 position = Vector2(-96.999985, 52.999985)
@@ -636,6 +640,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Irises2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(471, 638)
+_label_text = "Irises"
 
 [node name="Iris4" type="Node2D" parent="EyeHolders/Irises2"]
 position = Vector2(-96.999985, 52.999985)
@@ -742,6 +747,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 96)
+_label_text = "Eyebrows"
 
 [node name="Eyebrow1" type="Node2D" parent="EyeHolders/Eyebrows1"]
 position = Vector2(-97, 56)
@@ -833,6 +839,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1482, 266)
+_label_text = "Eyebrows"
 
 [node name="Eyebrow4" type="Node2D" parent="EyeHolders/Eyebrows2"]
 position = Vector2(-97, 56)
@@ -925,6 +932,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 465)
+_label_text = "Pupils"
 
 [node name="Pupil1" type="Node2D" parent="EyeHolders/Pupils1"]
 position = Vector2(-96.999985, 52.999985)
@@ -1012,6 +1020,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1477, 644)
+_label_text = "Pupils"
 
 [node name="Pupil4" type="Node2D" parent="EyeHolders/Pupils2"]
 position = Vector2(-96.999985, 52.999985)
@@ -2185,6 +2194,22 @@ vertical_alignment = 1
 visible = false
 position = Vector2(-1749.4608, 292.5417)
 scale = Vector2(2.0037098, 2.0037098)
+
+[node name="Background" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(79.45517, 7.058942)
+rotation = 0.20080507
+scale = Vector2(0.42797044, 0.42797044)
+texture = ExtResource("83_vwitv")
+region_enabled = true
+region_rect = Rect2(26.725311, 2.2172146, 414.7261, 226.21425)
+
+[node name="Background2" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(79.45517, 7.058942)
+rotation = 0.20080507
+scale = Vector2(0.42797044, 0.42797044)
+texture = ExtResource("83_vwitv")
+region_enabled = true
+region_rect = Rect2(26.725311, 2.2172146, 414.7261, 226.21425)
 
 [node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
 position = Vector2(32.552044, -0.062461376)
