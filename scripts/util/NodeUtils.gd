@@ -199,4 +199,4 @@ static func get_full_name(this : Node, separator : String = "::", is_stop: Calla
 		ret.append(node.name)
 		node = node.get_parent()
 	ret.reverse()
-	return DatastructUtils.string_concat(ret, "::")
+	return DatastructUtils.string_concat(ret, separator)

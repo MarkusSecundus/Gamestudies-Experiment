@@ -49,7 +49,7 @@ class ActionRunner:
 		var next_iteration : Callable = func(n)->void: iteration(n)
 		if current.is_enabled:
 			if ctx._dialog_system: ctx._dialog_system.before_node_is_performed.emit(current)
-			current.do_perform(ctx, next_iteration)
+			current.do_perform_with_argument_overrides(ctx, next_iteration)
 		else:
 			current._default_perform(ctx, next_iteration)
 

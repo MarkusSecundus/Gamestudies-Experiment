@@ -95,3 +95,14 @@ static func remove_all_falsy(arr)->int:
 			removed_count += 1
 	
 	return removed_count
+
+
+static func ensure_these_and_only_these_dict_keys_are_present(dict: Variant, keys: Variant, default_value : Variant = null)->void:
+	var not_present : Array = []
+	for key in dict:
+		if not key in keys: not_present.append(key)
+	for key in not_present: dict.erase(key)
+	
+	for key in keys:
+		if not key in dict: dict[key] = default_value
+	

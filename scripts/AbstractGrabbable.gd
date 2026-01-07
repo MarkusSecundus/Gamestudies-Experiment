@@ -117,7 +117,7 @@ static func _update_selection_visuals()->void:
 	if _hover_stack.is_empty():
 		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))
 	else:
-		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), 0, Vector2(0, 30))
+		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), Input.CursorShape.CURSOR_ARROW, Vector2(0, 30))
 		_hover_stack[0]._set_outline_visibility(true)
 		
 
