@@ -1120,9 +1120,9 @@ region_enabled = true
 region_rect = Rect2(1395, 265, 1050, 1300)
 
 [node name="Customer1" type="Sprite2D" parent="Customers/Customer1"]
-position = Vector2(5.5848575, 385.1395)
+position = Vector2(4.8132906, 409.42688)
 rotation = -1.5390388
-scale = Vector2(1.3784109, 1037.5371)
+scale = Vector2(1.5682517, 1037.5371)
 texture = SubResource("GradientTexture1D_x1s54")
 region_rect = Rect2(-47, 0, 303, 0)
 
@@ -1167,6 +1167,7 @@ position = Vector2(966, 851)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
 submit_destination = NodePath("../EyePiedestalDestination")
+submit_distance = 200.0
 
 [node name="Holder" type="Area2D" parent="EyePiedestal"]
 visible = false
@@ -1683,6 +1684,7 @@ axis_stretch_vertical = 1
 
 [node name="Economy" type="Node" parent="."]
 script = ExtResource("87_1acod")
+current_balance = 1000
 _balance_change_stay_seconds = 5.0
 _purchasable_unavailable_alpha = 0.4
 
@@ -2237,7 +2239,7 @@ script = ExtResource("83_iawhq")
 stream_variants = Array[AudioStream]([ExtResource("84_opqqa"), ExtResource("85_dhgue"), ExtResource("86_vwitv"), ExtResource("87_m27th")])
 pitch_min = 0.9
 pitch_max = 1.2
-volume_db = -12.0
+volume_db = -9.0
 
 [node name="DialogSystem_Main" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
 script = ExtResource("45_pwxld")
@@ -2265,11 +2267,10 @@ transition = 4
 script = ExtResource("47_q5chl")
 
 [node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
+script = ExtResource("56_wu3oq")
 target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 1)
-duration = 2.0
+end_alpha = 1.0
+duration_seconds = 2.0
 ease = 0
 transition = 1
 
@@ -2295,11 +2296,10 @@ script = ExtResource("91_2qf71")
 amount = 11
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
+script = ExtResource("56_wu3oq")
 target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 0)
-duration = 2.0
+start_alpha = -1.0
+duration_seconds = 2.0
 ease = 1
 transition = 1
 

@@ -53,7 +53,7 @@ zoom_transition = 4
 zoom_multiplier = Vector2(2, 2)
 
 [node name="Text" type="Label" parent="Visual/Label"]
-self_modulate = Color(0.95245594, 0.95245606, 0.95245594, 1)
+self_modulate = Color(1, 1, 1, 0.7490196)
 offset_left = -86.54768
 offset_top = -23.1923
 offset_right = 84.20856

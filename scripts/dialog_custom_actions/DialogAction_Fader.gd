@@ -15,7 +15,7 @@ func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	fader.visible = true
 	var final_color = fader.modulate
 	final_color.a = end_alpha
-	fader.modulate.a = start_alpha
+	if start_alpha >= 0.0: fader.modulate.a = start_alpha
 	var tweener := tw.tween_property(fader, "modulate", final_color, duration_seconds)
 	tweener.set_ease(ease)
 	tweener.set_trans(transition)
