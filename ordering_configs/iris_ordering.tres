@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_jh8aa"]
 script = ExtResource("2_qtr1o")
-z_index = 51
+z_index = 901
 z_as_relative = false
 metadata/_custom_type_script = "uid://c2cvcg2aq7xlp"
 

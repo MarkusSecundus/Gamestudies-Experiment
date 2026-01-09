@@ -14,7 +14,7 @@ default_font = ExtResource("5_p5nv4")
 default_font_size = 30
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfwt3"]
-radius = 23.0
+radius = 16.0
 height = 100.0
 
 [node name="EyeHolder" type="Node2D"]

@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_twos7"]
 script = ExtResource("2_ud437")
-z_index = 54
+z_index = 904
 z_as_relative = false
 metadata/_custom_type_script = "uid://c2cvcg2aq7xlp"
 
