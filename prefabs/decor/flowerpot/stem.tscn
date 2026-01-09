@@ -30,6 +30,7 @@ position = Vector2(0.99999607, -30.000015)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0.99999607, -30.000015)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part2" type="Bone2D" parent="Skeleton2D/Root/Part1"]
@@ -37,6 +38,7 @@ position = Vector2(2.0000005, -49)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.0000005, -49)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part3" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2"]
@@ -44,6 +46,7 @@ position = Vector2(2.0000007, -43.000027)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.0000007, -43.000027)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part4" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3"]
@@ -51,6 +54,7 @@ position = Vector2(2.000001, -49.000034)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.000001, -49.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part5" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4"]
@@ -58,6 +62,7 @@ position = Vector2(1.0000006, -49.000034)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5"]
@@ -65,6 +70,7 @@ position = Vector2(1.0000006, -49.000034)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part7" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6"]
@@ -72,6 +78,7 @@ position = Vector2(-1.0000011, -51.000034)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, -1.0000011, -51.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7"]
@@ -79,6 +86,7 @@ position = Vector2(-2.0000024, -52.000053)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6"]
@@ -86,6 +94,7 @@ position = Vector2(-2.0000024, -51.000053)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 script = ExtResource("2_4tmal")
+rotation_interval_deg = 8
 linear_velocity_change_factor = 0.001
 
 [node name="Blossom" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
@@ -104,7 +113,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal1"]
@@ -119,13 +128,13 @@ uv = PackedVector2Array(368.41553, 168.31631, 351.3726, 171.41504, 336.6537, 178
 [node name="Petal2" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(53.000065, 18.00002)
 rotation = 0.18196395
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = 10.425766
+bone_angle = 10.425765
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal2"]
@@ -145,7 +154,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal3"]
@@ -165,7 +174,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal4"]
@@ -185,7 +194,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal5"]
@@ -205,7 +214,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal6"]
@@ -224,9 +233,9 @@ scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
-bone_angle = -48.140408
+bone_angle = -48.140404
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal7"]
@@ -247,7 +256,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = -91.98523
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal8"]
@@ -268,7 +277,7 @@ auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = -130.19705
 script = ExtResource("2_4tmal")
-rotation_interval_deg = 15
+rotation_interval_deg = 25
 linear_velocity_change_factor = 0.001
 
 [node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal9"]

@@ -185,6 +185,7 @@ mouse_filter = 2
 script = ExtResource("1_4ikpr")
 
 [node name="P1" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(18, 203)
 script = ExtResource("1_kik7w")
 
@@ -192,6 +193,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(305, 0)
 
 [node name="P2" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(389, 203)
 script = ExtResource("1_kik7w")
 
@@ -199,6 +201,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(258, 0)
 
 [node name="P3" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(8, 372)
 script = ExtResource("1_kik7w")
 
@@ -206,6 +209,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(199, 0)
 
 [node name="P4" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(251, 372)
 script = ExtResource("1_kik7w")
 
@@ -213,6 +217,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(408, 0)
 
 [node name="P5" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(7, 570)
 script = ExtResource("1_kik7w")
 
@@ -220,6 +225,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(324, 0)
 
 [node name="P6" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(376, 570)
 script = ExtResource("1_kik7w")
 
@@ -227,6 +233,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(284, 0)
 
 [node name="P7" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(9, 743)
 script = ExtResource("1_kik7w")
 
@@ -234,6 +241,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(216, 0)
 
 [node name="P8" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(271, 743)
 script = ExtResource("1_kik7w")
 
@@ -241,6 +249,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(393, 0)
 
 [node name="P9" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(1278, 201)
 script = ExtResource("1_kik7w")
 
@@ -248,6 +257,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(273, 0)
 
 [node name="P10" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(1602, 201)
 script = ExtResource("1_kik7w")
 
@@ -255,6 +265,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(322, 0)
 
 [node name="P11" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1277, 369)
 script = ExtResource("1_kik7w")
 
@@ -262,6 +273,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(411, 0)
 
 [node name="P12" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1728, 369)
 script = ExtResource("1_kik7w")
 
@@ -269,6 +281,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(197, 0)
 
 [node name="P13" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(1276, 566)
 script = ExtResource("1_kik7w")
 
@@ -276,13 +289,23 @@ script = ExtResource("1_kik7w")
 position = Vector2(284, 0)
 
 [node name="P14" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(1610, 566)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P14"]
 position = Vector2(321, 0)
 
+[node name="P15" type="Node2D" parent="PlacementLocations"]
+z_index = 40
+position = Vector2(1273, 742)
+script = ExtResource("1_kik7w")
+
+[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
+position = Vector2(395, 0)
+
 [node name="P16" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(1712, 742)
 script = ExtResource("1_kik7w")
 
@@ -290,6 +313,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(219, 0)
 
 [node name="MainShelf" type="Node2D" parent="PlacementLocations"]
+z_index = 50
 position = Vector2(3, 826)
 script = ExtResource("1_kik7w")
 
@@ -297,6 +321,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(760, 0)
 
 [node name="MainShelf2" type="Node2D" parent="PlacementLocations"]
+z_index = 50
 position = Vector2(1175, 826)
 script = ExtResource("1_kik7w")
 
@@ -304,6 +329,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(760, 0)
 
 [node name="P17" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(35, 1088)
 script = ExtResource("1_kik7w")
 
@@ -311,6 +337,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(481, 0)
 
 [node name="P18" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(571, 1088)
 script = ExtResource("1_kik7w")
 
@@ -318,6 +345,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(372, 0)
 
 [node name="P19" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1000, 1088)
 script = ExtResource("1_kik7w")
 
@@ -325,18 +353,12 @@ script = ExtResource("1_kik7w")
 position = Vector2(382, 0)
 
 [node name="P20" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1451, 1088)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P20"]
 position = Vector2(443, 0)
-
-[node name="P15" type="Node2D" parent="PlacementLocations"]
-position = Vector2(1273, 742)
-script = ExtResource("1_kik7w")
-
-[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
-position = Vector2(395, 0)
 
 [node name="Mockup" type="TextureRect" parent="."]
 layout_mode = 1
@@ -1686,7 +1708,7 @@ axis_stretch_vertical = 1
 
 [node name="Economy" type="Node" parent="."]
 script = ExtResource("87_1acod")
-current_balance = 1000
+current_balance = 60
 _balance_change_stay_seconds = 5.0
 _purchasable_unavailable_alpha = 0.4
 
@@ -2029,61 +2051,6 @@ theme = SubResource("Theme_1acod")
 text = "50"
 vertical_alignment = 1
 
-[node name="Potion5" type="Node2D" parent="Economy/Shop/Goods"]
-position = Vector2(1632.8027, 26.048218)
-scale = Vector2(2.0037112, 2.0037112)
-script = ExtResource("92_2qf71")
-price = 10
-
-[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion5"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("23_xuwja")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion5/Visual"]
-visible = false
-position = Vector2(11.41626, 19.687134)
-scale = Vector2(1.6959186, 1.6959186)
-texture = ExtResource("33_pou4m")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion5"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion5/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion5"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -38.0
-offset_top = -66.99998
-offset_right = 9.0
-offset_bottom = 10.0000305
-
-[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion5"]
-position = Vector2(-41.000004, 44)
-scale = Vector2(2.0037098, 2.0037098)
-
-[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion5/PriceTag"]
-position = Vector2(-0.18948746, -0.4990692)
-scale = Vector2(0.15299995, 0.15299995)
-texture = ExtResource("86_2a4qe")
-region_enabled = true
-region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
-
-[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion5/PriceTag"]
-offset_left = 15.281818
-offset_top = -17.966673
-offset_right = 190.2819
-offset_bottom = 18.699991
-theme = SubResource("Theme_1acod")
-text = "50"
-vertical_alignment = 1
-
 [node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
 z_index = 1
 position = Vector2(-1014.10004, 22.040833)
@@ -2189,6 +2156,33 @@ region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
 offset_left = 15.281818
 offset_top = -17.966673
 offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Flower" parent="Economy/Shop/Goods" instance=ExtResource("105_m27th")]
+position = Vector2(1598.7395, 140.25981)
+scale = Vector2(0.35, 0.35)
+script = ExtResource("92_2qf71")
+price = 60
+post_purchase_scale_multiplier = 1.5
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Flower"]
+position = Vector2(-74.423386, -27.033466)
+scale = Vector2(11.997618, 11.997618)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Flower/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Flower/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 74.35768
 offset_bottom = 18.699991
 theme = SubResource("Theme_1acod")
 text = "50"
@@ -2890,10 +2884,6 @@ append = true
 [node name="Jump" type="Node" parent="DialogSystem_Main/test" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("..")
-
-[node name="Flower" parent="." instance=ExtResource("105_m27th")]
-position = Vector2(1771, 828)
-scale = Vector2(0.2589384, 0.2589384)
 
 [connection signal="on_submitted" from="EyePiedestal" to="DialogSystem_Main/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]

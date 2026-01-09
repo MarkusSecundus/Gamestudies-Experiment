@@ -2,6 +2,7 @@ class_name PlacementLocation
 extends Node2D
 
 
+
 class Segment:
 	extends RefCounted
 	

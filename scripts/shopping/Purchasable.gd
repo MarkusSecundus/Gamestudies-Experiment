@@ -1,6 +1,7 @@
 extends Grabbable
 
 @export var price : int = 1
+@export var post_purchase_scale_multiplier : float = 1.0
 
 
 var is_purchased : bool = false
@@ -31,6 +32,7 @@ func _perform_purchase()->void:
 	_economy.spend_money(price)
 	EffectsUtils.do_fade($PriceTag, 0.0, 1.0)
 	self.reparent(get_tree().current_scene)
+	if post_purchase_scale_multiplier != 1.0: create_tween().tween_property(self, "scale", self.scale*post_purchase_scale_multiplier, 0.4)
 	
 func _should_place_on_start()->bool: return false
 	

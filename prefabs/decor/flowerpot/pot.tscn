@@ -17,18 +17,229 @@ freeze = true
 freeze_mode = 1
 script = ExtResource("1_aq6b4")
 
-[node name="Visual" type="Sprite2D" parent="."]
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="Visual" type="Sprite2D" parent="Visual"]
 position = Vector2(7.5, -192.54163)
 texture = ExtResource("2_wkt4x")
 region_enabled = true
 region_rect = Rect2(21.599976, 331.59998, 403.19995, 414.40002)
 
-[node name="Outline" type="Sprite2D" parent="."]
+[node name="Outline" type="Sprite2D" parent="Visual"]
 visible = false
 position = Vector2(11.5, -196.54163)
 texture = ExtResource("3_468cm")
 region_enabled = true
 region_rect = Rect2(10.127869, 310.91595, 434.63208, 451.08807)
+
+[node name="Leaf3" parent="Visual" instance=ExtResource("7_wia44")]
+position = Vector2(-17, -347)
+
+[node name="Root" parent="Visual/Leaf3/Skeleton2D" index="0"]
+rotation = -0.23007098
+
+[node name="Leaf2" parent="Visual" instance=ExtResource("6_ufrmi")]
+position = Vector2(23, -332)
+
+[node name="Part1" parent="Visual/Leaf2/Skeleton2D/Root" index="0"]
+rotation = 0.14172676
+
+[node name="Part2" parent="Visual/Leaf2/Skeleton2D/Root/Part1" index="0"]
+rotation = 0.11670078
+
+[node name="Part3" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2" index="0"]
+rotation = 0.06191624
+
+[node name="Part4" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
+rotation = 0.042797334
+
+[node name="Part5" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
+rotation = 0.054046635
+
+[node name="Part6" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
+rotation = 0.058433335
+
+[node name="Leaf1b" type="Node2D" parent="Visual"]
+position = Vector2(56, -334)
+
+[node name="Leaf2" type="Polygon2D" parent="Visual/Leaf1b"]
+position = Vector2(-95.75928, -299.9334)
+texture = ExtResource("2_wkt4x")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(66.86755, 301.95984, 65.21988, 292.62305, 65.49451, 280.5401, 65.49451, 268.18253, 65.49451, 251.15654, 65.769104, 234.40518, 66.59296, 220.94916, 67.14218, 205.84547, 67.41678, 191.291, 68.51523, 178.65883, 74.01138, 161.35774, 75.38443, 149.27478, 77.032104, 137.19183, 79.77823, 123.461205, 81.97513, 111.10364, 86.09433, 95.17611, 89.11508, 80.34703, 94.60733, 66.89102, 98.17728, 49.865044, 103.94415, 36.68364, 109.16177, 21.579948, 114.932205, 8.943577, 122.62135, -1.2170868, 131.13435, -3.9632149, 139.37273, 0.7052002, 141.295, 12.513538, 141.84422, 24.871105, 143.4919, 42.995533, 143.76653, 55.627712, 143.76653, 65.788376, 144.31575, 84.18742, 144.04112, 93.79886, 144.04112, 102.86107, 142.672, 114.670715, 142.12277, 125.65522, 141.84818, 138.01279, 141.84818, 148.17345, 141.29895, 159.43256, 140.74973, 169.86783, 140.4751, 179.75389, 140.2005, 188.5415, 140.4751, 198.42755, 139.92587, 211.60895, 140.2005, 221.2204, 138.00122, 232.75725, 136.62814, 245.93866, 134.43124, 259.66928, 133.0582, 270.9284, 131.68512, 281.63828, 129.48822, 292.6228, 126.4675, 303.33267, 122.0737, 308.0011, 109.44151, 309.92337, 75.93878, 308.5503, 119.74663, 57.277596, 123.60483, 37.305756, 126.782166, 19.376501, 118.15796, 79.06504, 115.434525, 93.36306, 112.25719, 111.51927, 110.21413, 128.54434, 108.8524, 143.29626, 106.80983, 161.90637, 105.90202, 177.11221, 103.17859, 190.50241, 102.04382, 206.843, 100.22672, 224.54866, 99.31892, 238.84668, 98.41111, 252.91774, 96.82244, 268.8044, 95.23377, 283.10245, 95.00681, 296.94653)
+uv = PackedVector2Array(66.86755, 301.95984, 65.21988, 292.62305, 65.49451, 280.5401, 65.49451, 268.18253, 65.49451, 251.15654, 65.769104, 234.40518, 66.59296, 220.94916, 67.14218, 205.84547, 67.41678, 191.291, 68.51523, 178.65883, 74.01138, 161.35774, 75.38443, 149.27478, 77.032104, 137.19183, 79.77823, 123.461205, 81.97513, 111.10364, 86.09433, 95.17611, 89.11508, 80.34703, 94.60733, 66.89102, 98.17728, 49.865044, 103.94415, 36.68364, 109.16177, 21.579948, 114.932205, 8.943577, 122.62135, -1.2170868, 131.13435, -3.9632149, 139.37273, 0.7052002, 141.295, 12.513538, 141.84422, 24.871105, 143.4919, 42.995533, 143.76653, 55.627712, 143.76653, 65.788376, 144.31575, 84.18742, 144.04112, 93.79886, 144.04112, 102.86107, 142.672, 114.670715, 142.12277, 125.65522, 141.84818, 138.01279, 141.84818, 148.17345, 141.29895, 161.3266, 140.74973, 169.86783, 140.4751, 179.75389, 140.2005, 188.5415, 140.4751, 198.42755, 139.92587, 211.60895, 140.2005, 221.2204, 138.00122, 232.75725, 136.62814, 245.93866, 134.43124, 259.66928, 133.0582, 270.9284, 131.68512, 281.63828, 129.48822, 292.6228, 126.4675, 303.33267, 122.0737, 308.0011, 109.44151, 309.92337, 75.93878, 308.5503, 119.74663, 57.277596, 123.60483, 37.305756, 126.782166, 19.376501, 118.15796, 79.06504, 115.434525, 93.36306, 112.25719, 111.51927, 110.21413, 128.54434, 108.8524, 143.29626, 106.80983, 161.90637, 105.90202, 177.11221, 103.17859, 190.50241, 102.04382, 206.843, 100.22672, 224.54866, 99.31892, 238.84668, 98.41111, 252.91774, 96.82244, 268.8044, 95.23377, 283.10245, 95.00681, 296.94653)
+polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5), PackedInt32Array(53, 0, 71, 50, 51, 52), PackedInt32Array(50, 71, 0, 1, 2, 70, 48, 49), PackedInt32Array(48, 47, 69, 3, 2, 70), PackedInt32Array(47, 46, 68, 4, 3, 69), PackedInt32Array(46, 45, 67, 5, 4, 68), PackedInt32Array(45, 44, 66, 6, 5, 67), PackedInt32Array(44, 43, 42, 65, 7, 6, 66), PackedInt32Array(42, 41, 40, 64, 8, 7, 65), PackedInt32Array(40, 39, 63, 9, 8, 64), PackedInt32Array(63, 39, 38, 37, 62, 10, 9), PackedInt32Array(62, 37, 36, 61, 11, 10), PackedInt32Array(60, 13, 12, 11, 61, 36, 35, 34), PackedInt32Array(59, 14, 13, 60, 34, 33), PackedInt32Array(58, 15, 14, 59, 33, 32, 31), PackedInt32Array(57, 16, 15, 58, 31, 30), PackedInt32Array(29, 28, 54, 17, 16, 57, 30), PackedInt32Array(27, 55, 19, 18, 17, 54, 28), PackedInt32Array(26, 56, 20, 19, 55, 27), PackedInt32Array(24, 23, 22, 21, 20, 56, 26, 25)]
+bones = ["Root", PackedFloat32Array(0.79, 0.79, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.29000002, 0.58000004, 0.79, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.16, 0.32, 1, 1), "Root/Part1", PackedFloat32Array(0, 0, 0.37000006, 0.58000004, 1, 1, 1, 0.16, 0.16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.32, 0.32, 0.32, 0.32, 1, 0.71, 0.71, 0.71, 0.71, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 0.65, 0, 0), "Root/Part1/Part2", PackedFloat32Array(0, 0, 0, 0, 0, 0.16, 0.48, 0.9599999, 1, 0.9599999, 0.69, 0.9, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.37, 0.37, 0.69, 0.64, 0.69, 0.69, 0.48, 0.32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.78999996, 0.7, 0.7, 0.7, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0.16, 0.32, 0.9599999, 0.9599999, 0.9599999, 0.9599999, 0.73999995, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 0.69, 0.64, 0.79999995, 0.64, 0.9599999, 0.79999995, 0.64, 0.16, 0.16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.65, 0.97, 0.32, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 0.63, 0.63, 0.90999997, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 1, 0.49, 0.42, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 0, 0, 0.85999995, 0.65, 0.65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0, 0, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5/Part6", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 1, 1, 1, 1, 1, 0.98, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+internal_vertex_count = 18
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Visual/Leaf1b"]
+position = Vector2(2, -1)
+
+[node name="Root" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 5
+linear_velocity_change_factor = 0.001
+
+[node name="Part1" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root"]
+position = Vector2(-4.053116e-06, -30.000015)
+rotation = 0.15480046
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, -4.053116e-06, -30.000015)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 20
+linear_velocity_change_factor = 0.001
+
+[node name="Part2" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1"]
+position = Vector2(2.9999967, -53.000023)
+rotation = 0.13224447
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.9999967, -53.000023)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 20
+linear_velocity_change_factor = 0.001
+
+[node name="Part3" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1/Part2"]
+position = Vector2(4.999997, -46.000023)
+rotation = 0.3275892
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -46.000023)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 20
+linear_velocity_change_factor = 0.001
+
+[node name="Part4" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1/Part2/Part3"]
+position = Vector2(4.999997, -42.000023)
+rotation = 0.12501273
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -42.000023)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 15
+linear_velocity_change_factor = 0.001
+
+[node name="Part5" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1/Part2/Part3/Part4"]
+position = Vector2(4.999997, -44.000023)
+rotation = 0.11879852
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -44.000023)
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 15
+linear_velocity_change_factor = 0.001
+
+[node name="Part6" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5"]
+position = Vector2(6.999998, -42.00002)
+rotation = 0.2916151
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 6.999998, -42.00002)
+auto_calculate_length_and_angle = false
+length = 32.702
+bone_angle = -76.40797
+script = ExtResource("5_8ps2v")
+rotation_interval_deg = 15
+linear_velocity_change_factor = 0.001
+
+[node name="Leaf4" parent="Visual" instance=ExtResource("6_ufrmi")]
+position = Vector2(32, -332)
+
+[node name="Part1" parent="Visual/Leaf4/Skeleton2D/Root" index="0"]
+rotation = -0.033966705
+
+[node name="Part2" parent="Visual/Leaf4/Skeleton2D/Root/Part1" index="0"]
+rotation = -0.0675279
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Part3" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2" index="0"]
+rotation = -0.04778844
+
+[node name="Part4" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
+rotation = -0.08842002
+
+[node name="Part5" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
+rotation = 0.0020925289
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Part6" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
+rotation = 0.058433335
+
+[node name="Leaf6" parent="Visual" instance=ExtResource("7_wia44")]
+position = Vector2(43, -312)
+
+[node name="Root" parent="Visual/Leaf6/Skeleton2D" index="0"]
+position = Vector2(5, 2)
+rotation = 0.27083623
+
+[node name="Part1" parent="Visual/Leaf6/Skeleton2D/Root" index="0"]
+rotation = 0.23711303
+
+[node name="Part2" parent="Visual/Leaf6/Skeleton2D/Root/Part1" index="0"]
+rotation = 0.29576895
+
+[node name="Leaf7" parent="Visual" instance=ExtResource("7_wia44")]
+position = Vector2(-67, -324)
+
+[node name="Root" parent="Visual/Leaf7/Skeleton2D" index="0"]
+position = Vector2(5, 2)
+rotation = -0.016204534
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Part1" parent="Visual/Leaf7/Skeleton2D/Root" index="0"]
+rotation = -0.35542795
+
+[node name="Part2" parent="Visual/Leaf7/Skeleton2D/Root/Part1" index="0"]
+rotation = -0.30062172
+
+[node name="Part3" parent="Visual/Leaf7/Skeleton2D/Root/Part1/Part2" index="0"]
+rotation = -0.27627036
+
+[node name="Leaf1" parent="Visual" instance=ExtResource("4_3qtin")]
+position = Vector2(-16, -316)
+
+[node name="Part1" parent="Visual/Leaf1/Skeleton2D/Root" index="0"]
+rotation = -0.25383928
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Part2" parent="Visual/Leaf1/Skeleton2D/Root/Part1" index="0"]
+rotation = -0.2573548
+
+[node name="Part3" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2" index="0"]
+rotation = -0.10552053
+
+[node name="Part4" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
+rotation = -0.20035222
+
+[node name="Part5" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
+rotation = -0.14261498
+
+[node name="Part6" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
+rotation = 0.011250038
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Leaf5" parent="Visual" instance=ExtResource("6_ufrmi")]
+position = Vector2(2, -310)
+
+[node name="Part1" parent="Visual/Leaf5/Skeleton2D/Root" index="0"]
+rotation = -0.033966705
+
+[node name="Part2" parent="Visual/Leaf5/Skeleton2D/Root/Part1" index="0"]
+rotation = -0.0675279
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Part3" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2" index="0"]
+rotation = -0.04778844
+
+[node name="Part4" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
+rotation = -0.08842002
+
+[node name="Part5" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
+rotation = 0.0020925289
+scale = Vector2(0.9999997, 0.9999997)
+
+[node name="Part6" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
+rotation = 0.05843333
+
+[node name="Stem" parent="Visual" instance=ExtResource("8_46jsq")]
+position = Vector2(13, -313)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -41,212 +252,6 @@ position = Vector2(-112, -18)
 [node name="Right" type="Node2D" parent="SelfAnchor"]
 position = Vector2(246, 0)
 
-[node name="Leaf3" parent="." instance=ExtResource("7_wia44")]
-position = Vector2(-17, -347)
-
-[node name="Root" parent="Leaf3/Skeleton2D" index="0"]
-rotation = -0.230071
-
-[node name="Leaf1b" type="Node2D" parent="."]
-position = Vector2(56, -334)
-
-[node name="Leaf2" type="Polygon2D" parent="Leaf1b"]
-position = Vector2(-95.75928, -299.9334)
-texture = ExtResource("2_wkt4x")
-skeleton = NodePath("../Skeleton2D")
-polygon = PackedVector2Array(66.86755, 301.95984, 65.21988, 292.62305, 65.49451, 280.5401, 65.49451, 268.18253, 65.49451, 251.15654, 65.769104, 234.40518, 66.59296, 220.94916, 67.14218, 205.84547, 67.41678, 191.291, 68.51523, 178.65883, 74.01138, 161.35774, 75.38443, 149.27478, 77.032104, 137.19183, 79.77823, 123.461205, 81.97513, 111.10364, 86.09433, 95.17611, 89.11508, 80.34703, 94.60733, 66.89102, 98.17728, 49.865044, 103.94415, 36.68364, 109.16177, 21.579948, 114.932205, 8.943577, 122.62135, -1.2170868, 131.13435, -3.9632149, 139.37273, 0.7052002, 141.295, 12.513538, 141.84422, 24.871105, 143.4919, 42.995533, 143.76653, 55.627712, 143.76653, 65.788376, 144.31575, 84.18742, 144.04112, 93.79886, 144.04112, 102.86107, 142.672, 114.670715, 142.12277, 125.65522, 141.84818, 138.01279, 141.84818, 148.17345, 141.29895, 159.43256, 140.74973, 169.86783, 140.4751, 179.75389, 140.2005, 188.5415, 140.4751, 198.42755, 139.92587, 211.60895, 140.2005, 221.2204, 138.00122, 232.75725, 136.62814, 245.93866, 134.43124, 259.66928, 133.0582, 270.9284, 131.68512, 281.63828, 129.48822, 292.6228, 126.4675, 303.33267, 122.0737, 308.0011, 109.44151, 309.92337, 75.93878, 308.5503, 119.74663, 57.277596, 123.60483, 37.305756, 126.782166, 19.376501, 118.15796, 79.06504, 115.434525, 93.36306, 112.25719, 111.51927, 110.21413, 128.54434, 108.8524, 143.29626, 106.80983, 161.90637, 105.90202, 177.11221, 103.17859, 190.50241, 102.04382, 206.843, 100.22672, 224.54866, 99.31892, 238.84668, 98.41111, 252.91774, 96.82244, 268.8044, 95.23377, 283.10245, 95.00681, 296.94653)
-uv = PackedVector2Array(66.86755, 301.95984, 65.21988, 292.62305, 65.49451, 280.5401, 65.49451, 268.18253, 65.49451, 251.15654, 65.769104, 234.40518, 66.59296, 220.94916, 67.14218, 205.84547, 67.41678, 191.291, 68.51523, 178.65883, 74.01138, 161.35774, 75.38443, 149.27478, 77.032104, 137.19183, 79.77823, 123.461205, 81.97513, 111.10364, 86.09433, 95.17611, 89.11508, 80.34703, 94.60733, 66.89102, 98.17728, 49.865044, 103.94415, 36.68364, 109.16177, 21.579948, 114.932205, 8.943577, 122.62135, -1.2170868, 131.13435, -3.9632149, 139.37273, 0.7052002, 141.295, 12.513538, 141.84422, 24.871105, 143.4919, 42.995533, 143.76653, 55.627712, 143.76653, 65.788376, 144.31575, 84.18742, 144.04112, 93.79886, 144.04112, 102.86107, 142.672, 114.670715, 142.12277, 125.65522, 141.84818, 138.01279, 141.84818, 148.17345, 141.29895, 161.3266, 140.74973, 169.86783, 140.4751, 179.75389, 140.2005, 188.5415, 140.4751, 198.42755, 139.92587, 211.60895, 140.2005, 221.2204, 138.00122, 232.75725, 136.62814, 245.93866, 134.43124, 259.66928, 133.0582, 270.9284, 131.68512, 281.63828, 129.48822, 292.6228, 126.4675, 303.33267, 122.0737, 308.0011, 109.44151, 309.92337, 75.93878, 308.5503, 119.74663, 57.277596, 123.60483, 37.305756, 126.782166, 19.376501, 118.15796, 79.06504, 115.434525, 93.36306, 112.25719, 111.51927, 110.21413, 128.54434, 108.8524, 143.29626, 106.80983, 161.90637, 105.90202, 177.11221, 103.17859, 190.50241, 102.04382, 206.843, 100.22672, 224.54866, 99.31892, 238.84668, 98.41111, 252.91774, 96.82244, 268.8044, 95.23377, 283.10245, 95.00681, 296.94653)
-polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5), PackedInt32Array(53, 0, 71, 50, 51, 52), PackedInt32Array(50, 71, 0, 1, 2, 70, 48, 49), PackedInt32Array(48, 47, 69, 3, 2, 70), PackedInt32Array(47, 46, 68, 4, 3, 69), PackedInt32Array(46, 45, 67, 5, 4, 68), PackedInt32Array(45, 44, 66, 6, 5, 67), PackedInt32Array(44, 43, 42, 65, 7, 6, 66), PackedInt32Array(42, 41, 40, 64, 8, 7, 65), PackedInt32Array(40, 39, 63, 9, 8, 64), PackedInt32Array(63, 39, 38, 37, 62, 10, 9), PackedInt32Array(62, 37, 36, 61, 11, 10), PackedInt32Array(60, 13, 12, 11, 61, 36, 35, 34), PackedInt32Array(59, 14, 13, 60, 34, 33), PackedInt32Array(58, 15, 14, 59, 33, 32, 31), PackedInt32Array(57, 16, 15, 58, 31, 30), PackedInt32Array(29, 28, 54, 17, 16, 57, 30), PackedInt32Array(27, 55, 19, 18, 17, 54, 28), PackedInt32Array(26, 56, 20, 19, 55, 27), PackedInt32Array(24, 23, 22, 21, 20, 56, 26, 25)]
-bones = ["Root", PackedFloat32Array(0.79, 0.79, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.29000002, 0.58000004, 0.79, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.16, 0.32, 1, 1), "Root/Part1", PackedFloat32Array(0, 0, 0.37000006, 0.58000004, 1, 1, 1, 0.16, 0.16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.32, 0.32, 0.32, 0.32, 1, 0.71, 0.71, 0.71, 0.71, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 0.65, 0, 0), "Root/Part1/Part2", PackedFloat32Array(0, 0, 0, 0, 0, 0.16, 0.48, 0.9599999, 1, 0.9599999, 0.69, 0.9, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.37, 0.37, 0.69, 0.64, 0.69, 0.69, 0.48, 0.32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.78999996, 0.7, 0.7, 0.7, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0.16, 0.32, 0.9599999, 0.9599999, 0.9599999, 0.9599999, 0.73999995, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 0.69, 0.64, 0.79999995, 0.64, 0.9599999, 0.79999995, 0.64, 0.16, 0.16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.65, 0.97, 0.32, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 0.63, 0.63, 0.90999997, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 1, 0.49, 0.42, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 0, 0, 0.85999995, 0.65, 0.65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.49, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0, 0, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5/Part6", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 1, 1, 1, 1, 1, 1, 1, 1, 0.98, 0.49, 0.49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.49, 0.98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
-internal_vertex_count = 18
-
-[node name="Skeleton2D" type="Skeleton2D" parent="Leaf1b"]
-position = Vector2(2, -1)
-
-[node name="Root" type="Bone2D" parent="Leaf1b/Skeleton2D"]
-scale = Vector2(0.9999999, 0.9999999)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 5
-linear_velocity_change_factor = 0.001
-
-[node name="Part1" type="Bone2D" parent="Leaf1b/Skeleton2D/Root"]
-position = Vector2(-4.053116e-06, -30.000015)
-rotation = 0.15480046
-scale = Vector2(0.99999976, 0.99999976)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, -4.053116e-06, -30.000015)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 20
-linear_velocity_change_factor = 0.001
-
-[node name="Part2" type="Bone2D" parent="Leaf1b/Skeleton2D/Root/Part1"]
-position = Vector2(2.9999967, -53.000023)
-rotation = 0.13224447
-scale = Vector2(0.9999999, 0.9999999)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.9999967, -53.000023)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 20
-linear_velocity_change_factor = 0.001
-
-[node name="Part3" type="Bone2D" parent="Leaf1b/Skeleton2D/Root/Part1/Part2"]
-position = Vector2(4.999997, -46.000023)
-rotation = 0.3275892
-scale = Vector2(0.9999999, 0.9999999)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -46.000023)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 20
-linear_velocity_change_factor = 0.001
-
-[node name="Part4" type="Bone2D" parent="Leaf1b/Skeleton2D/Root/Part1/Part2/Part3"]
-position = Vector2(4.999997, -42.000023)
-rotation = 0.12501273
-scale = Vector2(0.9999999, 0.9999999)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -42.000023)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 15
-linear_velocity_change_factor = 0.001
-
-[node name="Part5" type="Bone2D" parent="Leaf1b/Skeleton2D/Root/Part1/Part2/Part3/Part4"]
-position = Vector2(4.999997, -44.000023)
-rotation = 0.11879852
-scale = Vector2(0.99999976, 0.99999976)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 4.999997, -44.000023)
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 15
-linear_velocity_change_factor = 0.001
-
-[node name="Part6" type="Bone2D" parent="Leaf1b/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5"]
-position = Vector2(6.999998, -42.00002)
-rotation = 0.29161507
-scale = Vector2(0.99999976, 0.99999976)
-rest = Transform2D(0.9999999, 0, 0, 0.9999999, 6.999998, -42.00002)
-auto_calculate_length_and_angle = false
-length = 32.702
-bone_angle = -76.40797
-script = ExtResource("5_8ps2v")
-rotation_interval_deg = 15
-linear_velocity_change_factor = 0.001
-
-[node name="Leaf2" parent="." instance=ExtResource("6_ufrmi")]
-position = Vector2(54, -323)
-
-[node name="Part1" parent="Leaf2/Skeleton2D/Root" index="0"]
-rotation = 0.14172676
-
-[node name="Part2" parent="Leaf2/Skeleton2D/Root/Part1" index="0"]
-rotation = 0.11670078
-
-[node name="Part3" parent="Leaf2/Skeleton2D/Root/Part1/Part2" index="0"]
-rotation = 0.06191624
-
-[node name="Part4" parent="Leaf2/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
-rotation = 0.042797334
-
-[node name="Part5" parent="Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.05404664
-
-[node name="Part6" parent="Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.05843334
-
-[node name="Leaf4" parent="." instance=ExtResource("6_ufrmi")]
-position = Vector2(32, -332)
-
-[node name="Part1" parent="Leaf4/Skeleton2D/Root" index="0"]
-rotation = -0.033966705
-
-[node name="Part2" parent="Leaf4/Skeleton2D/Root/Part1" index="0"]
-rotation = -0.067527905
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Part3" parent="Leaf4/Skeleton2D/Root/Part1/Part2" index="0"]
-rotation = -0.04778844
-
-[node name="Part4" parent="Leaf4/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
-rotation = -0.08842002
-
-[node name="Part5" parent="Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.002092529
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Part6" parent="Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.05843334
-
-[node name="Leaf6" parent="." instance=ExtResource("7_wia44")]
-position = Vector2(43, -312)
-
-[node name="Root" parent="Leaf6/Skeleton2D" index="0"]
-position = Vector2(5, 2)
-rotation = 0.27083623
-
-[node name="Part1" parent="Leaf6/Skeleton2D/Root" index="0"]
-rotation = 0.23711301
-
-[node name="Part2" parent="Leaf6/Skeleton2D/Root/Part1" index="0"]
-rotation = 0.29576895
-
-[node name="Leaf7" parent="." instance=ExtResource("7_wia44")]
-position = Vector2(-67, -324)
-
-[node name="Root" parent="Leaf7/Skeleton2D" index="0"]
-position = Vector2(5, 2)
-rotation = -0.016204536
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Part1" parent="Leaf7/Skeleton2D/Root" index="0"]
-rotation = -0.35542795
-
-[node name="Part2" parent="Leaf7/Skeleton2D/Root/Part1" index="0"]
-rotation = -0.30062172
-
-[node name="Part3" parent="Leaf7/Skeleton2D/Root/Part1/Part2" index="0"]
-rotation = -0.27627036
-
-[node name="Leaf1" parent="." instance=ExtResource("4_3qtin")]
-position = Vector2(-16, -316)
-
-[node name="Part1" parent="Leaf1/Skeleton2D/Root" index="0"]
-rotation = -0.25383928
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Part2" parent="Leaf1/Skeleton2D/Root/Part1" index="0"]
-rotation = -0.2573548
-
-[node name="Part3" parent="Leaf1/Skeleton2D/Root/Part1/Part2" index="0"]
-rotation = -0.10552053
-
-[node name="Part4" parent="Leaf1/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
-rotation = -0.20035224
-
-[node name="Part5" parent="Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = -0.14261498
-
-[node name="Part6" parent="Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.011250038
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Leaf5" parent="." instance=ExtResource("6_ufrmi")]
-position = Vector2(2, -310)
-
-[node name="Part1" parent="Leaf5/Skeleton2D/Root" index="0"]
-rotation = -0.033966705
-
-[node name="Part2" parent="Leaf5/Skeleton2D/Root/Part1" index="0"]
-rotation = -0.067527905
-scale = Vector2(0.9999998, 0.9999998)
-
-[node name="Part3" parent="Leaf5/Skeleton2D/Root/Part1/Part2" index="0"]
-rotation = -0.04778844
-
-[node name="Part4" parent="Leaf5/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
-rotation = -0.08842002
-
-[node name="Part5" parent="Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.0020925289
-scale = Vector2(0.99999976, 0.99999976)
-
-[node name="Part6" parent="Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.058433335
-
 [node name="Holder" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -255,13 +260,10 @@ offset_top = -390.0
 offset_right = 200.0
 offset_bottom = -2.0
 
-[node name="Stem" parent="." instance=ExtResource("8_46jsq")]
-position = Vector2(11, -321)
-
-[editable path="Leaf3"]
-[editable path="Leaf2"]
-[editable path="Leaf4"]
-[editable path="Leaf6"]
-[editable path="Leaf7"]
-[editable path="Leaf1"]
-[editable path="Leaf5"]
+[editable path="Visual/Leaf3"]
+[editable path="Visual/Leaf2"]
+[editable path="Visual/Leaf4"]
+[editable path="Visual/Leaf6"]
+[editable path="Visual/Leaf7"]
+[editable path="Visual/Leaf1"]
+[editable path="Visual/Leaf5"]
