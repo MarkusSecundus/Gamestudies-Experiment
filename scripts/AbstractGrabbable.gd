@@ -31,7 +31,7 @@ func perform_drag(cursor_position: Vector2, _delta: float)->void:
 func _process(delta: float) -> void:
 	const INTERPOLATION_FACTOR = 2
 	
-	var is_free_to_move := ((self as Node2D) is RigidBody2D)
+	var is_free_to_move := ((self as Node2D) is RigidBody2D) and (not (self as Node2D as RigidBody2D).freeze)
 	
 	var drag_was_performed := false
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):

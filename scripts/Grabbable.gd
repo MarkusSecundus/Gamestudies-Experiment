@@ -15,12 +15,14 @@ func on_drag_start()->void:
 		_placement =  _placement.do_leave()
 	var rb := self as Node2D as RigidBody2D
 	if rb: rb.freeze = true
+	
+var _og_freeze : bool = (self as Node2D is RigidBody2D) and (self as Node2D as RigidBody2D).freeze
 func on_drag_end()->void: 
 	if PlacementLocations.INSTANCE:
 		PlacementLocations.INSTANCE.do_place(self)
 	EyePiedestal.write_record({"type": "place_object", "object": self.name, "destination": (_placement.parent.name if _placement else "<nil>")})
 	var rb := self as Node2D as RigidBody2D
-	if rb: rb.freeze = false
+	if rb: rb.freeze = _og_freeze
 func get_position_difference()->Vector2:
 	if not _placement: return Vector2.ZERO
 	return _placement.left - get_left_anchor()
@@ -39,4 +41,5 @@ func _ready() -> void:
 				await self.visibility_changed
 				if self.is_visible_in_tree(): break
 		await get_tree().process_frame
+		print("placing "+ self.name)
 		PlacementLocations.INSTANCE.do_place(self)

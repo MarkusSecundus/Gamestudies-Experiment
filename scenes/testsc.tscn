@@ -1,0 +1,337 @@
+[gd_scene load_steps=29 format=3 uid="uid://cqbaionj0c2m8"]
+
+[ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_6i6h3"]
+[ext_resource type="PackedScene" uid="uid://h2kojyit5fy2" path="res://prefabs/decor/flowerpot/pot.tscn" id="14_b5e5p"]
+[ext_resource type="Script" uid="uid://bfabcqdk8i3fa" path="res://scripts/FlowerLeaf.gd" id="17_2ko3c"]
+[ext_resource type="Texture2D" uid="uid://cf24bflbn5iye" path="res://art/shop/decor/flowerpot.png" id="20_pv5rl"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="32_ik7tv"]
+[ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="33_eyib3"]
+[ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="34_dwv78"]
+[ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="35_hy2v7"]
+[ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="36_2aeif"]
+[ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="37_ahnsj"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="38_kgvgs"]
+[ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="39_mt15a"]
+[ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="40_mjbym"]
+[ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="42_q41c6"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="43_lou86"]
+[ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="44_cqovb"]
+
+[sub_resource type="Gradient" id="Gradient_inarv"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fyhrx"]
+gradient = SubResource("Gradient_inarv")
+
+[sub_resource type="Theme" id="Theme_i7ifx"]
+default_font = ExtResource("38_kgvgs")
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_hkpxx"]
+default_font = ExtResource("38_kgvgs")
+default_font_size = 150
+
+[sub_resource type="Theme" id="Theme_ceh8e"]
+default_font = ExtResource("38_kgvgs")
+default_font_size = 30
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_javl5"]
+size = Vector2(30941, 12097)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taho5"]
+size = Vector2(3762, 24736)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i36mk"]
+size = Vector2(33640.996, 9770.281)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q56tx"]
+size = Vector2(24790.998, 10019.641)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceh8e"]
+size = Vector2(261, 33.333336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkpxx"]
+size = Vector2(320.99997, 33.333336)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ceh8e"]
+radius = 12.500061
+height = 170.5
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0090001
+anchor_bottom = 1.0
+offset_right = 0.631958
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_fyhrx")
+expand_mode = 1
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_6i6h3")
+
+[node name="TextBubble" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 694.0
+offset_top = 20.0
+offset_right = 1242.0
+offset_bottom = 283.0
+script = ExtResource("32_ik7tv")
+sounds_per_char = Array[AudioStream]([ExtResource("33_eyib3"), ExtResource("34_dwv78"), ExtResource("35_hy2v7"), ExtResource("36_2aeif"), ExtResource("37_ahnsj")])
+is_skippable = false
+
+[node name="Label" type="RichTextLabel" parent="TextBubble"]
+self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
+z_index = 10
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 47.0
+offset_top = 37.0
+offset_right = -42.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme = SubResource("Theme_i7ifx")
+text = "Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters_behavior = 3
+
+[node name="Control" type="Control" parent="TextBubble/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -33.0
+offset_right = 42.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.667
+anchor_bottom = 1.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("39_mt15a")
+region_rect = Rect2(1540, 60, 761, 602)
+patch_margin_left = 115
+patch_margin_top = 112
+patch_margin_right = 118
+patch_margin_bottom = 110
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 218.0
+offset_right = 1938.0
+offset_bottom = 389.0
+focus_mode = 0
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme = SubResource("Theme_hkpxx")
+bbcode_enabled = true
+text = "[center]EYE SHOP"
+
+[node name="PressSpace" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 811.0
+offset_right = 1938.0
+offset_bottom = 860.0
+focus_mode = 0
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme = SubResource("Theme_ceh8e")
+bbcode_enabled = true
+text = "[center](Press Space)"
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="WorldBounds" type="StaticBody2D" parent="Environment"]
+position = Vector2(974, 1080)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/WorldBounds"]
+position = Vector2(50.5, 6038.5)
+shape = SubResource("RectangleShape2D_javl5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/WorldBounds"]
+position = Vector2(30, -16390)
+shape = SubResource("RectangleShape2D_taho5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Environment/WorldBounds"]
+position = Vector2(17761.498, -14594.359)
+scale = Vector2(1, 3.1200004)
+shape = SubResource("RectangleShape2D_i36mk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Environment/WorldBounds"]
+position = Vector2(-13348.499, -14983.359)
+scale = Vector2(1, 3.1200004)
+shape = SubResource("RectangleShape2D_q56tx")
+
+[node name="Heading" type="StaticBody2D" parent="Environment"]
+position = Vector2(974, 1080)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/Heading"]
+position = Vector2(-197.49994, -779)
+scale = Vector2(1, 3.1200004)
+shape = SubResource("RectangleShape2D_ceh8e")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Environment/Heading"]
+position = Vector2(151.5, -779)
+scale = Vector2(1, 3.1200004)
+shape = SubResource("RectangleShape2D_hkpxx")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Environment/Heading"]
+position = Vector2(-5.75, -251.50006)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ceh8e")
+
+[node name="DialogSystem_FirstScreen" type="Node" parent="." node_paths=PackedStringArray("default_start")]
+script = ExtResource("40_mjbym")
+default_start = NodePath("Fn_Main")
+run_on_start = true
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_FirstScreen"]
+script = ExtResource("42_q41c6")
+
+[node name="Condition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("43_lou86")
+
+[node name="FadeOut" type="Node" parent="DialogSystem_FirstScreen/Fn_Main/Condition"]
+script = ExtResource("44_cqovb")
+start_alpha = 1.0
+duration_seconds = 0.5
+ease = 1
+transition = 4
+
+[node name="Flowerpot" type="Node2D" parent="."]
+position = Vector2(1613, 1027)
+
+[node name="Pot" parent="Flowerpot" instance=ExtResource("14_b5e5p")]
+
+[node name="polygons" type="Node2D" parent="Flowerpot"]
+visible = false
+
+[node name="Leaf4" type="Node2D" parent="Flowerpot/polygons"]
+visible = false
+position = Vector2(416, -150)
+
+[node name="Leaf2" type="Polygon2D" parent="Flowerpot/polygons/Leaf4"]
+position = Vector2(-95.75928, -299.9334)
+texture = ExtResource("20_pv5rl")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+uv = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5)]
+bones = ["Bone2D", PackedFloat32Array(1, 1, 1, 1, 1, 0.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.8, 1, 1, 1, 0, 0), "Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0.16, 0.44, 1, 1, 0.56, 0, 0, 0, 0, 0, 0, 1, 1, 0.8, 0.32, 0, 0, 1, 1), "Bone2D/Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.08, 0.56, 1, 1, 1, 1, 1, 1, 0.56, 0.24, 0, 0, 0, 0, 0, 0.56)]
+internal_vertex_count = 2
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot/polygons/Leaf4"]
+position = Vector2(2, -1)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D/Bone2D"]
+position = Vector2(8.000001, -110.000015)
+rotation = 0.64126927
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 8.000001, -110.000015)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D/Bone2D/Bone2D"]
+position = Vector2(12.000003, -101.00002)
+rotation = 0.678382
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 12.000003, -101.00002)
+auto_calculate_length_and_angle = false
+length = 78.633
+bone_angle = -79.34696
+
+[node name="Leaf3" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-133.5, -557.5416)
+texture = ExtResource("20_pv5rl")
+polygon = PackedVector2Array(183.04918, 71.1009, 175.77295, 90.0399, 166.32123, 115.748634, 161.02826, 138.81088, 159.89404, 158.84857, 163.67474, 181.91081, 168.96771, 200.8143, 176.15103, 220.47392, 189.0054, 228.03531, 206.01852, 228.79144, 220.98566, 220.31573, 226.37004, 199.87276, 228.79414, 177.17879, 230.21497, 153.17752, 229.08075, 131.24948, 222.65356, 111.96794, 215.61827, 88.24099, 206.01852, 70.00221, 194.3913, 62.86444)
+uv = PackedVector2Array(186.73697, 67.733795, 175.77295, 90.0399, 166.32123, 115.748634, 161.02826, 138.81088, 159.89404, 158.84857, 163.67474, 181.91081, 168.96771, 200.8143, 176.15103, 220.47392, 189.0054, 228.03531, 206.01852, 228.79144, 218.8729, 225.01076, 223.78778, 207.61955, 228.32465, 176.23978, 230.21497, 153.17752, 229.08075, 131.24948, 222.65356, 111.96794, 213.57993, 87.771484, 206.01852, 70.00221, 198.07907, 62.062748)
+
+[node name="Leaf1" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(67.5, -638.5416)
+texture = ExtResource("20_pv5rl")
+polygon = PackedVector2Array(6, 53, 4, 87, 2, 130, 2, 167, 0, 210, 0, 243, -1, 288, 0, 311, 8, 326, 42, 325, 52.482666, 292.5751, 51.51465, 245.1431, 50.54663, 197.71106, 51, 151, 52.482666, 103.815056, 50.54663, 64.12704, 48.610718, 27.343025, 39, -5, 18, 1, 8, 24)
+uv = PackedVector2Array(-4.6291504, -31.704865, 4.0826416, 53.479027, 0.21069336, 87.35905, -1.7253418, 128.01505, -3.661377, 166.73505, -6.5653076, 207.39108, -7.533325, 240.30307, -8.501343, 285.7991, -10.437378, 309.9991, 16.666626, 326.4551, 44.738647, 325.48712, 52.482666, 292.5751, 51.51465, 245.1431, 50.54663, 197.71106, 48.610718, 150.27905, 52.482666, 103.815056, 50.54663, 64.12704, 48.610718, 27.343025, 40.8667, -15.248985, 12.794678, -5.568985, 4.0826416, 44.767036)
+
+[node name="Petal" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-322.5, -879.5416)
+texture = ExtResource("20_pv5rl")
+polygon = PackedVector2Array(368.41553, 168.31631, 351.3726, 171.41504, 336.6537, 178.9036, 327.3575, 194.39719, 317.54492, 214.28064, 313.92975, 235.71344, 316.77023, 254.04752, 322.96765, 268.76645, 331.74738, 283.48535, 349.04855, 290.9739, 372.8054, 295.622, 397.59512, 291.4904, 411.7976, 279.35373, 420.06085, 263.6019, 425.4836, 240.36151, 425.22537, 220.21985, 413.8634, 194.65543, 399.1445, 182.51877, 379.26105, 170.1239)
+uv = PackedVector2Array(368.41553, 168.31631, 351.3726, 171.41504, 336.6537, 178.9036, 327.3575, 194.39719, 317.54492, 214.28064, 313.92975, 235.71344, 316.77023, 254.04752, 322.96765, 268.76645, 331.74738, 283.48535, 349.04855, 290.9739, 372.8054, 295.622, 397.59512, 291.4904, 411.7976, 279.35373, 420.06085, 263.6019, 425.4836, 240.36151, 425.22537, 220.21985, 413.8634, 194.65543, 399.1445, 182.51877, 379.26105, 170.1239)
+
+[node name="Blossom" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-331.5, -845.5416)
+texture = ExtResource("20_pv5rl")
+polygon = PackedVector2Array(347.12482, 39.744617, 327.87766, 42.83791, 313.44226, 50.743, 296.9447, 63.45988, 289.3833, 79.95746, 283.8841, 98.86095, 284.2278, 117.76442, 288.6959, 135.98048, 296.2573, 152.82176, 309.31787, 165.53865, 327.19025, 171.03784, 343.34412, 173.44374, 361.2165, 172.75635, 378.74518, 165.19495, 397.30496, 152.13437, 412.08405, 132.54349, 417.23953, 108.82823, 416.89584, 84.42555, 408.64703, 63.803585, 396.92752, 52.933266, 383.17117, 45.378666, 367.90884, 39.541622)
+uv = PackedVector2Array(347.12482, 39.744617, 327.87766, 42.83791, 313.44226, 50.743, 296.9447, 63.45988, 289.3833, 79.95746, 283.8841, 98.86095, 284.2278, 117.76442, 288.6959, 135.98048, 296.2573, 152.82176, 309.31787, 165.53865, 327.19025, 171.03784, 343.34412, 173.44374, 361.2165, 172.75635, 378.74518, 165.19495, 397.30496, 152.13437, 412.08405, 132.54349, 417.23953, 108.82823, 416.89584, 84.42555, 408.64703, 63.803585, 398.67975, 50.743, 379.77628, 38.369816, 366.372, 36.651318)
+
+[node name="Leaf5" type="Node2D" parent="Flowerpot"]
+visible = false
+position = Vector2(72, -324)
+
+[node name="Leaf2" type="Polygon2D" parent="Flowerpot/Leaf5"]
+position = Vector2(-95.75928, -299.9334)
+texture = ExtResource("20_pv5rl")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+uv = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5)]
+bones = ["Root", PackedFloat32Array(1, 1, 1, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 1, 1, 1, 0, 0), "Root/Part1", PackedFloat32Array(0, 0, 0, 0, 0.26, 0.76, 1, 1, 1, 0.26, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0.26, 0.5), "Root/Part1/Part2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0.26, 0.52, 0.52, 0.52, 0.78, 1, 1, 1, 1, 0.78, 0, 0, 0, 0, 0, 0, 0.52)]
+internal_vertex_count = 2
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot/Leaf5"]
+position = Vector2(2, -1)
+
+[node name="Root" type="Bone2D" parent="Flowerpot/Leaf5/Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+script = ExtResource("17_2ko3c")
+rotation_interval_deg = 35
+linear_velocity_change_factor = 2.0
+
+[node name="Part1" type="Bone2D" parent="Flowerpot/Leaf5/Skeleton2D/Root"]
+position = Vector2(8.000001, -110.000015)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 8.000001, -110.000015)
+script = ExtResource("17_2ko3c")
+rotation_interval_deg = 35
+linear_velocity_change_factor = 2.0
+
+[node name="Part2" type="Bone2D" parent="Flowerpot/Leaf5/Skeleton2D/Root/Part1"]
+position = Vector2(12.000003, -101.00002)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 12.000003, -101.00002)
+auto_calculate_length_and_angle = false
+length = 78.633
+bone_angle = -79.34696
+script = ExtResource("17_2ko3c")
+rotation_interval_deg = 35
+linear_velocity_change_factor = 2.0
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot"]

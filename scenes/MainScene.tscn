@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=125 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -104,6 +104,7 @@
 [ext_resource type="Script" uid="uid://bsehpor25dn6p" path="res://scripts/dialog_system/DialogWait.gd" id="92_grpki"]
 [ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="93_8h2n0"]
 [ext_resource type="PackedScene" uid="uid://cfh2elbhj280b" path="res://scenes/OutroText.tscn" id="94_qb1n5"]
+[ext_resource type="PackedScene" uid="uid://h2kojyit5fy2" path="res://prefabs/decor/flowerpot/pot.tscn" id="105_m27th"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
@@ -2889,6 +2890,10 @@ append = true
 [node name="Jump" type="Node" parent="DialogSystem_Main/test" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("..")
+
+[node name="Flower" parent="." instance=ExtResource("105_m27th")]
+position = Vector2(1771, 828)
+scale = Vector2(0.2589384, 0.2589384)
 
 [connection signal="on_submitted" from="EyePiedestal" to="DialogSystem_Main/EyeWasSubmittedSignal" method="do_emit"]
 [connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]

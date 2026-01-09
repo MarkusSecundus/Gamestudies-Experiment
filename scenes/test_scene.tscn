@@ -1,0 +1,172 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjmrm7qc3tocn"]
+
+[ext_resource type="Texture2D" uid="uid://cf24bflbn5iye" path="res://art/shop/decor/flowerpot.png" id="1_j8ivh"]
+[ext_resource type="Texture2D" uid="uid://dwgxb66y6u7fl" path="res://art/shop/decor/flowerpot-outline.png" id="2_nd71p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ddre"]
+size = Vector2(348, 331)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8ivh"]
+size = Vector2(8101, 1773)
+
+[node name="TestScene" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -653.0
+offset_top = -327.0
+offset_right = 2527.0
+offset_bottom = 1239.0
+
+[node name="Pot2" type="RigidBody2D" parent="."]
+position = Vector2(1439, 569)
+
+[node name="Visual" type="Sprite2D" parent="Pot2"]
+position = Vector2(7.5, -192.54163)
+texture = ExtResource("1_j8ivh")
+region_enabled = true
+region_rect = Rect2(21.599976, 331.59998, 403.19995, 414.40002)
+
+[node name="Outline" type="Sprite2D" parent="Pot2/Visual"]
+visible = false
+position = Vector2(4, -4)
+texture = ExtResource("2_nd71p")
+region_enabled = true
+region_rect = Rect2(10.127869, 310.91595, 434.63208, 451.08807)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pot2"]
+position = Vector2(9, -163.5)
+shape = SubResource("RectangleShape2D_7ddre")
+
+[node name="Flowerpot" type="Node2D" parent="."]
+position = Vector2(814, 602)
+
+[node name="Pot" type="RigidBody2D" parent="Flowerpot"]
+
+[node name="Visual" type="Sprite2D" parent="Flowerpot/Pot"]
+position = Vector2(7.5, -192.54163)
+texture = ExtResource("1_j8ivh")
+region_enabled = true
+region_rect = Rect2(21.599976, 331.59998, 403.19995, 414.40002)
+
+[node name="Outline" type="Sprite2D" parent="Flowerpot/Pot/Visual"]
+visible = false
+position = Vector2(4, -4)
+texture = ExtResource("2_nd71p")
+region_enabled = true
+region_rect = Rect2(10.127869, 310.91595, 434.63208, 451.08807)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flowerpot/Pot"]
+position = Vector2(9, -163.5)
+shape = SubResource("RectangleShape2D_7ddre")
+
+[node name="Leaf2" type="Node2D" parent="Flowerpot"]
+position = Vector2(-23, -349)
+
+[node name="Leaf2" type="Polygon2D" parent="Flowerpot/Leaf2"]
+position = Vector2(-95.75928, -299.9334)
+texture = ExtResource("1_j8ivh")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+uv = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5)]
+bones = ["Bone2D", PackedFloat32Array(1, 1, 1, 1, 1, 0.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.8, 1, 1, 1, 0, 0), "Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0.16, 0.44, 1, 1, 0.56, 0, 0, 0, 0, 0, 0, 1, 1, 0.8, 0.32, 0, 0, 1, 1), "Bone2D/Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.08, 0.56, 1, 1, 1, 1, 1, 1, 0.56, 0.24, 0, 0, 0, 0, 0, 0.56)]
+internal_vertex_count = 2
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot/Leaf2"]
+position = Vector2(2, -1)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/Leaf2/Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/Leaf2/Skeleton2D/Bone2D"]
+position = Vector2(8.000001, -110.000015)
+rotation = 0.64126927
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 8.000001, -110.000015)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/Leaf2/Skeleton2D/Bone2D/Bone2D"]
+position = Vector2(12.000003, -101.00002)
+rotation = 0.678382
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 12.000003, -101.00002)
+auto_calculate_length_and_angle = false
+length = 78.633
+bone_angle = -79.34696
+
+[node name="polygons" type="Node2D" parent="Flowerpot"]
+visible = false
+
+[node name="Leaf4" type="Node2D" parent="Flowerpot/polygons"]
+position = Vector2(416, -150)
+
+[node name="Leaf2" type="Polygon2D" parent="Flowerpot/polygons/Leaf4"]
+position = Vector2(-95.75928, -299.9334)
+texture = ExtResource("1_j8ivh")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+uv = PackedVector2Array(71.06915, 309.46408, 91.04932, 319.2105, 120.77594, 314.82462, 132.95898, 285.58533, 137.34485, 245.62498, 140.2688, 202.74072, 141.73077, 165.7043, 145.14203, 133.54109, 145.14203, 99.91591, 148.06592, 61.417522, 147.57861, 19.507885, 142.21808, -13.629963, 120.288635, -16.06657, 100.79578, 19.995205, 92.51129, 53.13306, 82.76489, 90.656815, 74.48041, 135.97769, 68.14526, 189.09572, 65.70862, 231.00536, 63.75934, 265.60516, 64.73401, 293.38248, 106.83728, 195.839, 115.88989, 97.722946)
+polygons = [PackedInt32Array(15, 22, 8, 9, 10, 11, 12, 13, 14), PackedInt32Array(17, 21, 5, 6, 7, 8, 22, 15, 16), PackedInt32Array(21, 17, 18, 19, 20, 0, 1, 2, 3, 4, 5)]
+bones = ["Bone2D", PackedFloat32Array(1, 1, 1, 1, 1, 0.6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.8, 1, 1, 1, 0, 0), "Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0.16, 0.44, 1, 1, 0.56, 0, 0, 0, 0, 0, 0, 1, 1, 0.8, 0.32, 0, 0, 1, 1), "Bone2D/Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.08, 0.56, 1, 1, 1, 1, 1, 1, 0.56, 0.24, 0, 0, 0, 0, 0, 0.56)]
+internal_vertex_count = 2
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot/polygons/Leaf4"]
+position = Vector2(2, -1)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D/Bone2D"]
+position = Vector2(8.000001, -110.000015)
+rotation = 0.64126927
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 8.000001, -110.000015)
+
+[node name="Bone2D" type="Bone2D" parent="Flowerpot/polygons/Leaf4/Skeleton2D/Bone2D/Bone2D"]
+position = Vector2(12.000003, -101.00002)
+rotation = 0.678382
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 12.000003, -101.00002)
+auto_calculate_length_and_angle = false
+length = 78.633
+bone_angle = -79.34696
+
+[node name="Leaf3" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-133.5, -557.5416)
+texture = ExtResource("1_j8ivh")
+polygon = PackedVector2Array(183.04918, 71.1009, 175.77295, 90.0399, 166.32123, 115.748634, 161.02826, 138.81088, 159.89404, 158.84857, 163.67474, 181.91081, 168.96771, 200.8143, 176.15103, 220.47392, 189.0054, 228.03531, 206.01852, 228.79144, 220.98566, 220.31573, 226.37004, 199.87276, 228.79414, 177.17879, 230.21497, 153.17752, 229.08075, 131.24948, 222.65356, 111.96794, 215.61827, 88.24099, 206.01852, 70.00221, 194.3913, 62.86444)
+uv = PackedVector2Array(186.73697, 67.733795, 175.77295, 90.0399, 166.32123, 115.748634, 161.02826, 138.81088, 159.89404, 158.84857, 163.67474, 181.91081, 168.96771, 200.8143, 176.15103, 220.47392, 189.0054, 228.03531, 206.01852, 228.79144, 218.8729, 225.01076, 223.78778, 207.61955, 228.32465, 176.23978, 230.21497, 153.17752, 229.08075, 131.24948, 222.65356, 111.96794, 213.57993, 87.771484, 206.01852, 70.00221, 198.07907, 62.062748)
+
+[node name="Leaf1" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(67.5, -638.5416)
+texture = ExtResource("1_j8ivh")
+polygon = PackedVector2Array(6, 53, 4, 87, 2, 130, 2, 167, 0, 210, 0, 243, -1, 288, 0, 311, 8, 326, 42, 325, 52.482666, 292.5751, 51.51465, 245.1431, 50.54663, 197.71106, 51, 151, 52.482666, 103.815056, 50.54663, 64.12704, 48.610718, 27.343025, 39, -5, 18, 1, 8, 24)
+uv = PackedVector2Array(-4.6291504, -31.704865, 4.0826416, 53.479027, 0.21069336, 87.35905, -1.7253418, 128.01505, -3.661377, 166.73505, -6.5653076, 207.39108, -7.533325, 240.30307, -8.501343, 285.7991, -10.437378, 309.9991, 16.666626, 326.4551, 44.738647, 325.48712, 52.482666, 292.5751, 51.51465, 245.1431, 50.54663, 197.71106, 48.610718, 150.27905, 52.482666, 103.815056, 50.54663, 64.12704, 48.610718, 27.343025, 40.8667, -15.248985, 12.794678, -5.568985, 4.0826416, 44.767036)
+
+[node name="Stem" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-440.5, -710.5416)
+texture = ExtResource("1_j8ivh")
+polygon = PackedVector2Array(433.34662, 8.085037, 434.719, 36.905273, 434.26154, 61.15088, 434.26154, 87.68379, 433.80408, 114.216705, 435.63397, 139.8347, 434.719, 166.82509, 433.34662, 201.13489, 431.97424, 239.56189, 431.97424, 278.44632, 430.6001, 324.64777, 429.22772, 353.01053, 428.77026, 375.42627, 427.39783, 390.98004, 445.23895, 400.12933, 457.5905, 396.4696, 469.94202, 384.1181, 473.6075, 326.18463, 474.67297, 280.51886, 475.0998, 245.73297, 477.87415, 204.11795, 478.72296, 165.70825, 478.93637, 139.67218, 478.50955, 116.83728, 478.08273, 89.94758, 477.01926, 59.007088, 476.1656, 35.105133, 475.73877, 6.08132, 458.45255, -13.765842)
+uv = PackedVector2Array(433.34662, 8.085037, 434.719, 36.905273, 434.26154, 61.15088, 434.26154, 87.68379, 433.80408, 114.216705, 435.63397, 139.8347, 434.719, 166.82509, 433.34662, 201.13489, 431.97424, 239.56189, 431.97424, 278.44632, 430.6001, 324.64777, 429.22772, 353.01053, 428.77026, 375.42627, 427.39783, 390.98004, 445.23895, 400.12933, 457.5905, 396.4696, 469.94202, 384.1181, 473.6075, 326.18463, 474.67297, 280.51886, 475.0998, 245.73297, 477.87415, 204.11795, 478.72296, 165.70825, 478.93637, 139.67218, 478.50955, 116.83728, 478.08273, 89.94758, 477.01926, 59.007088, 476.1656, 35.105133, 475.73877, 6.08132, 458.45255, -13.765842)
+
+[node name="Petal" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-322.5, -879.5416)
+texture = ExtResource("1_j8ivh")
+polygon = PackedVector2Array(368.41553, 168.31631, 351.3726, 171.41504, 336.6537, 178.9036, 327.3575, 194.39719, 317.54492, 214.28064, 313.92975, 235.71344, 316.77023, 254.04752, 322.96765, 268.76645, 331.74738, 283.48535, 349.04855, 290.9739, 372.8054, 295.622, 397.59512, 291.4904, 411.7976, 279.35373, 420.06085, 263.6019, 425.4836, 240.36151, 425.22537, 220.21985, 413.8634, 194.65543, 399.1445, 182.51877, 379.26105, 170.1239)
+uv = PackedVector2Array(368.41553, 168.31631, 351.3726, 171.41504, 336.6537, 178.9036, 327.3575, 194.39719, 317.54492, 214.28064, 313.92975, 235.71344, 316.77023, 254.04752, 322.96765, 268.76645, 331.74738, 283.48535, 349.04855, 290.9739, 372.8054, 295.622, 397.59512, 291.4904, 411.7976, 279.35373, 420.06085, 263.6019, 425.4836, 240.36151, 425.22537, 220.21985, 413.8634, 194.65543, 399.1445, 182.51877, 379.26105, 170.1239)
+
+[node name="Blossom" type="Polygon2D" parent="Flowerpot/polygons"]
+position = Vector2(-331.5, -845.5416)
+texture = ExtResource("1_j8ivh")
+polygon = PackedVector2Array(347.12482, 39.744617, 327.87766, 42.83791, 313.44226, 50.743, 296.9447, 63.45988, 289.3833, 79.95746, 283.8841, 98.86095, 284.2278, 117.76442, 288.6959, 135.98048, 296.2573, 152.82176, 309.31787, 165.53865, 327.19025, 171.03784, 343.34412, 173.44374, 361.2165, 172.75635, 378.74518, 165.19495, 397.30496, 152.13437, 412.08405, 132.54349, 417.23953, 108.82823, 416.89584, 84.42555, 408.64703, 63.803585, 396.92752, 52.933266, 383.17117, 45.378666, 367.90884, 39.541622)
+uv = PackedVector2Array(347.12482, 39.744617, 327.87766, 42.83791, 313.44226, 50.743, 296.9447, 63.45988, 289.3833, 79.95746, 283.8841, 98.86095, 284.2278, 117.76442, 288.6959, 135.98048, 296.2573, 152.82176, 309.31787, 165.53865, 327.19025, 171.03784, 343.34412, 173.44374, 361.2165, 172.75635, 378.74518, 165.19495, 397.30496, 152.13437, 412.08405, 132.54349, 417.23953, 108.82823, 416.89584, 84.42555, 408.64703, 63.803585, 398.67975, 50.743, 379.77628, 38.369816, 366.372, 36.651318)
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Flowerpot"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(619, 1032)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(936.5, 910.5)
+shape = SubResource("RectangleShape2D_j8ivh")
