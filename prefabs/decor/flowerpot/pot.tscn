@@ -36,7 +36,7 @@ region_rect = Rect2(10.127869, 310.91595, 434.63208, 451.08807)
 position = Vector2(-17, -347)
 
 [node name="Root" parent="Visual/Leaf3/Skeleton2D" index="0"]
-rotation = -0.23007098
+rotation = -0.23007093
 
 [node name="Leaf2" parent="Visual" instance=ExtResource("6_ufrmi")]
 position = Vector2(23, -332)
@@ -54,10 +54,10 @@ rotation = 0.06191624
 rotation = 0.042797334
 
 [node name="Part5" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.054046635
+rotation = 0.054046612
 
 [node name="Part6" parent="Visual/Leaf2/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.058433335
+rotation = 0.058433313
 
 [node name="Leaf1b" type="Node2D" parent="Visual"]
 position = Vector2(56, -334)
@@ -85,7 +85,7 @@ linear_velocity_change_factor = 0.001
 [node name="Part1" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root"]
 position = Vector2(-4.053116e-06, -30.000015)
 rotation = 0.15480046
-scale = Vector2(0.9999997, 0.9999997)
+scale = Vector2(0.99999934, 0.99999934)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, -4.053116e-06, -30.000015)
 script = ExtResource("5_8ps2v")
 rotation_interval_deg = 20
@@ -129,8 +129,8 @@ linear_velocity_change_factor = 0.001
 
 [node name="Part6" type="Bone2D" parent="Visual/Leaf1b/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5"]
 position = Vector2(6.999998, -42.00002)
-rotation = 0.2916151
-scale = Vector2(0.9999997, 0.9999997)
+rotation = 0.2916152
+scale = Vector2(0.99999946, 0.99999946)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 6.999998, -42.00002)
 auto_calculate_length_and_angle = false
 length = 32.702
@@ -147,7 +147,7 @@ rotation = -0.033966705
 
 [node name="Part2" parent="Visual/Leaf4/Skeleton2D/Root/Part1" index="0"]
 rotation = -0.0675279
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Part3" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2" index="0"]
 rotation = -0.04778844
@@ -156,11 +156,11 @@ rotation = -0.04778844
 rotation = -0.08842002
 
 [node name="Part5" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.0020925289
-scale = Vector2(0.99999976, 0.99999976)
+rotation = 0.0020925284
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Part6" parent="Visual/Leaf4/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.058433335
+rotation = 0.058433313
 
 [node name="Leaf6" parent="Visual" instance=ExtResource("7_wia44")]
 position = Vector2(43, -312)
@@ -170,7 +170,7 @@ position = Vector2(5, 2)
 rotation = 0.27083623
 
 [node name="Part1" parent="Visual/Leaf6/Skeleton2D/Root" index="0"]
-rotation = 0.23711303
+rotation = 0.23711304
 
 [node name="Part2" parent="Visual/Leaf6/Skeleton2D/Root/Part1" index="0"]
 rotation = 0.29576895
@@ -180,8 +180,8 @@ position = Vector2(-67, -324)
 
 [node name="Root" parent="Visual/Leaf7/Skeleton2D" index="0"]
 position = Vector2(5, 2)
-rotation = -0.016204534
-scale = Vector2(0.99999976, 0.99999976)
+rotation = -0.016204532
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Part1" parent="Visual/Leaf7/Skeleton2D/Root" index="0"]
 rotation = -0.35542795
@@ -197,7 +197,7 @@ position = Vector2(-16, -316)
 
 [node name="Part1" parent="Visual/Leaf1/Skeleton2D/Root" index="0"]
 rotation = -0.25383928
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Part2" parent="Visual/Leaf1/Skeleton2D/Root/Part1" index="0"]
 rotation = -0.2573548
@@ -206,14 +206,14 @@ rotation = -0.2573548
 rotation = -0.10552053
 
 [node name="Part4" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3" index="0"]
-rotation = -0.20035222
+rotation = -0.20035213
 
 [node name="Part5" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
 rotation = -0.14261498
 
 [node name="Part6" parent="Visual/Leaf1/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.011250038
-scale = Vector2(0.99999976, 0.99999976)
+rotation = 0.011250039
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Leaf5" parent="Visual" instance=ExtResource("6_ufrmi")]
 position = Vector2(2, -310)
@@ -223,7 +223,7 @@ rotation = -0.033966705
 
 [node name="Part2" parent="Visual/Leaf5/Skeleton2D/Root/Part1" index="0"]
 rotation = -0.0675279
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999994, 0.9999994)
 
 [node name="Part3" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2" index="0"]
 rotation = -0.04778844
@@ -232,11 +232,11 @@ rotation = -0.04778844
 rotation = -0.08842002
 
 [node name="Part5" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4" index="0"]
-rotation = 0.0020925289
-scale = Vector2(0.9999997, 0.9999997)
+rotation = 0.0020925284
+scale = Vector2(0.99999934, 0.99999934)
 
 [node name="Part6" parent="Visual/Leaf5/Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5" index="0"]
-rotation = 0.05843333
+rotation = 0.05843331
 
 [node name="Stem" parent="Visual" instance=ExtResource("8_46jsq")]
 position = Vector2(13, -313)
