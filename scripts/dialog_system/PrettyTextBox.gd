@@ -46,10 +46,6 @@ func finish_printing_immediately()->void:
 			_on_finished = Callable()
 			on_printing_finished.emit()
 
-func _process(delta: float) -> void:
-	if not self.visible: return
-	#print("visible chars: %d (%f)"%[_lbl.visible_characters, _lbl.visible_ratio])
-
 const UNICODE_ZERO_WIDTH_SPACE = "\u200B"
 
 func print_text(text:String, on_finished : Callable = Callable(), should_display_the_dot: bool = true, start_character_count: int = 0):

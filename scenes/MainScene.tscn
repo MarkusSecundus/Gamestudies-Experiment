@@ -332,7 +332,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(760, 0)
 
 [node name="P17" type="Node2D" parent="PlacementLocations"]
-z_index = 20
+z_index = 60
 position = Vector2(35, 1088)
 script = ExtResource("1_kik7w")
 
@@ -340,7 +340,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(481, 0)
 
 [node name="P18" type="Node2D" parent="PlacementLocations"]
-z_index = 20
+z_index = 60
 position = Vector2(571, 1088)
 script = ExtResource("1_kik7w")
 
@@ -348,7 +348,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(372, 0)
 
 [node name="P19" type="Node2D" parent="PlacementLocations"]
-z_index = 20
+z_index = 60
 position = Vector2(1000, 1088)
 script = ExtResource("1_kik7w")
 
@@ -356,7 +356,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(382, 0)
 
 [node name="P20" type="Node2D" parent="PlacementLocations"]
-z_index = 20
+z_index = 60
 position = Vector2(1451, 1088)
 script = ExtResource("1_kik7w")
 
@@ -1188,7 +1188,7 @@ position = Vector2(954, 385)
 scale = Vector2(0.2, 0.2)
 
 [node name="EyePiedestal" type="Node2D" parent="." node_paths=PackedStringArray("submit_destination", "customer_image")]
-z_index = 60
+z_index = 70
 position = Vector2(966, 851)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
@@ -1670,15 +1670,17 @@ offset_bottom = 140.0
 grow_horizontal = 2
 mouse_filter = 2
 theme = SubResource("Theme_i7ifx")
-text = "I was growing this flower, to give to her at the right moment.
-But that's no use now. It would only remind me of her.
-Please, take good care of it."
+text = "Ok, so me and my pals, we were at this shrine, murdering and pillaging.
+I thought I'd have some fun with the priestess.
+
+She cried, promised gods' wrath and so - I like when they do that.
+But then, the BITCH stabbed me in my eye with a hairpin!"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
 script = ExtResource("74_te826")
-source = NodePath("../../DialogSystem_Main/Fn_Main/GentleWerewolf/T_GiveFlower")
+source = NodePath("../../DialogSystem_Main/Fn_Main/DisgustingThug/Text")
 
 [node name="Control" type="Control" parent="TextBubble/Label"]
 z_index = -1
@@ -2319,7 +2321,7 @@ attribute_overrides = Dictionary[StringName, Variant]({
 })
 
 [node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower"]
-position = Vector2(1254, 794)
+position = Vector2(1231, 818)
 
 [node name="WerewolfFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower/Destination"]
 
@@ -2332,6 +2334,320 @@ ease = 0
 transition = 1
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Scared" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 6.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Sir, this place is really scary.
+Please, get me some eyes quickly, so that I can go back home."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+I hope this much money is enough?"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("91_2qf71")
+amount = 20
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 0.7
+ease = 1
+transition = 1
+
+[node name="EyeCousineEnjoyer" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Greetings. I need your help in a certain, rather embarassing matter."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+Last week, I was in a restaurant. I ordered a soup. I don't know how, but there was an eye, floating in it."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+When I asked for more, the waiter kept apologizing. It got there by accident."
+append = true
+
+[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text4" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I need ingredients to make more! It was the tastiest thing I have ever eaten."
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Splendid!
+Here is your pay. 
+I expect us to do more business in the future."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer"]
+script = ExtResource("91_2qf71")
+amount = 30
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/EyeCousineEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="TheStrongest" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I must become the strongest.
+I can't do that with my eyes.
+Give me new eyes.
+Strong eyes."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest"]
+script = ExtResource("46_cw1g3")
+text = "Good."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest"]
+script = ExtResource("91_2qf71")
+amount = 30
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="DisgustingThug" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Ok, so me and my pals, we were at this shrine, murdering and pillaging."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I thought I'd have some fun with the priestess."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+
+She cried, promised gods' wrath and so - I like when they do that."
+append = true
+
+[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text4" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+But then, the BITCH stabbed me in my eye with a hairpin!"
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("46_cw1g3")
+text = "Thanks."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
+script = ExtResource("91_2qf71")
+amount = 20
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Child" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Child" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Child"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Please, save my Rosie!
+The gods have a cruel sense of humor. She was born blind.
+But you - You can help us. Right?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Child" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Child"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+This is all I can give you."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Child"]
+script = ExtResource("91_2qf71")
+amount = 10
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Child" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="RejectedLover" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one rejected me.
+She said these eyes make me look stupid.
+Please, you're the only one who can help me."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+With these eyes, she'll fall in love with me, for sure."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover"]
+script = ExtResource("91_2qf71")
+amount = 10
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/RejectedLover" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"

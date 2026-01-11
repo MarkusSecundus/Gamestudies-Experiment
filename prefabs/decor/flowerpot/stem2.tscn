@@ -94,7 +94,7 @@ position = Vector2(-0.9999968, -26.999996)
 scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 script = ExtResource("2_gi7s7")
-rotation_interval_deg = 8
+rotation_interval_deg = 15
 linear_velocity_change_factor = 0.001
 
 [node name="Blossom" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
@@ -149,8 +149,8 @@ uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326
 
 [node name="Petal13" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(42.000046, -6.0000153)
-rotation = -0.21039265
-scale = Vector2(0.99999976, 0.99999976)
+rotation = -0.21039267
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -171,7 +171,7 @@ uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326
 [node name="Petal14" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(1.9073486e-06, -31.000046)
 rotation = -1.9548156
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -213,7 +213,7 @@ uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326
 [node name="Petal16" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(9.000008, 47.000065)
 rotation = 1.2758355
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -255,7 +255,7 @@ uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326
 [node name="Petal12" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(-20.000027, 28.00003)
 rotation = 1.9073609
-scale = Vector2(0.9999998, 0.9999998)
+scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -360,7 +360,7 @@ uv = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.
 [node name="Petal3" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(23.000029, 23.000025)
 rotation = 0.45861167
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999998, 0.9999998)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -381,7 +381,7 @@ uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 50
 [node name="Petal7" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(18.00002, -11.000017)
 rotation = -1.0365868
-scale = Vector2(0.9999998, 0.9999998)
+scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -423,7 +423,7 @@ uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 50
 [node name="Petal9" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
 position = Vector2(-8.000008, 21.000027)
 rotation = 2.0740783
-scale = Vector2(0.99999976, 0.99999976)
+scale = Vector2(0.9999997, 0.9999997)
 rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
 auto_calculate_length_and_angle = false
 length = 16.0

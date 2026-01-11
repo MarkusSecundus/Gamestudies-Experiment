@@ -9,7 +9,6 @@ class StackFrame:
 		self.caller = the_caller
 		self.arguments = the_arguments
 
-var _temporary_variables : Dictionary[String, Variant] = {}
 var _call_stack : Array[StackFrame] = []
 
 var default_text_box : PrettyTextBox
