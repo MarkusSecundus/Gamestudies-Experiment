@@ -137,7 +137,7 @@ func _record_answer()->void:
 static func write_record(record: Dictionary[String, Variant])->void:
 	if OS.get_name() == "Android": return
 	record["timestamp"] = Time.get_time_string_from_system()
-	const ANSWERS_PATH = "answers.txt"
+	const ANSWERS_PATH = "eyeshop.log"
 	var is_append :bool = true
 	var to_append := JSON.stringify(record, "\t")
 	var f := FileAccess.open(ANSWERS_PATH, FileAccess.READ_WRITE)
