@@ -105,8 +105,8 @@
 [ext_resource type="Script" uid="uid://bsehpor25dn6p" path="res://scripts/dialog_system/DialogWait.gd" id="92_grpki"]
 [ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="93_8h2n0"]
 [ext_resource type="PackedScene" uid="uid://cfh2elbhj280b" path="res://scenes/OutroText.tscn" id="94_qb1n5"]
-[ext_resource type="Script" uid="uid://cdftgtqqljb4b" path="res://scripts/dialog_system/simple_actions/DialogActionInstantiate.gd" id="100_0ow57"]
-[ext_resource type="Script" uid="uid://cpdg8vi0rnm1c" path="res://scripts/dialog_system/simple_actions/DialogActionSetProperties.gd" id="101_djqke"]
+[ext_resource type="Script" path="res://scripts/dialog_system/simple_actions/DialogActionInstantiate.gd" id="100_0ow57"]
+[ext_resource type="Script" path="res://scripts/dialog_system/simple_actions/DialogActionSetProperties.gd" id="101_djqke"]
 [ext_resource type="PackedScene" uid="uid://h2kojyit5fy2" path="res://prefabs/decor/flowerpot/pot.tscn" id="105_m27th"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
@@ -1680,7 +1680,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
 script = ExtResource("74_te826")
-source = NodePath("../../DialogSystem_Main/Fn_Main/DisgustingThug/Text")
+source = NodePath("")
 
 [node name="Control" type="Control" parent="TextBubble/Label"]
 z_index = -1
@@ -2491,79 +2491,6 @@ script = ExtResource("91_2qf71")
 amount = 30
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/TheStrongest" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 0)
-duration = 2.0
-ease = 1
-transition = 1
-
-[node name="DisgustingThug" type="Node" parent="DialogSystem_Main/Fn_Main"]
-script = ExtResource("47_q5chl")
-
-[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 1)
-duration = 2.0
-ease = 0
-transition = 1
-
-[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "Ok, so me and my pals, we were at this shrine, murdering and pillaging."
-
-[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("92_grpki")
-delay_seconds = 1.0
-
-[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "
-I thought I'd have some fun with the priestess."
-append = true
-
-[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("92_grpki")
-delay_seconds = 1.0
-
-[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "
-
-She cried, promised gods' wrath and so - I like when they do that."
-append = true
-
-[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("92_grpki")
-delay_seconds = 1.0
-
-[node name="Text4" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "
-But then, the BITCH stabbed me in my eye with a hairpin!"
-append = true
-
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("callee")]
-script = ExtResource("54_ell2e")
-callee = NodePath("../../../Fn_HandleEyeSubmittion")
-
-[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("46_cw1g3")
-text = "Thanks."
-do_fade_out_after = true
-
-[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug"]
-script = ExtResource("91_2qf71")
-amount = 20
-
-[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/DisgustingThug" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
