@@ -1,7 +1,6 @@
 extends IDialogAction
 
 @export var target : CanvasItem
-@export var target_path : NodePath
 
 @export var start_alpha : float
 @export var end_alpha : float
@@ -12,7 +11,7 @@ extends IDialogAction
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var tw := create_tween()
-	var fader : CanvasItem = target if target else (get_node(target_path) if target_path else FaderSingleton.INSTANCE)
+	var fader : CanvasItem = target if target else FaderSingleton.INSTANCE
 	fader.visible = true
 	var final_color = fader.modulate
 	final_color.a = end_alpha
