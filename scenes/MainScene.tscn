@@ -2292,7 +2292,7 @@ do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer"]
 script = ExtResource("91_2qf71")
-amount = 14
+amount = 50
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -2412,7 +2412,7 @@ do_fade_out_after = true
 
 [node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight"]
 script = ExtResource("91_2qf71")
-amount = 45
+amount = 100
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
