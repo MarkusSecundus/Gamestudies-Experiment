@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://i016na5khgay"]
+
+[ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="1_b44at"]
+[ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="2_gye3f"]
+[ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="3_xhb7d"]
+[ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="4_f1oe1"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="5_omy65"]
+
+[sub_resource type="Theme" id="Theme_1acod"]
+default_font = ExtResource("5_omy65")
+default_font_size = 16
+
+[node name="Potion" type="Node2D"]
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("1_b44at")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="."]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("2_gye3f")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("3_xhb7d")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="."]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="."]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("4_f1oe1")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
