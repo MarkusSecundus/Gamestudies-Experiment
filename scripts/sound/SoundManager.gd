@@ -65,3 +65,5 @@ func SetSoundtrackIntensity(intensity: float)->void:
 			_running_tweens.append(tw)
 		i+= 1
 		
+func GetSoundtrackLayer(idx: int)->SoundtrackPart:
+	return self._soundtrackLayers[idx]

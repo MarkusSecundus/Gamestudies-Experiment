@@ -28,6 +28,7 @@ static func find_min(list, selector: Callable, compare_lt: Callable = Callable()
 	return minimum;
 
 class Wrapper:
+	extends RefCounted
 	var value;
 	
 	@warning_ignore("shadowed_variable")
@@ -76,3 +77,32 @@ static func all(arr, predicate: Callable)->bool:
 	for e in arr:
 		if not predicate.call(e): return false
 	return true
+
+static func remove_if(arr, predicate: Callable)->int:
+	var removed_count :int = 0
+	for i in Vector3i(arr.size()-1, -1, -1):
+		if not predicate.call(arr[i]):
+			arr.remove_at(i)
+			removed_count += 1
+	
+	return removed_count
+
+static func remove_all_falsy(arr)->int:
+	var removed_count :int = 0
+	for i in Vector3i(arr.size()-1, -1, -1):
+		if not arr[i]:
+			arr.remove_at(i)
+			removed_count += 1
+	
+	return removed_count
+
+
+static func ensure_these_and_only_these_dict_keys_are_present(dict: Variant, keys: Variant, default_value : Variant = null)->void:
+	var not_present : Array = []
+	for key in dict:
+		if not key in keys: not_present.append(key)
+	for key in not_present: dict.erase(key)
+	
+	for key in keys:
+		if not key in dict: dict[key] = default_value
+	

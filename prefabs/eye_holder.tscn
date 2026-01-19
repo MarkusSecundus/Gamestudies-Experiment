@@ -1,21 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://dieqi7fura551"]
+[gd_scene load_steps=11 format=3 uid="uid://dieqi7fura551"]
 
 [ext_resource type="Texture2D" uid="uid://5u4p88silywj" path="res://art/shop/eye_holder/eye_holder_main.png" id="1_vac4u"]
 [ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_xfwt3"]
 [ext_resource type="Texture2D" uid="uid://bjiuj3dlrodj4" path="res://art/shop/eye_holder/eye_holder_handle.png" id="2_xfwt3"]
+[ext_resource type="Texture2D" uid="uid://caupr67rvqn7u" path="res://art/shop/eye_holder/eye_holder_label_v2.png" id="4_mkntb"]
+[ext_resource type="Texture2D" uid="uid://7tb6b7kx1nw8" path="res://art/shop/eye_holder/eye_holder_handle-outline.png" id="4_v2h6w"]
 [ext_resource type="Script" uid="uid://cuko36hm8usx2" path="res://scripts/test.gd" id="4_xb2x5"]
+[ext_resource type="Script" uid="uid://wipvo4ysl7mb" path="res://scripts/util/VisualEffectProvider.gd" id="5_72s2h"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="5_p5nv4"]
+
+[sub_resource type="Theme" id="Theme_72s2h"]
+default_font = ExtResource("5_p5nv4")
+default_font_size = 30
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfwt3"]
-radius = 23.0
+radius = 16.0
 height = 100.0
 
 [node name="EyeHolder" type="Node2D"]
 script = ExtResource("1_xfwt3")
+_show_label = true
 
 [node name="Visual" type="Node2D" parent="."]
-modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 
 [node name="EyeHolderMain" type="Sprite2D" parent="Visual"]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
 texture = ExtResource("1_vac4u")
@@ -23,11 +32,44 @@ region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
 [node name="EyeHolderHandle" type="Sprite2D" parent="Visual"]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
 texture = ExtResource("2_xfwt3")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
+
+[node name="Label" type="Sprite2D" parent="Visual"]
+modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
+position = Vector2(2, 3.999998)
+scale = Vector2(0.42751, 0.38805974)
+texture = ExtResource("4_mkntb")
+region_enabled = true
+region_rect = Rect2(881.83167, 701.10535, 181.45276, 67.326294)
+script = ExtResource("5_72s2h")
+zoom_in_duration_seconds = 0.1
+zoom_out_duration_seconds = 0.1
+zoom_transition = 4
+zoom_multiplier = Vector2(2, 2)
+
+[node name="Text" type="Label" parent="Visual/Label"]
+self_modulate = Color(1, 1, 1, 0.7490196)
+offset_left = -86.54768
+offset_top = -23.1923
+offset_right = 84.20856
+offset_bottom = 25.769232
+mouse_filter = 1
+theme = SubResource("Theme_72s2h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Outline" type="Sprite2D" parent="Visual"]
+visible = false
+position = Vector2(2, -32)
+scale = Vector2(0.56, 0.5574567)
+texture = ExtResource("4_v2h6w")
+region_enabled = true
+region_rect = Rect2(882, 641, 173, 61)
 
 [node name="ContentAnchors" type="Node2D" parent="."]
 script = ExtResource("4_xb2x5")
@@ -53,3 +95,6 @@ position = Vector2(286, 0)
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
+
+[connection signal="mouse_entered" from="Visual/Label/Text" to="Visual/Label" method="do_zoom_in"]
+[connection signal="mouse_exited" from="Visual/Label/Text" to="Visual/Label" method="do_zoom_out"]

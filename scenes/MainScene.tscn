@@ -1,26 +1,28 @@
-[gd_scene load_steps=48 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=128 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
-[ext_resource type="Script" uid="uid://6tyv7v1ulak" path="res://scripts/old/GameManager.gd" id="1_u55b3"]
 [ext_resource type="Texture2D" uid="uid://c7y1fq7lt3jsy" path="res://art/shop/eye_shop.png" id="1_wsqty"]
-[ext_resource type="Script" uid="uid://cwvtbrr7ojsuu" path="res://scripts/old/BigEye.gd" id="2_1wiy7"]
 [ext_resource type="Texture2D" uid="uid://c30felno5aoxi" path="res://art/eyebrows/eyebrows_1.png" id="2_cfq0f"]
-[ext_resource type="Script" uid="uid://drwi8itr31skv" path="res://scripts/old/EyePartButton.gd" id="3_ygjfp"]
 [ext_resource type="Texture2D" uid="uid://ci0je63rsgf6k" path="res://art/eyes/eyes_elegant.png" id="4_o3jky"]
 [ext_resource type="Texture2D" uid="uid://dirlrh8gxhvwm" path="res://art/pupils/pupil_normal.png" id="5_kp0ql"]
 [ext_resource type="Texture2D" uid="uid://seqgy7i5i0t" path="res://art/irises/iris_blank.png" id="5_u55b3"]
 [ext_resource type="Script" uid="uid://bhcb2bch8u75h" path="res://scripts/EyePart.gd" id="6_doyhq"]
+[ext_resource type="Texture2D" uid="uid://byk186ociwdvh" path="res://art/eyes/eye2-outline.png" id="7_vmuuw"]
 [ext_resource type="Texture2D" uid="uid://s8ngnmoa0pq0" path="res://art/eyes/eye2.png" id="8_0ehpd"]
 [ext_resource type="Texture2D" uid="uid://cpbu7jpfm6s5g" path="res://art/eyebrows/eyebrow2.png" id="8_o3jky"]
 [ext_resource type="Texture2D" uid="uid://d1ycnltaajkgj" path="res://art/eyes/eye3.png" id="9_8wjpf"]
+[ext_resource type="Texture2D" uid="uid://bthgr8ecqe7lc" path="res://art/eyes/eye3-outline.png" id="9_dhx1h"]
 [ext_resource type="Texture2D" uid="uid://b0or5ndj1r1fa" path="res://art/eyebrows/eyebrow3.png" id="9_kp0ql"]
 [ext_resource type="Texture2D" uid="uid://d0d7237y688ps" path="res://art/eyebrows/eyebrow4.png" id="10_08o8g"]
 [ext_resource type="Texture2D" uid="uid://db412xs71ne0b" path="res://art/eyes/eye4.png" id="10_25dfr"]
 [ext_resource type="Texture2D" uid="uid://bgya2rntxgfo0" path="res://art/eyebrows/eyebrow5.png" id="11_0cxu4"]
 [ext_resource type="Texture2D" uid="uid://env08lefcovd" path="res://art/eyes/eye5.png" id="11_kjvyo"]
+[ext_resource type="Texture2D" uid="uid://fokk5gdhqit5" path="res://art/eyes/eye5-outline.png" id="11_w2e6h"]
+[ext_resource type="Texture2D" uid="uid://d3of0k8v4j044" path="res://art/eyes/eyes_elegant-outline.png" id="11_x2kui"]
 [ext_resource type="Texture2D" uid="uid://480ml28wifbu" path="res://art/eyes/eye6.png" id="12_2phbr"]
 [ext_resource type="Texture2D" uid="uid://dq06sr4nb1gqa" path="res://art/eyebrows/eyebrow6.png" id="12_xnxdc"]
+[ext_resource type="Texture2D" uid="uid://cny15qnb1kd71" path="res://art/eyes/eye4-outline.png" id="13_1icot"]
 [ext_resource type="Texture2D" uid="uid://nuskljiavvwo" path="res://art/irises/iris2.png" id="13_1ns3k"]
 [ext_resource type="Texture2D" uid="uid://cs0aaulk7d32e" path="res://art/pupils/pupil2.png" id="13_mkg2b"]
 [ext_resource type="Texture2D" uid="uid://dtcr1w0xsts4a" path="res://art/irises/iris_green.png" id="13_u55b3"]
@@ -31,29 +33,147 @@
 [ext_resource type="Texture2D" uid="uid://dx4b3juobuf4j" path="res://art/irises/iris5.png" id="16_7wwop"]
 [ext_resource type="Texture2D" uid="uid://vkh8e3ac527q" path="res://art/pupils/pupil5.png" id="16_ye0jt"]
 [ext_resource type="Texture2D" uid="uid://dgjs8vfbnjjrg" path="res://art/pupils/pupil6.png" id="17_7wwop"]
+[ext_resource type="Texture2D" uid="uid://dxygi4atjxq43" path="res://art/eyes/eye6-outline.png" id="17_e3xpc"]
 [ext_resource type="Texture2D" uid="uid://bi1aoba2wuenu" path="res://art/irises/iris6.png" id="17_jcw2p"]
-[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/old/PrettyTextBox.gd" id="28_i7ifx"]
+[ext_resource type="Texture2D" uid="uid://cmojha3lwrixo" path="res://art/irises/iris-outline.png" id="20_ks3v5"]
+[ext_resource type="Texture2D" uid="uid://yvkpahw0lfte" path="res://art/shop/decor/decor_glasses.png" id="21_j2mks"]
+[ext_resource type="Texture2D" uid="uid://uw4vjgv02q4o" path="res://art/shop/decor/decor_mask.png" id="22_5ha8j"]
+[ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="23_xuwja"]
+[ext_resource type="Texture2D" uid="uid://bas0lw8wpebyy" path="res://art/eyebrows/eyebrows_1-outline.png" id="27_r2n46"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="28_i7ifx"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
+[ext_resource type="Texture2D" uid="uid://bp3erj86uoq45" path="res://art/eyebrows/eyebrow2-outline.png" id="29_fgeqo"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="29_kwqb8"]
 [ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="30_y15d6"]
 [ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="31_u55b3"]
+[ext_resource type="Texture2D" uid="uid://bub6bn0apnq3t" path="res://art/eyebrows/eyebrow3-outline.png" id="31_wpp01"]
 [ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="32_wsqty"]
+[ext_resource type="Texture2D" uid="uid://ovmqgumvdji5" path="res://art/pupils/pupil_normal-outline.png" id="33_7l3w6"]
+[ext_resource type="Texture2D" uid="uid://dpeqb2ugiauhd" path="res://art/eyebrows/eyebrow4-outline.png" id="33_h2fw1"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
-[ext_resource type="Resource" uid="uid://b26svdsm54pcb" path="res://questions.tres" id="36_u55b3"]
+[ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="33_pou4m"]
+[ext_resource type="Texture2D" uid="uid://bj0llke1bgq4e" path="res://art/shop/decor/decor_mask-outline.png" id="35_48gc8"]
+[ext_resource type="Texture2D" uid="uid://cskbcld7rrhkn" path="res://art/eyebrows/eyebrow5-outline.png" id="35_ai8dq"]
+[ext_resource type="Texture2D" uid="uid://dtghk611hy6jb" path="res://art/pupils/pupil2-outline.png" id="35_projt"]
+[ext_resource type="Texture2D" uid="uid://bdovfubkemthr" path="res://art/pupils/pupil3-outline.png" id="37_8t55c"]
+[ext_resource type="Texture2D" uid="uid://bo0pisnk7aegw" path="res://art/shop/decor/decor_glasses-outline.png" id="37_wu3oq"]
+[ext_resource type="Texture2D" uid="uid://b2ab2hayylhp4" path="res://art/eyebrows/eyebrow6-outline.png" id="37_ygraj"]
 [ext_resource type="Texture2D" uid="uid://nny5p5oxacxb" path="res://art/shop/eye_piedestal.png" id="38_oiest"]
 [ext_resource type="PackedScene" uid="uid://dieqi7fura551" path="res://prefabs/eye_holder.tscn" id="39_f4jp2"]
+[ext_resource type="Texture2D" uid="uid://c0sr8rnxn20a2" path="res://art/pupils/pupil4-outline.png" id="39_vr51q"]
+[ext_resource type="Texture2D" uid="uid://cubvuu3f36wx7" path="res://art/pupils/pupil5-outline.png" id="41_d4kxf"]
 [ext_resource type="Script" uid="uid://bf7lv13p2npde" path="res://scripts/EyePiedestal.gd" id="43_2so2y"]
+[ext_resource type="Texture2D" uid="uid://dl7dg2ec2xntx" path="res://art/pupils/pupil6-outline.png" id="43_npyg8"]
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="44_7yh6i"]
+[ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="45_pwxld"]
+[ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="46_cw1g3"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="47_q5chl"]
+[ext_resource type="Texture2D" uid="uid://dha4qyrdl0r40" path="res://art/customers/customer2.png" id="47_x1s54"]
+[ext_resource type="Texture2D" uid="uid://c0717b17l4guh" path="res://art/customers/custom-questionmark.png" id="48_48gc8"]
+[ext_resource type="Texture2D" uid="uid://crey10du5l7ha" path="res://art/customers/custom-questionmark-dot.png" id="49_wu3oq"]
+[ext_resource type="Script" uid="uid://drxrnydk5u6ee" path="res://scripts/util/SignalProvider.gd" id="50_7tuqu"]
+[ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="51_fupde"]
+[ext_resource type="Script" uid="uid://e6ngriff8i3t" path="res://scripts/dialog_system/DialogJump.gd" id="52_xuwja"]
+[ext_resource type="Script" uid="uid://ba7h0my7t55g3" path="res://scripts/dialog_system/DialogWaitForSignal.gd" id="53_g8282"]
+[ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="54_ell2e"]
+[ext_resource type="Script" uid="uid://b6x07h8jlg25h" path="res://scripts/dialog_system/simple_actions/DialogActionTween.gd" id="55_pou4m"]
+[ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="56_wu3oq"]
+[ext_resource type="Texture2D" uid="uid://cex4atcdcr2di" path="res://art/customers/customer1.png" id="58_ep2w0"]
+[ext_resource type="Script" uid="uid://wipvo4ysl7mb" path="res://scripts/util/VisualEffectProvider.gd" id="62_g3eqb"]
+[ext_resource type="Texture2D" uid="uid://iqq46r448l2i" path="res://art/shop/eye_piedestal-handles.png" id="62_tuspm"]
+[ext_resource type="Texture2D" uid="uid://bledvs74mxd4q" path="res://art/shop/eye_piedestal-handles-ouline.png" id="63_hr6p2"]
+[ext_resource type="Script" uid="uid://c1uuotoe1wldw" path="res://scripts/util/CounterCondition.gd" id="64_e8t1i"]
+[ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="74_te826"]
+[ext_resource type="PackedScene" uid="uid://i016na5khgay" path="res://prefabs/decor/potion.tscn" id="76_djqke"]
+[ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="83_e8t1i"]
+[ext_resource type="Script" uid="uid://bymsueargorsq" path="res://scripts/sound/PlaySound.gd" id="83_iawhq"]
+[ext_resource type="Texture2D" uid="uid://dfmbpva5lngvx" path="res://art/ui/small_background.png" id="83_vwitv"]
+[ext_resource type="PackedScene" uid="uid://bw15amhjdneso" path="res://prefabs/decor/flowerpot/pot2.tscn" id="84_0ow57"]
+[ext_resource type="AudioStream" uid="uid://bhhvpaj7s45up" path="res://art/sounds/coin/276159__littlerobotsoundfactory__coins_few_12.wav" id="84_opqqa"]
+[ext_resource type="AudioStream" uid="uid://dbfr2i5sj87ot" path="res://art/sounds/coin/276191__littlerobotsoundfactory__coins_several_16.wav" id="85_dhgue"]
+[ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="86_2a4qe"]
+[ext_resource type="AudioStream" uid="uid://i40qqk1evxgi" path="res://art/sounds/coin/276195__littlerobotsoundfactory__coins_several_12.wav" id="86_vwitv"]
+[ext_resource type="Script" uid="uid://4dolsccd1d2g" path="res://scripts/shopping/Economy.gd" id="87_1acod"]
+[ext_resource type="AudioStream" uid="uid://bbe1l1kafe6bf" path="res://art/sounds/coin/276197__littlerobotsoundfactory__coins_several_18.wav" id="87_m27th"]
+[ext_resource type="Script" uid="uid://c2etq748frf4g" path="res://scripts/shopping/ShopTab.gd" id="88_dofa8"]
+[ext_resource type="Texture2D" uid="uid://bef6oeru7sdtj" path="res://art/ui/shop-body.png" id="88_hhhsk"]
+[ext_resource type="Texture2D" uid="uid://cwpcpue4wax7v" path="res://art/ui/shop-arrow_button.png" id="88_m330v"]
+[ext_resource type="Texture2D" uid="uid://ca0o5ivm8s36g" path="res://art/ui/shop-arrow_button-outline.png" id="89_3u7l0"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="89_dhgue"]
+[ext_resource type="Texture2D" uid="uid://djhp0dp4qddyk" path="res://art/ui/shop-separator.png" id="90_aime7"]
+[ext_resource type="Script" uid="uid://blxdhs427af1o" path="res://scripts/dialog_custom_actions/DialogAction_AddMoney.gd" id="91_2qf71"]
+[ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="92_2qf71"]
+[ext_resource type="Script" uid="uid://bsehpor25dn6p" path="res://scripts/dialog_system/DialogWait.gd" id="92_grpki"]
+[ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="93_8h2n0"]
+[ext_resource type="PackedScene" uid="uid://cfh2elbhj280b" path="res://scenes/OutroText.tscn" id="94_qb1n5"]
+[ext_resource type="Script" uid="uid://cdftgtqqljb4b" path="res://scripts/dialog_system/simple_actions/DialogActionInstantiate.gd" id="100_0ow57"]
+[ext_resource type="PackedScene" uid="uid://h2kojyit5fy2" path="res://prefabs/decor/flowerpot/pot.tscn" id="105_m27th"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_doyhq"]
 radius = 41.0
 
-[sub_resource type="Theme" id="Theme_i7ifx"]
-default_font = ExtResource("28_qavw1")
-default_font_size = 24
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tuspm"]
+radius = 17.0
+height = 88.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7yh6i"]
-radius = 220.0091
+[sub_resource type="CircleShape2D" id="CircleShape2D_g3eqb"]
+radius = 32.01562
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ygraj"]
+radius = 18.0
+height = 82.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8t1i"]
+radius = 14.0
+height = 82.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ygraj"]
+radius = 27.018513
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hr6p2"]
+radius = 33.01515
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tuspm"]
+radius = 25.019993
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8t1i"]
+radius = 33.01515
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_te826"]
+radius = 30.066593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2a4qe"]
+radius = 29.274563
+
+[sub_resource type="Gradient" id="Gradient_ep2w0"]
+offsets = PackedFloat32Array(0.2923077, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_x1s54"]
+gradient = SubResource("Gradient_ep2w0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr6p2"]
+size = Vector2(44, 122)
+
+[sub_resource type="FontVariation" id="FontVariation_2qf71"]
+base_font = ExtResource("28_qavw1")
+spacing_bottom = 4
+
+[sub_resource type="Theme" id="Theme_i7ifx"]
+default_font = SubResource("FontVariation_2qf71")
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_aime7"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 96
+
+[sub_resource type="Theme" id="Theme_1acod"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 16
+
+[sub_resource type="Theme" id="Theme_2qf71"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 32
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -68,6 +188,7 @@ mouse_filter = 2
 script = ExtResource("1_4ikpr")
 
 [node name="P1" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(18, 203)
 script = ExtResource("1_kik7w")
 
@@ -75,6 +196,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(305, 0)
 
 [node name="P2" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(389, 203)
 script = ExtResource("1_kik7w")
 
@@ -82,6 +204,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(258, 0)
 
 [node name="P3" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(8, 372)
 script = ExtResource("1_kik7w")
 
@@ -89,6 +212,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(199, 0)
 
 [node name="P4" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(251, 372)
 script = ExtResource("1_kik7w")
 
@@ -96,6 +220,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(408, 0)
 
 [node name="P5" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(7, 570)
 script = ExtResource("1_kik7w")
 
@@ -103,6 +228,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(324, 0)
 
 [node name="P6" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(376, 570)
 script = ExtResource("1_kik7w")
 
@@ -110,6 +236,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(284, 0)
 
 [node name="P7" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(9, 743)
 script = ExtResource("1_kik7w")
 
@@ -117,6 +244,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(216, 0)
 
 [node name="P8" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(271, 743)
 script = ExtResource("1_kik7w")
 
@@ -124,6 +252,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(393, 0)
 
 [node name="P9" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(1278, 201)
 script = ExtResource("1_kik7w")
 
@@ -131,6 +260,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(273, 0)
 
 [node name="P10" type="Node2D" parent="PlacementLocations"]
+z_index = 10
 position = Vector2(1602, 201)
 script = ExtResource("1_kik7w")
 
@@ -138,6 +268,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(322, 0)
 
 [node name="P11" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1277, 369)
 script = ExtResource("1_kik7w")
 
@@ -145,6 +276,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(411, 0)
 
 [node name="P12" type="Node2D" parent="PlacementLocations"]
+z_index = 20
 position = Vector2(1728, 369)
 script = ExtResource("1_kik7w")
 
@@ -152,6 +284,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(197, 0)
 
 [node name="P13" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(1276, 566)
 script = ExtResource("1_kik7w")
 
@@ -159,13 +292,23 @@ script = ExtResource("1_kik7w")
 position = Vector2(284, 0)
 
 [node name="P14" type="Node2D" parent="PlacementLocations"]
+z_index = 30
 position = Vector2(1610, 566)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P14"]
 position = Vector2(321, 0)
 
+[node name="P15" type="Node2D" parent="PlacementLocations"]
+z_index = 40
+position = Vector2(1273, 742)
+script = ExtResource("1_kik7w")
+
+[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
+position = Vector2(395, 0)
+
 [node name="P16" type="Node2D" parent="PlacementLocations"]
+z_index = 40
 position = Vector2(1712, 742)
 script = ExtResource("1_kik7w")
 
@@ -173,6 +316,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(219, 0)
 
 [node name="MainShelf" type="Node2D" parent="PlacementLocations"]
+z_index = 50
 position = Vector2(3, 826)
 script = ExtResource("1_kik7w")
 
@@ -180,6 +324,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(760, 0)
 
 [node name="MainShelf2" type="Node2D" parent="PlacementLocations"]
+z_index = 50
 position = Vector2(1175, 826)
 script = ExtResource("1_kik7w")
 
@@ -187,6 +332,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(760, 0)
 
 [node name="P17" type="Node2D" parent="PlacementLocations"]
+z_index = 60
 position = Vector2(35, 1088)
 script = ExtResource("1_kik7w")
 
@@ -194,6 +340,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(481, 0)
 
 [node name="P18" type="Node2D" parent="PlacementLocations"]
+z_index = 60
 position = Vector2(571, 1088)
 script = ExtResource("1_kik7w")
 
@@ -201,6 +348,7 @@ script = ExtResource("1_kik7w")
 position = Vector2(372, 0)
 
 [node name="P19" type="Node2D" parent="PlacementLocations"]
+z_index = 60
 position = Vector2(1000, 1088)
 script = ExtResource("1_kik7w")
 
@@ -208,18 +356,12 @@ script = ExtResource("1_kik7w")
 position = Vector2(382, 0)
 
 [node name="P20" type="Node2D" parent="PlacementLocations"]
+z_index = 60
 position = Vector2(1451, 1088)
 script = ExtResource("1_kik7w")
 
 [node name="Right" type="Node2D" parent="PlacementLocations/P20"]
 position = Vector2(443, 0)
-
-[node name="P15" type="Node2D" parent="PlacementLocations"]
-position = Vector2(1273, 742)
-script = ExtResource("1_kik7w")
-
-[node name="Right" type="Node2D" parent="PlacementLocations/P15"]
-position = Vector2(395, 0)
 
 [node name="Mockup" type="TextureRect" parent="."]
 layout_mode = 1
@@ -235,6 +377,7 @@ expand_mode = 1
 
 [node name="Shapes1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(179, 98)
+_label_text = "Shapes"
 
 [node name="Eye1" type="Node2D" parent="EyeHolders/Shapes1"]
 position = Vector2(-96.999985, 52.999985)
@@ -245,6 +388,15 @@ scale = Vector2(0.082, 0.082)
 texture = ExtResource("8_0ehpd")
 region_enabled = true
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye1"]
+visible = false
+z_index = 60
+position = Vector2(-1.5258789e-05, -4.9999847)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("7_vmuuw")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 1017.81323, 692.3595)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -266,6 +418,15 @@ texture = ExtResource("9_8wjpf")
 region_enabled = true
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye2"]
+visible = false
+z_index = 60
+position = Vector2(1, -5.255)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("9_dhx1h")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 1017.81323, 692.3595)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye2"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -280,13 +441,23 @@ position = Vector2(104.000015, 52.999985)
 script = ExtResource("6_doyhq")
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
-position = Vector2(2.0000134, -1.9999847)
-scale = Vector2(0.082, 0.082)
+position = Vector2(-1.9999866, -11.999985)
+scale = Vector2(0.072451584, 0.072451584)
 texture = ExtResource("4_o3jky")
 region_enabled = true
-region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
+region_rect = Rect2(-17, 6, 1331, 1281)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes1/Eye3"]
+visible = false
+z_index = 60
+position = Vector2(2, -2.5947416)
+scale = Vector2(0.0724516, 0.0724516)
+texture = ExtResource("11_x2kui")
+region_enabled = true
+region_rect = Rect2(118.5275, 404.0517, 1158.539, 750.07684)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Shapes1/Eye3"]
+position = Vector2(-2.4290009, -2.9999847)
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes1/Eye3/Holder"]
@@ -297,9 +468,98 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Shapes2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(436, 267)
+_label_text = "Shapes"
+
+[node name="Eye4" type="Node2D" parent="EyeHolders/Shapes2"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes2/Eye4"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("10_25dfr")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye4"]
+visible = false
+z_index = 60
+position = Vector2(7.17, -4)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("13_1icot")
+region_enabled = true
+region_rect = Rect2(118.5275, 404.0517, 1158.539, 750.07684)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes2/Eye4/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes2/Eye4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eye5" type="Node2D" parent="EyeHolders/Shapes2"]
+position = Vector2(3.0000153, 52.999985)
+script = ExtResource("6_doyhq")
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes2/Eye5"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("11_kjvyo")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye5"]
+visible = false
+z_index = 60
+position = Vector2(-3, -2)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("11_w2e6h")
+region_enabled = true
+region_rect = Rect2(154.35095, 461.76907, 835.51337, 692.3595)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes2/Eye5/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes2/Eye5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eye6" type="Node2D" parent="EyeHolders/Shapes2"]
+position = Vector2(101.000015, 52.999985)
+script = ExtResource("6_doyhq")
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Shapes2/Eye6"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("12_2phbr")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Shapes2/Eye6"]
+visible = false
+z_index = 60
+position = Vector2(5.205, 3.11)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("17_e3xpc")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Shapes2/Eye6"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Shapes2/Eye6/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_doyhq")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Shapes2/Eye6"]
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Irises1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(166, 462)
+_label_text = "Irises"
 
 [node name="Iris1" type="Node2D" parent="EyeHolders/Irises1"]
 position = Vector2(-96.999985, 52.999985)
@@ -316,6 +576,15 @@ region_rect = Rect2(412, 598, 394, 394)
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris1"]
+visible = false
+z_index = 60
+position = Vector2(8.265, 8.07)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -343,6 +612,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris2"]
+visible = false
+z_index = 60
+position = Vector2(8.264999, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris2"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -368,6 +646,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises1/Iris3"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises1/Iris3"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -379,6 +666,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Irises2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(471, 638)
+_label_text = "Irises"
 
 [node name="Iris4" type="Node2D" parent="EyeHolders/Irises2"]
 position = Vector2(-96.999985, 52.999985)
@@ -387,15 +675,23 @@ type = 2
 
 [node name="Sprite" type="Sprite2D" parent="EyeHolders/Irises2/Iris4"]
 scale = Vector2(0.14256983, 0.14256983)
-texture = ExtResource("5_u55b3")
+texture = ExtResource("15_ye0jt")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
 [node name="Lineart" type="Sprite2D" parent="EyeHolders/Irises2/Iris4/Sprite"]
-visible = false
 texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris4"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
 
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris4"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -423,6 +719,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris5"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris5"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -448,6 +753,15 @@ texture = ExtResource("5_u55b3")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Irises2/Iris6"]
+visible = false
+z_index = 60
+position = Vector2(8.265015, 8.070007)
+scale = Vector2(0.13682707, 0.13682707)
+texture = ExtResource("20_ks3v5")
+region_enabled = true
+region_rect = Rect2(219.1348, 466.93253, 899.16455, 778.1239)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Irises2/Iris6"]
 scale = Vector2(1.0000001, 1.0000001)
 
@@ -459,6 +773,7 @@ scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 96)
+_label_text = "Eyebrows"
 
 [node name="Eyebrow1" type="Node2D" parent="EyeHolders/Eyebrows1"]
 position = Vector2(-97, 56)
@@ -471,12 +786,21 @@ texture = ExtResource("2_cfq0f")
 region_enabled = true
 region_rect = Rect2(101, 245, 1062, 360)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
+visible = false
+position = Vector2(1, -0.415)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("27_r2n46")
+region_enabled = true
+region_rect = Rect2(101, 208.22824, 1098.2671, 427.10306)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow1/Holder"]
-position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow1/Holder"]
+position = Vector2(1.9999998, 0.9999999)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_tuspm")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -492,11 +816,18 @@ texture = ExtResource("8_o3jky")
 region_enabled = true
 region_rect = Rect2(121, 110, 492, 533)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
+visible = false
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("29_fgeqo")
+region_enabled = true
+region_rect = Rect2(94.17609, 94.51112, 547.32996, 548.4889)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow2/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_g3eqb")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow2"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -513,20 +844,121 @@ texture = ExtResource("9_kp0ql")
 region_enabled = true
 region_rect = Rect2(163.99994, 233, 1015.1999, 416)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
+visible = false
+position = Vector2(1.51, 0.385)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("31_wpp01")
+region_enabled = true
+region_rect = Rect2(163.99994, 212.98177, 1015.1999, 468.3105)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows1/Eyebrow3/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+position = Vector2(0.9999999, 0.9999999)
+rotation = 1.8804066
+shape = SubResource("CapsuleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows1/Eyebrow3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1482, 266)
+_label_text = "Eyebrows"
+
+[node name="Eyebrow4" type="Node2D" parent="EyeHolders/Eyebrows2"]
+position = Vector2(-97, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("10_08o8g")
+region_enabled = true
+region_rect = Rect2(192, 193, 937, 326)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
+visible = false
+position = Vector2(-1.035, -0.21)
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("33_h2fw1")
+region_enabled = true
+region_rect = Rect2(156.54224, 171.12207, 983.19324, 362.98126)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow4/Holder"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ygraj")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow4"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eyebrow5" type="Node2D" parent="EyeHolders/Eyebrows2"]
+position = Vector2(1, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("11_0cxu4")
+region_enabled = true
+region_rect = Rect2(86, 241, 1118, 360)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
+visible = false
+position = Vector2(0, -0.145)
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("35_ai8dq")
+region_enabled = true
+region_rect = Rect2(86, 241, 1118, 360)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow5/Holder"]
+position = Vector2(7.1054274e-15, -1.9999998)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_e8t1i")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow5"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Eyebrow6" type="Node2D" parent="EyeHolders/Eyebrows2"]
+position = Vector2(104, 56)
+script = ExtResource("6_doyhq")
+type = 1
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
+position = Vector2(2.0000134, 0)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("12_xnxdc")
+region_enabled = true
+region_rect = Rect2(146, 96, 984, 377)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
+visible = false
+position = Vector2(1.43, -0.405)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("37_ygraj")
+region_enabled = true
+region_rect = Rect2(130.35085, 85.67735, 999.6492, 387.32263)
+
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyebrows2/Eyebrow6/Holder"]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ygraj")
+
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyebrows2/Eyebrow6"]
+scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1774, 465)
+_label_text = "Pupils"
 
 [node name="Pupil1" type="Node2D" parent="EyeHolders/Pupils1"]
 position = Vector2(-96.999985, 52.999985)
@@ -539,12 +971,19 @@ texture = ExtResource("5_kp0ql")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil1"]
+visible = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("33_7l3w6")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil1"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil1/Holder"]
 position = Vector2(-1.5258787e-05, -1.9999845)
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_ygraj")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil1"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -560,11 +999,19 @@ texture = ExtResource("13_mkg2b")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil2"]
+visible = false
+position = Vector2(0, -0.105)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("35_projt")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil2"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil2/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_hr6p2")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil2"]
 scale = Vector2(1.0000001, 1.0000001)
@@ -580,537 +1027,213 @@ texture = ExtResource("14_1ns3k")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils1/Pupil3"]
+visible = false
+position = Vector2(0, -0.175)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("37_8t55c")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
+
 [node name="Holder" type="Area2D" parent="EyeHolders/Pupils1/Pupil3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils1/Pupil3/Holder"]
-shape = SubResource("CircleShape2D_doyhq")
+shape = SubResource("CircleShape2D_tuspm")
 
 [node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils1/Pupil3"]
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
 position = Vector2(1477, 644)
+_label_text = "Pupils"
 
-[node name="EyeShapes" type="Control" parent="."]
+[node name="Pupil4" type="Node2D" parent="EyeHolders/Pupils2"]
+position = Vector2(-96.999985, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
+
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil4"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_a7pbh")
+region_enabled = true
+region_rect = Rect2(527, 670, 149, 280)
+
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil4"]
 visible = false
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 88.0
-offset_top = 119.0
-offset_right = -1462.2
-offset_bottom = -605.0
-mouse_filter = 2
+position = Vector2(1.625, -3.25)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("39_vr51q")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
 
-[node name="Background" type="ColorRect" parent="EyeShapes"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.013
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil4"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="EyeHuma1" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 28.0
-offset_top = 255.47202
-offset_right = 109.0
-offset_bottom = 341.85315
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("4_o3jky")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil4/Holder"]
+position = Vector2(-1.5258787e-05, -1.9999845)
+shape = SubResource("CircleShape2D_e8t1i")
 
-[node name="EyeHuma2" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 158.0
-offset_top = 256.0
-offset_right = 239.0
-offset_bottom = 342.38113
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("8_0ehpd")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil4"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="EyeHuma3" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 294.0
-offset_top = 253.0
-offset_right = 375.0
-offset_bottom = 339.38113
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("9_8wjpf")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+[node name="Pupil5" type="Node2D" parent="EyeHolders/Pupils2"]
+position = Vector2(1.0000002, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
 
-[node name="EyeHuma4" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 32.0
-offset_top = 163.0
-offset_right = 113.0
-offset_bottom = 249.38113
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("10_25dfr")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil5"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_ye0jt")
+region_enabled = true
+region_rect = Rect2(474, 708, 243, 183)
 
-[node name="EyeHuma5" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 162.0
-offset_top = 161.0
-offset_right = 243.0
-offset_bottom = 247.38113
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("11_kjvyo")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
-
-[node name="EyeHuma6" type="TextureButton" parent="EyeShapes" node_paths=PackedStringArray("target")]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 301.0
-offset_top = 164.0
-offset_right = 382.0
-offset_bottom = 250.38113
-pivot_offset = Vector2(40.5, 53.876)
-texture_normal = ExtResource("12_2phbr")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eye")
-
-[node name="IrisColours" type="Control" parent="."]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil5"]
 visible = false
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 1430.0
-offset_top = 121.0
-offset_right = -117.19995
-offset_bottom = -601.0
-mouse_filter = 2
+position = Vector2(2.85, -1.245)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("41_d4kxf")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
 
-[node name="Background" type="ColorRect" parent="IrisColours"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.013
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil5"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="IrisGreen" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 256.0
-offset_right = 107.0
-offset_bottom = 348.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("13_u55b3")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil5/Holder"]
+shape = SubResource("CircleShape2D_te826")
 
-[node name="Iris2" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 150.0
-offset_top = 255.0
-offset_right = 237.0
-offset_bottom = 347.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("13_1ns3k")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil5"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Iris3" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 299.0
-offset_top = 257.0
-offset_right = 386.0
-offset_bottom = 349.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("14_a7pbh")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
+[node name="Pupil6" type="Node2D" parent="EyeHolders/Pupils2"]
+position = Vector2(104.000015, 52.999985)
+script = ExtResource("6_doyhq")
+type = 3
 
-[node name="Iris4" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 154.0
-offset_right = 107.0
-offset_bottom = 246.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("15_ye0jt")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
+[node name="Sprite" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil6"]
+scale = Vector2(0.2, 0.199)
+texture = ExtResource("17_7wwop")
+region_enabled = true
+region_rect = Rect2(493, 709, 217, 170)
 
-[node name="Iris5" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 157.0
-offset_right = 241.0
-offset_bottom = 249.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("16_7wwop")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
-
-[node name="Iris6" type="TextureButton" parent="IrisColours" node_paths=PackedStringArray("target", "additional_targets")]
-layout_mode = 0
-offset_left = 298.0
-offset_top = 158.0
-offset_right = 385.0
-offset_bottom = 250.77972
-pivot_offset = Vector2(41.565, 57.28)
-texture_normal = ExtResource("17_jcw2p")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Iris")
-additional_targets = [NodePath("../../BigEyeShowcase/BigEye/IrisLineart")]
-additional_textures = Array[Texture2D]([ExtResource("5_u55b3")])
-
-[node name="PupilShapes" type="Control" parent="."]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Pupils2/Pupil6"]
 visible = false
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 85.0
-offset_top = 623.0
-offset_right = -1463.2
-offset_bottom = -82.0
-mouse_filter = 2
+position = Vector2(1.665, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("43_npyg8")
+region_enabled = true
+region_rect = Rect2(412, 598, 394, 394)
 
-[node name="Background" type="ColorRect" parent="PupilShapes"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.013
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Holder" type="Area2D" parent="EyeHolders/Pupils2/Pupil6"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Pupil1" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 278.2028
-offset_right = 89.0
-offset_bottom = 352.85315
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("5_kp0ql")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Pupils2/Pupil6/Holder"]
+shape = SubResource("CircleShape2D_2a4qe")
 
-[node name="Pupil2" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 171.0
-offset_top = 279.00003
-offset_right = 241.0
-offset_bottom = 353.6504
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("13_mkg2b")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Pupils2/Pupil6"]
+scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Pupil3" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 306.0
-offset_top = 284.00003
-offset_right = 376.0
-offset_bottom = 358.6504
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("14_1ns3k")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="Decoration" type="Node2D" parent="."]
 
-[node name="Pupil4" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 171.00003
-offset_right = 90.0
-offset_bottom = 245.65039
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("15_a7pbh")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="Customers" type="Node2D" parent="."]
 
-[node name="Pupil5" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 175.0
-offset_top = 176.00003
-offset_right = 245.0
-offset_bottom = 250.65039
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("16_ye0jt")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="Customer1" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(963.99994, 505)
+scale = Vector2(0.3453294, 0.34532946)
+texture = ExtResource("58_ep2w0")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
 
-[node name="Pupil6" type="TextureButton" parent="PupilShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 314.0
-offset_top = 179.00003
-offset_right = 384.0
-offset_bottom = 253.65039
-pivot_offset = Vector2(33.045, 46.52)
-texture_normal = ExtResource("17_7wwop")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Pupil")
+[node name="Customer1" type="Sprite2D" parent="Customers/Customer1"]
+position = Vector2(4.8132906, 409.42688)
+rotation = -1.5390388
+scale = Vector2(1.5682517, 1037.5371)
+texture = SubResource("GradientTexture1D_x1s54")
+region_rect = Rect2(-47, 0, 303, 0)
 
-[node name="EyebrowShapes" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 1420.0
-offset_top = 627.0
-offset_right = -116.19995
-offset_bottom = -83.0
-mouse_filter = 2
+[node name="CustomerKnight" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(963.99994, 502)
+scale = Vector2(0.3453294, 0.34532946)
+texture = ExtResource("47_x1s54")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
 
-[node name="Background" type="ColorRect" parent="EyebrowShapes"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.013
-anchor_bottom = 1.0
-offset_right = -4.0820313
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Customer1" type="Sprite2D" parent="Customers/CustomerKnight"]
+position = Vector2(5.5848575, 385.1395)
+rotation = -1.5390388
+scale = Vector2(1.3784109, 1037.5371)
+texture = SubResource("GradientTexture1D_x1s54")
+region_rect = Rect2(-47, 0, 303, 0)
 
-[node name="Eyebrow1" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 257.0
-offset_right = 113.0
-offset_bottom = 331.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("2_cfq0f")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+[node name="CustomerQuestionMark" type="Sprite2D" parent="Customers"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(964.00006, 442)
+scale = Vector2(0.24910125, 0.2491013)
+texture = ExtResource("48_48gc8")
+region_enabled = true
+region_rect = Rect2(1395, 265, 1050, 1300)
 
-[node name="Eyebrow2" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 171.0
-offset_top = 258.0
-offset_right = 241.0
-offset_bottom = 332.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("8_o3jky")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+[node name="CustomerQuestionMark2" type="Sprite2D" parent="Customers/CustomerQuestionMark"]
+position = Vector2(31.40895, 628.18195)
+scale = Vector2(0.8647507, 0.86475074)
+texture = ExtResource("49_wu3oq")
+region_enabled = true
+region_rect = Rect2(1786, 1399, 319, 310)
 
-[node name="Eyebrow3" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 296.0
-offset_top = 261.0
-offset_right = 366.0
-offset_bottom = 335.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("9_kp0ql")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
+[node name="EyePiedestalDestination" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.4745098)
+position = Vector2(954, 385)
+scale = Vector2(0.2, 0.2)
 
-[node name="Eyebrow4" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 133.0
-offset_right = 113.0
-offset_bottom = 207.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("10_08o8g")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
-
-[node name="Eyebrow5" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 164.0
-offset_top = 138.0
-offset_right = 234.0
-offset_bottom = 212.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("11_0cxu4")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
-
-[node name="Eyebrow6" type="TextureButton" parent="EyebrowShapes" node_paths=PackedStringArray("target")]
-layout_mode = 0
-offset_left = 303.0
-offset_top = 148.0
-offset_right = 373.0
-offset_bottom = 222.65036
-pivot_offset = Vector2(34.74, 22.305)
-texture_normal = ExtResource("12_xnxdc")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_ygjfp")
-target = NodePath("../../BigEyeShowcase/BigEye/Eyebrow")
-
-[node name="QuestionsBox" type="Control" parent="."]
-visible = false
-anchors_preset = 0
-offset_left = 618.0
-offset_top = 747.0
-offset_right = 1316.0
-offset_bottom = 1045.0
-script = ExtResource("28_i7ifx")
-seconds_per_char = 0.02
-sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
-
-[node name="Background" type="ColorRect" parent="QuestionsBox"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="RichTextLabel" parent="QuestionsBox"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_i7ifx")
-text = "
-
-Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
-horizontal_alignment = 1
-visible_characters_behavior = 3
-
-[node name="EyeDestination" type="Node2D" parent="QuestionsBox"]
-position = Vector2(350, 249)
-
-[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("question_box")]
-script = ExtResource("1_u55b3")
-question_box = NodePath("../QuestionsBox")
-questions = ExtResource("36_u55b3")
-
-[node name="BigEyeShowcase" type="Control" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.45490196)
-layout_mode = 1
-anchor_right = 1.01
-anchor_bottom = 1.0
-offset_left = 790.0
-offset_top = 587.0
-offset_right = -537.19995
-offset_bottom = 108.0
-scale = Vector2(0.59539735, 0.59539735)
-mouse_filter = 2
-
-[node name="BigEye" type="Node2D" parent="BigEyeShowcase" node_paths=PackedStringArray("destination")]
-z_index = 500
-position = Vector2(321, 297)
-script = ExtResource("2_1wiy7")
-destination = NodePath("../../QuestionsBox/EyeDestination")
-color_distance_interval = Vector2(300, 40)
-
-[node name="Eyebrow" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("9_kp0ql")
-
-[node name="Iris" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("13_u55b3")
-
-[node name="IrisLineart" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("5_u55b3")
-
-[node name="Pupil" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("13_mkg2b")
-
-[node name="Eye" type="Sprite2D" parent="BigEyeShowcase/BigEye"]
-visible = false
-position = Vector2(-12.533447, 2.4665222)
-scale = Vector2(0.49291644, 0.49291644)
-texture = ExtResource("8_0ehpd")
-
-[node name="EyePiedestal" type="Node2D" parent="."]
-z_index = 5
-position = Vector2(966, 775.99994)
+[node name="EyePiedestal" type="Node2D" parent="." node_paths=PackedStringArray("submit_destination", "customer_image")]
+z_index = 70
+position = Vector2(966, 851)
 script = ExtResource("43_2so2y")
 active_distance = 600.0
+submit_destination = NodePath("../EyePiedestalDestination")
+submit_distance = 200.0
+customer_image = NodePath("../Customers")
 
 [node name="Holder" type="Area2D" parent="EyePiedestal"]
+visible = false
+position = Vector2(0, -4.355)
+script = ExtResource("62_g3eqb")
+
+[node name="Handles" type="Sprite2D" parent="EyePiedestal/Holder"]
+position = Vector2(-13.765808, -26.658997)
+scale = Vector2(0.4010122, 0.40101218)
+texture = ExtResource("62_tuspm")
+region_enabled = true
+region_rect = Rect2(1299.8398, 969.89624, 1253.5095, 1069.0906)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EyePiedestal/Holder"]
-shape = SubResource("CircleShape2D_7yh6i")
+position = Vector2(218, -2)
+shape = SubResource("RectangleShape2D_hr6p2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyePiedestal/Holder"]
+position = Vector2(-221, -2)
+shape = SubResource("RectangleShape2D_hr6p2")
+
+[node name="HolderHidingCondition" type="Node" parent="EyePiedestal"]
+script = ExtResource("64_e8t1i")
+desired_value = 2
+
+[node name="Outline" type="Sprite2D" parent="EyePiedestal"]
+visible = false
+position = Vector2(-1.0000008, 0)
+scale = Vector2(0.40101224, 0.40101218)
+texture = ExtResource("63_hr6p2")
+region_enabled = true
+region_rect = Rect2(1340.1309, 1027.0933, 1235.4475, 1109.1794)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal"]
+position = Vector2(-4.9999995, -14)
 scale = Vector2(0.40101224, 0.40101218)
 texture = ExtResource("38_oiest")
 region_enabled = true
-region_rect = Rect2(1376.6321, 969.89624, 1085.3711, 1069.0906)
+region_rect = Rect2(1376.6321, 969.89624, 1143.165, 1158.0645)
 
 [node name="Anchors" type="Node2D" parent="EyePiedestal"]
 
@@ -1159,6 +1282,43 @@ scale = Vector2(0.082, 0.08265571)
 texture = ExtResource("9_kp0ql")
 region_enabled = true
 region_rect = Rect2(163.99994, 233, 1015.1999, 416)
+
+[node name="Eyebrow4" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.60784316)
+position = Vector2(14.000001, -93.99994)
+scale = Vector2(3.5798323, 3.5798323)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow4"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("10_08o8g")
+region_enabled = true
+region_rect = Rect2(192, 193, 937, 326)
+
+[node name="Eyebrow5" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+position = Vector2(9, -74.99994)
+scale = Vector2(3.2845333, 3.2845333)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow5"]
+scale = Vector2(0.089100756, 0.089100756)
+texture = ExtResource("11_0cxu4")
+region_enabled = true
+region_rect = Rect2(86, 241, 1118, 360)
+
+[node name="Eyebrow6" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(0, -114.99994)
+scale = Vector2(3.6038232, 3.6038232)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eyebrow6"]
+position = Vector2(2.0000134, 0)
+scale = Vector2(0.082, 0.08265571)
+texture = ExtResource("12_xnxdc")
+region_enabled = true
+region_rect = Rect2(146, 96, 984, 377)
 
 [node name="Iris1" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
@@ -1334,6 +1494,78 @@ texture = ExtResource("13_mkg2b")
 region_enabled = true
 region_rect = Rect2(412, 598, 394, 394)
 
+[node name="Pupil4" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.7137255)
+position = Vector2(0, 39.00006)
+scale = Vector2(1.8265033, 1.8265033)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil4"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_a7pbh")
+region_enabled = true
+region_rect = Rect2(527, 670, 149, 280)
+
+[node name="Pupil4-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.7137255)
+position = Vector2(-4, 39.00006)
+scale = Vector2(1.472696, 1.472696)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil4-og"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_a7pbh")
+region_enabled = true
+region_rect = Rect2(527, 670, 149, 280)
+
+[node name="Pupil5" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.52156866)
+position = Vector2(-5.415, 36)
+scale = Vector2(1.509491, 1.509491)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil5"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_ye0jt")
+region_enabled = true
+region_rect = Rect2(474, 708, 243, 183)
+
+[node name="Pupil5-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.52156866)
+position = Vector2(-5.415, 36)
+scale = Vector2(1.4649297, 1.4649297)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil5-og"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_ye0jt")
+region_enabled = true
+region_rect = Rect2(474, 708, 243, 183)
+
+[node name="Pupil6" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5372549)
+position = Vector2(-3.755, 34.325)
+scale = Vector2(2.174464, 2.334459)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil6"]
+scale = Vector2(0.2, 0.199)
+texture = ExtResource("17_7wwop")
+region_enabled = true
+region_rect = Rect2(493, 709, 217, 170)
+
+[node name="Pupil6-og" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5372549)
+position = Vector2(-3.755, 34.325)
+scale = Vector2(1.4618834, 1.4618834)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Pupil6-og"]
+scale = Vector2(0.2, 0.199)
+texture = ExtResource("17_7wwop")
+region_enabled = true
+region_rect = Rect2(493, 709, 217, 170)
+
 [node name="Eye1" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
 modulate = Color(1, 1, 1, 0.6901961)
@@ -1365,30 +1597,105 @@ region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
 [node name="Eye3" type="Node2D" parent="EyePiedestal/Anchors"]
 visible = false
-position = Vector2(9.999939, 42.00006)
-scale = Vector2(3.5805511, 3.5805516)
+position = Vector2(15.000002, 25)
+scale = Vector2(4.0698104, 4.0698104)
 
 [node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye3"]
-modulate = Color(1, 1, 1, 0.5686275)
-z_index = 500
-z_as_relative = false
-position = Vector2(2.0000134, -1.9999847)
-scale = Vector2(0.082, 0.082)
+position = Vector2(-1.9999866, -11.999985)
+scale = Vector2(0.072451584, 0.072451584)
 texture = ExtResource("4_o3jky")
 region_enabled = true
-region_rect = Rect2(163.99994, 494.84625, 1015.1999, 600.68695)
+region_rect = Rect2(-17, 6, 1331, 1281)
+
+[node name="Eye4" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.4745098)
+position = Vector2(-2, 43.00006)
+scale = Vector2(3.5526671, 3.5526671)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye4"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("10_25dfr")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Eye5" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.69803923)
+position = Vector2(-1.9999999, 43.00006)
+scale = Vector2(3.567142, 3.567142)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye5"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("11_kjvyo")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
+
+[node name="Eye6" type="Node2D" parent="EyePiedestal/Anchors"]
+visible = false
+modulate = Color(1, 1, 1, 0.5686275)
+position = Vector2(-2, 44.00006)
+scale = Vector2(3.601044, 3.601044)
+
+[node name="Sprite" type="Sprite2D" parent="EyePiedestal/Anchors/Eye6"]
+scale = Vector2(0.082, 0.082)
+texture = ExtResource("12_2phbr")
+region_enabled = true
+region_rect = Rect2(178.67114, 425, 857.32886, 799)
 
 [node name="TextBubble" type="Control" parent="."]
+visible = false
+z_index = 10
 anchors_preset = 0
 offset_left = 694.0
-offset_top = 71.0
+offset_top = 11.0
 offset_right = 1242.0
-offset_bottom = 334.0
+offset_bottom = 274.0
+mouse_filter = 2
 script = ExtResource("28_i7ifx")
 sounds_per_char = Array[AudioStream]([ExtResource("29_kwqb8"), ExtResource("30_y15d6"), ExtResource("31_u55b3"), ExtResource("32_wsqty"), ExtResource("33_oiest")])
-print_on_start = true
+is_skippable = false
 
-[node name="Frame" type="NinePatchRect" parent="TextBubble"]
+[node name="Label" type="RichTextLabel" parent="TextBubble" node_paths=PackedStringArray("source")]
+self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
+z_index = 10
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 47.0
+offset_top = 37.0
+offset_right = -42.0
+offset_bottom = 140.0
+grow_horizontal = 2
+mouse_filter = 2
+theme = SubResource("Theme_i7ifx")
+text = "My loved one saw my true self, under the full moon.
+I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control.
+
+She told me she still loves me, despite what I am. Help me come back to her, please."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters_behavior = 3
+script = ExtResource("74_te826")
+source = NodePath("../../DialogSystem_Main/Fn_Main/GentleWerewolf/Text")
+
+[node name="Control" type="Control" parent="TextBubble/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -22.0
+offset_right = 42.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.667
@@ -1403,142 +1710,2349 @@ patch_margin_bottom = 110
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Label" type="RichTextLabel" parent="TextBubble"]
-modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 47.0
-offset_top = 37.0
-offset_right = -42.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_i7ifx")
+[node name="Economy" type="Node" parent="."]
+script = ExtResource("87_1acod")
+current_balance = 60
+_balance_change_stay_seconds = 5.0
+_purchasable_unavailable_alpha = 0.4
+
+[node name="Shop" type="Node2D" parent="Economy" node_paths=PackedStringArray("_open_position")]
+z_index = 100
+position = Vector2(959.1109, -113.00001)
+scale = Vector2(0.49907398, 0.49907398)
+script = ExtResource("88_dofa8")
+_open_position = NodePath("../ShopOpenedPosition")
+_alpha_when_grabbed = 0.7
+
+[node name="Body" type="NinePatchRect" parent="Economy/Shop"]
+offset_left = -1795.5461
+offset_top = -302.56006
+offset_right = 1795.1038
+offset_bottom = 248.46033
+mouse_filter = 0
+texture = ExtResource("88_hhhsk")
+region_rect = Rect2(118.80051, 11.659119, 3603.2358, 534.7495)
+patch_margin_left = 64
+patch_margin_right = 62
+patch_margin_bottom = 67
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Holder" type="Control" parent="Economy/Shop"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -92.392334
+offset_top = 166.30792
+offset_right = 93.95264
+offset_bottom = 294.5454
+
+[node name="ArrowButton" type="Sprite2D" parent="Economy/Shop"]
+position = Vector2(-0.22216797, 230.42656)
+scale = Vector2(0.80839306, 0.8083931)
+texture = ExtResource("88_m330v")
+region_enabled = true
+region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop"]
+visible = false
+position = Vector2(-0.22216797, 230.42656)
+scale = Vector2(0.80839294, 0.80839306)
+texture = ExtResource("89_3u7l0")
+region_enabled = true
+region_rect = Rect2(1804.8615, 461.5455, 231.01453, 145.05472)
+
+[node name="Separators" type="Node2D" parent="Economy/Shop"]
+scale = Vector2(0.9999994, 0.9999994)
+
+[node name="ShopSeparator" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-1404.8228, -36.066757)
+scale = Vector2(1.0567511, 1.0567511)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator2" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-689.49915, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator3" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(-246.67877, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator4" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(502.70935, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator5" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(1125.8641, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator6" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(825.3071, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="ShopSeparator7" type="Sprite2D" parent="Economy/Shop/Separators"]
+position = Vector2(1442.4504, -36.066757)
+scale = Vector2(1.056751, 1.056751)
+texture = ExtResource("90_aime7")
+region_enabled = true
+region_rect = Rect2(615.0514, 0, 73.32837, 547.2829)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop"]
+position = Vector2(-1585.1559, 88.16322)
+scale = Vector2(1.1260852, 1.1260852)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="BalanceLabel" type="Label" parent="Economy/Shop"]
+self_modulate = Color(1, 1, 1, 0.92156863)
+offset_left = -1745.4528
+offset_top = -118.21883
+offset_right = -1424.859
+offset_bottom = 2.00383
+theme = SubResource("Theme_aime7")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Goods" type="Node2D" parent="Economy/Shop"]
+position = Vector2(-0.00012207031, 0)
+scale = Vector2(0.99999976, 0.99999976)
+
+[node name="Potion" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
+position = Vector2(-441.03857, 26.048218)
+
+[node name="Potion2" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(713.09924, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion2/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion2/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion3" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(1009.64856, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion3/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion3/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Potion4" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(1316.2163, 26.048218)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 10
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-14.211262, -30.813215)
+scale = Vector2(0.19369009, 0.19369009)
+texture = ExtResource("23_xuwja")
+region_enabled = true
+region_rect = Rect2(2049, 1766, 250, 382)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/Visual"]
+visible = false
+position = Vector2(11.41626, 19.687134)
+scale = Vector2(1.6959186, 1.6959186)
+texture = ExtResource("33_pou4m")
+region_enabled = true
+region_rect = Rect2(1463, 1101, 200, 300)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-31, 2)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion4/SelfAnchor"]
+position = Vector2(33, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -38.0
+offset_top = -66.99998
+offset_right = 9.0
+offset_bottom = 10.0000305
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion4/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
+z_index = 1
+position = Vector2(-1014.10004, 22.040833)
+scale = Vector2(2.003711, 2.003711)
+script = ExtResource("92_2qf71")
+price = 50
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-19.999634, -27.000061)
+scale = Vector2(0.26437035, 0.26437035)
+texture = ExtResource("22_5ha8j")
+region_enabled = true
+region_rect = Rect2(567, 1203, 739, 342)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Mask/Visual"]
+visible = false
+position = Vector2(7.2800293, -9.342682)
+texture = ExtResource("35_48gc8")
+region_enabled = true
+region_rect = Rect2(503, 440, 762, 358)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-88, 0)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Mask/SelfAnchor"]
+position = Vector2(144, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Mask"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -110.0
+offset_top = -70.000015
+offset_right = 75.0
+offset_bottom = 12.0
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Mask"]
+position = Vector2(-41.000004, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Mask/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Mask/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Glasses" type="Node2D" parent="Economy/Shop/Goods"]
+position = Vector2(126.0118, 42.077953)
+scale = Vector2(2.0037112, 2.0037112)
+script = ExtResource("92_2qf71")
+price = 120
+
+[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(1, -35.00006)
+scale = Vector2(0.31658533, 0.31658533)
+texture = ExtResource("21_j2mks")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Glasses/Visual"]
+visible = false
+position = Vector2(0, 1.2320862)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("37_wu3oq")
+region_enabled = true
+region_rect = Rect2(817, 807, 438, 367)
+
+[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(-48, 6)
+
+[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Glasses/SelfAnchor"]
+position = Vector2(100, 0)
+
+[node name="Holder" type="Control" parent="Economy/Shop/Goods/Glasses"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -66.0
+offset_top = -84.00001
+offset_right = 69.0
+offset_bottom = 15.0
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Glasses"]
+position = Vector2(-27.000002, 44)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Glasses/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Glasses/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 190.2819
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="Flower" parent="Economy/Shop/Goods" instance=ExtResource("105_m27th")]
+position = Vector2(1598.7395, 140.25981)
+scale = Vector2(0.35, 0.35)
+script = ExtResource("92_2qf71")
+price = 60
+post_purchase_scale_multiplier = 1.5
+
+[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Flower"]
+position = Vector2(-74.423386, -27.033466)
+scale = Vector2(11.997618, 11.997618)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Flower/PriceTag"]
+position = Vector2(-0.18948746, -0.4990692)
+scale = Vector2(0.15299995, 0.15299995)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Flower/PriceTag"]
+offset_left = 15.281818
+offset_top = -17.966673
+offset_right = 74.35768
+offset_bottom = 18.699991
+theme = SubResource("Theme_1acod")
+text = "50"
+vertical_alignment = 1
+
+[node name="BalanceChangeMarker" type="Node2D" parent="Economy/Shop"]
+visible = false
+position = Vector2(-1749.4608, 292.5417)
+scale = Vector2(2.0037098, 2.0037098)
+
+[node name="Background" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(79.45517, 7.058942)
+rotation = 0.20080507
+scale = Vector2(0.42797044, 0.42797044)
+texture = ExtResource("83_vwitv")
+region_enabled = true
+region_rect = Rect2(26.725311, 2.2172146, 414.7261, 226.21425)
+
+[node name="Background2" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(79.45517, 7.058942)
+rotation = 0.20080507
+scale = Vector2(0.42797044, 0.42797044)
+texture = ExtResource("83_vwitv")
+region_enabled = true
+region_rect = Rect2(26.725311, 2.2172146, 414.7261, 226.21425)
+
+[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/BalanceChangeMarker"]
+position = Vector2(32.552044, -0.062461376)
+scale = Vector2(0.30500063, 0.30500063)
+texture = ExtResource("86_2a4qe")
+region_enabled = true
+region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+
+[node name="Label" type="Label" parent="Economy/Shop/BalanceChangeMarker"]
+offset_left = 66.9995
+offset_top = -20.999945
+offset_right = 272.227
+offset_bottom = 22.000082
+theme = SubResource("Theme_2qf71")
+text = "+ 10"
+vertical_alignment = 1
+
+[node name="ShopOpenedPosition" type="Node2D" parent="Economy"]
+z_index = 600
+position = Vector2(959.1109, 87.99998)
+scale = Vector2(0.49907398, 0.49907398)
+
+[node name="CoinSound" type="Node" parent="Economy"]
+script = ExtResource("83_iawhq")
+stream_variants = Array[AudioStream]([ExtResource("84_opqqa"), ExtResource("85_dhgue"), ExtResource("86_vwitv"), ExtResource("87_m27th")])
+pitch_min = 0.9
+pitch_max = 1.2
+volume_db = -9.0
+
+[node name="DialogSystem_Main" type="Node" parent="." node_paths=PackedStringArray("default_start", "default_text_box")]
+script = ExtResource("45_pwxld")
+default_start = NodePath("Fn_Main")
+run_on_start = true
+default_text_box = NodePath("../TextBubble")
+
+[node name="PlayRecorder" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("89_dhgue")
+
+[node name="EyeWasSubmittedSignal" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("50_7tuqu")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("51_fupde")
+
+[node name="FadeIn" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("56_wu3oq")
+start_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 4
+
+[node name="Jump" type="Node" parent="DialogSystem_Main/Fn_Main" node_paths=PackedStringArray("destination")]
+script = ExtResource("52_xuwja")
+destination = NodePath("../MadScientist")
+is_enabled = false
+
+[node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../../../../Customers/Customer1")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "[Tutorial]
+Assemble an eye by dragging different eye parts on the piedestal.
+When all 4 eye parts are present and you are satisfied with your creation, submit it to the customer by dragging the piedestal onto him."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
+script = ExtResource("46_cw1g3")
+text = "Thanks.
+Here is your pay."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
+script = ExtResource("91_2qf71")
+amount = 11
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../../../../Customers/Customer1")
+start_alpha = -1.0
+duration_seconds = 2.0
+ease = 1
+transition = 1
+
+[node name="Tutorial2" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Hello, I am yet another tutorial customer.
+Please create whatever eye you like and give it to me.
+Real customers will follow right after."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
+script = ExtResource("46_cw1g3")
+text = "Oh, I really like this one!
+Here's your pay, plus a tip.
+
+[You can use the money to buy decoration items for your shop.
+Open the decoration shop by clicking the arrow above this bubble.]"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
+script = ExtResource("91_2qf71")
+amount = 35
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "After what I've done, my family won't look me in the eye.
+Remind me what they look like, please.
+I mustn't let myself forget."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+text = "Oh, what horrors . . .
+I . . .
+Farewell, shopkeeper."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
+script = ExtResource("91_2qf71")
+amount = 7
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "Sir, you have my utmost gratitude!"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
+script = ExtResource("91_2qf71")
+amount = 45
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Vain" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Dear shopkeeper,
+I dedicated my entire life to pursuing beauty. Eyes are the true jewel of the face.
+Give me your best pick, and I will reward you greatly."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
+script = ExtResource("46_cw1g3")
+text = "These eyes are abhorrent!
+. . . Well, whatever.
+
+(She still takes them)"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
+script = ExtResource("91_2qf71")
+amount = 10
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Gambler" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my left eye in a game of dice.
+So... which of these are currently on sale?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
+script = ExtResource("46_cw1g3")
+text = "Oh. . . yes, yes.
+This one is nice.
+Nice and cheap."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
+script = ExtResource("91_2qf71")
+amount = 6
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Warlock" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Hi, so, you won’t believe it, but this time I lost both of my eyes playing cards with the devil.
+But I got out alive!
+I don’t care about the price. Give me eyes that will bring me luck. I will win the next time around, I know it!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Ahahah, good!"
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("91_2qf71")
+amount = 66
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="PoorPeasant" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Please, help me!
+
+I can't feed my family if I can't even see the turnip growing on my little field."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+text = "Thank you, mister.
+
+I am forever in your debt."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
+script = ExtResource("91_2qf71")
+amount = 3
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="BookEnjoyer" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Reading books is my whole life.
+But now, my eyes are failing me.
+Is there possibly a chance you could save me from that future?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Honestly, something about these eyes doesn't feel right.
+But what other options do I have?
+Here. Your pay."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
+script = ExtResource("91_2qf71")
+amount = 14
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="FormerVizier" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I was once the grand vizier.
+Then the sultan decided I was becoming too powerful - he gouged out my eyes and banished me.
+With your help, I will finally get my revenge. Give me eyes that are powerful!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
+script = ExtResource("46_cw1g3")
+text = "Very well.
+I shall pay you even more generously once I get back what's mine."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
+script = ExtResource("91_2qf71")
+amount = 25
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="MadScientist" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "They call me crazy, but my new invention, oh, it will change the world. 
+They’ll see! They will all see!!!
+
+Erm, ahem, but for now I need to see. In my own laboratory, I mean. A recent potion burned out my sight…"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GivePotion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist"]
+script = ExtResource("46_cw1g3")
+text = "Oh . . . now I see.
+. . . I must head to my lab immediately.
+
+But, the potion I mentioned - it's actually really useful. It will revolutionize cleaning ink stains from wool.
+Here - a sample as a reward for your trouble. Just remember to only use it on tuesday mornings (it still needs a bit of tuning)."
+do_fade_out_after = true
+
+[node name="GivePotion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("Potion")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+
+[node name="Potion" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion" instance=ExtResource("76_djqke")]
+visible = false
+position = Vector2(439, 556)
+scale = Vector2(1, 1)
+price = 0
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Scared" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 6.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "M-Madam, this place is really scary.
+Please, get me some eyes quickly. I need to get out of here!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+I hope this much money is enough?"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("91_2qf71")
+amount = 20
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 0.7
+ease = 1
+transition = 1
+
+[node name="Archmage" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 6.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Yes, these samples will do. 
+Construct a set fit for a powerful Archmage. He lost his sight in his most recent magical duel.
+I trust you will be discreet in the matter."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage"]
+script = ExtResource("46_cw1g3")
+text = "Good.
+As we discussed, you shall receive the other half of the payment, when the eyes are confirmed satisfactory."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage"]
+script = ExtResource("91_2qf71")
+amount = 80
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 0.7
+ease = 1
+transition = 1
+
+[node name="GentleWerewolf" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one saw my true self, under the full moon."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
 text = "
 
-Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
-horizontal_alignment = 1
-visible_characters_behavior = 3
+She told me she still loves me, despite what I am. Help me come back to her, please."
+append = true
 
-[connection signal="button_down" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma1" to="EyeShapes/EyeHuma1" method="_on_pressed"]
-[connection signal="button_down" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma2" to="EyeShapes/EyeHuma2" method="_on_pressed"]
-[connection signal="button_down" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma3" to="EyeShapes/EyeHuma3" method="_on_pressed"]
-[connection signal="button_down" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma4" to="EyeShapes/EyeHuma4" method="_on_pressed"]
-[connection signal="button_down" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma5" to="EyeShapes/EyeHuma5" method="_on_pressed"]
-[connection signal="button_down" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_button_down"]
-[connection signal="button_up" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyeShapes/EyeHuma6" to="EyeShapes/EyeHuma6" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/IrisGreen" to="IrisColours/IrisGreen" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/Iris2" to="IrisColours/Iris2" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/Iris3" to="IrisColours/Iris3" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/Iris4" to="IrisColours/Iris4" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/Iris5" to="IrisColours/Iris5" method="_on_pressed"]
-[connection signal="button_down" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_button_down"]
-[connection signal="button_up" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_button_up"]
-[connection signal="mouse_entered" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_mouse_exited"]
-[connection signal="pressed" from="IrisColours/Iris6" to="IrisColours/Iris6" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil1" to="PupilShapes/Pupil1" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil2" to="PupilShapes/Pupil2" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil3" to="PupilShapes/Pupil3" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil4" to="PupilShapes/Pupil4" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil5" to="PupilShapes/Pupil5" method="_on_pressed"]
-[connection signal="button_down" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_button_down"]
-[connection signal="button_up" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_button_up"]
-[connection signal="mouse_entered" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_mouse_exited"]
-[connection signal="pressed" from="PupilShapes/Pupil6" to="PupilShapes/Pupil6" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow1" to="EyebrowShapes/Eyebrow1" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow2" to="EyebrowShapes/Eyebrow2" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow3" to="EyebrowShapes/Eyebrow3" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow4" to="EyebrowShapes/Eyebrow4" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow5" to="EyebrowShapes/Eyebrow5" method="_on_pressed"]
-[connection signal="button_down" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_button_down"]
-[connection signal="button_up" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_button_up"]
-[connection signal="mouse_entered" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_mouse_exited"]
-[connection signal="pressed" from="EyebrowShapes/Eyebrow6" to="EyebrowShapes/Eyebrow6" method="_on_pressed"]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+text = "Take this flower as my thanks.
+It was grown under the moon’s light."
+do_fade_out_after = true
+
+[node name="GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("parent")]
+script = ExtResource("100_0ow57")
+prototype = ExtResource("84_0ow57")
+parent = NodePath("Destination")
+attribute_overrides = Dictionary[StringName, Variant]({
+&"name": &"WerewolfFlower",
+&"scale": Vector2(0.35, 0.35)
+})
+
+[node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower"]
+visible = false
+position = Vector2(1231, 818)
+
+[node name="ShowFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../GiveFlower/Destination")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("92_grpki")
+delay_seconds = 5.0
+
+[node name="FadeOut" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("56_wu3oq")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="Transition" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("93_8h2n0")
+destination = ExtResource("94_qb1n5")
+
+[node name="Fn_Preview" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("51_fupde")
+
+[node name="FadeIn" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("56_wu3oq")
+start_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 4
+
+[node name="BookEnjoyer" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Reading books is my whole life.
+But now, my eyes are failing me.
+Is there possibly a chance you could save me from that future?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Honestly, something about these eyes doesn't feel right.
+But what other options do I have?
+Here. Your pay."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer"]
+script = ExtResource("91_2qf71")
+amount = 50
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="GentleWerewolf" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one saw my true self, under the full moon."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+
+But then she told me she still loves me, despite what I am. Help me come back to her, please."
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+text = "Take this flower as my thanks.
+It was grown under the moon’s light."
+do_fade_out_after = true
+
+[node name="GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf" node_paths=PackedStringArray("parent")]
+script = ExtResource("100_0ow57")
+prototype = ExtResource("84_0ow57")
+parent = NodePath("Destination")
+attribute_overrides = Dictionary[StringName, Variant]({
+&"name": &"WerewolfFlower",
+&"scale": Vector2(0.35, 0.35)
+})
+
+[node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf/GiveFlower"]
+visible = false
+position = Vector2(1231, 818)
+
+[node name="ShowFlower" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../GiveFlower/Destination")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "Sir, you have my utmost gratitude!"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight"]
+script = ExtResource("91_2qf71")
+amount = 100
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Gambler" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my left eye in a game of dice.
+So... which of these are currently on sale?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler"]
+script = ExtResource("46_cw1g3")
+text = "Oh. . . yes, yes.
+This one is nice.
+Nice and cheap."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler"]
+script = ExtResource("91_2qf71")
+amount = 6
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Preview/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("92_grpki")
+delay_seconds = 5.0
+
+[node name="FadeOut" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("56_wu3oq")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="Transition" type="Node" parent="DialogSystem_Main/Fn_Preview"]
+script = ExtResource("93_8h2n0")
+destination = ExtResource("94_qb1n5")
+
+[node name="Fn_MainOld" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("51_fupde")
+
+[node name="FadeIn" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("56_wu3oq")
+start_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 4
+
+[node name="GentleWerewolf" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one saw my true self, under the full moon.
+"
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control."
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+text = "I was growing this flower, to give to her at the right moment.
+But that's no use now. It would only remind me of her.
+Please, take good care of it."
+do_fade_out_after = true
+
+[node name="GiveFlower" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf" node_paths=PackedStringArray("parent")]
+script = ExtResource("100_0ow57")
+prototype = ExtResource("84_0ow57")
+parent = NodePath("Destination")
+attribute_overrides = Dictionary[StringName, Variant]({
+&"name": &"WerewolfFlower",
+&"scale": Vector2(0.35, 0.35)
+})
+
+[node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf/GiveFlower"]
+visible = false
+position = Vector2(1231, 818)
+
+[node name="ShowFlower" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../GiveFlower/Destination")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Scared" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 6.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Sir, this place is really scary.
+Please, get me some eyes quickly, so that I can go back home."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+I hope this much money is enough?"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared"]
+script = ExtResource("91_2qf71")
+amount = 20
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scared" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 0.7
+ease = 1
+transition = 1
+
+[node name="EyeCousineEnjoyer" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Greetings. I need your help in a certain, rather embarassing matter."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+Last week, I was in a restaurant. I ordered a soup. I don't know how, but there was an eye, floating in it."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+When I asked for more, the waiter kept apologizing. It got there by accident."
+append = true
+
+[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text4" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I need ingredients to make more! It was the tastiest thing I have ever eaten."
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Splendid!
+Here is your pay. 
+I expect us to do more business in the future."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer"]
+script = ExtResource("91_2qf71")
+amount = 30
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeCousineEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="TheStrongest" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I must become the strongest.
+I can't do that with my eyes.
+Give me new eyes.
+Strong eyes."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest"]
+script = ExtResource("46_cw1g3")
+text = "Good."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest"]
+script = ExtResource("91_2qf71")
+amount = 30
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/TheStrongest" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Child" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Please, save my Rosie!
+The gods have a cruel sense of humor. She was born blind.
+But you - You can help us. Right?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+This is all I can give you."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child"]
+script = ExtResource("91_2qf71")
+amount = 10
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Child" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="RejectedLover" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one rejected me.
+She said these eyes make me look stupid.
+Please, you're the only one who can help me."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover"]
+script = ExtResource("46_cw1g3")
+text = "Thank you.
+With these eyes, she'll fall in love with me, for sure."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover"]
+script = ExtResource("91_2qf71")
+amount = 10
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/RejectedLover" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../../../../Customers/Customer1")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "[Tutorial]
+Assemble an eye by dragging different eye parts on the piedestal.
+When all 4 eye parts are present and you are satisfied with your creation, submit it to the customer by dragging the piedestal onto him."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial"]
+script = ExtResource("46_cw1g3")
+text = "Thanks.
+Here is your pay."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial"]
+script = ExtResource("91_2qf71")
+amount = 11
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../../../../Customers/Customer1")
+start_alpha = -1.0
+duration_seconds = 2.0
+ease = 1
+transition = 1
+
+[node name="Tutorial2" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Hello, I am yet another tutorial customer.
+Please create whatever eye you like and give it to me.
+Real customers will follow right after."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2"]
+script = ExtResource("46_cw1g3")
+text = "Oh, I really like this one!
+Here's your pay, plus a tip.
+
+[You can use the money to buy decoration items for your shop.
+Open the decoration shop by clicking the arrow above this bubble.]"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2"]
+script = ExtResource("91_2qf71")
+amount = 35
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Tutorial2" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="NeedsToForgetWhatHeDid" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "After what I did, my family will never look into my eyes.
+Please give me new ones, so that they forget.
+...so that I can forget."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid"]
+script = ExtResource("46_cw1g3")
+text = "Thank you. 
+Really."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid"]
+script = ExtResource("91_2qf71")
+amount = 7
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/NeedsToForgetWhatHeDid" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="LoyalKnight" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my eyes serving my king and country.
+Please, help me so that I can ride into battle once more."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight"]
+script = ExtResource("46_cw1g3")
+text = "Sir, you have my utmost gratitude!"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight"]
+script = ExtResource("91_2qf71")
+amount = 45
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/LoyalKnight" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerKnight")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Vain" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I dedicated my whole life to pursuing beauty, yet I still have to bear these filthy servant eyes!
+Give me some new ones - ones that are more deserving of me."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain"]
+script = ExtResource("46_cw1g3")
+text = "These eyes are abhorrent!
+. . . Well, whatever.
+
+(She still takes them)"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain"]
+script = ExtResource("91_2qf71")
+amount = 1
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Vain" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Gambler" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I lost my left eye in a game of dice.
+So... which of these are currently on sale?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler"]
+script = ExtResource("46_cw1g3")
+text = "Oh. . . yes, yes.
+This one is nice.
+Nice and cheap."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler"]
+script = ExtResource("91_2qf71")
+amount = 6
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Gambler" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Warlock" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Hi, you won't believe it, this time I lost both my eyes playing cards with the mad god Azathoth himself (lol).
+So, what eyes have you got in stock?
+Get me some powerful ones."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Muhahahaha!"
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="T_GiveMoney2" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+Muhahaha!"
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("92_grpki")
+delay_seconds = 2.0
+
+[node name="T_GiveMoney3" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+Ha!"
+append = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("91_2qf71")
+amount = 66
+
+[node name="Wait3" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="T_GiveMoney4" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock"]
+script = ExtResource("46_cw1g3")
+text = "
+Just wait 'till he sees this."
+append = true
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="PoorPeasant" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Please, help me!
+
+I can't feed my family if I can't even see the turnip growing on my little field."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant"]
+script = ExtResource("46_cw1g3")
+text = "Thank you, mister.
+
+I am forever in your debt."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant"]
+script = ExtResource("91_2qf71")
+amount = 3
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/PoorPeasant" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="BookEnjoyer" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Reading books is my whole life.
+But now, my eyes are failing me.
+Is there possibly a chance you could save me from that future?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer"]
+script = ExtResource("46_cw1g3")
+text = "Honestly, something about these eyes doesn't feel right.
+But what other options do I have?
+Here. Your pay."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer"]
+script = ExtResource("91_2qf71")
+amount = 14
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/BookEnjoyer" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="FormerVizier" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "I was once the grand vizier.
+Then the sultan decided I was becoming too powerful - he gouged my eyes and banished me.
+With your help, I will finally get my revenge."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier"]
+script = ExtResource("46_cw1g3")
+text = "Very well.
+I shall pay you even more generously once I get back what's mine."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier"]
+script = ExtResource("91_2qf71")
+amount = 25
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/FormerVizier" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="EyeObsessed" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeObsessed" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeObsessed"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Eyes, eyes, eyes, EYES, EEEYYYEEESSS...
+.............................
+I NEED MORE EYES!!!!!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeObsessed" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeObsessed"]
+script = ExtResource("46_cw1g3")
+text = "Heheeee
+
+Eyes!"
+do_fade_out_after = true
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/EyeObsessed" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Scientist" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Yes, these look like fine specimens.
+
+Please, have 500 kg of these eye samples delivered to this address by next monday.
+
+The University will of course compensate you generously for your service."
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist"]
+script = ExtResource("46_cw1g3")
+text = "Very well. I knew we can rely on you.
+After all, you are a highly trained professional.
+Here is the advance pay.  The remaining 100 000 groschen will be paid on delivery."
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist"]
+script = ExtResource("91_2qf71")
+amount = 1000
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Scientist" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Twoflower" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Oh my goodness, are these actual eyes?!
+My colleagues at the bank won't believe this, it will be the bestest souvenir!
+
+Also could we possibly get a photograph together, pretty please?"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower"]
+script = ExtResource("46_cw1g3")
+text = "Wow, this is so cool.
+(He gives you a huge coin made of pure gold)"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower"]
+script = ExtResource("91_2qf71")
+amount = 2500
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_MainOld/Twoflower" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("92_grpki")
+delay_seconds = 5.0
+
+[node name="FadeOut" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("56_wu3oq")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="Transition" type="Node" parent="DialogSystem_Main/Fn_MainOld"]
+script = ExtResource("93_8h2n0")
+destination = ExtResource("94_qb1n5")
+
+[node name="Fn_HandleEyeSubmittion" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("51_fupde")
+
+[node name="EnablePiedestalCollider" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion"]
+script = ExtResource("83_e8t1i")
+
+[node name="WaitForSubmission" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion" node_paths=PackedStringArray("provider")]
+script = ExtResource("53_g8282")
+provider = NodePath("../../EyeWasSubmittedSignal")
+
+[node name="DisablePiedestalCollider" type="Node" parent="DialogSystem_Main/Fn_HandleEyeSubmittion"]
+script = ExtResource("83_e8t1i")
+
+[node name="test" type="Node" parent="DialogSystem_Main"]
+script = ExtResource("47_q5chl")
+condition_holds = false
+
+[node name="Text" type="Node" parent="DialogSystem_Main/test"]
+script = ExtResource("46_cw1g3")
+text = "This is a piece of text"
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/test"]
+script = ExtResource("46_cw1g3")
+text = "More text"
+append = true
+
+[node name="Jump" type="Node" parent="DialogSystem_Main/test" node_paths=PackedStringArray("destination")]
+script = ExtResource("52_xuwja")
+destination = NodePath("..")
+
+[connection signal="on_submitted" from="EyePiedestal" to="DialogSystem_Main/EyeWasSubmittedSignal" method="do_emit"]
+[connection signal="on_success" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_in"]
+[connection signal="on_unsuccess" from="EyePiedestal/HolderHidingCondition" to="EyePiedestal/Holder" method="do_fade_out"]
+[connection signal="on_balance_change" from="Economy" to="Economy/CoinSound" method="play"]
+[connection signal="before_node_is_performed" from="DialogSystem_Main" to="DialogSystem_Main/PlayRecorder" method="do_record"]
+[connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
+[connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]

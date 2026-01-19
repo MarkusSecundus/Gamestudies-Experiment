@@ -65,7 +65,10 @@ func do_place(g: Grabbable)->void:
 			best_location = loc
 			best_segment_idx = segment_idx
 	
-	best_location.place(g, best_segment_idx, best_left, best_right)
+	print("placing {0} - {1}".format([g.name, best_location]))
+	if best_location:
+		best_location.place(g, best_segment_idx, best_left, best_right)
+	
 
 
 

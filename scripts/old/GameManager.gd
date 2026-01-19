@@ -23,7 +23,7 @@ func next_question()->void:
 	_active_question_idx += 1
 	if _active_question_idx >= _questions.size():
 		_active_question_idx = 0
-	question_box.print_text(_questions[_active_question_idx])
+	#question_box.print_text(_questions[_active_question_idx])
 
 
 

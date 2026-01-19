@@ -40,6 +40,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	super._process(delta)
+	if not _piedestal: return
 		
 	var target_anchor := _piedestal.get_anchor(self)
 	var distance_to_target_anchor := self.get_only_anchor().distance_to(target_anchor.global_position)
@@ -48,7 +49,7 @@ func _process(delta: float) -> void:
 	var target_t = clampf(distance_to_target_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance
 	var home_t = 1.0 - (clampf(distance_to_home_anchor, 0, _piedestal.active_distance) / _piedestal.active_distance)
 	var t = lerpf(home_t, target_t, distance_to_home_anchor / (distance_to_target_anchor + distance_to_home_anchor))
-	var new_scale := lerp(target_anchor.global_scale, _original_scale, t) as Vector2
+	var new_scale := lerp(target_anchor.scale, _original_scale, t) as Vector2
 	var distance_from_active_anchor := get_position_difference().length()
 	var distance_from_the_cabinet := (_holder_anchor.global_position - self.get_only_anchor()).length()
 	if (not _is_being_grabbed) and (distance_from_active_anchor < 40.0) and (self.get_parent() != _active_anchor.get_parent().get_parent()):
@@ -68,11 +69,13 @@ func on_drag_start()->void:
 	_ordering_config.when_moving.apply(self)
 func on_drag_end()->void: 
 	var piedestal_anchor := _piedestal.get_anchor(self)
-	if piedestal_anchor.global_position.distance_to(self.global_position) < _piedestal.submit_distance:
-		_piedestal_anchor = piedestal_anchor
+	var distance_to_piedestal := _piedestal.global_position.distance_to(self.global_position)
+	print("piedestal distance: {0} (required {1})".format([distance_to_piedestal, _piedestal.submit_distance]))
+	if distance_to_piedestal < _piedestal.submit_distance:
+		self._piedestal_anchor = piedestal_anchor
 		_piedestal.add_eye_part(self)
 	else:
-		_piedestal_anchor = null
+		self._piedestal_anchor = null
 		_piedestal.remove_eye_part(self)
 
 

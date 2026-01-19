@@ -1,0 +1,442 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmf5vd4xt81yx"]
+
+[ext_resource type="Script" uid="uid://bfabcqdk8i3fa" path="res://scripts/FlowerLeaf.gd" id="2_gi7s7"]
+[ext_resource type="Texture2D" uid="uid://c4odet0ry4uoy" path="res://art/shop/decor/flowerpot2.png" id="3_gi7s7"]
+
+[node name="Stem" type="Node2D"]
+z_index = 1
+
+[node name="Stem" type="Polygon2D" parent="."]
+position = Vector2(-447, -386)
+texture = ExtResource("3_gi7s7")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(433.34662, 8.085037, 433.7093, 15.702465, 434.11435, 24.207985, 434.719, 36.905273, 434.33337, 48.75532, 434, 59, 434.26147, 69.40638, 431.46082, 77.78292, 432.3944, 87.06142, 434, 100, 434, 112, 434.40436, 124.64919, 433.44406, 134.22203, 435, 148, 435.0566, 156.86569, 434.719, 166.82509, 434.25293, 178.47656, 433.80307, 189.72305, 433.34662, 201.13489, 430.8815, 212.74261, 432.43396, 226.68866, 431.97424, 239.56189, 431.97418, 253.50809, 431.9742, 266.48062, 424.96024, 276.9266, 425.68005, 288.21268, 431.3106, 300.75647, 430.9411, 313.1807, 430.6001, 324.64777, 429.94324, 338.22253, 429.22772, 353.01053, 429.01273, 363.54477, 428.77026, 375.42627, 431, 390, 445.23895, 400.12933, 457.5905, 396.4696, 469.94202, 384.1181, 470.80612, 370.45972, 471.83923, 354.13184, 475.22324, 340.3048, 478.58652, 327.1182, 473.84796, 315.8782, 474.06964, 306.37524, 474.36725, 293.62082, 474.67297, 280.51886, 474.86374, 264.96985, 474.98843, 254.8069, 476, 241, 476.49683, 231.2228, 477.16638, 218.04611, 477.87415, 204.11795, 478.10367, 193.73114, 478.4002, 180.31126, 478.72296, 165.70825, 478.7936, 157.082, 479, 146, 479, 135, 478.68, 123.1508, 479, 112, 479, 101, 479, 90, 478.34058, 79.681854, 477.71777, 69.93699, 477.01926, 59.007088, 476.6224, 47.896297, 476.1656, 35.105133, 476.02292, 25.405094, 475.88455, 15.997276, 475.73877, 6.08132, 469.98315, -0.5269203, 458.45255, -13.765842, 446.5052, -3.3675346, 448.52075, 372.20175, 449.0949, 356.50858, 449.8604, 338.51883, 449.28625, 318.99805, 448.90372, 301.96326, 450.8175, 288.37524, 451.58304, 271.72516, 451.39166, 256.03198, 452.34924, 239.5699, 452.9234, 224.25949, 452.732, 209.33182, 453.88025, 196.50935, 454.26306, 181.19893, 454.458, 165.12259, 454.2666, 151.72598, 453.69244, 136.98972, 453.3097, 123.40172, 454.84076, 108.665436, 454.26575, 93.35202, 453.883, 80.720924, 453.50024, 65.98465, 452.54333, 52.97079, 452.54333, 37.468994, 452.73315, 19.47969)
+uv = PackedVector2Array(433.34662, 8.085037, 434.719, 36.905273, 434.26154, 61.15088, 434.26154, 87.68379, 433.80408, 114.216705, 435.63397, 139.8347, 434.719, 166.82509, 433.34662, 201.13489, 431.97424, 239.56189, 431.97424, 278.44632, 430.6001, 324.64777, 429.22772, 353.01053, 428.77026, 375.42627, 427.39783, 390.98004, 445.23895, 400.12933, 457.5905, 396.4696, 469.94202, 384.1181, 473.6075, 326.18463, 474.67297, 280.51886, 475.0998, 245.73297, 477.87415, 204.11795, 478.72296, 165.70825, 478.93637, 139.67218, 478.50955, 116.83728, 478.08273, 89.94758, 477.01926, 59.007088, 476.1656, 35.105133, 475.73877, 6.08132, 458.45255, -13.765842, 448.52075, 372.20175, 449.0949, 356.50858, 449.8604, 338.51883, 449.28625, 318.99805, 448.90372, 301.96326, 450.8175, 288.37524, 451.58304, 271.72516, 451.39166, 256.03198, 452.73132, 237.46811, 452.732, 237.84747, 452.34924, 239.5699, 452.9234, 224.25949, 452.732, 209.33182, 453.88025, 196.50935, 454.26306, 181.19893, 454.458, 165.12259, 454.2666, 151.72598, 453.69244, 136.98972, 453.3097, 123.40172, 454.84076, 108.665436, 454.26575, 93.35202, 453.883, 80.720924, 453.50024, 65.98465, 452.54333, 52.97079, 452.54333, 37.468994, 451.77783, 22.34996, 452.73315, 19.47969)
+polygons = [PackedInt32Array(72, 32, 33, 34, 35, 36, 37), PackedInt32Array(31, 73, 38, 37, 72, 32), PackedInt32Array(73, 31, 30, 29, 74, 40, 39, 38), PackedInt32Array(41, 75, 28, 29, 74, 40), PackedInt32Array(42, 76, 26, 27, 28, 75, 41), PackedInt32Array(42, 43, 77, 25, 26, 76), PackedInt32Array(44, 45, 78, 24, 25, 77, 43), PackedInt32Array(78, 24, 23, 22, 79, 46, 45), PackedInt32Array(79, 22, 21, 80, 47, 46), PackedInt32Array(80, 21, 20, 81, 48, 47), PackedInt32Array(20, 19, 82, 49, 48, 81), PackedInt32Array(19, 18, 83, 50, 49, 82), PackedInt32Array(18, 17, 16, 84, 52, 51, 50, 83), PackedInt32Array(52, 53, 85, 15, 16, 84), PackedInt32Array(53, 54, 55, 86, 13, 14, 15, 85), PackedInt32Array(56, 87, 12, 13, 86, 55), PackedInt32Array(56, 57, 88, 11, 12, 87), PackedInt32Array(57, 58, 89, 10, 11, 88), PackedInt32Array(59, 60, 90, 9, 10, 89, 58), PackedInt32Array(60, 61, 91, 7, 8, 9, 90), PackedInt32Array(61, 62, 63, 92, 6, 7, 91), PackedInt32Array(63, 64, 93, 4, 5, 6, 92), PackedInt32Array(64, 65, 94, 3, 4, 93), PackedInt32Array(65, 66, 67, 95, 2, 3, 94), PackedInt32Array(67, 68, 69, 70, 71, 0, 1, 2, 95)]
+bones = ["Root", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.63, 0.63, 0.63, 0.63, 0.63, 0.63, 0.42, 0.63, 0.63, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.63, 0.63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 0.63, 0.84, 0.84, 0.63, 0.63, 0.21, 0.21, 0, 0, 0, 0, 0.21, 0.63, 0.63, 0.84, 0.84, 0.63, 0.21, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.42, 0.63, 0.84, 0.84, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.63, 0.63, 0.63, 0.63, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.42, 0.63, 0.84, 0.63, 0.42, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.63, 0.63, 0.84, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.21, 1, 1, 0.84, 1, 1, 0.42, 0.21, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.84, 0.84, 0.84, 1, 0.84, 0.42, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 1, 1, 1, 1, 0.63, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 0.42, 1, 1, 1, 0.84, 0.84, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.63, 0.84, 0.84, 1, 0.63, 0.42, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.84, 0.84, 0.84, 1, 0.63, 0.21, 0, 0, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.84, 0.84, 0.84, 1, 0.84, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.63, 0.63, 0.84, 0.63, 0.63, 0.63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.84, 1, 1, 0.84, 0.21, 0, 0, 0, 0, 0, 0), "Root/Part1/Part2/Part3/Part4/Part5/Part6", PackedFloat32Array(0, 0, 0.11, 0.43, 0.64, 0.74, 0.74, 0.95, 0.95, 0.63, 0.63, 0.21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 0.63, 0.63, 0.63, 0.63, 0.63, 0.63, 0.32, 0.32, 0.11, 0.11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.21, 1, 1, 0.95, 0.95, 0.64, 0.43, 0.11), "Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7", PackedFloat32Array(1, 1, 1, 0.84, 0.84, 0.42, 0.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 0.63, 0.42, 0.63, 0.84, 0.84, 0.84, 0.84, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.42, 1, 1, 1)]
+internal_vertex_count = 24
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="Root" type="Bone2D" parent="Skeleton2D"]
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0, 0)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 3
+linear_velocity_change_factor = 0.001
+
+[node name="Part1" type="Bone2D" parent="Skeleton2D/Root"]
+position = Vector2(0.99999607, -30.000015)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 0.99999607, -30.000015)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part2" type="Bone2D" parent="Skeleton2D/Root/Part1"]
+position = Vector2(2.0000005, -49)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.0000005, -49)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part3" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2"]
+position = Vector2(2.0000007, -43.000027)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.0000007, -43.000027)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part4" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3"]
+position = Vector2(2.000001, -49.000034)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 2.000001, -49.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part5" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4"]
+position = Vector2(1.0000006, -49.000034)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5"]
+position = Vector2(1.0000006, -49.000034)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part7" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6"]
+position = Vector2(-1.0000011, -51.000034)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, -1.0000011, -51.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7"]
+position = Vector2(-2.0000024, -52.000053)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 8
+linear_velocity_change_factor = 0.001
+
+[node name="Part6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6"]
+position = Vector2(-0.9999968, -26.999996)
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 15
+linear_velocity_change_factor = 0.001
+
+[node name="Blossom" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+z_index = 1
+position = Vector2(-413.0005, -543.00055)
+scale = Vector2(1.0000002, 1.0000002)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(409.58633, 508.9686, 394.4484, 516.2934, 382.72867, 533.38464, 378.82208, 559.754, 390.0535, 579.7752, 423.74768, 585.6351, 445.72214, 581.7285, 453.04697, 562.1956, 457.44183, 538.2679, 445.23383, 515.8051, 429.1192, 507.99194)
+uv = PackedVector2Array(409.58633, 508.9686, 394.4484, 516.2934, 382.72867, 533.38464, 378.82208, 559.754, 390.0535, 579.7752, 423.74768, 585.6351, 445.72214, 581.7285, 453.04697, 562.1956, 457.44183, 538.2679, 445.23383, 515.8051, 429.1192, 507.99194)
+
+[node name="Petal2" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(25.00003, 28.000042)
+rotation = 0.30576247
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal2"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal2/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal10" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(25.000029, -22.00003)
+rotation = -1.1214774
+scale = Vector2(0.9999998, 0.9999998)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal10"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal10/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal13" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(42.000046, -6.0000153)
+rotation = -0.21039267
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal13"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal13/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal14" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(1.9073486e-06, -31.000046)
+rotation = -1.9548156
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal14"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal14/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal15" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-43.000053, -3.8146973e-06)
+rotation = 2.57838
+scale = Vector2(0.9999998, 0.9999998)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal15"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal15/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal16" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(9.000008, 47.000065)
+rotation = 1.2758355
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal16"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal16/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal11" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-29.000038, -13.000016)
+rotation = -2.5804787
+scale = Vector2(0.9999998, 0.9999998)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal11"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal11/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal12" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-20.000027, 28.00003)
+rotation = 1.9073609
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal12"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal12/Petal"]
+position = Vector2(-232.39584, -348.65112)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+uv = PackedVector2Array(198.60712, 258.6482, 184.45105, 292.4654, 183.66461, 326.28262, 201.75287, 364.81848, 263.0957, 376.6152, 280.39752, 350.66248, 298.48578, 301.90277, 278.82465, 249.99728, 241.0752, 231.90901)
+
+[node name="Petal1" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(3.0000038, 20.000023)
+rotation = 0.5692374
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal1"]
+rotation = 2.4842472
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal1/Petal"]
+position = Vector2(-372.07867, -386.9886)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+uv = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+
+[node name="Petal4" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(20.000027, 4.000002)
+rotation = -1.0240003
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal4"]
+rotation = 2.4842472
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal4/Petal"]
+position = Vector2(-372.07867, -386.9886)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+uv = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+
+[node name="Petal5" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(1.0000013, -11.000018)
+rotation = -2.545527
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal5"]
+rotation = 2.4842472
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal5/Petal"]
+position = Vector2(-372.07867, -386.9886)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+uv = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+
+[node name="Petal6" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-13.000015, 4)
+rotation = 2.0679061
+scale = Vector2(0.9999999, 0.9999999)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal6"]
+rotation = 2.4842472
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal6/Petal"]
+position = Vector2(-372.07867, -386.9886)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+uv = PackedVector2Array(371.6173, 301.21878, 400.2154, 318.1176, 423.61377, 344.7658, 405.41504, 394.16248, 350.81873, 400.0121, 319.62085, 379.2135, 319.62085, 349.31552, 331.32007, 318.1176)
+
+[node name="Petal3" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(23.000029, 23.000025)
+rotation = 0.45861167
+scale = Vector2(0.9999998, 0.9999998)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal3"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal3/Petal"]
+position = Vector2(-459.3905, -484.17612)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+
+[node name="Petal7" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(18.00002, -11.000017)
+rotation = -1.0365868
+scale = Vector2(0.99999976, 0.99999976)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal7"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal7/Petal"]
+position = Vector2(-459.3905, -484.17612)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+
+[node name="Petal8" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-11.000014, -8.000013)
+rotation = -2.7855546
+scale = Vector2(0.9999998, 0.9999998)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal8"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal8/Petal"]
+position = Vector2(-459.3905, -484.17612)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+
+[node name="Petal9" type="Bone2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6"]
+position = Vector2(-8.000008, 21.000027)
+rotation = 2.0740783
+scale = Vector2(0.9999997, 0.9999997)
+rest = Transform2D(0.9999999, 0, 0, 0.9999999, 1.0000006, -49.000034)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+script = ExtResource("2_gi7s7")
+rotation_interval_deg = 50
+linear_velocity_change_factor = 0.001
+
+[node name="Petal" type="Node2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal9"]
+rotation = 1.8092997
+
+[node name="Petal" type="Polygon2D" parent="Skeleton2D/Root/Part1/Part2/Part3/Part4/Part5/Part6/Part7/Part6/Part6/Petal9/Petal"]
+position = Vector2(-459.3905, -484.17612)
+texture = ExtResource("3_gi7s7")
+polygon = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)
+uv = PackedVector2Array(456.61438, 429.32532, 424.87347, 462.04285, 434.1516, 500.13196, 485.42535, 500.13196, 497.14508, 465.94943)

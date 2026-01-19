@@ -1,0 +1,302 @@
+[gd_scene load_steps=25 format=3 uid="uid://cfh2elbhj280b"]
+
+[ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="1_7cenv"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="2_l8b4j"]
+[ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="3_rrmmi"]
+[ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="4_6esj1"]
+[ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="5_1crja"]
+[ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="6_1yvh5"]
+[ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="7_0y85s"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="8_do2vo"]
+[ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="9_larrf"]
+[ext_resource type="Texture2D" uid="uid://bvg4onu7meubs" path="res://art/shop/text_bubble-dot.png" id="10_wufyc"]
+[ext_resource type="Script" uid="uid://dj65i8h1vxjyr" path="res://scripts/util/RichTextUrlOpener.gd" id="11_1epfi"]
+[ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="11_kelb6"]
+[ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="12_ngi55"]
+[ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="13_ijnjj"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="13_rohoa"]
+[ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="14_k8jjf"]
+[ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="16_p07gd"]
+
+[sub_resource type="Gradient" id="Gradient_f0hic"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lg00b"]
+gradient = SubResource("Gradient_f0hic")
+
+[sub_resource type="FontVariation" id="FontVariation_kd8v4"]
+base_font = ExtResource("8_do2vo")
+spacing_bottom = 14
+
+[sub_resource type="Theme" id="Theme_plw00"]
+default_font = SubResource("FontVariation_kd8v4")
+default_font_size = 24
+
+[sub_resource type="Animation" id="Animation_5g2oq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -21.678314)]
+}
+
+[sub_resource type="Animation" id="Animation_aq5dq"]
+resource_name = "dot_jumping"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.033333335, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.61960787)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5g2oq"]
+_data = {
+&"RESET": SubResource("Animation_5g2oq"),
+&"dot_jumping": SubResource("Animation_aq5dq")
+}
+
+[node name="IntroText" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0090001
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -44.0
+offset_right = 26.719849
+offset_bottom = 80.0
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_lg00b")
+expand_mode = 1
+
+[node name="FancyFrame" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="NinePatchRect" parent="FancyFrame"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.667
+anchor_bottom = 1.667
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_7cenv")
+region_rect = Rect2(1540, 60, 761, 602)
+patch_margin_left = 115
+patch_margin_top = 112
+patch_margin_right = 118
+patch_margin_bottom = 110
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextBubble" type="Control" parent="."]
+z_index = 1
+anchors_preset = 0
+offset_top = -4.0
+offset_right = 1938.0
+offset_bottom = 1080.0
+script = ExtResource("2_l8b4j")
+sounds_per_char = Array[AudioStream]([ExtResource("3_rrmmi"), ExtResource("4_6esj1"), ExtResource("5_1crja"), ExtResource("6_1yvh5"), ExtResource("7_0y85s")])
+_dot_fade_duration = 0.5
+
+[node name="Label" type="RichTextLabel" parent="TextBubble" node_paths=PackedStringArray("source")]
+self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
+z_index = 10
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 116.0
+offset_top = 138.0
+offset_right = -280.0
+offset_bottom = 1050.0
+grow_horizontal = 2
+theme = SubResource("Theme_plw00")
+bbcode_enabled = true
+text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
+You put the sign saying CLOSED on the door.
+You cook a few eggs for dinner.
+Then you go to sleep.
+
+Tomorrow, you need to be fresh for work.
+Same as all the other days.
+
+
+
+
+
+
+
+
+[font size=32]
+Thank you for playing!
+[/font][font size=28]
+To complete the experiment, please, fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
+[/font][font size=24]
+
+[color=dark_gray]
+Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
+fit_content = true
+visible_characters_behavior = 3
+script = ExtResource("9_larrf")
+source = NodePath("../../DialogSystem_Outro/Fn_Text/Text")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
+root_node = NodePath("../PrintFinishedMarker")
+libraries = {
+&"": SubResource("AnimationLibrary_5g2oq")
+}
+autoplay = "dot_jumping"
+
+[node name="PrintFinishedMarker" type="Sprite2D" parent="TextBubble"]
+position = Vector2(1781.9999, 992)
+scale = Vector2(0.5497112, 0.5497113)
+texture = ExtResource("10_wufyc")
+offset = Vector2(0, -21.678314)
+region_enabled = true
+region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
+
+[node name="UrlOpener" type="Node" parent="TextBubble"]
+script = ExtResource("11_1epfi")
+
+[node name="DialogSystem_Outro" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
+script = ExtResource("11_kelb6")
+run_on_start = true
+default_text_box = NodePath("../TextBubble")
+
+[node name="PlayRecorder" type="Node" parent="DialogSystem_Outro"]
+script = ExtResource("13_rohoa")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_Outro"]
+script = ExtResource("12_ngi55")
+
+[node name="TextReset" type="Node" parent="DialogSystem_Outro/Fn_Main"]
+script = ExtResource("13_ijnjj")
+wait_for_user_input = false
+
+[node name="FadeOut" type="Node" parent="DialogSystem_Outro/Fn_Main"]
+script = ExtResource("14_k8jjf")
+start_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="PrintText" type="Node" parent="DialogSystem_Outro/Fn_Main" node_paths=PackedStringArray("callee")]
+script = ExtResource("16_p07gd")
+callee = NodePath("../../Fn_Text")
+
+[node name="Fn_Text" type="Node" parent="DialogSystem_Outro"]
+script = ExtResource("12_ngi55")
+
+[node name="Text" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
+"
+append = true
+
+[node name="Text2" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "You put the sign saying CLOSED on the door.
+"
+append = true
+
+[node name="Text4" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "You cook a few eggs for dinner.
+"
+append = true
+
+[node name="Text5" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "Then you go to sleep.
+"
+append = true
+
+[node name="Text6" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "
+Tomorrow, you need to be fresh for work."
+append = true
+
+[node name="Text7" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+text = "
+Same as all the other days."
+append = true
+
+[node name="Text8" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("13_ijnjj")
+wait_for_user_input = false
+text = "
+
+
+
+
+
+
+
+
+[font size=32]
+Thank you for playing!
+[/font][font size=28]
+To complete the experiment, please, fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
+[/font][font size=24]
+
+[color=dark_gray]
+Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
+append = true
+
+[connection signal="meta_clicked" from="TextBubble/Label" to="TextBubble/UrlOpener" method="_on_meta_clicked"]
+[connection signal="before_node_is_performed" from="DialogSystem_Outro" to="DialogSystem_Outro/PlayRecorder" method="do_record"]
