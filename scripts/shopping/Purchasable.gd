@@ -10,21 +10,20 @@ func on_drag_start()->void:
 	_perform_purchase()
 	
 
-func can_grab()->bool: return is_purchased or (not _economy) or _economy.can_spend_money(price)
+func can_grab()->bool: return is_purchased or _economy.can_spend_money(price)
 
 var _economy: Economy:
 	get: return Economy.INSTANCE
 
 func _ready() -> void:
 	super._ready()
-	if (not _economy) or (price <= 0):
+	if price <= 0:
 		is_purchased = true
 		$PriceTag.visible = false
 		self.scale *= post_purchase_scale_multiplier
 	$PriceTag/Label.text = "%d"%price
 	await get_tree().process_frame
-	if _economy:
-		_economy.on_balance_change.connect(_on_balance_change)
+	_economy.on_balance_change.connect(_on_balance_change)
 	_on_balance_change(true)	
 	
 	
