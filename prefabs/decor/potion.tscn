@@ -7,9 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://iq2frvc7qon0" path="res://art/ui/coin.png" id="4_f1oe1"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="5_omy65"]
 
-[sub_resource type="Gradient" id="Gradient_b44at"]
+[sub_resource type="Gradient" id="Gradient_gye3f"]
 offsets = PackedFloat32Array(0.21212122, 0.54882157, 0.8148148)
 colors = PackedColorArray(1, 1, 1, 1, 0.79709226, 0.79709226, 0.79709226, 0, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xhb7d"]
+noise_type = 0
+frequency = 0.0138
+fractal_octaves = 2
+fractal_lacunarity = 1.6
+fractal_gain = 0.15
+fractal_weighted_strength = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f1oe1"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_xhb7d")
+color_ramp = SubResource("Gradient_gye3f")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Gradient" id="Gradient_b44at"]
+offsets = PackedFloat32Array(0, 0.21682243, 0.54882157, 0.77009344, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.57861704, 0.5786178, 0.57861763, 1, 0.79709226, 0.79709226, 0.79709226, 0, 0.5803922, 0.5803922, 0.5803922, 1, 1, 1, 1, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gye3f"]
 
@@ -21,20 +41,20 @@ color_ramp = SubResource("Gradient_b44at")
 seamless = true
 seamless_blend_skirt = 1.0
 
-[sub_resource type="Gradient" id="Gradient_gye3f"]
-offsets = PackedFloat32Array(0.21212122, 0.54882157, 0.8148148)
-colors = PackedColorArray(1, 1, 1, 1, 0.79709226, 0.79709226, 0.79709226, 0, 1, 1, 1, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_xhb7d"]
-frequency = 0.0138
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f1oe1"]
-width = 256
-height = 256
-noise = SubResource("FastNoiseLite_xhb7d")
-color_ramp = SubResource("Gradient_gye3f")
-seamless = true
-seamless_blend_skirt = 1.0
+[sub_resource type="Animation" id="Animation_xhb7d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise1:uv_shift")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_gye3f"]
 resource_name = "potion_anim1"
@@ -65,21 +85,6 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(-9.43, -11.665)]
 }
 
-[sub_resource type="Animation" id="Animation_xhb7d"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Noise1:uv_shift")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xhb7d"]
 _data = {
 &"RESET": SubResource("Animation_xhb7d"),
@@ -98,24 +103,24 @@ price = 10
 [node name="Visual" type="Node2D" parent="."]
 position = Vector2(-14.211263, -30.813215)
 
-[node name="Noise1" type="Polygon2D" parent="Visual"]
-texture_repeat = 2
-scale = Vector2(0.19369009, 0.19369009)
-color = Color(0.57252985, 0.5979594, 0.4815213, 1)
-texture = SubResource("NoiseTexture2D_xhb7d")
-polygon = PackedVector2Array(16.684574, -111.4644, 24.414558, -62.507813, 37.29787, -54.777817, 63.06449, -54.777817, 91.407776, -44.471176, 104.291084, -26.43454, 106.867744, 12.215393, 104.291084, 58.595306, 99.13776, 112.705215, 99.13776, 151.35515, 91.407776, 174.5451, -19.388695, 177.12177, -65.768616, 171.96844, -86.38191, 156.50847, -99.26521, 141.0485, -104.41855, 89.51525, -104.41855, 22.522034, -104.41855, -29.0112, -91.53523, -41.894516, -68.345276, -49.624496, -47.73198, -49.624496, -37.42533, -65.08447, -40.00199, -103.73439)
-uv = PackedVector2Array(124.323944, -83.99831, 132.9656, -29.267422, 147.36844, -20.625717, 176.17413, -20.625717, 207.8602, -9.103451, 222.26343, 11.060532, 225.14392, 54.269142, 222.26343, 106.11957, 216.50229, 166.61156, 216.50229, 209.82005, 207.8602, 235.74504, 83.99605, 238.62538, 32.145714, 232.86443, 9.101185, 215.58122, -5.3016663, 198.2978, -11.062832, 140.68642, -11.062832, 65.79143, -11.062832, 8.179981, 3.3400288, -6.222887, 29.265175, -14.864601, 52.309715, -14.864601, 63.831997, -32.147976, 60.951412, -75.35654)
-script = ExtResource("2_gye3f")
-
 [node name="Noise2" type="Polygon2D" parent="Visual"]
 texture_repeat = 2
 scale = Vector2(0.19369009, 0.19369009)
-color = Color(0.57252985, 0.5979594, 0.4815213, 1)
+color = Color(0.15196803, 0.56450063, 0.7245084, 1)
 texture = SubResource("NoiseTexture2D_f1oe1")
 polygon = PackedVector2Array(16.684574, -111.4644, 24.414558, -62.507813, 37.29787, -54.777817, 63.06449, -54.777817, 91.407776, -44.471176, 104.291084, -26.43454, 106.867744, 12.215393, 104.291084, 58.595306, 99.13776, 112.705215, 99.13776, 151.35515, 91.407776, 174.5451, -19.388695, 177.12177, -65.768616, 171.96844, -86.38191, 156.50847, -99.26521, 141.0485, -104.41855, 89.51525, -104.41855, 22.522034, -104.41855, -29.0112, -91.53523, -41.894516, -68.345276, -49.624496, -47.73198, -49.624496, -37.42533, -65.08447, -40.00199, -103.73439)
-uv = PackedVector2Array(122.77446, -85.91618, 131.41429, -31.184689, 145.8152, -22.542782, 174.6209, -22.542782, 206.30717, -11.020356, 220.71013, 9.143847, 223.59059, 52.351894, 220.71013, 104.201416, 214.94887, 164.69672, 214.94887, 207.90521, 206.30717, 233.83035, 82.44629, 236.7109, 30.596355, 230.9498, 7.5517726, 213.66638, -6.8510237, 196.38297, -12.612213, 138.77158, -12.612213, 63.874058, -12.612213, 6.2633023, 1.7906122, -8.139682, 27.715797, -16.781624, 50.760242, -16.781624, 62.28255, -34.065197, 59.40198, -77.27443)
+uv = PackedVector2Array(822.73193, -39.53483, 826.86255, -13.359268, 833.74805, -9.227158, 847.52295, -9.227158, 862.6809, -3.7150135, 869.5708, 5.931, 870.9487, 26.599382, 869.5708, 51.400352, 866.81494, 80.34061, 866.81494, 101.00775, 862.6809, 113.410034, 803.4487, 114.7883, 778.65405, 112.03175, 767.63086, 103.76375, 760.7405, 95.49533, 757.98413, 67.93807, 757.98413, 32.10941, 757.98413, 4.5530734, 764.87476, -2.336893, 777.27637, -6.4718704, 788.29663, -6.4718704, 793.8064, -14.736561, 792.42896, -35.40085)
 script = ExtResource("2_gye3f")
-uv_shift = Vector2(-1.5494151, -1.9166412)
+shift_velocity = Vector2(15, -4)
+
+[node name="Noise1" type="Polygon2D" parent="Visual"]
+texture_repeat = 2
+scale = Vector2(0.19369009, 0.19369009)
+texture = SubResource("NoiseTexture2D_xhb7d")
+polygon = PackedVector2Array(16.684574, -111.4644, 24.414558, -62.507813, 37.29787, -54.777817, 63.06449, -54.777817, 91.407776, -44.471176, 104.291084, -26.43454, 106.867744, 12.215393, 104.291084, 58.595306, 99.13776, 112.705215, 99.13776, 151.35515, 91.407776, 174.5451, -19.388695, 177.12177, -65.768616, 171.96844, -86.38191, 156.50847, -99.26521, 141.0485, -104.41855, 89.51525, -104.41855, 22.522034, -104.41855, -29.0112, -91.53523, -41.894516, -68.345276, -49.624496, -47.73198, -49.624496, -37.42533, -65.08447, -40.00199, -103.73439)
+uv = PackedVector2Array(124.32826, -84.01192, 132.96852, -29.27494, 147.36653, -20.631641, 176.16815, -20.631641, 207.857, -9.106411, 222.26309, 11.060506, 225.14435, 54.26773, 222.26309, 106.122086, 216.50107, 166.6146, 216.50107, 209.82312, 207.857, 235.74786, 84.00151, 238.6282, 32.144924, 232.86716, 9.101181, 215.58429, -5.3028107, 198.30087, -11.065273, 140.6893, -11.065273, 65.78948, -11.065273, 8.179949, 3.3400574, -6.2248154, 29.264729, -14.869373, 52.308777, -14.869373, 63.832077, -32.155937, 60.95117, -75.36922)
+script = ExtResource("2_gye3f")
+shift_velocity = Vector2(-9, -9)
 
 [node name="Visual" type="Sprite2D" parent="Visual"]
 position = Vector2(9.536743e-07, 0)
@@ -136,7 +141,6 @@ region_rect = Rect2(1463, 1101, 200, 300)
 libraries = {
 &"": SubResource("AnimationLibrary_xhb7d")
 }
-autoplay = "potion_anim1"
 
 [node name="SelfAnchor" type="Node2D" parent="."]
 position = Vector2(-31, 2)
