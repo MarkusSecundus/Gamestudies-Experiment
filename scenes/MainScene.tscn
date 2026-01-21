@@ -348,6 +348,21 @@ base_font = ExtResource("28_qavw1")
 default_font = SubResource("FontVariation_vyesr")
 default_font_size = 17
 
+[sub_resource type="Animation" id="Animation_djqke"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise1:noise_lacunarity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.385]
+}
+
 [sub_resource type="Animation" id="Animation_vyesr"]
 resource_name = "potion5"
 length = 6.0
@@ -363,21 +378,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [2.5, 4.5]
-}
-
-[sub_resource type="Animation" id="Animation_djqke"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Noise1:noise_lacunarity")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [5.385]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_djqke"]
@@ -2610,6 +2610,86 @@ duration = 2.0
 ease = 1
 transition = 1
 
+[node name="GentleWerewolf" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "My loved one saw my true self, under the full moon."
+
+[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control."
+append = true
+
+[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("92_grpki")
+delay_seconds = 1.0
+
+[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "
+
+She told me she still loves me, despite what I am. Help me come back to her, please."
+append = true
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+script = ExtResource("46_cw1g3")
+text = "Take this flower as my thanks.
+It was grown under the moon’s light."
+do_fade_out_after = true
+
+[node name="GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("parent")]
+script = ExtResource("100_0ow57")
+prototype = ExtResource("84_0ow57")
+parent = NodePath("Destination")
+attribute_overrides = Dictionary[StringName, Variant]({
+&"name": &"WerewolfFlower",
+&"scale": Vector2(0.35, 0.35)
+})
+
+[node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower"]
+visible = false
+position = Vector2(1231, 818)
+
+[node name="ShowFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("56_wu3oq")
+target = NodePath("../GiveFlower/Destination")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
 [node name="Gambler" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
@@ -2646,47 +2726,6 @@ amount = 6
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 0)
-duration = 2.0
-ease = 1
-transition = 1
-
-[node name="Warlock" type="Node" parent="DialogSystem_Main/Fn_Main"]
-script = ExtResource("47_q5chl")
-
-[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/CustomerQuestionMark")
-property = &"modulate"
-end_value = Color(1, 1, 1, 1)
-duration = 2.0
-ease = 0
-transition = 1
-
-[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "Hi, so, you won’t believe it, but this time I lost both of my eyes playing cards with the devil.
-But I got out alive!
-I don’t care about the price. Give me eyes that will bring me luck. I will win the next time around, I know it!"
-
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
-script = ExtResource("54_ell2e")
-callee = NodePath("../../../Fn_HandleEyeSubmittion")
-
-[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "Ahahah, good!"
-
-[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
-script = ExtResource("91_2qf71")
-amount = 66
-
-[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
 end_value = Color(1, 1, 1, 0)
 duration = 2.0
@@ -2730,6 +2769,48 @@ amount = 3
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
+property = &"modulate"
+end_value = Color(1, 1, 1, 0)
+duration = 2.0
+ease = 1
+transition = 1
+
+[node name="Warlock" type="Node" parent="DialogSystem_Main/Fn_Main"]
+script = ExtResource("47_q5chl")
+
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
+property = &"modulate"
+end_value = Color(1, 1, 1, 1)
+duration = 2.0
+ease = 0
+transition = 1
+
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Hi, so, you won’t believe it, but this time I lost both of my eyes playing cards with the devil.
+But I got out alive!
+I don’t care about the price. Give me eyes that will bring me luck. I will win the next time around, I know it!"
+
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("callee")]
+script = ExtResource("54_ell2e")
+callee = NodePath("../../../Fn_HandleEyeSubmittion")
+
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("46_cw1g3")
+wait_for_user_input = false
+text = "Ahahah, good!"
+do_fade_out_after = true
+
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
+script = ExtResource("91_2qf71")
+amount = 66
+
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock" node_paths=PackedStringArray("target")]
+script = ExtResource("55_pou4m")
+target = NodePath("../../../../Customers/CustomerQuestionMark")
 property = &"modulate"
 end_value = Color(1, 1, 1, 0)
 duration = 2.0
@@ -2922,47 +3003,6 @@ duration = 2.0
 ease = 1
 transition = 1
 
-[node name="Scared" type="Node" parent="DialogSystem_Main/Fn_Main"]
-script = ExtResource("47_q5chl")
-
-[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 1)
-duration = 6.0
-ease = 0
-transition = 1
-
-[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "M-Madam, this place is really scary.
-Please, get me some eyes quickly. I need to get out of here!"
-
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("callee")]
-script = ExtResource("54_ell2e")
-callee = NodePath("../../../Fn_HandleEyeSubmittion")
-
-[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
-script = ExtResource("46_cw1g3")
-text = "Thank you.
-I hope this much money is enough?"
-do_fade_out_after = true
-
-[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
-script = ExtResource("91_2qf71")
-amount = 20
-
-[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
-script = ExtResource("55_pou4m")
-target = NodePath("../../../../Customers/Customer1")
-property = &"modulate"
-end_value = Color(1, 1, 1, 0)
-duration = 0.7
-ease = 1
-transition = 1
-
 [node name="Archmage" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
@@ -3005,83 +3045,44 @@ duration = 0.7
 ease = 1
 transition = 1
 
-[node name="GentleWerewolf" type="Node" parent="DialogSystem_Main/Fn_Main"]
+[node name="Scared" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
 
-[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+[node name="ShowFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
 end_value = Color(1, 1, 1, 1)
-duration = 2.0
+duration = 6.0
 ease = 0
 transition = 1
 
-[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+[node name="Text" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
 script = ExtResource("46_cw1g3")
 wait_for_user_input = false
-text = "My loved one saw my true self, under the full moon."
+text = "M-Madam, this place is really scary.
+Please, get me some eyes quickly. I need to get out of here!"
 
-[node name="Wait" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
-script = ExtResource("92_grpki")
-delay_seconds = 1.0
-
-[node name="Text2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "
-I . . . pierced my eyes. To give her a chance to escape. Before I'd lose control."
-append = true
-
-[node name="Wait2" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
-script = ExtResource("92_grpki")
-delay_seconds = 1.0
-
-[node name="Text3" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
-script = ExtResource("46_cw1g3")
-wait_for_user_input = false
-text = "
-
-She told me she still loves me, despite what I am. Help me come back to her, please."
-append = true
-
-[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("callee")]
+[node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")
 callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
-[node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
+[node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
 script = ExtResource("46_cw1g3")
-text = "Take this flower as my thanks.
-It was grown under the moon’s light."
+text = "Thank you.
+I hope this much money is enough?"
 do_fade_out_after = true
 
-[node name="GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("parent")]
-script = ExtResource("100_0ow57")
-prototype = ExtResource("84_0ow57")
-parent = NodePath("Destination")
-attribute_overrides = Dictionary[StringName, Variant]({
-&"name": &"WerewolfFlower",
-&"scale": Vector2(0.35, 0.35)
-})
+[node name="AddMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Scared"]
+script = ExtResource("91_2qf71")
+amount = 20
 
-[node name="Destination" type="Node2D" parent="DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower"]
-visible = false
-position = Vector2(1231, 818)
-
-[node name="ShowFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
-script = ExtResource("56_wu3oq")
-target = NodePath("../GiveFlower/Destination")
-end_alpha = 1.0
-duration_seconds = 1.0
-ease = 0
-transition = 1
-
-[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf" node_paths=PackedStringArray("target")]
+[node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/Scared" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
 target = NodePath("../../../../Customers/Customer1")
 property = &"modulate"
 end_value = Color(1, 1, 1, 0)
-duration = 2.0
+duration = 0.7
 ease = 1
 transition = 1
 
