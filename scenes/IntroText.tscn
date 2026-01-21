@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ckd6lb1ga41sf"]
+[gd_scene load_steps=32 format=3 uid="uid://ckd6lb1ga41sf"]
 
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="1_fin6i"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="2_4en75"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dfb3nyvrfv6a7" path="res://scenes/MainScene.tscn" id="17_kh5rm"]
 [ext_resource type="Texture2D" uid="uid://cqarsacvqxb5v" path="res://art/intro/intro_1b.png" id="20_mff2p"]
 [ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="21_plw00"]
+[ext_resource type="Script" uid="uid://bsehpor25dn6p" path="res://scripts/dialog_system/DialogWait.gd" id="23_0cx1n"]
 
 [sub_resource type="Gradient" id="Gradient_f0hic"]
 offsets = PackedFloat32Array(0)
@@ -32,7 +33,7 @@ gradient = SubResource("Gradient_f0hic")
 
 [sub_resource type="FontVariation" id="FontVariation_kd8v4"]
 base_font = ExtResource("7_4vcsn")
-spacing_bottom = 14
+spacing_bottom = 24
 
 [sub_resource type="Theme" id="Theme_plw00"]
 default_font = SubResource("FontVariation_kd8v4")
@@ -174,17 +175,29 @@ offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
-When you see a shop with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
+text = "
 
-That is how customers usually find your shop.
-More than few unfortunate souls got their throat cut on the way.
+
+
+
+
+
+
+
+
+For many, reward is well worth the risk.
+Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
+
+Nobody in their right mind would dare ask where your goods come from, however they don't seem to ever run out.
+Your pride is in being able to find the one that is just right, for every single customer.
+The price is whatever one can afford to give - you don't seek material wealth and live a very plain life without many expenses.
+
 
 "
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_kd8v4")
-source = NodePath("../../DialogSystem_Intro/Fn_Text/Part1/Text")
+source = NodePath("../../DialogSystem_Intro/Fn_Text/Part2/Text5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
 root_node = NodePath("../PrintFinishedMarker")
@@ -205,8 +218,8 @@ region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 
 [node name="Img1" type="Sprite2D" parent="Illustrations"]
 visible = false
-position = Vector2(1363, 551)
-scale = Vector2(0.2449074, 0.24490738)
+position = Vector2(1055, 355)
+scale = Vector2(0.2520833, 0.25208327)
 texture = ExtResource("20_mff2p")
 
 [node name="Label" type="Label" parent="Illustrations/Img1"]
@@ -228,7 +241,7 @@ uppercase = true
 
 [node name="Img2" type="Sprite2D" parent="Illustrations"]
 visible = false
-position = Vector2(616, 436.00003)
+position = Vector2(977.00006, 328)
 scale = Vector2(0.2449074, 0.24490738)
 texture = ExtResource("12_kj7qj")
 
@@ -278,11 +291,6 @@ script = ExtResource("3_gutn5")
 [node name="Part1" type="Node" parent="DialogSystem_Intro/Fn_Text"]
 script = ExtResource("21_plw00")
 
-[node name="Text" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
-script = ExtResource("16_5g2oq")
-text = "Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
-"
-
 [node name="ShowImg1" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1tgrv")
 target = NodePath("../../../../Illustrations/Img1")
@@ -291,6 +299,22 @@ duration_seconds = 2.0
 ease = 0
 transition = 1
 wait_for_finish = false
+
+[node name="Text" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
+script = ExtResource("16_5g2oq")
+text = "
+
+
+
+
+
+
+
+
+
+
+Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
+"
 
 [node name="Text2" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
 script = ExtResource("16_5g2oq")
@@ -324,11 +348,6 @@ wait_for_finish = false
 [node name="Part2" type="Node" parent="DialogSystem_Intro/Fn_Text"]
 script = ExtResource("21_plw00")
 
-[node name="Text5" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
-script = ExtResource("16_5g2oq")
-text = "For many, reward is well worth the risk.
-"
-
 [node name="ShowImg2" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2" node_paths=PackedStringArray("target")]
 script = ExtResource("4_1tgrv")
 target = NodePath("../../../../Illustrations/Img2")
@@ -338,7 +357,7 @@ ease = 0
 transition = 1
 wait_for_finish = false
 
-[node name="Text6" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
+[node name="Text5" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
 text = "
 
@@ -350,11 +369,12 @@ text = "
 
 
 
+For many, reward is well worth the risk.
+"
 
-
-
-
-Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
+[node name="Text6" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
+script = ExtResource("16_5g2oq")
+text = "Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
 
 "
 append = true
@@ -391,6 +411,14 @@ wait_for_finish = false
 [node name="Part3" type="Node" parent="DialogSystem_Intro/Fn_Text"]
 script = ExtResource("21_plw00")
 
+[node name="ClearText" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
+script = ExtResource("16_5g2oq")
+wait_for_user_input = false
+
+[node name="Wait" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
+script = ExtResource("23_0cx1n")
+delay_seconds = 4.0
+
 [node name="Text10" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
 script = ExtResource("16_5g2oq")
 text = "
@@ -408,8 +436,6 @@ append = true
 [node name="Text12" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
 script = ExtResource("16_5g2oq")
 text = "
-
-
 
 
 

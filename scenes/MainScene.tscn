@@ -1923,7 +1923,7 @@ axis_stretch_vertical = 1
 
 [node name="Economy" type="Node" parent="."]
 script = ExtResource("87_1acod")
-current_balance = 6000
+current_balance = 10
 _balance_change_stay_seconds = 5.0
 _purchasable_unavailable_alpha = 0.4
 
