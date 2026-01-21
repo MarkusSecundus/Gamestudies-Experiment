@@ -1923,7 +1923,7 @@ axis_stretch_vertical = 1
 
 [node name="Economy" type="Node" parent="."]
 script = ExtResource("87_1acod")
-current_balance = 60
+current_balance = 6000
 _balance_change_stay_seconds = 5.0
 _purchasable_unavailable_alpha = 0.4
 
@@ -2057,16 +2057,14 @@ price = 100
 scale = Vector2(1.2024741, 1.2024741)
 
 [node name="Noise2" parent="Economy/Shop/Goods/Potion2/Visual" index="0"]
-color = Color(0.7775154, 0.39771152, 0.20766419, 1)
+color = Color(0.24550098, 0.24550083, 0.24550089, 1)
 texture = SubResource("NoiseTexture2D_iqyvd")
 shift_velocity = Vector2(-8, -2)
-noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion2/Visual" index="1"]
 color = Color(0.80079913, 0.7437809, 0.7400256, 1)
 texture = SubResource("NoiseTexture2D_ac4xp")
 shift_velocity = Vector2(7, -5)
-noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion2/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -2099,18 +2097,16 @@ price = 30
 scale = Vector2(1.0085388, 1.3282938)
 
 [node name="Noise2" parent="Economy/Shop/Goods/Potion3/Visual" index="0"]
-color = Color(0.95157677, 0, 0.33591884, 1)
+color = Color(0.34856555, 0.34856576, 0.3485665, 1)
 texture = SubResource("NoiseTexture2D_gdx6n")
 uv = PackedVector2Array(131.72388, 72.1227, 133.41304, 82.82704, 136.22884, 84.51684, 141.86198, 84.51684, 148.06071, 86.77099, 150.87828, 90.71565, 151.44177, 99.16784, 150.87828, 109.31001, 149.75128, 121.14421, 149.75128, 129.58855, 148.06071, 134.66245, 123.83596, 135.22635, 113.693924, 134.09854, 109.188095, 130.71571, 106.37096, 127.33601, 105.24405, 116.073, 105.24405, 101.42113, 105.24405, 90.15216, 108.061264, 87.334564, 113.130806, 85.64359, 117.63574, 85.64359, 119.89011, 82.26381, 119.32643, 73.81326)
 shift_velocity = Vector2(4, 30)
-noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion3/Visual" index="1"]
-color = Color(0.6363577, 0.35801932, 0, 1)
+color = Color(0.84146875, 0.84146875, 0.8414687, 1)
 texture = SubResource("NoiseTexture2D_11a8o")
 uv = PackedVector2Array(116.98615, -13.821037, 119.73195, 15.502541, 127.51693, 20.17657, 143.08372, 20.17657, 160.21562, 26.409172, 168.00587, 37.313934, 169.56396, 60.67895, 168.00587, 88.724846, 164.89, 121.43619, 164.89, 144.79083, 160.21562, 158.80768, 93.25319, 160.36526, 65.2061, 157.2499, 52.74389, 147.90512, 44.954983, 138.56235, 41.839275, 107.416824, 41.839275, 66.910255, 41.839275, 35.75635, 49.628513, 27.967411, 63.648476, 23.29274, 76.11243, 23.29274, 82.3458, 13.944637, 78.31044, -17.40371)
 shift_velocity = Vector2(-7, 15)
-noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion3/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -2147,16 +2143,14 @@ position = Vector2(-14.211263, -35.999985)
 scale = Vector2(1.6018968, 1.6018968)
 
 [node name="Noise2" parent="Economy/Shop/Goods/Potion4/Visual" index="0"]
-color = Color(0.71971804, 0.8199623, 0.98711485, 1)
+color = Color(0.99, 0.99, 0.99, 1)
 texture = SubResource("NoiseTexture2D_qpicb")
 shift_velocity = Vector2(-8, 0)
-noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion4/Visual" index="1"]
-color = Color(0.06323071, 0.54883826, 0.631098, 1)
+color = Color(0.6313726, 0.6313726, 0.6313726, 1)
 texture = SubResource("NoiseTexture2D_ac4xp")
 shift_velocity = Vector2(7, 1)
-noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion4/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -2906,6 +2900,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_djqke")
 }
 autoplay = "potion5"
+
+[node name="SelfAnchor" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion" index="1"]
+position = Vector2(-31, 10)
+
+[node name="Right" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/SelfAnchor" index="0"]
+position = Vector2(39, 0)
 
 [node name="Holder" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion" index="2"]
 offset_left = -39.0
