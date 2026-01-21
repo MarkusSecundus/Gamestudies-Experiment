@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=144 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -38,7 +38,6 @@
 [ext_resource type="Texture2D" uid="uid://cmojha3lwrixo" path="res://art/irises/iris-outline.png" id="20_ks3v5"]
 [ext_resource type="Texture2D" uid="uid://yvkpahw0lfte" path="res://art/shop/decor/decor_glasses.png" id="21_j2mks"]
 [ext_resource type="Texture2D" uid="uid://uw4vjgv02q4o" path="res://art/shop/decor/decor_mask.png" id="22_5ha8j"]
-[ext_resource type="Texture2D" uid="uid://b3te5ivhwyetq" path="res://art/shop/decor/decor_potion.png" id="23_xuwja"]
 [ext_resource type="Texture2D" uid="uid://bas0lw8wpebyy" path="res://art/eyebrows/eyebrows_1-outline.png" id="27_r2n46"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="28_i7ifx"]
 [ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="28_qavw1"]
@@ -51,7 +50,6 @@
 [ext_resource type="Texture2D" uid="uid://ovmqgumvdji5" path="res://art/pupils/pupil_normal-outline.png" id="33_7l3w6"]
 [ext_resource type="Texture2D" uid="uid://dpeqb2ugiauhd" path="res://art/eyebrows/eyebrow4-outline.png" id="33_h2fw1"]
 [ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="33_oiest"]
-[ext_resource type="Texture2D" uid="uid://4cqwf1u0kbpi" path="res://art/shop/decor/decor_potion-outline.png" id="33_pou4m"]
 [ext_resource type="Texture2D" uid="uid://bj0llke1bgq4e" path="res://art/shop/decor/decor_mask-outline.png" id="35_48gc8"]
 [ext_resource type="Texture2D" uid="uid://cskbcld7rrhkn" path="res://art/eyebrows/eyebrow5-outline.png" id="35_ai8dq"]
 [ext_resource type="Texture2D" uid="uid://dtghk611hy6jb" path="res://art/pupils/pupil2-outline.png" id="35_projt"]
@@ -85,6 +83,7 @@
 [ext_resource type="Script" uid="uid://c1uuotoe1wldw" path="res://scripts/util/CounterCondition.gd" id="64_e8t1i"]
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="74_te826"]
 [ext_resource type="PackedScene" uid="uid://i016na5khgay" path="res://prefabs/decor/potion.tscn" id="76_djqke"]
+[ext_resource type="Texture2D" uid="uid://dw2xlij7t0y0i" path="res://art/shop/decor/potion_whatever.png" id="77_vyesr"]
 [ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="83_e8t1i"]
 [ext_resource type="Script" uid="uid://bymsueargorsq" path="res://scripts/sound/PlaySound.gd" id="83_iawhq"]
 [ext_resource type="Texture2D" uid="uid://dfmbpva5lngvx" path="res://art/ui/small_background.png" id="83_vwitv"]
@@ -166,6 +165,124 @@ default_font_size = 22
 [sub_resource type="Theme" id="Theme_aime7"]
 default_font = ExtResource("28_qavw1")
 default_font_size = 96
+
+[sub_resource type="Gradient" id="Gradient_vyesr"]
+offsets = PackedFloat32Array(0.17570093, 0.54882157, 0.8148148)
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 0.50980395, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_djqke"]
+noise_type = 0
+seed = 2
+frequency = 0.0138
+fractal_octaves = 2
+fractal_lacunarity = 1.6
+fractal_gain = 0.15
+fractal_weighted_strength = 1.0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 32.45
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_iqyvd"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_djqke")
+color_ramp = SubResource("Gradient_vyesr")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Gradient" id="Gradient_gdx6n"]
+offsets = PackedFloat32Array(0.14766355, 0.54882157, 0.87476635)
+colors = PackedColorArray(1, 1, 1, 1, 0.61420256, 0.614203, 0.61420256, 0.3137255, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_qpicb"]
+seed = 6
+fractal_octaves = 1
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ac4xp"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_qpicb")
+color_ramp = SubResource("Gradient_gdx6n")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Theme" id="Theme_vyesr"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 11
+
+[sub_resource type="Gradient" id="Gradient_djqke"]
+offsets = PackedFloat32Array(0.17570093, 0.54882157, 0.8148148)
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 0, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iqyvd"]
+noise_type = 0
+seed = 4
+frequency = 0.0138
+fractal_octaves = 2
+fractal_lacunarity = 1.6
+fractal_gain = 0.15
+fractal_weighted_strength = 1.0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 32.45
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gdx6n"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_iqyvd")
+color_ramp = SubResource("Gradient_djqke")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Gradient" id="Gradient_qpicb"]
+offsets = PackedFloat32Array(0.14766355, 0.54882157, 0.87476635)
+colors = PackedColorArray(1, 1, 1, 1, 0.61, 0.61, 0.61, 0.5411765, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ac4xp"]
+seed = 2
+fractal_octaves = 1
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_11a8o"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_ac4xp")
+color_ramp = SubResource("Gradient_qpicb")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Theme" id="Theme_gk0f8"]
+default_font = ExtResource("28_qavw1")
+default_font_size = 13
+
+[sub_resource type="Gradient" id="Gradient_iqyvd"]
+offsets = PackedFloat32Array(0.17570093, 0.54882157, 0.8148148)
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 0.4117647, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gdx6n"]
+noise_type = 0
+seed = 5
+frequency = 0.0138
+fractal_octaves = 2
+fractal_lacunarity = 1.6
+fractal_gain = 0.15
+fractal_weighted_strength = 1.0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 32.45
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qpicb"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_gdx6n")
+color_ramp = SubResource("Gradient_iqyvd")
+seamless = true
+seamless_blend_skirt = 1.0
 
 [sub_resource type="Theme" id="Theme_1acod"]
 default_font = ExtResource("28_qavw1")
@@ -1838,170 +1955,138 @@ scale = Vector2(0.99999976, 0.99999976)
 [node name="Potion" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
 position = Vector2(-441.03857, 26.048218)
 
-[node name="Potion2" type="Node2D" parent="Economy/Shop/Goods"]
-position = Vector2(713.09924, 26.048218)
-scale = Vector2(2.0037112, 2.0037112)
-script = ExtResource("92_2qf71")
-price = 10
+[node name="Potion2" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
+position = Vector2(701.0769, 26.048218)
 
-[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion2"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("23_xuwja")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
+[node name="Visual" parent="Economy/Shop/Goods/Potion2" index="0"]
+scale = Vector2(1.2024741, 1.2024741)
 
-[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/Visual"]
-visible = false
-position = Vector2(11.41626, 19.687134)
-scale = Vector2(1.6959186, 1.6959186)
-texture = ExtResource("33_pou4m")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
+[node name="Noise2" parent="Economy/Shop/Goods/Potion2/Visual" index="0"]
+color = Color(0.7775154, 0.39771152, 0.20766419, 1)
+texture = SubResource("NoiseTexture2D_iqyvd")
+shift_velocity = Vector2(-8, -2)
 
-[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
-position = Vector2(-31, 2)
+[node name="Noise1" parent="Economy/Shop/Goods/Potion2/Visual" index="1"]
+color = Color(0.80079913, 0.7437809, 0.7400256, 1)
+texture = SubResource("NoiseTexture2D_ac4xp")
+shift_velocity = Vector2(7, -5)
 
-[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion2/SelfAnchor"]
-position = Vector2(33, 0)
+[node name="Visual" parent="Economy/Shop/Goods/Potion2/Visual" index="3"]
+texture = ExtResource("77_vyesr")
 
-[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion2"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -38.0
-offset_top = -66.99998
-offset_right = 9.0
-offset_bottom = 10.0000305
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion2/Visual" index="4"]
+offset_left = -8.972079
+offset_top = 4.834393
+offset_right = 17.639736
+offset_bottom = 27.834393
+theme = SubResource("Theme_vyesr")
+text = "Uuo"
 
-[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion2"]
-position = Vector2(-41.000004, 44)
-scale = Vector2(2.0037098, 2.0037098)
+[node name="SelfAnchor" parent="Economy/Shop/Goods/Potion2" index="1"]
+position = Vector2(-33, 10.000024)
 
-[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion2/PriceTag"]
-position = Vector2(-0.18948746, -0.4990692)
-scale = Vector2(0.15299995, 0.15299995)
-texture = ExtResource("86_2a4qe")
-region_enabled = true
-region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+[node name="Right" parent="Economy/Shop/Goods/Potion2/SelfAnchor" index="0"]
+position = Vector2(39, 0)
 
-[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion2/PriceTag"]
-offset_left = 15.281818
-offset_top = -17.966673
-offset_right = 190.2819
-offset_bottom = 18.699991
-theme = SubResource("Theme_1acod")
-text = "50"
-vertical_alignment = 1
+[node name="Holder" parent="Economy/Shop/Goods/Potion2" index="2"]
+offset_left = -44.0
+offset_top = -74.99998
+offset_right = 17.0
+offset_bottom = 15.0000305
 
-[node name="Potion3" type="Node2D" parent="Economy/Shop/Goods"]
-position = Vector2(1009.64856, 26.048218)
-scale = Vector2(2.0037112, 2.0037112)
-script = ExtResource("92_2qf71")
-price = 10
+[node name="Potion3" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
+position = Vector2(1019.667, 26.048218)
 
-[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion3"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("23_xuwja")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
+[node name="Visual" parent="Economy/Shop/Goods/Potion3" index="0"]
+scale = Vector2(1.0085388, 1.3282938)
 
-[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/Visual"]
-visible = false
-position = Vector2(11.41626, 19.687134)
-scale = Vector2(1.6959186, 1.6959186)
-texture = ExtResource("33_pou4m")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
+[node name="Noise2" parent="Economy/Shop/Goods/Potion3/Visual" index="0"]
+color = Color(0.95157677, 0, 0.33591884, 1)
+texture = SubResource("NoiseTexture2D_gdx6n")
+uv = PackedVector2Array(131.72388, 72.1227, 133.41304, 82.82704, 136.22884, 84.51684, 141.86198, 84.51684, 148.06071, 86.77099, 150.87828, 90.71565, 151.44177, 99.16784, 150.87828, 109.31001, 149.75128, 121.14421, 149.75128, 129.58855, 148.06071, 134.66245, 123.83596, 135.22635, 113.693924, 134.09854, 109.188095, 130.71571, 106.37096, 127.33601, 105.24405, 116.073, 105.24405, 101.42113, 105.24405, 90.15216, 108.061264, 87.334564, 113.130806, 85.64359, 117.63574, 85.64359, 119.89011, 82.26381, 119.32643, 73.81326)
+shift_velocity = Vector2(4, 30)
 
-[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
-position = Vector2(-31, 2)
+[node name="Noise1" parent="Economy/Shop/Goods/Potion3/Visual" index="1"]
+color = Color(0.6363577, 0.35801932, 0, 1)
+texture = SubResource("NoiseTexture2D_11a8o")
+uv = PackedVector2Array(116.98615, -13.821037, 119.73195, 15.502541, 127.51693, 20.17657, 143.08372, 20.17657, 160.21562, 26.409172, 168.00587, 37.313934, 169.56396, 60.67895, 168.00587, 88.724846, 164.89, 121.43619, 164.89, 144.79083, 160.21562, 158.80768, 93.25319, 160.36526, 65.2061, 157.2499, 52.74389, 147.90512, 44.954983, 138.56235, 41.839275, 107.416824, 41.839275, 66.910255, 41.839275, 35.75635, 49.628513, 27.967411, 63.648476, 23.29274, 76.11243, 23.29274, 82.3458, 13.944637, 78.31044, -17.40371)
+shift_velocity = Vector2(-7, 15)
 
-[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion3/SelfAnchor"]
-position = Vector2(33, 0)
+[node name="Visual" parent="Economy/Shop/Goods/Potion3/Visual" index="3"]
+texture = ExtResource("77_vyesr")
 
-[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion3"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -38.0
-offset_top = -66.99998
-offset_right = 9.0
-offset_bottom = 10.0000305
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion3/Visual" index="4"]
+self_modulate = Color(0.8277689, 0.82776994, 0.82776845, 1)
+offset_left = -4.748213
+offset_top = 5.1293125
+offset_right = 21.863604
+offset_bottom = 28.129313
+scale = Vector2(1.2866099, 0.938661)
+theme = SubResource("Theme_gk0f8")
+text = "F"
 
-[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion3"]
-position = Vector2(-41.000004, 44)
-scale = Vector2(2.0037098, 2.0037098)
+[node name="Outline" parent="Economy/Shop/Goods/Potion3/Visual" index="5"]
+visible = true
 
-[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion3/PriceTag"]
-position = Vector2(-0.18948746, -0.4990692)
-scale = Vector2(0.15299995, 0.15299995)
-texture = ExtResource("86_2a4qe")
-region_enabled = true
-region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+[node name="SelfAnchor" parent="Economy/Shop/Goods/Potion3" index="1"]
+position = Vector2(-29, 15.000025)
 
-[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion3/PriceTag"]
-offset_left = 15.281818
-offset_top = -17.966673
-offset_right = 190.2819
-offset_bottom = 18.699991
-theme = SubResource("Theme_1acod")
-text = "50"
-vertical_alignment = 1
+[node name="Holder" parent="Economy/Shop/Goods/Potion3" index="2"]
+offset_left = -42.0
+offset_top = -79.99998
+offset_right = 14.0
+offset_bottom = 22.00003
 
-[node name="Potion4" type="Node2D" parent="Economy/Shop/Goods"]
-position = Vector2(1316.2163, 26.048218)
-scale = Vector2(2.0037112, 2.0037112)
-script = ExtResource("92_2qf71")
-price = 10
+[node name="Potion4" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
+position = Vector2(1316.2162, 26.048218)
+scale = Vector2(2.003711, 2.003711)
 
-[node name="Visual" type="Sprite2D" parent="Economy/Shop/Goods/Potion4"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("23_xuwja")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
+[node name="Visual" parent="Economy/Shop/Goods/Potion4" index="0"]
+position = Vector2(-14.211263, -35.999985)
+scale = Vector2(1.6018968, 1.6018968)
 
-[node name="Outline" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/Visual"]
-visible = false
-position = Vector2(11.41626, 19.687134)
-scale = Vector2(1.6959186, 1.6959186)
-texture = ExtResource("33_pou4m")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
+[node name="Noise2" parent="Economy/Shop/Goods/Potion4/Visual" index="0"]
+color = Color(0.71971804, 0.8199623, 0.98711485, 1)
+texture = SubResource("NoiseTexture2D_qpicb")
+shift_velocity = Vector2(-8, 0)
 
-[node name="SelfAnchor" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
-position = Vector2(-31, 2)
+[node name="Noise1" parent="Economy/Shop/Goods/Potion4/Visual" index="1"]
+color = Color(0.06323071, 0.54883826, 0.631098, 1)
+texture = SubResource("NoiseTexture2D_ac4xp")
+shift_velocity = Vector2(7, 1)
 
-[node name="Right" type="Node2D" parent="Economy/Shop/Goods/Potion4/SelfAnchor"]
-position = Vector2(33, 0)
+[node name="Visual" parent="Economy/Shop/Goods/Potion4/Visual" index="3"]
+texture = ExtResource("77_vyesr")
 
-[node name="Holder" type="Control" parent="Economy/Shop/Goods/Potion4"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -38.0
-offset_top = -66.99998
-offset_right = 9.0
-offset_bottom = 10.0000305
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion4/Visual" index="4"]
+offset_left = -9.23201
+offset_top = 4.9940777
+offset_right = 17.379807
+offset_bottom = 27.994078
+theme = SubResource("Theme_vyesr")
+text = "H 0"
 
-[node name="PriceTag" type="Node2D" parent="Economy/Shop/Goods/Potion4"]
-position = Vector2(-41.000004, 44)
-scale = Vector2(2.0037098, 2.0037098)
+[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion4/Visual/Label"]
+layout_mode = 0
+offset_left = 6.493
+offset_top = 4.994
+offset_right = 29.575
+offset_bottom = 27.994
+scale = Vector2(0.7394887, 0.7394887)
+theme = SubResource("Theme_vyesr")
+text = "2"
 
-[node name="CoinIcon" type="Sprite2D" parent="Economy/Shop/Goods/Potion4/PriceTag"]
-position = Vector2(-0.18948746, -0.4990692)
-scale = Vector2(0.15299995, 0.15299995)
-texture = ExtResource("86_2a4qe")
-region_enabled = true
-region_rect = Rect2(189.76913, 27.670135, 128.3088, 125.5329)
+[node name="SelfAnchor" parent="Economy/Shop/Goods/Potion4" index="1"]
+position = Vector2(-38, 17.000027)
 
-[node name="Label" type="Label" parent="Economy/Shop/Goods/Potion4/PriceTag"]
-offset_left = 15.281818
-offset_top = -17.966673
-offset_right = 190.2819
-offset_bottom = 18.699991
-theme = SubResource("Theme_1acod")
-text = "50"
-vertical_alignment = 1
+[node name="Right" parent="Economy/Shop/Goods/Potion4/SelfAnchor" index="0"]
+position = Vector2(52.000004, 0)
+
+[node name="Holder" parent="Economy/Shop/Goods/Potion4" index="2"]
+offset_left = -44.0
+offset_top = -74.99998
+offset_right = 17.0
+offset_bottom = 15.0000305
 
 [node name="Mask" type="Node2D" parent="Economy/Shop/Goods"]
 z_index = 1
@@ -4056,3 +4141,7 @@ destination = NodePath("..")
 [connection signal="before_node_is_performed" from="DialogSystem_Main" to="DialogSystem_Main/PlayRecorder" method="do_record"]
 [connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="increment"]
 [connection signal="the_signal" from="DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider" to="EyePiedestal/HolderHidingCondition" method="decrement"]
+
+[editable path="Economy/Shop/Goods/Potion2"]
+[editable path="Economy/Shop/Goods/Potion3"]
+[editable path="Economy/Shop/Goods/Potion4"]

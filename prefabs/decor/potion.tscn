@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i016na5khgay"]
+[gd_scene load_steps=14 format=3 uid="uid://i016na5khgay"]
 
 [ext_resource type="Script" uid="uid://cqexvwyj6cqpm" path="res://scripts/shopping/Purchasable.gd" id="1_b44at"]
 [ext_resource type="Texture2D" uid="uid://bi1g0jn1xly7x" path="res://art/shop/decor/potion_blank.png" id="2_b44at"]
@@ -47,56 +47,6 @@ noise = SubResource("FastNoiseLite_gye3f")
 color_ramp = SubResource("Gradient_b44at")
 seamless = true
 seamless_blend_skirt = 1.0
-
-[sub_resource type="Animation" id="Animation_xhb7d"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Noise1:uv_shift")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_gye3f"]
-resource_name = "potion_anim1"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Noise1:uv_shift")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335, 0.04, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(50, 30)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Noise2:uv_shift")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.63),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(-9.43, -11.665)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xhb7d"]
-_data = {
-&"RESET": SubResource("Animation_xhb7d"),
-&"potion_anim1": SubResource("Animation_gye3f")
-}
 
 [sub_resource type="Theme" id="Theme_1acod"]
 default_font = ExtResource("5_omy65")
@@ -148,11 +98,6 @@ scale = Vector2(0.3284827, 0.3284827)
 texture = ExtResource("3_xhb7d")
 region_enabled = true
 region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Visual"]
-libraries = {
-&"": SubResource("AnimationLibrary_xhb7d")
-}
 
 [node name="SelfAnchor" type="Node2D" parent="."]
 position = Vector2(-31, 2)
