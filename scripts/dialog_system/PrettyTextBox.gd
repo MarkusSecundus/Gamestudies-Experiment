@@ -41,17 +41,21 @@ func finish_printing_immediately()->void:
 			_tw.stop()
 			_tw = null
 			_lbl.visible_characters = _lbl.get_total_character_count()
-			do_fade_the_finish_marker(1.0)
+			if self._should_display_the_dot:
+				do_fade_the_finish_marker(1.0)
 			if _on_finished: _on_finished.call()
 			_on_finished = Callable()
 			on_printing_finished.emit()
 
 const UNICODE_ZERO_WIDTH_SPACE = "\u200B"
 
+var _should_display_the_dot : bool = true
+
 func print_text(text:String, on_finished : Callable = Callable(), should_display_the_dot: bool = true, start_character_count: int = 0):
 	if is_printing_in_progress():
 		ErrorUtils.report_error("Printing new text while printing process is still running (old: '{0}', new: '{1}')".format([_lbl.text, text]))
 		finish_printing_immediately()
+	self._should_display_the_dot = should_display_the_dot
 	do_fade_the_finish_marker(0.0)
 	if start_character_count > 0:
 		while _lbl.visible_ratio >= 1.0:
@@ -76,7 +80,9 @@ func print_text(text:String, on_finished : Callable = Callable(), should_display
 			SoundManager.PlaySound(sounds_per_char.pick_random(), randf_range(sound_pitch_range.x, sound_pitch_range.y))
 	, start_character_count, total_chars, (total_chars-start_character_count) * seconds_per_char)
 	await _tw.finished
-	if should_display_the_dot: do_fade_the_finish_marker(1.0)
+	if should_display_the_dot: 
+		do_fade_the_finish_marker(1.0)
+		print("DISPLAYING the dot!")
 	else: do_fade_the_finish_marker(0.0)
 	_tw = null
 	if _on_finished: _on_finished.call()
@@ -114,6 +120,7 @@ func do_fade_out():
 @export var _dot_fade_duration : float = 0.2
 @onready var _finish_marker : CanvasItem = self.get_node_or_null("PrintFinishedMarker")
 func do_fade_the_finish_marker(alpha: float)->void:
+	print("DOT TWEEN {0}".format([alpha]))
 	if not _finish_marker: return
 	_finish_marker_tween.do_fade(_finish_marker, alpha, _dot_fade_duration)
 	
