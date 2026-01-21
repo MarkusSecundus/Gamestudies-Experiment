@@ -587,7 +587,7 @@ expand_mode = 1
 [node name="EyeHolders" type="Node2D" parent="."]
 
 [node name="Shapes1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(179, 98)
+position = Vector2(460, 268)
 _label_text = "Shapes"
 
 [node name="Eye1" type="Node2D" parent="EyeHolders/Shapes1"]
@@ -678,7 +678,7 @@ shape = SubResource("CircleShape2D_doyhq")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Shapes2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(436, 267)
+position = Vector2(179, 101)
 _label_text = "Shapes"
 
 [node name="Eye4" type="Node2D" parent="EyeHolders/Shapes2"]
@@ -983,7 +983,7 @@ shape = SubResource("CircleShape2D_doyhq")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(1774, 96)
+position = Vector2(1483, 264)
 _label_text = "Eyebrows"
 
 [node name="Eyebrow1" type="Node2D" parent="EyeHolders/Eyebrows1"]
@@ -1075,7 +1075,7 @@ shape = SubResource("CapsuleShape2D_ygraj")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Eyebrows2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(1482, 266)
+position = Vector2(1771, 96)
 _label_text = "Eyebrows"
 
 [node name="Eyebrow4" type="Node2D" parent="EyeHolders/Eyebrows2"]
@@ -1168,7 +1168,7 @@ shape = SubResource("CapsuleShape2D_ygraj")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils1" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(1774, 465)
+position = Vector2(1458, 642)
 _label_text = "Pupils"
 
 [node name="Pupil1" type="Node2D" parent="EyeHolders/Pupils1"]
@@ -1256,7 +1256,7 @@ shape = SubResource("CircleShape2D_tuspm")
 scale = Vector2(1.0000001, 1.0000001)
 
 [node name="Pupils2" parent="EyeHolders" instance=ExtResource("39_f4jp2")]
-position = Vector2(1477, 644)
+position = Vector2(1778, 465)
 _label_text = "Pupils"
 
 [node name="Pupil4" type="Node2D" parent="EyeHolders/Pupils2"]
@@ -2402,6 +2402,7 @@ transition = 4
 [node name="Jump" type="Node" parent="DialogSystem_Main/Fn_Main" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("../MadScientist")
+is_enabled = false
 
 [node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
