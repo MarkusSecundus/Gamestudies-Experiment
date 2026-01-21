@@ -13,6 +13,16 @@ extends Polygon2D
 		uv = new_uv
 		
 @export var shift_velocity : Vector2 = Vector2.ZERO
+
+var _noise_texture: NoiseTexture2D:
+	get: return self.texture as NoiseTexture2D
+var _noise : FastNoiseLite:
+	get: return (_noise_texture.noise as FastNoiseLite)
+
+@export var noise_lacunarity : float:
+	get: return _noise.fractal_lacunarity
+	set(val): _noise.fractal_lacunarity = val
+
 @export var _do_reset: bool:
 	get: return false
 	set(_val):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=3 uid="uid://dfb3nyvrfv6a7"]
+[gd_scene load_steps=155 format=3 uid="uid://dfb3nyvrfv6a7"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_4ikpr"]
 [ext_resource type="Script" uid="uid://xd1qo61t6aii" path="res://scripts/PlacementLocation.gd" id="1_kik7w"]
@@ -291,6 +291,100 @@ default_font_size = 16
 [sub_resource type="Theme" id="Theme_2qf71"]
 default_font = ExtResource("28_qavw1")
 default_font_size = 32
+
+[sub_resource type="Gradient" id="Gradient_ac4xp"]
+offsets = PackedFloat32Array(0.17570093, 0.54882157, 0.8148148)
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 0.58431375, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_11a8o"]
+seed = -5
+frequency = 0.008
+fractal_type = 2
+fractal_octaves = 2
+fractal_lacunarity = 3.035
+fractal_gain = 0.135
+fractal_weighted_strength = 1.0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 32.45
+domain_warp_frequency = 0.2
+domain_warp_fractal_octaves = 2
+domain_warp_fractal_lacunarity = -3.705
+domain_warp_fractal_gain = 0.175
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gk0f8"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_11a8o")
+color_ramp = SubResource("Gradient_ac4xp")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="Gradient" id="Gradient_11a8o"]
+offsets = PackedFloat32Array(0.14766355, 0.54882157, 0.8186916)
+colors = PackedColorArray(1, 1, 1, 1, 0.8, 0.8, 0.8, 0.22352941, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gk0f8"]
+seed = 9
+frequency = 0.0015
+fractal_octaves = 2
+fractal_lacunarity = 5.385
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 34.185
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5odq1"]
+width = 256
+height = 256
+noise = SubResource("FastNoiseLite_gk0f8")
+color_ramp = SubResource("Gradient_11a8o")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="FontVariation" id="FontVariation_vyesr"]
+base_font = ExtResource("28_qavw1")
+
+[sub_resource type="Theme" id="Theme_djqke"]
+default_font = SubResource("FontVariation_vyesr")
+default_font_size = 17
+
+[sub_resource type="Animation" id="Animation_vyesr"]
+resource_name = "potion5"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise1:noise_lacunarity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.5, 4.5]
+}
+
+[sub_resource type="Animation" id="Animation_djqke"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Noise1:noise_lacunarity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.385]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_djqke"]
+_data = {
+&"RESET": SubResource("Animation_djqke"),
+&"potion5": SubResource("Animation_vyesr")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -1957,6 +2051,7 @@ position = Vector2(-441.03857, 26.048218)
 
 [node name="Potion2" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
 position = Vector2(701.0769, 26.048218)
+price = 100
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion2" index="0"]
 scale = Vector2(1.2024741, 1.2024741)
@@ -1965,11 +2060,13 @@ scale = Vector2(1.2024741, 1.2024741)
 color = Color(0.7775154, 0.39771152, 0.20766419, 1)
 texture = SubResource("NoiseTexture2D_iqyvd")
 shift_velocity = Vector2(-8, -2)
+noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion2/Visual" index="1"]
 color = Color(0.80079913, 0.7437809, 0.7400256, 1)
 texture = SubResource("NoiseTexture2D_ac4xp")
 shift_velocity = Vector2(7, -5)
+noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion2/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -1996,6 +2093,7 @@ offset_bottom = 15.0000305
 
 [node name="Potion3" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
 position = Vector2(1019.667, 26.048218)
+price = 30
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion3" index="0"]
 scale = Vector2(1.0085388, 1.3282938)
@@ -2005,12 +2103,14 @@ color = Color(0.95157677, 0, 0.33591884, 1)
 texture = SubResource("NoiseTexture2D_gdx6n")
 uv = PackedVector2Array(131.72388, 72.1227, 133.41304, 82.82704, 136.22884, 84.51684, 141.86198, 84.51684, 148.06071, 86.77099, 150.87828, 90.71565, 151.44177, 99.16784, 150.87828, 109.31001, 149.75128, 121.14421, 149.75128, 129.58855, 148.06071, 134.66245, 123.83596, 135.22635, 113.693924, 134.09854, 109.188095, 130.71571, 106.37096, 127.33601, 105.24405, 116.073, 105.24405, 101.42113, 105.24405, 90.15216, 108.061264, 87.334564, 113.130806, 85.64359, 117.63574, 85.64359, 119.89011, 82.26381, 119.32643, 73.81326)
 shift_velocity = Vector2(4, 30)
+noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion3/Visual" index="1"]
 color = Color(0.6363577, 0.35801932, 0, 1)
 texture = SubResource("NoiseTexture2D_11a8o")
 uv = PackedVector2Array(116.98615, -13.821037, 119.73195, 15.502541, 127.51693, 20.17657, 143.08372, 20.17657, 160.21562, 26.409172, 168.00587, 37.313934, 169.56396, 60.67895, 168.00587, 88.724846, 164.89, 121.43619, 164.89, 144.79083, 160.21562, 158.80768, 93.25319, 160.36526, 65.2061, 157.2499, 52.74389, 147.90512, 44.954983, 138.56235, 41.839275, 107.416824, 41.839275, 66.910255, 41.839275, 35.75635, 49.628513, 27.967411, 63.648476, 23.29274, 76.11243, 23.29274, 82.3458, 13.944637, 78.31044, -17.40371)
 shift_velocity = Vector2(-7, 15)
+noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion3/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -2040,6 +2140,7 @@ offset_bottom = 22.00003
 [node name="Potion4" parent="Economy/Shop/Goods" instance=ExtResource("76_djqke")]
 position = Vector2(1316.2162, 26.048218)
 scale = Vector2(2.003711, 2.003711)
+price = 150
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion4" index="0"]
 position = Vector2(-14.211263, -35.999985)
@@ -2049,11 +2150,13 @@ scale = Vector2(1.6018968, 1.6018968)
 color = Color(0.71971804, 0.8199623, 0.98711485, 1)
 texture = SubResource("NoiseTexture2D_qpicb")
 shift_velocity = Vector2(-8, 0)
+noise_lacunarity = 1.6
 
 [node name="Noise1" parent="Economy/Shop/Goods/Potion4/Visual" index="1"]
 color = Color(0.06323071, 0.54883826, 0.631098, 1)
 texture = SubResource("NoiseTexture2D_ac4xp")
 shift_velocity = Vector2(7, 1)
+noise_lacunarity = 2.0
 
 [node name="Visual" parent="Economy/Shop/Goods/Potion4/Visual" index="3"]
 texture = ExtResource("77_vyesr")
@@ -2299,7 +2402,6 @@ transition = 4
 [node name="Jump" type="Node" parent="DialogSystem_Main/Fn_Main" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
 destination = NodePath("../MadScientist")
-is_enabled = false
 
 [node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_Main"]
 script = ExtResource("47_q5chl")
@@ -2750,11 +2852,9 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GivePotion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist"]
 script = ExtResource("46_cw1g3")
-text = "Oh . . . now I see.
-. . . I must head to my lab immediately.
+text = "...I must head to my lab immediately.
 
-But, the potion I mentioned - it's actually really useful. It will revolutionize cleaning ink stains from wool.
-Here - a sample as a reward for your trouble. Just remember to only use it on tuesday mornings (it still needs a bit of tuning)."
+Here, a sample for your trouble. Just remember to only use it on Tuesday mornings - it still needs a bit of tuning."
 do_fade_out_after = true
 
 [node name="GivePotion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("target")]
@@ -2770,6 +2870,47 @@ visible = false
 position = Vector2(439, 556)
 scale = Vector2(1, 1)
 price = 0
+
+[node name="Visual" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion" index="0"]
+scale = Vector2(1.1958404, 1.1958404)
+
+[node name="Noise2" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/Visual" index="0"]
+color = Color(0.5450844, 0.6877075, 0.9200205, 1)
+texture = SubResource("NoiseTexture2D_gk0f8")
+shift_velocity = Vector2(1, -2)
+noise_lacunarity = 3.035
+
+[node name="Noise1" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/Visual" index="1"]
+color = Color(0.7187659, 0.7972625, 0.54494435, 1)
+texture = SubResource("NoiseTexture2D_5odq1")
+shift_velocity = Vector2(0, 1)
+noise_lacunarity = 5.385
+
+[node name="Label" type="Label" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/Visual" index="3"]
+self_modulate = Color(0.74, 0.3626, 0.3626, 1)
+offset_left = -3.7887268
+offset_top = 2.8132324
+offset_right = 1.9866333
+offset_bottom = 25.813232
+scale = Vector2(1.2120503, 0.94626695)
+mouse_behavior_recursive = 1
+theme = SubResource("Theme_djqke")
+text = "!"
+
+[node name="Visual" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/Visual" index="4"]
+texture = ExtResource("77_vyesr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion/Visual" index="6"]
+libraries = {
+&"": SubResource("AnimationLibrary_djqke")
+}
+autoplay = "potion5"
+
+[node name="Holder" parent="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion" index="2"]
+offset_left = -39.0
+offset_top = -68.00001
+offset_right = 12.0
+offset_bottom = 11.999992
 
 [node name="HideFigure" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("target")]
 script = ExtResource("55_pou4m")
@@ -4145,3 +4286,4 @@ destination = NodePath("..")
 [editable path="Economy/Shop/Goods/Potion2"]
 [editable path="Economy/Shop/Goods/Potion3"]
 [editable path="Economy/Shop/Goods/Potion4"]
+[editable path="DialogSystem_Main/Fn_Main/MadScientist/GivePotion/Potion"]
