@@ -134,8 +134,9 @@ func _record_answer()->void:
 	write_record(answer)
 
 
+const NO_RECORD_PLATFORMS : PackedStringArray = ["Android", "Web"]
 static func write_record(record: Dictionary[String, Variant])->void:
-	if OS.get_name() == "Android": return
+	if OS.get_name() in NO_RECORD_PLATFORMS: return
 	record["timestamp"] = Time.get_time_string_from_system()
 	const ANSWERS_PATH = "eyeshop.log"
 	var is_append :bool = true
