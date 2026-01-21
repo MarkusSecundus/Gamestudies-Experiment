@@ -1,6 +1,8 @@
+class_name DialogAction_Fader
 extends IDialogAction
 
 @export var target : CanvasItem
+@export var target_fader : DialogAction_Fader
 
 @export var start_alpha : float
 @export var end_alpha : float
@@ -9,9 +11,16 @@ extends IDialogAction
 @export var transition : Tween.TransitionType = Tween.TransitionType.TRANS_LINEAR
 @export var wait_for_finish : bool = true
 
+var _tw : EffectsUtils.TweenWrapper:
+	get:
+		if not _tw:
+			if target_fader: _tw = target_fader._tw
+			else: _tw = EffectsUtils.TweenWrapper.new(target if target else FaderSingleton.INSTANCE) 
+		return _tw
+			
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
-	var tw := create_tween()
-	var fader : CanvasItem = target if target else FaderSingleton.INSTANCE
+	var tw := _tw.create_tween()
+	var fader : CanvasItem = _tw.obj
 	fader.visible = true
 	var final_color = fader.modulate
 	final_color.a = end_alpha

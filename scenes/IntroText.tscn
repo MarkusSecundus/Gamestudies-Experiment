@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ckd6lb1ga41sf"]
+[gd_scene load_steps=31 format=3 uid="uid://ckd6lb1ga41sf"]
 
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="1_fin6i"]
 [ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="2_4en75"]
@@ -14,11 +14,14 @@
 [ext_resource type="Script" uid="uid://dhr2kqkkrp5oi" path="res://scripts/dialog_system/misc/LabelVisualizeTextPiece.gd" id="9_kd8v4"]
 [ext_resource type="Texture2D" uid="uid://bvg4onu7meubs" path="res://art/shop/text_bubble-dot.png" id="10_kh5rm"]
 [ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="12_4vcsn"]
+[ext_resource type="Texture2D" uid="uid://t761g5mhmm8k" path="res://art/intro/intro_b.png" id="12_kj7qj"]
 [ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="13_4en75"]
 [ext_resource type="Script" uid="uid://mpunko578tq3" path="res://scripts/dialog_custom_actions/DialogAction_PlaySoundtrack.gd" id="15_kh5rm"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="16_5g2oq"]
 [ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="16_kd8v4"]
 [ext_resource type="PackedScene" uid="uid://dfb3nyvrfv6a7" path="res://scenes/MainScene.tscn" id="17_kh5rm"]
+[ext_resource type="Texture2D" uid="uid://cqarsacvqxb5v" path="res://art/intro/intro_1b.png" id="20_mff2p"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="21_plw00"]
 
 [sub_resource type="Gradient" id="Gradient_f0hic"]
 offsets = PackedFloat32Array(0)
@@ -97,6 +100,10 @@ _data = {
 &"dot_jumping": SubResource("Animation_aq5dq")
 }
 
+[sub_resource type="Theme" id="Theme_mff2p"]
+default_font = ExtResource("7_4vcsn")
+default_font_size = 80
+
 [node name="IntroText" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -173,23 +180,11 @@ When you see a shop with the sign \"Teddy Bears Extraordinaire\", delve into the
 That is how customers usually find your shop.
 More than few unfortunate souls got their throat cut on the way.
 
-For many, reward is well worth the risk.
-Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
-
-Nobody in their right mind would dare ask where your goods come from, however they don't seem to ever run out.
-Your pride is in being able to find the one that is just right, for every single customer.
-The price is whatever one can afford to give - you don't seek material wealth and live a very plain life without many expenses.
-
-
-. . . You wake up in the morning after a good night's sleep.
-There are already a few customers lined up in front of your shop.
-
-It's time to go to work.
-There are people in need of eyes, and you are the one to provide them."
+"
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_kd8v4")
-source = NodePath("../../DialogSystem_Intro/Fn_Text/Text")
+source = NodePath("../../DialogSystem_Intro/Fn_Text/Part1/Text")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
 root_node = NodePath("../PrintFinishedMarker")
@@ -205,6 +200,37 @@ texture = ExtResource("10_kh5rm")
 offset = Vector2(0, -21.678314)
 region_enabled = true
 region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
+
+[node name="Illustrations" type="Node2D" parent="."]
+
+[node name="Img1" type="Sprite2D" parent="Illustrations"]
+visible = false
+position = Vector2(1363, 551)
+scale = Vector2(0.2449074, 0.24490738)
+texture = ExtResource("20_mff2p")
+
+[node name="Label" type="Label" parent="Illustrations/Img1"]
+anchors_preset = -1
+anchor_right = 0.12900001
+anchor_bottom = 0.079
+offset_left = 626.7857
+offset_top = -221.78572
+offset_right = 1363.426
+offset_bottom = -276.71164
+theme = SubResource("Theme_mff2p")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 121
+theme_override_constants/shadow_offset_y = 126
+theme_override_constants/outline_size = 60
+theme_override_constants/shadow_outline_size = 136
+text = "Teddy Bears extraordinaire"
+uppercase = true
+
+[node name="Img2" type="Sprite2D" parent="Illustrations"]
+visible = false
+position = Vector2(616, 436.00003)
+scale = Vector2(0.2449074, 0.24490738)
+texture = ExtResource("12_kj7qj")
 
 [node name="DialogSystem_Intro" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("2_42d8r")
@@ -249,58 +275,103 @@ destination = ExtResource("17_kh5rm")
 [node name="Fn_Text" type="Node" parent="DialogSystem_Intro"]
 script = ExtResource("3_gutn5")
 
-[node name="Text" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Part1" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+script = ExtResource("21_plw00")
+
+[node name="Text" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
 script = ExtResource("16_5g2oq")
 text = "Standing in front of the Tiberius hospital, make your way south, through the Sarnath boulevard.
 "
-append = true
 
-[node name="Text2" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="ShowImg1" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1" node_paths=PackedStringArray("target")]
+script = ExtResource("4_1tgrv")
+target = NodePath("../../../../Illustrations/Img1")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 1
+wait_for_finish = false
+
+[node name="Text2" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
 script = ExtResource("16_5g2oq")
 text = "When you see a shop with the sign \"Teddy Bears Extraordinaire\", delve into the shady passageway right behind it, then go left, right, left, left, forward, right, up the stairs, right, right, left, right, five more rights, and finally left.
 
 "
 append = true
 
-[node name="Text3" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text3" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
 script = ExtResource("16_5g2oq")
 text = "That is how customers usually find your shop.
 "
 append = true
 
-[node name="Text4" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text4" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1"]
 script = ExtResource("16_5g2oq")
 text = "More than few unfortunate souls got their throat cut on the way.
 
 "
 append = true
 
-[node name="Text5" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="HideImg1" type="Node" parent="DialogSystem_Intro/Fn_Text/Part1" node_paths=PackedStringArray("target_fader")]
+script = ExtResource("4_1tgrv")
+target_fader = NodePath("../ShowImg1")
+start_alpha = -1.0
+duration_seconds = 2.0
+ease = 1
+transition = 1
+wait_for_finish = false
+
+[node name="Part2" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+script = ExtResource("21_plw00")
+
+[node name="Text5" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
 text = "For many, reward is well worth the risk.
 "
-append = true
 
-[node name="Text6" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="ShowImg2" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2" node_paths=PackedStringArray("target")]
+script = ExtResource("4_1tgrv")
+target = NodePath("../../../../Illustrations/Img2")
+end_alpha = 1.0
+duration_seconds = 2.0
+ease = 0
+transition = 1
+wait_for_finish = false
+
+[node name="Text6" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
-text = "Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+Returning back a glimpse of long faded youth, erasing the consequences of folly, or even just unhealthy curiosity - all of these are good reasons to come to you, as far as you are concerned.
 
 "
 append = true
 
-[node name="Text7" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text7" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
 text = "Nobody in their right mind would dare ask where your goods come from, however they don't seem to ever run out.
 "
 append = true
 
-[node name="Text8" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text8" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
 text = "Your pride is in being able to find the one that is just right, for every single customer.
 "
 append = true
 
-[node name="Text9" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text9" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2"]
 script = ExtResource("16_5g2oq")
 text = "The price is whatever one can afford to give - you don't seek material wealth and live a very plain life without many expenses.
 
@@ -308,26 +379,50 @@ text = "The price is whatever one can afford to give - you don't seek material w
 "
 append = true
 
-[node name="Text10" type="Node" parent="DialogSystem_Intro/Fn_Text"]
-script = ExtResource("16_5g2oq")
-text = ". . . You wake up in the morning after a good night's sleep.
-"
-append = true
+[node name="HideImg2" type="Node" parent="DialogSystem_Intro/Fn_Text/Part2" node_paths=PackedStringArray("target_fader")]
+script = ExtResource("4_1tgrv")
+target_fader = NodePath("../ShowImg2")
+start_alpha = -1.0
+duration_seconds = 2.0
+ease = 1
+transition = 1
+wait_for_finish = false
 
-[node name="Text11" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Part3" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+script = ExtResource("21_plw00")
+
+[node name="Text10" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
+script = ExtResource("16_5g2oq")
+text = "
+
+. . . You wake up in the morning after a good night's sleep.
+"
+
+[node name="Text11" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
 script = ExtResource("16_5g2oq")
 text = "There are already a few customers lined up in front of your shop.
 
 "
 append = true
 
-[node name="Text12" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text12" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
 script = ExtResource("16_5g2oq")
-text = "It's time to go to work.
+text = "
+
+
+
+
+
+
+
+
+
+
+It's time to go to work.
 "
 append = true
 
-[node name="Text13" type="Node" parent="DialogSystem_Intro/Fn_Text"]
+[node name="Text13" type="Node" parent="DialogSystem_Intro/Fn_Text/Part3"]
 script = ExtResource("16_5g2oq")
 text = "There are people in need of eyes, and you are the one to provide them."
 append = true
