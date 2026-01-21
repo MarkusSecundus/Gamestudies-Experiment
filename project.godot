@@ -17,7 +17,8 @@ boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/image="uid://ci0je63rsgf6k"
-config/icon="res://icon.svg"
+config/icon="uid://bka345vmrgtgk"
+config/windows_native_icon="res://art/exe_icon/game-icon-win.ico"
 
 [autoload]
 
@@ -30,6 +31,7 @@ Fader="*res://scenes/Fader.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/size/initial_position_type=3
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://gp5owanlog6h"
 
