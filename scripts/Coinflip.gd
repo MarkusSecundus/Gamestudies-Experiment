@@ -30,7 +30,18 @@ func generate_random_id()->int:
 
 func copy_id_to_clipboard()->void:
 	DisplayServer.clipboard_set(id)
+	_display_user_id()
 
+func _display_user_id() -> void:
+	# Web browsers restrict clipboard access, so we use a prompt instead
+	var js_code := """
+        prompt("Your ID", "{0}");
+	""".format([id])
+	var clipboard : Variant = JavaScriptBridge.eval(js_code, true)
+	if clipboard == null or clipboard == "":
+		return  # User cancelled or provided empty input
+	# ...
+	# ... do something with the clipboard data
 
 static func get_persistent(path : String, supplier : Callable)->String:
 	var fread := FileAccess.open(path, FileAccess.READ)
