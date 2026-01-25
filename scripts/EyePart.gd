@@ -71,7 +71,7 @@ func on_drag_end()->void:
 	var piedestal_anchor := _piedestal.get_anchor(self)
 	var distance_to_piedestal := _piedestal.global_position.distance_to(self.global_position)
 	print("piedestal distance: {0} (required {1})".format([distance_to_piedestal, _piedestal.submit_distance]))
-	if distance_to_piedestal < _piedestal.submit_distance:
+	if (distance_to_piedestal < _piedestal.submit_distance) and (not _piedestal._is_submitted) and _piedestal.visible and (_piedestal.modulate.a > 0.1):
 		self._piedestal_anchor = piedestal_anchor
 		_piedestal.add_eye_part(self)
 	else:

@@ -51,7 +51,7 @@ func _process(delta: float) -> void:
 	self.scale = lerp(_og_scale, submit_destination.scale, t) as Vector2
 	self.modulate = lerp(_og_modulate, submit_destination.modulate, t) as Color
 	if customer_image:
-		customer_image.modulate.a = customer_triggered_alpha if (distance_to_submit <= self.submit_distance and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) else _customer_base_alpha
+		customer_image.modulate.a = customer_triggered_alpha if ((distance_to_submit <= self.submit_distance) and (not _is_submitted) and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)) else _customer_base_alpha
 
 
 func on_drag_start()->void: pass
