@@ -1,0 +1,297 @@
+[gd_scene load_steps=29 format=3 uid="uid://1bipbyy207ti"]
+
+[ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_2fxoi"]
+[ext_resource type="Script" uid="uid://btuwtey363pho" path="res://scripts/Coinflip.gd" id="10_oi6hs"]
+[ext_resource type="Script" uid="uid://dj65i8h1vxjyr" path="res://scripts/util/RichTextUrlOpener.gd" id="11_pn7yo"]
+[ext_resource type="Script" uid="uid://ba7h0my7t55g3" path="res://scripts/dialog_system/DialogWaitForSignal.gd" id="16_oi6hs"]
+[ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="32_p8yef"]
+[ext_resource type="AudioStream" uid="uid://lyyv4d1y88ut" path="res://art/sounds/typing1.wav" id="33_pjfvp"]
+[ext_resource type="AudioStream" uid="uid://dvwvtqkhmkjja" path="res://art/sounds/typing2.wav" id="34_y24nb"]
+[ext_resource type="AudioStream" uid="uid://bngdb6kvcpvgj" path="res://art/sounds/typing3.wav" id="35_boi8s"]
+[ext_resource type="AudioStream" uid="uid://b1oa0aixjoxwx" path="res://art/sounds/typing4.wav" id="36_x0vou"]
+[ext_resource type="AudioStream" uid="uid://ka8006boe45u" path="res://art/sounds/typing5.wav" id="37_uj3j2"]
+[ext_resource type="FontFile" uid="uid://bkxx1ukjneiqi" path="res://art/fonts/veteran typewriter.ttf" id="38_vplqq"]
+[ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="39_6vl0e"]
+[ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="40_1fjhi"]
+[ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="41_chfxk"]
+[ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="42_ot6tx"]
+[ext_resource type="Script" uid="uid://cymijsmi3fejy" path="res://scripts/dialog_system/simple_actions/DialogSimpleCondition.gd" id="43_qr5ts"]
+[ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="44_d434h"]
+[ext_resource type="Script" uid="uid://c1w5ir0mx15un" path="res://scripts/dialog_custom_actions/DialogAction_PlaySound.gd" id="46_4ivwa"]
+[ext_resource type="AudioStream" uid="uid://c3rp5bqbaawj8" path="res://art/sounds/thunder1.wav" id="47_pr4a6"]
+[ext_resource type="Script" uid="uid://dfavgujxe6882" path="res://scripts/dialog_system/simple_actions/DialogActionTransitionScene.gd" id="48_rsi8a"]
+[ext_resource type="PackedScene" uid="uid://ckd6lb1ga41sf" path="res://scenes/IntroText.tscn" id="49_s11ye"]
+
+[sub_resource type="Gradient" id="Gradient_inarv"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fyhrx"]
+gradient = SubResource("Gradient_inarv")
+
+[sub_resource type="Theme" id="Theme_i7ifx"]
+default_font = ExtResource("38_vplqq")
+default_font_size = 22
+
+[sub_resource type="Theme" id="Theme_hkpxx"]
+default_font = ExtResource("38_vplqq")
+default_font_size = 150
+
+[sub_resource type="FontVariation" id="FontVariation_oi6hs"]
+base_font = ExtResource("38_vplqq")
+spacing_bottom = 4
+
+[sub_resource type="Theme" id="Theme_ceh8e"]
+default_font = SubResource("FontVariation_oi6hs")
+default_font_size = 36
+
+[sub_resource type="Theme" id="Theme_oi6hs"]
+default_font = ExtResource("38_vplqq")
+default_font_size = 37
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0090001
+anchor_bottom = 1.0
+offset_right = 0.631958
+mouse_filter = 2
+texture = SubResource("GradientTexture1D_fyhrx")
+expand_mode = 1
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("1_2fxoi")
+
+[node name="TextBubble" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 694.0
+offset_top = 20.0
+offset_right = 1242.0
+offset_bottom = 283.0
+script = ExtResource("32_p8yef")
+sounds_per_char = Array[AudioStream]([ExtResource("33_pjfvp"), ExtResource("34_y24nb"), ExtResource("35_boi8s"), ExtResource("36_x0vou"), ExtResource("37_uj3j2")])
+is_skippable = false
+
+[node name="Label" type="RichTextLabel" parent="TextBubble"]
+self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
+z_index = 10
+clip_contents = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 47.0
+offset_top = 37.0
+offset_right = -42.0
+offset_bottom = 140.0
+grow_horizontal = 2
+theme = SubResource("Theme_i7ifx")
+text = "Lorem ipsum dolor sit amet. Consectetuer adipiscing elit"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters_behavior = 3
+
+[node name="Control" type="Control" parent="TextBubble/Label"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -47.0
+offset_top = -33.0
+offset_right = 42.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.667
+anchor_bottom = 1.667
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("39_6vl0e")
+region_rect = Rect2(1540, 60, 761, 602)
+patch_margin_left = 115
+patch_margin_top = 112
+patch_margin_right = 118
+patch_margin_bottom = 110
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_top = 170.0
+offset_right = 1938.0
+offset_bottom = 341.0
+focus_mode = 0
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme = SubResource("Theme_hkpxx")
+bbcode_enabled = true
+text = "[center]EYE SHOP"
+
+[node name="PressSpace" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 811.0
+offset_right = 1938.0
+offset_bottom = 860.0
+focus_mode = 0
+focus_behavior_recursive = 1
+mouse_filter = 2
+mouse_behavior_recursive = 1
+theme = SubResource("Theme_ceh8e")
+bbcode_enabled = true
+text = "[center](Press Space)"
+
+[node name="Coinflip" type="Node" parent="."]
+script = ExtResource("10_oi6hs")
+
+[node name="UrlOpener" type="Node" parent="Coinflip"]
+script = ExtResource("11_pn7yo")
+
+[node name="QuestionnaireFirst" type="Node2D" parent="Coinflip"]
+position = Vector2(0, -30)
+
+[node name="Label" type="RichTextLabel" parent="Coinflip/QuestionnaireFirst"]
+z_index = 10
+clip_contents = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 194.0
+offset_top = 490.0
+offset_right = 1829.0
+offset_bottom = 1063.0
+grow_horizontal = 2
+theme = SubResource("Theme_ceh8e")
+bbcode_enabled = true
+text = "Thank you for deciding to participate in our experiment.
+
+Your unique ID is:   [font size=50]{0}[/font]
+
+
+Please complete the experiment on this computer and do not reset your browser data.
+
+You were chosen into the group that fills out the questionnaire first.
+Please do so on [url=https://docs.google.com/forms/d/e/1FAIpQLSf3seioPn6SUyvw6_cTQsxT3N-dpLKjpMWlYr1Z4fQJzPQ1LQ/viewform]THIS LINK[/url]"
+fit_content = true
+visible_characters_behavior = 3
+
+[node name="Btn_CopyToClipboard" type="Button" parent="Coinflip/QuestionnaireFirst"]
+offset_left = 1073.0
+offset_top = 571.0
+offset_right = 1405.0
+offset_bottom = 652.0
+theme = SubResource("Theme_oi6hs")
+text = "Copy to clickboard"
+
+[node name="Btn_PlayGame" type="Button" parent="Coinflip/QuestionnaireFirst"]
+offset_left = 734.0
+offset_top = 933.0
+offset_right = 1793.0
+offset_bottom = 1019.0
+theme = SubResource("Theme_oi6hs")
+text = "I have completed the questionnaire - Proceed to the Game"
+
+[node name="GameFirst" type="Node2D" parent="Coinflip"]
+visible = false
+
+[node name="Label" type="RichTextLabel" parent="Coinflip/GameFirst"]
+z_index = 10
+clip_contents = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 194.0
+offset_top = 490.0
+offset_right = 1829.0
+offset_bottom = 1063.0
+grow_horizontal = 2
+theme = SubResource("Theme_ceh8e")
+bbcode_enabled = true
+text = "Thank you for deciding to participate in our experiment.
+
+Your unique ID is:   [font size=50]{0}[/font]
+
+
+Please complete the experiment on this computer and do not reset your browser data.
+
+You were chosen into the group that plays the game first."
+fit_content = true
+visible_characters_behavior = 3
+
+[node name="Btn_CopyToClipboard" type="Button" parent="Coinflip/GameFirst"]
+offset_left = 1065.0
+offset_top = 571.0
+offset_right = 1397.0
+offset_bottom = 652.0
+theme = SubResource("Theme_oi6hs")
+text = "Copy to clickboard"
+
+[node name="Btn_PlayGame" type="Button" parent="Coinflip/GameFirst"]
+offset_left = 699.0
+offset_top = 903.0
+offset_right = 1165.0
+offset_bottom = 993.0
+theme = SubResource("Theme_oi6hs")
+text = "Continue to the Game"
+
+[node name="DialogSystem_FirstScreen" type="Node" parent="." node_paths=PackedStringArray("default_start")]
+script = ExtResource("40_1fjhi")
+default_start = NodePath("Fn_Main")
+run_on_start = true
+
+[node name="PlayRecorder" type="Node" parent="DialogSystem_FirstScreen"]
+script = ExtResource("41_chfxk")
+
+[node name="Fn_Main" type="Node" parent="DialogSystem_FirstScreen"]
+script = ExtResource("42_ot6tx")
+
+[node name="Condition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("43_qr5ts")
+
+[node name="FadeOut" type="Node" parent="DialogSystem_FirstScreen/Fn_Main/Condition"]
+script = ExtResource("44_d434h")
+start_alpha = 1.0
+duration_seconds = 2.0
+ease = 1
+transition = 4
+
+[node name="WaitForButton" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("16_oi6hs")
+
+[node name="ThunderSound" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("46_4ivwa")
+stream = ExtResource("47_pr4a6")
+pitch_min = 0.9
+pitch_max = 0.0
+
+[node name="FadeIn" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("44_d434h")
+end_alpha = 1.0
+duration_seconds = 3.0
+ease = 1
+transition = 4
+
+[node name="Transition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+script = ExtResource("48_rsi8a")
+destination = ExtResource("49_s11ye")
+
+[connection signal="meta_clicked" from="Coinflip/QuestionnaireFirst/Label" to="Coinflip/UrlOpener" method="_on_meta_clicked"]
+[connection signal="pressed" from="Coinflip/QuestionnaireFirst/Btn_CopyToClipboard" to="Coinflip" method="copy_id_to_clipboard"]
+[connection signal="pressed" from="Coinflip/QuestionnaireFirst/Btn_PlayGame" to="DialogSystem_FirstScreen/Fn_Main/WaitForButton" method="do_complete_func"]
+[connection signal="meta_clicked" from="Coinflip/GameFirst/Label" to="Coinflip/UrlOpener" method="_on_meta_clicked"]
+[connection signal="pressed" from="Coinflip/GameFirst/Btn_CopyToClipboard" to="Coinflip" method="copy_id_to_clipboard"]
+[connection signal="pressed" from="Coinflip/GameFirst/Btn_PlayGame" to="DialogSystem_FirstScreen/Fn_Main/WaitForButton" method="do_complete_func"]
+[connection signal="before_node_is_performed" from="DialogSystem_FirstScreen" to="DialogSystem_FirstScreen/PlayRecorder" method="do_record"]
