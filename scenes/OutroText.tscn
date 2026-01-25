@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfh2elbhj280b"]
+[gd_scene load_steps=29 format=3 uid="uid://cfh2elbhj280b"]
 
 [ext_resource type="Texture2D" uid="uid://3nt84bbdeiat" path="res://art/shop/text_bubble.png" id="1_7cenv"]
 [ext_resource type="Script" uid="uid://0e7cubkvwvvf" path="res://scripts/dialog_system/PrettyTextBox.gd" id="2_l8b4j"]
@@ -12,11 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://bvg4onu7meubs" path="res://art/shop/text_bubble-dot.png" id="10_wufyc"]
 [ext_resource type="Script" uid="uid://dj65i8h1vxjyr" path="res://scripts/util/RichTextUrlOpener.gd" id="11_1epfi"]
 [ext_resource type="Script" uid="uid://oftyspnf0fd3" path="res://scripts/dialog_system/DialogSystem.gd" id="11_kelb6"]
+[ext_resource type="Script" uid="uid://c2hc2r8toiclb" path="res://scripts/misc/WebLogDownloader.gd" id="12_l8b4j"]
 [ext_resource type="Script" uid="uid://drunnu1gxn230" path="res://scripts/dialog_system/DialogCoroutine.gd" id="12_ngi55"]
 [ext_resource type="Script" uid="uid://24o8mm5k8wt3" path="res://scripts/dialog_system/DialogMessage.gd" id="13_ijnjj"]
 [ext_resource type="Script" uid="uid://cg1lxu8vcax2p" path="res://scripts/dialog_custom_actions/DialogNodePlayRecorder.gd" id="13_rohoa"]
 [ext_resource type="Script" uid="uid://ubonts5hn7fi" path="res://scripts/dialog_custom_actions/DialogAction_Fader.gd" id="14_k8jjf"]
 [ext_resource type="Script" uid="uid://b1igdcx7pq657" path="res://scripts/dialog_system/DialogCall.gd" id="16_p07gd"]
+[ext_resource type="Script" uid="uid://dnj4llybyjkvs" path="res://scripts/dialog_system/simple_actions/DialogPlatformSpecific.gd" id="18_7cenv"]
+[ext_resource type="Script" uid="uid://bw4p4wxlm5ae8" path="res://scripts/dialog_system/simple_actions/DialogActionEmitSignal.gd" id="20_rrmmi"]
 
 [sub_resource type="Gradient" id="Gradient_f0hic"]
 offsets = PackedFloat32Array(0)
@@ -95,6 +98,10 @@ _data = {
 &"dot_jumping": SubResource("Animation_aq5dq")
 }
 
+[sub_resource type="Theme" id="Theme_7cenv"]
+default_font = ExtResource("8_do2vo")
+default_font_size = 32
+
 [node name="IntroText" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -165,33 +172,18 @@ offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "As today's last customer disappears into the darkness of night, you let out a tired sigh.
-You put the sign saying CLOSED on the door.
-You cook a few eggs for dinner.
-Then you go to sleep.
+text = "[font size=28]
+To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
 
-Tomorrow, you need to be fresh for work.
-Same as all the other days.
-
-
-
-
-
-
-
-
-[font size=32]
-Thank you for playing!
-[/font][font size=28]
-To complete the experiment, please, fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
-[/font][font size=24]
-
+You will need to submit the log from this game. If it didn't export automatically, click this button: 
+[/font][font size=24
 [color=dark_gray]
-Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
+
+[color=dark_gray]Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
 fit_content = true
 visible_characters_behavior = 3
 script = ExtResource("9_larrf")
-source = NodePath("../../DialogSystem_Outro/Fn_Text/Text")
+source = NodePath("../../DialogSystem_Outro/Fn_Text/OnWeb/Text10")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextBubble"]
 root_node = NodePath("../PrintFinishedMarker")
@@ -210,6 +202,17 @@ region_rect = Rect2(1857.3008, 96.176636, 157.76428, 155.38937)
 
 [node name="UrlOpener" type="Node" parent="TextBubble"]
 script = ExtResource("11_1epfi")
+
+[node name="ExportButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1451.0
+offset_top = 933.0
+offset_right = 1672.0
+offset_bottom = 1010.0
+theme = SubResource("Theme_7cenv")
+text = "EXPORT LOG"
+script = ExtResource("12_l8b4j")
 
 [node name="DialogSystem_Outro" type="Node" parent="." node_paths=PackedStringArray("default_text_box")]
 script = ExtResource("11_kelb6")
@@ -287,10 +290,49 @@ text = "
 
 
 
-
 [font size=32]
 Thank you for playing!
-[/font][font size=28]
+[/font]
+"
+append = true
+
+[node name="OnWeb" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("18_7cenv")
+platforms = 32
+
+[node name="Text10" type="Node" parent="DialogSystem_Outro/Fn_Text/OnWeb"]
+script = ExtResource("13_ijnjj")
+wait_for_user_input = false
+text = "[font size=28]
+To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
+
+You will need to submit the log from this game. If it didn't export automatically, click this button: 
+[/font][font size=24
+[color=dark_gray]
+
+[color=dark_gray]Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
+append = true
+
+[node name="DoExportTheLog" type="Node" parent="DialogSystem_Outro/Fn_Text/OnWeb"]
+script = ExtResource("20_rrmmi")
+
+[node name="ShowExportButton" type="Node" parent="DialogSystem_Outro/Fn_Text/OnWeb" node_paths=PackedStringArray("target")]
+script = ExtResource("14_k8jjf")
+target = NodePath("../../../../ExportButton")
+end_alpha = 1.0
+duration_seconds = 1.0
+ease = 0
+transition = 1
+wait_for_finish = false
+
+[node name="OnNonWeb" type="Node" parent="DialogSystem_Outro/Fn_Text"]
+script = ExtResource("18_7cenv")
+platforms = 95
+
+[node name="Text9" type="Node" parent="DialogSystem_Outro/Fn_Text/OnNonWeb"]
+script = ExtResource("13_ijnjj")
+wait_for_user_input = false
+text = "[font size=28]
 To complete the experiment, please, fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
 [/font][font size=24]
 
@@ -299,4 +341,6 @@ Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=htt
 append = true
 
 [connection signal="meta_clicked" from="TextBubble/Label" to="TextBubble/UrlOpener" method="_on_meta_clicked"]
+[connection signal="pressed" from="ExportButton" to="ExportButton" method="do_download_log"]
 [connection signal="before_node_is_performed" from="DialogSystem_Outro" to="DialogSystem_Outro/PlayRecorder" method="do_record"]
+[connection signal="the_signal" from="DialogSystem_Outro/Fn_Text/OnWeb/DoExportTheLog" to="ExportButton" method="do_download_log"]

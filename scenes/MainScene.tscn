@@ -2395,7 +2395,7 @@ transition = 4
 
 [node name="Jump" type="Node" parent="DialogSystem_Main/Fn_Main" node_paths=PackedStringArray("destination")]
 script = ExtResource("52_xuwja")
-destination = NodePath("../MadScientist")
+destination = NodePath("../Scared")
 is_enabled = false
 
 [node name="Tutorial" type="Node" parent="DialogSystem_Main/Fn_Main"]
@@ -2920,7 +2920,7 @@ wait_for_user_input = false
 text = "They call me crazy, but my new invention, oh, it will change the world. 
 They’ll see! They will all see!!!
 
-Erm, ahem, but for now I need to see. In my own laboratory, I mean. A recent potion burned out my sight…"
+Erm, ahem, but for now I need to see. In my own laboratory, I mean. A recent potion burned out my sight..."
 
 [node name="Call_WaitForSubmittion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist" node_paths=PackedStringArray("callee")]
 script = ExtResource("54_ell2e")

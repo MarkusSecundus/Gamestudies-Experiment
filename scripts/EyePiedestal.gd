@@ -133,20 +133,36 @@ func _record_answer()->void:
 	answer.pupil = _chosen_eye_parts[EyePart.PartType.Pupil].name
 	write_record(answer)
 
+static var logfile_web : String = ""
 
-const NO_RECORD_PLATFORMS : PackedStringArray = ["Android", "Web"]
+const NO_RECORD_PLATFORMS : PackedStringArray = ["Android"]
 static func write_record(record: Dictionary[String, Variant])->void:
 	if OS.get_name() in NO_RECORD_PLATFORMS: return
 	record["timestamp"] = Time.get_time_string_from_system()
 	const ANSWERS_PATH = "eyeshop.log"
 	var is_append :bool = true
 	var to_append := JSON.stringify(record, "\t")
-	var f := FileAccess.open(ANSWERS_PATH, FileAccess.READ_WRITE)
-	if not f: 
-		f = FileAccess.open(ANSWERS_PATH, FileAccess.WRITE)
-		is_append = false
+	
+	var is_web :bool = OS.get_name() == "Web"
+	var f : FileAccess
+	
+	if is_web:
+		is_append = not logfile_web.is_empty()
+	else:
+		f = FileAccess.open(ANSWERS_PATH, FileAccess.READ_WRITE)
+		if not f: 
+			f = FileAccess.open(ANSWERS_PATH, FileAccess.WRITE)
+			is_append = false
 	if is_append:
 		to_append = ", " + to_append
-	f.seek_end()
-	f.store_line(to_append)
-	f.close()
+	if is_web:
+		logfile_web += to_append
+	else:
+		f.seek_end()
+		f.store_line(to_append)
+		f.close()
+
+static func flush_record()->void:
+	if OS.get_name() != "Web": return
+	var result := "[" + logfile_web + "]"
+	JavaScriptBridge.download_buffer(result.to_ascii_buffer(), "eyeshop.log")
