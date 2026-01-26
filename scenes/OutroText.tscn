@@ -100,7 +100,7 @@ _data = {
 
 [sub_resource type="Theme" id="Theme_7cenv"]
 default_font = ExtResource("8_do2vo")
-default_font_size = 32
+default_font_size = 64
 
 [node name="IntroText" type="Control"]
 layout_mode = 3
@@ -167,17 +167,15 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_left = 116.0
 offset_top = 138.0
-offset_right = -280.0
+offset_right = -135.0
 offset_bottom = 1050.0
 grow_horizontal = 2
 theme = SubResource("Theme_plw00")
 bbcode_enabled = true
-text = "[font size=28]
-To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
+text = "[font size=32][color=FF4444]To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
 
-You will need to submit the log from this game. If it didn't export automatically, click this button: 
-[/font][font size=24
-[color=dark_gray]
+You will need to submit the log from this game. If it didn't export automatically, click the button above: 
+[/color][/font][font size=24]
 
 [color=dark_gray]Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
 fit_content = true
@@ -206,10 +204,10 @@ script = ExtResource("11_1epfi")
 [node name="ExportButton" type="Button" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 1451.0
-offset_top = 933.0
-offset_right = 1672.0
-offset_bottom = 1010.0
+offset_left = 1245.0
+offset_top = 709.0
+offset_right = 1684.0
+offset_bottom = 851.0
 theme = SubResource("Theme_7cenv")
 text = "EXPORT LOG"
 script = ExtResource("12_l8b4j")
@@ -303,12 +301,10 @@ platforms = 32
 [node name="Text10" type="Node" parent="DialogSystem_Outro/Fn_Text/OnWeb"]
 script = ExtResource("13_ijnjj")
 wait_for_user_input = false
-text = "[font size=28]
-To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
+text = "[font size=32][color=FF4444]To complete the experiment, please fill out [url=https://docs.google.com/forms/d/e/1FAIpQLSc5MUjSgyW-ft26mjaM5f2l653HdnfurdSK_Pla7b2cP0ckxg/viewform?usp=publish-editor]THIS QUESTIONNAIRE[/url]
 
-You will need to submit the log from this game. If it didn't export automatically, click this button: 
-[/font][font size=24
-[color=dark_gray]
+You will need to submit the log from this game. If it didn't export automatically, click the button above: 
+[/color][/font][font size=24]
 
 [color=dark_gray]Created by Jakub Hroník, Kris Zajícová and Jack Felix Smirnov, 2026  [url=https://github.com/MarkusSecundus/Gamestudies-Experiment](github repo)[/url] [/color]"
 append = true

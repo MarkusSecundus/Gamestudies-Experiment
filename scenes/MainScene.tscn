@@ -2422,6 +2422,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Thanks.
 Here is your pay."
 do_fade_out_after = true
@@ -2463,6 +2464,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Tutorial2"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Oh, I really like this one!
 Here's your pay, plus a tip.
 
@@ -2508,6 +2510,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Oh, what horrors . . .
 I . . .
 Farewell, shopkeeper."
@@ -2550,6 +2553,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/LoyalKnight"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Sir, you have my utmost gratitude!"
 do_fade_out_after = true
 
@@ -2591,6 +2595,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Vain"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "These eyes are abhorrent!
 . . . Well, whatever.
 
@@ -2656,6 +2661,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveFlower" type="Node" parent="DialogSystem_Main/Fn_Main/GentleWerewolf"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Take this flower as my thanks.
 It was grown under the moon’s light."
 do_fade_out_after = true
@@ -2714,6 +2720,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Gambler"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Oh. . . yes, yes.
 This one is nice.
 Nice and cheap."
@@ -2757,6 +2764,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/PoorPeasant"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Thank you, mister.
 
 I am forever in your debt."
@@ -2800,7 +2808,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Warlock"]
 script = ExtResource("46_cw1g3")
-wait_for_user_input = false
+max_wait_for_user_seconds = 4.0
 text = "Ahahah, good!"
 do_fade_out_after = true
 
@@ -2842,6 +2850,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/BookEnjoyer"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Honestly, something about these eyes doesn't feel right.
 But what other options do I have?
 Here. Your pay."
@@ -2885,6 +2894,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/FormerVizier"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Very well.
 I shall pay you even more generously once I get back what's mine."
 do_fade_out_after = true
@@ -2928,6 +2938,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GivePotion" type="Node" parent="DialogSystem_Main/Fn_Main/MadScientist"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "...I must head to my lab immediately.
 
 Here, a sample for your trouble. Just remember to only use it on Tuesday mornings - it still needs a bit of tuning."
@@ -3028,6 +3039,7 @@ callee = NodePath("../../../Fn_HandleEyeSubmittion")
 
 [node name="T_GiveMoney" type="Node" parent="DialogSystem_Main/Fn_Main/Archmage"]
 script = ExtResource("46_cw1g3")
+max_wait_for_user_seconds = 4.0
 text = "Good.
 As we discussed, you shall receive the other half of the payment, when the eyes are confirmed satisfactory."
 do_fade_out_after = true
