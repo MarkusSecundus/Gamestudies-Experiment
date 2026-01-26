@@ -3,6 +3,7 @@ class_name DialogMessage
 extends IDialogAction
 
 @export var wait_for_user_input : bool = true
+@export var max_wait_for_user_seconds : float = 0.0
 @export_multiline var text : String
 @export var append: bool = false
 @export var text_box_override : PrettyTextBox = null
@@ -13,16 +14,20 @@ extends IDialogAction
 	var previewable := NodeUtils.get_descendant_of_type(text_box, LabelVisualizeTextPiece) as LabelVisualizeTextPiece
 	if previewable: 
 		previewable.source = self
+		
 
 func do_perform(ctx: DialogContext, on_finished: Callable)->void:
 	var text_box := text_box_override if text_box_override else ctx.default_text_box
 	var on_printing_finished: Callable = func():
 		if wait_for_user_input:
+			var skip_requested_flag := DatastructUtils.Wrapper.new(false)
+			if max_wait_for_user_seconds > 0.0:
+				CoroutineUtils.forget_and_fire_after_seconds(self, max_wait_for_user_seconds, func()->void: skip_requested_flag.value = true)
 			print("{0} - awaiting user input...".format([self.name]))
 			await get_tree().create_timer(0.2).timeout
 			while true:
 				await get_tree().process_frame
-				if Input.is_action_just_pressed("SkipDialog"):
+				if skip_requested_flag.value or Input.is_action_just_pressed("SkipDialog"):
 					print("got an input event")
 					break
 		if do_fade_out_after:

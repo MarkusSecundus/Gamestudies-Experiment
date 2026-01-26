@@ -115,7 +115,7 @@ static func _update_selection_visuals()->void:
 	DatastructUtils.remove_all_falsy(_hover_stack)
 	for i in Vector2i(1, _hover_stack.size()): _hover_stack[i]._set_outline_visibility(false)
 	if _hover_stack.is_empty():
-		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))
+		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-smaller.png"))
 	else:
 		Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-hand.png"), Input.CursorShape.CURSOR_ARROW, Vector2(0, 30))
 		_hover_stack[0]._set_outline_visibility(true)

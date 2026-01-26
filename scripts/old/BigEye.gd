@@ -64,4 +64,4 @@ func _on_area_2d_mouse_entered() -> void:
 
 
 func _on_area_2d_mouse_exited() -> void:
-	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder.png"))
+	Input.set_custom_mouse_cursor(preload	("res://art/cursor/cursor-placeholder-smaller.png"))
