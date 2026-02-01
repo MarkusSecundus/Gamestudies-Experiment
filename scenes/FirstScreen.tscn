@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://dop62lglc6uq0"]
+[gd_scene format=3 uid="uid://dop62lglc6uq0"]
 
 [ext_resource type="Script" uid="uid://din0s1uvjsoom" path="res://scripts/PlacementLocations.gd" id="1_kovtv"]
 [ext_resource type="Script" uid="uid://cx74eh3pn5vri" path="res://scripts/EyeCabinet.gd" id="1_pcypa"]
@@ -126,7 +126,7 @@ size = Vector2(320.99997, 33.333336)
 radius = 12.500061
 height = 170.5
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=2088634375]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -135,7 +135,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1145999493]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0090001
@@ -145,20 +145,20 @@ mouse_filter = 2
 texture = SubResource("GradientTexture1D_fyhrx")
 expand_mode = 1
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Node" parent="." unique_id=613782561]
 script = ExtResource("1_kovtv")
 
-[node name="EyeHolders" type="Node2D" parent="."]
+[node name="EyeHolders" type="Node2D" parent="." unique_id=414388050]
 
-[node name="Eyes1" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes1" type="RigidBody2D" parent="EyeHolders" unique_id=1173158235]
 position = Vector2(671, 774)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes1" unique_id=951189481]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes1/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes1/Visual" unique_id=1348394231]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -166,7 +166,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes1/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes1/Visual" unique_id=1876987104]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -174,7 +174,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes1/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes1/Visual" unique_id=640090736]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -182,185 +182,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes1" unique_id=115264327]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors" unique_id=1638106605]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors" unique_id=942111468]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes1/ContentAnchors" unique_id=987278754]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1" unique_id=1658993250]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes1/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes1/SelfAnchor" unique_id=2105308117]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1" unique_id=1811187507]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Holder" unique_id=1847735309]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes1" unique_id=105073055]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye1" unique_id=1815598773]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye" unique_id=1807886274]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye" unique_id=1177334622]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye" unique_id=1223719728]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye" unique_id=1276164173]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye1/Eye" unique_id=1674421746]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye1" unique_id=1747792226]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye1/Holder" unique_id=1555531434]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye1" unique_id=1262831593]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes1" unique_id=447144335]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye2" unique_id=440705886]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye2/Holder" unique_id=189151334]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye2" unique_id=1273622281]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye2" unique_id=705749425]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye" unique_id=1218064889]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye" unique_id=903625767]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye" unique_id=615928193]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye" unique_id=1541213913]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye2/Eye" unique_id=1166478239]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes1"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes1" unique_id=957114690]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes1/Eye3" unique_id=1042667775]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1/Eye3/Holder" unique_id=754936775]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes1/Eye3" unique_id=1635411439]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes1/Eye3" unique_id=369466284]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye" unique_id=2051410931]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye" unique_id=1712573446]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye" unique_id=1747050920]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye" unique_id=1333163470]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes1/Eye3/Eye" unique_id=1783285434]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("23_w3brj")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes1" unique_id=1576939646]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes1"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes1" unique_id=20766995]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes1"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes1" unique_id=1226070758]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes1"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes1" unique_id=1641498873]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes2" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes2" type="RigidBody2D" parent="EyeHolders" unique_id=2142896309]
 position = Vector2(1438, 774)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes2" unique_id=1121893871]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes2/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes2/Visual" unique_id=570325100]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -368,7 +368,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes2/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes2/Visual" unique_id=1739079165]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -376,7 +376,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes2/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes2/Visual" unique_id=1964236553]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -384,186 +384,186 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes2" unique_id=965255503]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors" unique_id=639252516]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors" unique_id=1004984726]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes2/ContentAnchors" unique_id=561737489]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2" unique_id=1689973127]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes2/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes2/SelfAnchor" unique_id=1968379421]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2" unique_id=970066856]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Holder" unique_id=540714142]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes2" unique_id=74169029]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye1" unique_id=1927713006]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye" unique_id=766427219]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("16_8scfc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye" unique_id=868392641]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye" unique_id=89670905]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye" unique_id=187603642]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("7_ve0d8")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye1/Eye" unique_id=81192064]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye1" unique_id=613443559]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye1/Holder" unique_id=1404979445]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye1" unique_id=1992412364]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes2" unique_id=1666389957]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye2" unique_id=945234539]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye2/Holder" unique_id=755078432]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye2" unique_id=10527158]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye2" unique_id=1282407936]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye" unique_id=1154585455]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye" unique_id=1321530857]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye" unique_id=1205405072]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye" unique_id=1834234324]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye2/Eye" unique_id=1368569013]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes2"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes2" unique_id=1068588450]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes2/Eye3" unique_id=1350690732]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2/Eye3/Holder" unique_id=1068182391]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes2/Eye3" unique_id=1604589910]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes2/Eye3" unique_id=384447730]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye" unique_id=100318615]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye" unique_id=1440831551]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye" unique_id=1824925860]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye" unique_id=1958556666]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes2/Eye3/Eye" unique_id=522136749]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("7_ve0d8")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes2" unique_id=1289309450]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes2" unique_id=1856656114]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes2" unique_id=1136783493]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes2"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes2" unique_id=1383953945]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes3" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes3" type="RigidBody2D" parent="EyeHolders" unique_id=1153600562]
 position = Vector2(381.00006, 734.00006)
 rotation = -0.7853982
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes3" unique_id=501113116]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes3/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes3/Visual" unique_id=495890626]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -571,7 +571,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes3/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes3/Visual" unique_id=2074764702]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -579,7 +579,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes3/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes3/Visual" unique_id=98136780]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -587,185 +587,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes3" unique_id=1523807602]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors" unique_id=1826240985]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors" unique_id=2114416544]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes3/ContentAnchors" unique_id=1648463425]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3" unique_id=287290361]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes3/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes3/SelfAnchor" unique_id=1253398525]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3" unique_id=764773599]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Holder" unique_id=1980732072]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes3" unique_id=1352718042]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye1" unique_id=1792689323]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye" unique_id=1698332609]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye" unique_id=1515579813]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye" unique_id=1545433109]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye" unique_id=1089076067]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("7_ve0d8")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye1/Eye" unique_id=1891119360]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("19_7776w")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye1" unique_id=1811775729]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye1/Holder" unique_id=1668763817]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye1" unique_id=2001102713]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes3" unique_id=1035889560]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye2" unique_id=1028138081]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye2/Holder" unique_id=272018068]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye2" unique_id=220963165]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye2" unique_id=1605947492]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye" unique_id=891959460]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("16_8scfc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye" unique_id=1528165541]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye" unique_id=194975438]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye" unique_id=939617419]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye2/Eye" unique_id=1980271608]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes3"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes3" unique_id=491219448]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes3/Eye3" unique_id=993712105]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3/Eye3/Holder" unique_id=360749156]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes3/Eye3" unique_id=801823799]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes3/Eye3" unique_id=441980545]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye" unique_id=1700346872]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye" unique_id=548328450]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye" unique_id=565511064]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye" unique_id=1032367175]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes3/Eye3/Eye" unique_id=1597353959]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes3" unique_id=422069635]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes3"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes3" unique_id=1524821925]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes3"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes3" unique_id=2084018606]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes3"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes3" unique_id=1969146425]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes4" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes4" type="RigidBody2D" parent="EyeHolders" unique_id=1410396097]
 position = Vector2(777, 537)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes4" unique_id=1098147452]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes4/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes4/Visual" unique_id=71766345]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -773,7 +773,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes4/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes4/Visual" unique_id=1950736563]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -781,7 +781,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes4/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes4/Visual" unique_id=1514043261]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -789,185 +789,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes4" unique_id=287359475]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors" unique_id=1208286420]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors" unique_id=863917918]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes4/ContentAnchors" unique_id=1082252095]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4" unique_id=2030051491]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes4/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes4/SelfAnchor" unique_id=999099789]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4" unique_id=1081700843]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Holder" unique_id=1931580077]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes4" unique_id=457292025]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye1" unique_id=106711698]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye" unique_id=1918350442]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye" unique_id=2105112190]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye" unique_id=1811731461]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye" unique_id=731382959]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_cniy0")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye1/Eye" unique_id=718153734]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye1" unique_id=416366842]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye1/Holder" unique_id=916384455]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye1" unique_id=1629119191]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes4" unique_id=528103129]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye2" unique_id=736971379]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye2/Holder" unique_id=1227413195]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye2" unique_id=1317380595]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye2" unique_id=2110917391]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye" unique_id=1240583957]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("16_8scfc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye" unique_id=1045882396]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye" unique_id=105620142]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye" unique_id=2045003029]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye2/Eye" unique_id=2020171198]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes4"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes4" unique_id=1430469396]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes4/Eye3" unique_id=1222226476]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4/Eye3/Holder" unique_id=1161480526]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes4/Eye3" unique_id=802182941]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes4/Eye3" unique_id=337595838]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye" unique_id=23145069]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye" unique_id=1716335249]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye" unique_id=1454391556]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye" unique_id=1496821008]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("7_ve0d8")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes4/Eye3/Eye" unique_id=1390559080]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes4" unique_id=756286184]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes4"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes4" unique_id=846859649]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes4"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes4" unique_id=1757414697]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes4"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes4" unique_id=561047496]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes5" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes5" type="RigidBody2D" parent="EyeHolders" unique_id=240462711]
 position = Vector2(1723, 467)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes5" unique_id=1299503196]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes5/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes5/Visual" unique_id=1436773496]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -975,7 +975,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes5/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes5/Visual" unique_id=2061589616]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -983,7 +983,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes5/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes5/Visual" unique_id=43104276]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -991,185 +991,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes5" unique_id=1663352079]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors" unique_id=926809903]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors" unique_id=1945588831]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes5/ContentAnchors" unique_id=1022786514]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5" unique_id=645509499]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes5/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes5/SelfAnchor" unique_id=1362970238]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5" unique_id=771785722]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Holder" unique_id=1572682455]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes5" unique_id=562133735]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye1" unique_id=1017748158]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye" unique_id=1799851598]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye" unique_id=953701690]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye" unique_id=655949526]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye" unique_id=722878551]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_cniy0")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye1/Eye" unique_id=1274827469]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye1" unique_id=305958233]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye1/Holder" unique_id=255442834]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye1" unique_id=645902051]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes5" unique_id=1811042792]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye2" unique_id=315820682]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye2/Holder" unique_id=1503774932]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye2" unique_id=689700652]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye2" unique_id=1110035972]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye" unique_id=2077747263]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye" unique_id=1299467839]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye" unique_id=279924996]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye" unique_id=1361708124]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye2/Eye" unique_id=348447500]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes5"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes5" unique_id=770522277]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes5/Eye3" unique_id=866972065]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5/Eye3/Holder" unique_id=1001334629]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes5/Eye3" unique_id=1406927701]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes5/Eye3" unique_id=299630229]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye" unique_id=64180407]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye" unique_id=201013096]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye" unique_id=1525633882]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye" unique_id=650920128]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_cniy0")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes5/Eye3/Eye" unique_id=646959598]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes5" unique_id=1328870898]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes5"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes5" unique_id=10284104]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes5"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes5" unique_id=520471283]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes5"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes5" unique_id=717525744]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes6" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes6" type="RigidBody2D" parent="EyeHolders" unique_id=1715927118]
 position = Vector2(1708, 959)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes6" unique_id=184026981]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes6/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes6/Visual" unique_id=2050456213]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -1177,7 +1177,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes6/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes6/Visual" unique_id=1748402665]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -1185,7 +1185,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes6/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes6/Visual" unique_id=235758029]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -1193,185 +1193,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes6" unique_id=1768914042]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors" unique_id=1478533740]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors" unique_id=1522128162]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes6/ContentAnchors" unique_id=1942942023]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6" unique_id=336719971]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes6/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes6/SelfAnchor" unique_id=59167394]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6" unique_id=1776619129]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Holder" unique_id=248475353]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes6" unique_id=1958734581]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye1" unique_id=1927069203]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye" unique_id=1980812005]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye" unique_id=13840563]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye" unique_id=1327175453]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye" unique_id=1863553087]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye1/Eye" unique_id=586228722]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye1" unique_id=549115012]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye1/Holder" unique_id=279246573]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye1" unique_id=1157445981]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes6" unique_id=1839610146]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye2" unique_id=871847584]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye2/Holder" unique_id=1631679167]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye2" unique_id=1790747364]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye2" unique_id=988900972]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye" unique_id=1353964574]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye" unique_id=1157570579]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye" unique_id=1999970155]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye" unique_id=713450236]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye2/Eye" unique_id=269957538]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("22_b3q36")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes6"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes6" unique_id=1925162477]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes6/Eye3" unique_id=941982543]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6/Eye3/Holder" unique_id=1773074778]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes6/Eye3" unique_id=1864423744]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes6/Eye3" unique_id=1036204948]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye" unique_id=930557083]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye" unique_id=355624104]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye" unique_id=1861256873]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye" unique_id=1762006797]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes6/Eye3/Eye" unique_id=1734993373]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes6" unique_id=2016843125]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes6"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes6" unique_id=547628048]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes6"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes6" unique_id=2133886325]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes6"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes6" unique_id=1691084733]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes7" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes7" type="RigidBody2D" parent="EyeHolders" unique_id=1029401943]
 position = Vector2(1293, 959)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes7" unique_id=512925585]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes7/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes7/Visual" unique_id=793518545]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -1379,7 +1379,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes7/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes7/Visual" unique_id=1863297184]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -1387,7 +1387,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes7/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes7/Visual" unique_id=545904750]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -1395,185 +1395,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes7" unique_id=1511708020]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors" unique_id=653980015]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors" unique_id=2088146222]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes7/ContentAnchors" unique_id=1993902597]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7" unique_id=1215060860]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes7/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes7/SelfAnchor" unique_id=958114586]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7" unique_id=688451293]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Holder" unique_id=1920076206]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes7" unique_id=362647288]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye1" unique_id=1518401003]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye" unique_id=1848443064]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye" unique_id=669994866]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye" unique_id=983949717]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye" unique_id=544257317]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye1/Eye" unique_id=1212983907]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye1" unique_id=1224702219]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye1/Holder" unique_id=1290089301]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye1" unique_id=433689810]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes7" unique_id=904679087]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye2" unique_id=269162262]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye2/Holder" unique_id=1342018254]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye2" unique_id=440402656]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye2" unique_id=772300642]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye" unique_id=1189871394]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye" unique_id=1046243425]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye" unique_id=100246182]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye" unique_id=156700018]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye2/Eye" unique_id=1295502889]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("22_b3q36")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes7"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes7" unique_id=759432734]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes7/Eye3" unique_id=443951533]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7/Eye3/Holder" unique_id=1818234055]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes7/Eye3" unique_id=900238166]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes7/Eye3" unique_id=764906623]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye" unique_id=806334918]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye" unique_id=1854788955]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye" unique_id=1917518235]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye" unique_id=1028608570]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes7/Eye3/Eye" unique_id=931099455]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes7" unique_id=1712251631]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes7"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes7" unique_id=765649752]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes7"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes7" unique_id=631038006]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes7"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes7" unique_id=1677804848]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes8" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes8" type="RigidBody2D" parent="EyeHolders" unique_id=1287945206]
 position = Vector2(1018, 681)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes8" unique_id=422175914]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes8/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes8/Visual" unique_id=543656820]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -1581,7 +1581,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes8/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes8/Visual" unique_id=292257176]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -1589,7 +1589,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes8/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes8/Visual" unique_id=2058267316]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -1597,185 +1597,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes8" unique_id=2058160124]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors" unique_id=331653727]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors" unique_id=509845923]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes8/ContentAnchors" unique_id=2041591563]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8" unique_id=1396598417]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes8/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes8/SelfAnchor" unique_id=508234034]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8" unique_id=50280167]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Holder" unique_id=432009727]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes8" unique_id=2013159494]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye1" unique_id=1950231260]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye" unique_id=1887202101]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye" unique_id=656339666]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye" unique_id=319138410]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye" unique_id=1222346026]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye1/Eye" unique_id=1365578169]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye1" unique_id=1455446549]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye1/Holder" unique_id=1520719027]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye1" unique_id=583013635]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes8" unique_id=1167584385]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye2" unique_id=1784345951]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye2/Holder" unique_id=247663139]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye2" unique_id=203822125]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye2" unique_id=1907378681]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye" unique_id=55778691]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye" unique_id=896839388]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye" unique_id=1279259260]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye" unique_id=911299548]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye2/Eye" unique_id=1404364817]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("22_b3q36")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes8"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes8" unique_id=237151603]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes8/Eye3" unique_id=301481080]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8/Eye3/Holder" unique_id=1780467867]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes8/Eye3" unique_id=1230471000]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes8/Eye3" unique_id=1400439989]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye" unique_id=108646426]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye" unique_id=1762836176]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye" unique_id=957190816]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("26_upg3p")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye" unique_id=9103343]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes8/Eye3/Eye" unique_id=817771133]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes8" unique_id=1048561717]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes8"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes8" unique_id=1058786567]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes8"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes8" unique_id=103087028]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes8"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes8" unique_id=2027278107]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes9" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes9" type="RigidBody2D" parent="EyeHolders" unique_id=73360159]
 position = Vector2(669, 955)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes9" unique_id=1114138886]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes9/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes9/Visual" unique_id=203611364]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -1783,7 +1783,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes9/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes9/Visual" unique_id=83478525]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -1791,7 +1791,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes9/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes9/Visual" unique_id=1104077591]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -1799,185 +1799,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes9" unique_id=1034818019]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors" unique_id=1413131338]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors" unique_id=533197140]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes9/ContentAnchors" unique_id=192218009]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9" unique_id=285636]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes9/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes9/SelfAnchor" unique_id=707108187]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9" unique_id=2073368725]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Holder" unique_id=65811040]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes9" unique_id=1893240090]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye1" unique_id=1197462229]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye" unique_id=1036564298]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye" unique_id=787534446]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye" unique_id=1031017266]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye" unique_id=1585272332]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye1/Eye" unique_id=1107282953]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("23_w3brj")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye1" unique_id=1674590440]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye1/Holder" unique_id=1805634575]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye1" unique_id=2051714223]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes9" unique_id=1052461643]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye2" unique_id=1355292686]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye2/Holder" unique_id=1478550769]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye2" unique_id=517202745]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye2" unique_id=1526518516]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye" unique_id=1641109001]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye" unique_id=671210429]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye" unique_id=1570007800]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye" unique_id=1569649413]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye2/Eye" unique_id=1889476270]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("23_w3brj")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes9"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes9" unique_id=1691206596]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes9/Eye3" unique_id=1185701638]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9/Eye3/Holder" unique_id=1650357565]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes9/Eye3" unique_id=158121070]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes9/Eye3" unique_id=31348735]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye" unique_id=851817533]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye" unique_id=1476293338]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye" unique_id=498771860]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye" unique_id=899107037]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes9/Eye3/Eye" unique_id=778233831]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("23_w3brj")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes9" unique_id=900602124]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes9"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes9" unique_id=2062151528]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes9"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes9" unique_id=1572413113]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes9"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes9" unique_id=521405574]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes10" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes10" type="RigidBody2D" parent="EyeHolders" unique_id=1162776129]
 position = Vector2(253, 970)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes10" unique_id=227019786]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes10/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes10/Visual" unique_id=1599050524]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -1985,7 +1985,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes10/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes10/Visual" unique_id=1961616619]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -1993,7 +1993,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes10/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes10/Visual" unique_id=2003272760]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -2001,185 +2001,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes10" unique_id=685786565]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors" unique_id=67235258]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors" unique_id=1140291216]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes10/ContentAnchors" unique_id=1442906802]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10" unique_id=60204789]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes10/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes10/SelfAnchor" unique_id=1724771327]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10" unique_id=1912616230]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Holder" unique_id=1368214942]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes10" unique_id=579458202]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye1" unique_id=1007704006]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye" unique_id=1003578687]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("16_8scfc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye" unique_id=1173223743]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye" unique_id=1030331114]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye" unique_id=2145015808]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye1/Eye" unique_id=755035669]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye1" unique_id=1803538687]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye1/Holder" unique_id=1432847933]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye1" unique_id=195698309]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes10" unique_id=920985403]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye2" unique_id=1725246488]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye2/Holder" unique_id=258957495]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye2" unique_id=1491776124]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye2" unique_id=1768772874]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye" unique_id=26543492]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye" unique_id=620957627]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye" unique_id=1757656910]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye" unique_id=765941993]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye2/Eye" unique_id=1751630046]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes10"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes10" unique_id=643788329]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes10/Eye3" unique_id=897010515]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10/Eye3/Holder" unique_id=463492329]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes10/Eye3" unique_id=2103276813]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes10/Eye3" unique_id=2033397110]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye" unique_id=864725970]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye" unique_id=412473967]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye" unique_id=1512421148]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye" unique_id=2119080855]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes10/Eye3/Eye" unique_id=1606290841]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes10" unique_id=1729138213]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes10"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes10" unique_id=1405457553]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes10"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes10" unique_id=1719531459]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes10"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes10" unique_id=561472251]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes11" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes11" type="RigidBody2D" parent="EyeHolders" unique_id=2130444061]
 position = Vector2(243, 537)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes11" unique_id=108298532]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes11/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes11/Visual" unique_id=888917973]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -2187,7 +2187,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes11/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes11/Visual" unique_id=1953855233]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -2195,7 +2195,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes11/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes11/Visual" unique_id=980386892]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -2203,194 +2203,194 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes11" unique_id=2069248865]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors" unique_id=131829352]
 position = Vector2(-99, 53)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors" unique_id=259607418]
 position = Vector2(2, 53)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes11/ContentAnchors" unique_id=1291549486]
 position = Vector2(101, 53)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11" unique_id=998896443]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes11/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes11/SelfAnchor" unique_id=707462251]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11" unique_id=2130599955]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Holder" unique_id=1232754617]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes11" unique_id=1245657675]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye1" unique_id=383186297]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye" unique_id=811122641]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("16_8scfc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye" unique_id=26493557]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye" unique_id=820669890]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye" unique_id=966563407]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye1/Eye" unique_id=453233754]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye1" unique_id=1887312969]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye1/Holder" unique_id=709901989]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye1" unique_id=1836583096]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes11" unique_id=865329513]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye2" unique_id=973472123]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye2/Holder" unique_id=993993939]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye2" unique_id=964652826]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye2" unique_id=1479870932]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye" unique_id=38963631]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye" unique_id=830051179]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye" unique_id=606431062]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("28_w671a")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye" unique_id=1224771411]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye2/Eye" unique_id=94713960]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes11"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes11" unique_id=2027087855]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes11/Eye3" unique_id=1591243846]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11/Eye3/Holder" unique_id=1414811912]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes11/Eye3" unique_id=1146957308]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes11/Eye3" unique_id=1811082131]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye" unique_id=1518812469]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("14_283dd")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye" unique_id=389520910]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye" unique_id=1662840082]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("27_ffc06")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye" unique_id=610599380]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes11/Eye3/Eye" unique_id=1890177620]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("20_mmsym")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes11" unique_id=1873139291]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes11"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes11" unique_id=1790938702]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes11"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes11" unique_id=1305637791]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes11"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes11" unique_id=1164224509]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes12" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes12" type="RigidBody2D" parent="EyeHolders" unique_id=772543266]
 position = Vector2(1687, 681)
 rotation = 0.5235988
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes12" unique_id=1875696173]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes12/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes12/Visual" unique_id=360928340]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -2398,7 +2398,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes12/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes12/Visual" unique_id=1837085651]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -2406,7 +2406,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes12/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes12/Visual" unique_id=1093307398]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -2414,185 +2414,185 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes12" unique_id=1757030755]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors" unique_id=1873627509]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors" unique_id=1436885098]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes12/ContentAnchors" unique_id=1431301743]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12" unique_id=1031460638]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes12/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes12/SelfAnchor" unique_id=455727528]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12" unique_id=1626922400]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Holder" unique_id=253339991]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes12" unique_id=829682049]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye1" unique_id=241295436]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye" unique_id=311997395]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_cniy0")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye" unique_id=1042785093]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye" unique_id=2049510572]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye" unique_id=784922343]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye1/Eye" unique_id=2086751326]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye1" unique_id=980054824]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye1/Holder" unique_id=2105745242]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye1" unique_id=256913506]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes12" unique_id=460838852]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye2" unique_id=1854252177]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye2/Holder" unique_id=1051800519]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye2" unique_id=66635227]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye2" unique_id=1687870101]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye" unique_id=375352036]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye" unique_id=1518409668]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye" unique_id=1272340247]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("10_hy64g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye" unique_id=774491789]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye2/Eye" unique_id=1566656316]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("9_cniy0")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes12"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes12" unique_id=217331702]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes12/Eye3" unique_id=1399443522]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12/Eye3/Holder" unique_id=1124104958]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes12/Eye3" unique_id=913706116]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes12/Eye3" unique_id=1661336171]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye" unique_id=1569064380]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye" unique_id=728643019]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye" unique_id=1449200163]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye" unique_id=961685831]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes12/Eye3/Eye" unique_id=1459119211]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes12" unique_id=2133634401]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes12"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes12" unique_id=889666206]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes12"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes12" unique_id=1374707993]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes12"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes12" unique_id=1354097395]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Eyes13" type="RigidBody2D" parent="EyeHolders"]
+[node name="Eyes13" type="RigidBody2D" parent="EyeHolders" unique_id=1363918987]
 position = Vector2(1348, 559)
 mass = 20.0
 freeze_mode = 1
 script = ExtResource("1_pcypa")
 
-[node name="Visual" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="Visual" type="Node2D" parent="EyeHolders/Eyes13" unique_id=686639650]
 
-[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes13/Visual"]
+[node name="EyeHolderMain" type="Sprite2D" parent="EyeHolders/Eyes13/Visual" unique_id=1071349399]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 17.940014)
 scale = Vector2(0.56, 0.50832367)
@@ -2600,7 +2600,7 @@ texture = ExtResource("2_6nsbg")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes13/Visual"]
+[node name="EyeHolderHandle" type="Sprite2D" parent="EyeHolders/Eyes13/Visual" unique_id=1248322659]
 modulate = Color(0.7699953, 0.7699953, 0.76999515, 1)
 position = Vector2(2.0000153, 18)
 scale = Vector2(0.56, 0.5574567)
@@ -2608,7 +2608,7 @@ texture = ExtResource("3_d5ulc")
 region_enabled = true
 region_rect = Rect2(1631.9048, 993.0667, 622.021, 346.86688)
 
-[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes13/Visual"]
+[node name="Outline" type="Sprite2D" parent="EyeHolders/Eyes13/Visual" unique_id=1759047191]
 visible = false
 position = Vector2(2, -32)
 scale = Vector2(0.56, 0.5574567)
@@ -2616,198 +2616,198 @@ texture = ExtResource("4_8x6xs")
 region_enabled = true
 region_rect = Rect2(882, 641, 173, 61)
 
-[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="ContentAnchors" type="Node2D" parent="EyeHolders/Eyes13" unique_id=1263235004]
 script = ExtResource("5_i1m6c")
 
-[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors"]
+[node name="Anchor1" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors" unique_id=667390204]
 position = Vector2(-99, 46)
 
-[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors"]
+[node name="Anchor2" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors" unique_id=934606917]
 position = Vector2(2, 46)
 
-[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors"]
+[node name="Anchor3" type="Node2D" parent="EyeHolders/Eyes13/ContentAnchors" unique_id=1160060768]
 position = Vector2(101, 46)
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13" unique_id=30871732]
 position = Vector2(-141, 100)
 
-[node name="Right" type="Node2D" parent="EyeHolders/Eyes13/SelfAnchor"]
+[node name="Right" type="Node2D" parent="EyeHolders/Eyes13/SelfAnchor" unique_id=105860482]
 position = Vector2(286, 0)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13" unique_id=1997636425]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Holder" unique_id=408137515]
 position = Vector2(1, -34)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xfwt3")
 
-[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="Eye1" type="Node2D" parent="EyeHolders/Eyes13" unique_id=45517765]
 position = Vector2(-96.999985, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye1"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye1" unique_id=1562833078]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye" unique_id=1480659801]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("17_bngdb")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye" unique_id=193589700]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye" unique_id=1668610250]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye" unique_id=1257870812]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye1/Eye" unique_id=1905923608]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("21_nll4g")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye1"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye1" unique_id=1257012133]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye1/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye1/Holder" unique_id=37409107]
 position = Vector2(-1.5258787e-05, -1.9999845)
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye1"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye1" unique_id=42079298]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="Eye2" type="Node2D" parent="EyeHolders/Eyes13" unique_id=655040949]
 position = Vector2(1.0000002, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye2"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye2" unique_id=533312192]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye2/Holder" unique_id=1740367122]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye2"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye2" unique_id=714731311]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye2"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye2" unique_id=358545547]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye" unique_id=195713624]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye" unique_id=1458691095]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye" unique_id=850559214]
 position = Vector2(5.9999995, -11.999999)
 scale = Vector2(0.17255044, 0.17255044)
 texture = ExtResource("30_v7yhf")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye" unique_id=2074024054]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("6_vxq86")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye2/Eye" unique_id=888165246]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("22_b3q36")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes13"]
+[node name="Eye3" type="Node2D" parent="EyeHolders/Eyes13" unique_id=1911206949]
 position = Vector2(104.000015, 52.999985)
 script = ExtResource("5_rwslu")
 
-[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye3"]
+[node name="Holder" type="Area2D" parent="EyeHolders/Eyes13/Eye3" unique_id=207362197]
 visible = false
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye3/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13/Eye3/Holder" unique_id=1047992664]
 shape = SubResource("CircleShape2D_doyhq")
 
-[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye3"]
+[node name="SelfAnchor" type="Node2D" parent="EyeHolders/Eyes13/Eye3" unique_id=1403310826]
 scale = Vector2(1.0000001, 1.0000001)
 
-[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye3"]
+[node name="Eye" type="Node2D" parent="EyeHolders/Eyes13/Eye3" unique_id=2020799211]
 position = Vector2(0, -12)
 
-[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye"]
+[node name="Iris" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye" unique_id=609992970]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("15_quvxm")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye"]
+[node name="IrisOutline" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye" unique_id=712816376]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("13_pmyfl")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye"]
+[node name="Pupil" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye" unique_id=2137874005]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("29_lj36c")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye"]
+[node name="Shape" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye" unique_id=215760217]
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("11_ixq08")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye"]
+[node name="EyeBrow" type="Sprite2D" parent="EyeHolders/Eyes13/Eye3/Eye" unique_id=986416760]
 visible = false
 scale = Vector2(0.082, 0.082)
 texture = ExtResource("24_24pqc")
 region_rect = Rect2(178.67114, 494.84625, 961.61475, 758.24457)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EyeHolders/Eyes13" unique_id=936774166]
 position = Vector2(1, 41)
 shape = SubResource("RectangleShape2D_r0aa4")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes13"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EyeHolders/Eyes13" unique_id=241707849]
 position = Vector2(1.5, 94.5)
 shape = SubResource("RectangleShape2D_pcypa")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes13"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EyeHolders/Eyes13" unique_id=220132207]
 position = Vector2(1, 5)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_pcypa")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes13"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EyeHolders/Eyes13" unique_id=1436850521]
 position = Vector2(1, -19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1pt")
 
-[node name="Decoration" type="Node2D" parent="."]
+[node name="Decoration" type="Node2D" parent="." unique_id=1852988869]
 
-[node name="Potion" type="RigidBody2D" parent="Decoration"]
+[node name="Potion" type="RigidBody2D" parent="Decoration" unique_id=2091076219]
 position = Vector2(112, 921)
 script = ExtResource("31_dfuxg")
 
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion"]
+[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion" unique_id=368671285]
 position = Vector2(-14.211262, -30.813215)
 scale = Vector2(0.19369009, 0.19369009)
 texture = ExtResource("32_rxrsw")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion"]
+[node name="Outline" type="Sprite2D" parent="Decoration/Potion" unique_id=343988825]
 visible = false
 position = Vector2(-12, -27.000013)
 scale = Vector2(0.3284826, 0.3284826)
@@ -2815,49 +2815,49 @@ texture = ExtResource("33_pxaeo")
 region_enabled = true
 region_rect = Rect2(1463, 1101, 200, 300)
 
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion"]
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion" unique_id=1551738048]
 position = Vector2(-31, 2)
 
-[node name="Right" type="Node2D" parent="Decoration/Potion/SelfAnchor"]
+[node name="Right" type="Node2D" parent="Decoration/Potion/SelfAnchor" unique_id=713656395]
 position = Vector2(33, 0)
 
-[node name="Holder" type="Area2D" parent="Decoration/Potion"]
+[node name="Holder" type="Area2D" parent="Decoration/Potion" unique_id=1079430889]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion/Holder" unique_id=2038690014]
 position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion" unique_id=872685659]
 position = Vector2(-15, -18.5)
 shape = SubResource("RectangleShape2D_3a6cf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion" unique_id=800955506]
 position = Vector2(-15, -35)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion" unique_id=1225913075]
 position = Vector2(-15, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion" unique_id=800806794]
 position = Vector2(-16, -50)
 shape = SubResource("CapsuleShape2D_s04bx")
 
-[node name="Potion2" type="RigidBody2D" parent="Decoration"]
+[node name="Potion2" type="RigidBody2D" parent="Decoration" unique_id=265745388]
 position = Vector2(461, 1050)
 rotation = 0.7853982
 script = ExtResource("31_dfuxg")
 
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion2"]
+[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion2" unique_id=593513086]
 position = Vector2(-14.211262, -30.813215)
 scale = Vector2(0.19369009, 0.19369009)
 texture = ExtResource("32_rxrsw")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion2"]
+[node name="Outline" type="Sprite2D" parent="Decoration/Potion2" unique_id=1503804084]
 visible = false
 position = Vector2(-12, -27.000013)
 scale = Vector2(0.3284826, 0.3284826)
@@ -2865,49 +2865,49 @@ texture = ExtResource("33_pxaeo")
 region_enabled = true
 region_rect = Rect2(1463, 1101, 200, 300)
 
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion2"]
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion2" unique_id=91501908]
 position = Vector2(-31, 2)
 
-[node name="Right" type="Node2D" parent="Decoration/Potion2/SelfAnchor"]
+[node name="Right" type="Node2D" parent="Decoration/Potion2/SelfAnchor" unique_id=1248909693]
 position = Vector2(33, 0)
 
-[node name="Holder" type="Area2D" parent="Decoration/Potion2"]
+[node name="Holder" type="Area2D" parent="Decoration/Potion2" unique_id=1294348318]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion2/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion2/Holder" unique_id=1694061918]
 position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion2" unique_id=2127471003]
 position = Vector2(-15, -18.5)
 shape = SubResource("RectangleShape2D_3a6cf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion2" unique_id=856860584]
 position = Vector2(-15, -35)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion2"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion2" unique_id=1845213141]
 position = Vector2(-15, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion2"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion2" unique_id=498217362]
 position = Vector2(-16, -50)
 shape = SubResource("CapsuleShape2D_s04bx")
 
-[node name="Potion14" type="RigidBody2D" parent="Decoration"]
+[node name="Potion14" type="RigidBody2D" parent="Decoration" unique_id=2109016950]
 position = Vector2(344, -2783)
 rotation = 0.7853982
 script = ExtResource("31_dfuxg")
 
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion14"]
+[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion14" unique_id=565199840]
 position = Vector2(-14.211262, -30.813215)
 scale = Vector2(0.19369009, 0.19369009)
 texture = ExtResource("32_rxrsw")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion14"]
+[node name="Outline" type="Sprite2D" parent="Decoration/Potion14" unique_id=1378894149]
 visible = false
 position = Vector2(-12, -27.000013)
 scale = Vector2(0.3284826, 0.3284826)
@@ -2915,49 +2915,49 @@ texture = ExtResource("33_pxaeo")
 region_enabled = true
 region_rect = Rect2(1463, 1101, 200, 300)
 
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion14"]
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion14" unique_id=1756044854]
 position = Vector2(-31, 2)
 
-[node name="Right" type="Node2D" parent="Decoration/Potion14/SelfAnchor"]
+[node name="Right" type="Node2D" parent="Decoration/Potion14/SelfAnchor" unique_id=698501810]
 position = Vector2(33, 0)
 
-[node name="Holder" type="Area2D" parent="Decoration/Potion14"]
+[node name="Holder" type="Area2D" parent="Decoration/Potion14" unique_id=1367658064]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion14/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion14/Holder" unique_id=1672577843]
 position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion14" unique_id=756913815]
 position = Vector2(-15, -18.5)
 shape = SubResource("RectangleShape2D_3a6cf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion14"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion14" unique_id=2011326230]
 position = Vector2(-15, -35)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion14"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion14" unique_id=2053913271]
 position = Vector2(-15, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion14"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion14" unique_id=1610337018]
 position = Vector2(-16, -50)
 shape = SubResource("CapsuleShape2D_s04bx")
 
-[node name="Potion15" type="RigidBody2D" parent="Decoration"]
+[node name="Potion15" type="RigidBody2D" parent="Decoration" unique_id=609307896]
 position = Vector2(1408, -2346.0005)
 rotation = 0.7853982
 script = ExtResource("31_dfuxg")
 
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion15"]
+[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion15" unique_id=1181645587]
 position = Vector2(-14.211262, -30.813215)
 scale = Vector2(0.19369009, 0.19369009)
 texture = ExtResource("32_rxrsw")
 region_enabled = true
 region_rect = Rect2(2049, 1766, 250, 382)
 
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion15"]
+[node name="Outline" type="Sprite2D" parent="Decoration/Potion15" unique_id=1779020495]
 visible = false
 position = Vector2(-12, -27.000013)
 scale = Vector2(0.3284826, 0.3284826)
@@ -2965,598 +2965,37 @@ texture = ExtResource("33_pxaeo")
 region_enabled = true
 region_rect = Rect2(1463, 1101, 200, 300)
 
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion15"]
+[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion15" unique_id=1086191543]
 position = Vector2(-31, 2)
 
-[node name="Right" type="Node2D" parent="Decoration/Potion15/SelfAnchor"]
+[node name="Right" type="Node2D" parent="Decoration/Potion15/SelfAnchor" unique_id=1803334247]
 position = Vector2(33, 0)
 
-[node name="Holder" type="Area2D" parent="Decoration/Potion15"]
+[node name="Holder" type="Area2D" parent="Decoration/Potion15" unique_id=59483054]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion15/Holder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion15/Holder" unique_id=1191240044]
 position = Vector2(-14, -27.5)
 shape = SubResource("RectangleShape2D_5ha8j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion15" unique_id=230116639]
 position = Vector2(-15, -18.5)
 shape = SubResource("RectangleShape2D_3a6cf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion15"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion15" unique_id=60042065]
 position = Vector2(-15, -35)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion15"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion15" unique_id=1942765683]
 position = Vector2(-15, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3a6cf")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion15"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion15" unique_id=506098141]
 position = Vector2(-16, -50)
 shape = SubResource("CapsuleShape2D_s04bx")
 
-[node name="Potion3" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(463, 910)
-rotation = -1.3089969
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion3"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion3"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion3"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion3/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion3/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion3"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion3"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion3"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion3"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion4" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(887, 970)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion4"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion4"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion4"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion4/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion4/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion4"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion4"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion4"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion4"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion5" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1051, 1048)
-rotation = 1.0471976
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion5"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion5"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion5"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion5/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion5/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion5"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion5"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion5"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion5"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion6" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(877, 1052)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion6"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion6"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion6"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion6/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion6/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion6"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion6"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion6"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion6"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion7" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1491, 970)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion7"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion7"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion7"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion7/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion7"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion7/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion7"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion7"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion7"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion7"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion8" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1106.0001, 940.0001)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion8"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion8"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion8"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion8/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion8"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion8/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion8"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion8"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion8"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion8"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion9" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1174.0001, 923.00006)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion9"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion9"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion9"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion9/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion9"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion9/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion9"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion9"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion9"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion9"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion10" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1224.0001, 853.0002)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion10"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion10"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion10"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion10/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion10"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion10/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion10"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion10"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion10"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion10"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion11" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(1135.0001, 860.00006)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion11"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion11"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion11"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion11/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion11"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion11/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion11"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion11"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion11"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion11"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion12" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(850, 927.00006)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion12"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion12"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion12"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion12/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion12"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion12/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion12"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion12"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion12"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion12"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="Potion13" type="RigidBody2D" parent="Decoration"]
-visible = false
-position = Vector2(770.0001, 750.00006)
-rotation = 0.7853982
-script = ExtResource("31_dfuxg")
-
-[node name="DecorPotion" type="Sprite2D" parent="Decoration/Potion13"]
-position = Vector2(-14.211262, -30.813215)
-scale = Vector2(0.19369009, 0.19369009)
-texture = ExtResource("32_rxrsw")
-region_enabled = true
-region_rect = Rect2(2049, 1766, 250, 382)
-
-[node name="Outline" type="Sprite2D" parent="Decoration/Potion13"]
-visible = false
-position = Vector2(-12, -27.000013)
-scale = Vector2(0.3284826, 0.3284826)
-texture = ExtResource("33_pxaeo")
-region_enabled = true
-region_rect = Rect2(1463, 1101, 200, 300)
-
-[node name="SelfAnchor" type="Node2D" parent="Decoration/Potion13"]
-position = Vector2(-31, 2)
-
-[node name="Right" type="Node2D" parent="Decoration/Potion13/SelfAnchor"]
-position = Vector2(33, 0)
-
-[node name="Holder" type="Area2D" parent="Decoration/Potion13"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion13/Holder"]
-position = Vector2(-14, -27.5)
-shape = SubResource("RectangleShape2D_5ha8j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoration/Potion13"]
-position = Vector2(-15, -18.5)
-shape = SubResource("RectangleShape2D_3a6cf")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Decoration/Potion13"]
-position = Vector2(-15, -35)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Decoration/Potion13"]
-position = Vector2(-15, -2)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_3a6cf")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Decoration/Potion13"]
-position = Vector2(-16, -50)
-shape = SubResource("CapsuleShape2D_s04bx")
-
-[node name="TextBubble" type="Control" parent="."]
+[node name="TextBubble" type="Control" parent="." unique_id=1137784963]
 visible = false
 anchors_preset = 0
 offset_left = 694.0
@@ -3567,7 +3006,7 @@ script = ExtResource("45_dvhea")
 sounds_per_char = Array[AudioStream]([ExtResource("46_7uff2"), ExtResource("47_l82gj"), ExtResource("48_uqsie"), ExtResource("49_yto75"), ExtResource("50_tbdw8")])
 is_skippable = false
 
-[node name="Label" type="RichTextLabel" parent="TextBubble"]
+[node name="Label" type="RichTextLabel" parent="TextBubble" unique_id=1183105366]
 self_modulate = Color(0.75987595, 0.75987595, 0.75987595, 1)
 z_index = 10
 clip_contents = false
@@ -3586,7 +3025,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 visible_characters_behavior = 3
 
-[node name="Control" type="Control" parent="TextBubble/Label"]
+[node name="Control" type="Control" parent="TextBubble/Label" unique_id=1744639243]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -3599,7 +3038,7 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control"]
+[node name="Frame" type="NinePatchRect" parent="TextBubble/Label/Control" unique_id=562105633]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.667
@@ -3614,7 +3053,7 @@ patch_margin_bottom = 110
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=140303798]
 layout_mode = 0
 offset_top = 218.0
 offset_right = 1938.0
@@ -3627,7 +3066,7 @@ theme = SubResource("Theme_hkpxx")
 bbcode_enabled = true
 text = "[center]EYE SHOP"
 
-[node name="PressSpace" type="RichTextLabel" parent="."]
+[node name="PressSpace" type="RichTextLabel" parent="." unique_id=1620499622]
 layout_mode = 0
 offset_top = 811.0
 offset_right = 1938.0
@@ -3640,86 +3079,86 @@ theme = SubResource("Theme_ceh8e")
 bbcode_enabled = true
 text = "[center](Press Space)"
 
-[node name="Environment" type="Node2D" parent="."]
+[node name="Environment" type="Node2D" parent="." unique_id=965002930]
 
-[node name="WorldBounds" type="StaticBody2D" parent="Environment"]
+[node name="WorldBounds" type="StaticBody2D" parent="Environment" unique_id=752798906]
 position = Vector2(974, 1080)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/WorldBounds"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/WorldBounds" unique_id=280381167]
 position = Vector2(50.5, 6038.5)
 shape = SubResource("RectangleShape2D_javl5")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/WorldBounds"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/WorldBounds" unique_id=1054549037]
 position = Vector2(30, -16390)
 shape = SubResource("RectangleShape2D_taho5")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Environment/WorldBounds"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Environment/WorldBounds" unique_id=629664483]
 position = Vector2(17761.498, -14594.359)
 scale = Vector2(1, 3.1200004)
 shape = SubResource("RectangleShape2D_i36mk")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Environment/WorldBounds"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Environment/WorldBounds" unique_id=1470073294]
 position = Vector2(-13348.499, -14983.359)
 scale = Vector2(1, 3.1200004)
 shape = SubResource("RectangleShape2D_q56tx")
 
-[node name="Heading" type="StaticBody2D" parent="Environment"]
+[node name="Heading" type="StaticBody2D" parent="Environment" unique_id=1145939167]
 position = Vector2(974, 1080)
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/Heading"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Environment/Heading" unique_id=611708504]
 position = Vector2(-197.49994, -779)
 scale = Vector2(1, 3.1200004)
 shape = SubResource("RectangleShape2D_ceh8e")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Environment/Heading"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Environment/Heading" unique_id=778423057]
 position = Vector2(151.5, -779)
 scale = Vector2(1, 3.1200004)
 shape = SubResource("RectangleShape2D_hkpxx")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Environment/Heading"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Environment/Heading" unique_id=697762111]
 position = Vector2(-5.75, -251.50006)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ceh8e")
 
-[node name="DialogSystem_FirstScreen" type="Node" parent="." node_paths=PackedStringArray("default_start")]
+[node name="DialogSystem_FirstScreen" type="Node" parent="." unique_id=277748865 node_paths=PackedStringArray("default_start")]
 script = ExtResource("53_h5n0a")
 default_start = NodePath("Fn_Main")
 run_on_start = true
 
-[node name="PlayRecorder" type="Node" parent="DialogSystem_FirstScreen"]
+[node name="PlayRecorder" type="Node" parent="DialogSystem_FirstScreen" unique_id=398686741]
 script = ExtResource("41_f0hic")
 
-[node name="Fn_Main" type="Node" parent="DialogSystem_FirstScreen"]
+[node name="Fn_Main" type="Node" parent="DialogSystem_FirstScreen" unique_id=1850834479]
 script = ExtResource("55_3bq6u")
 
-[node name="Condition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+[node name="Condition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main" unique_id=1236414582]
 script = ExtResource("56_eshda")
 
-[node name="FadeOut" type="Node" parent="DialogSystem_FirstScreen/Fn_Main/Condition"]
+[node name="FadeOut" type="Node" parent="DialogSystem_FirstScreen/Fn_Main/Condition" unique_id=1095318947]
 script = ExtResource("46_eb1j1")
 start_alpha = 1.0
 duration_seconds = 2.0
 ease = 1
 transition = 4
 
-[node name="WaitForKeyPress" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+[node name="WaitForKeyPress" type="Node" parent="DialogSystem_FirstScreen/Fn_Main" unique_id=680089720]
 script = ExtResource("48_i36mk")
 keys = Array[StringName]([&"Space"])
 
-[node name="ThunderSound" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+[node name="ThunderSound" type="Node" parent="DialogSystem_FirstScreen/Fn_Main" unique_id=1993098113]
 script = ExtResource("48_eb1j1")
 stream = ExtResource("49_3a6cf")
 pitch_min = 0.9
 pitch_max = 0.0
 
-[node name="FadeIn" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+[node name="FadeIn" type="Node" parent="DialogSystem_FirstScreen/Fn_Main" unique_id=1970701621]
 script = ExtResource("46_eb1j1")
 end_alpha = 1.0
 duration_seconds = 3.0
 ease = 1
 transition = 4
 
-[node name="Transition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main"]
+[node name="Transition" type="Node" parent="DialogSystem_FirstScreen/Fn_Main" unique_id=546701818]
 script = ExtResource("49_f0hic")
 destination = ExtResource("48_f0hic")
 

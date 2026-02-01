@@ -135,11 +135,13 @@ func _record_answer()->void:
 
 static var logfile_web : String = ""
 
-const NO_RECORD_PLATFORMS : PackedStringArray = ["Android"]
+const NO_RECORD_PLATFORMS : PackedStringArray = []
 static func write_record(record: Dictionary[String, Variant])->void:
 	if OS.get_name() in NO_RECORD_PLATFORMS: return
 	record["timestamp"] = Time.get_time_string_from_system()
-	const ANSWERS_PATH = "eyeshop.log"
+	var ANSWERS_PATH = "eyeshop.log"
+	if OS.get_name() == "Android":
+		ANSWERS_PATH = OS.get_system_dir(OS.SYSTEM_DIR_DOWNLOADS).path_join(ANSWERS_PATH)
 	var is_append :bool = true
 	var to_append := JSON.stringify(record, "\t")
 	

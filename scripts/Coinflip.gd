@@ -35,7 +35,7 @@ func copy_id_to_clipboard()->void:
 func _display_user_id() -> void:
 	# Web browsers restrict clipboard access, so we use a prompt instead
 	var js_code := """
-        prompt("Your ID", "{0}");
+		prompt("Your ID", "{0}");
 	""".format([id])
 	var clipboard : Variant = JavaScriptBridge.eval(js_code, true)
 	if clipboard == null or clipboard == "":
