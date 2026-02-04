@@ -1,0 +1,1815 @@
+[{
+	"id": "3074537546996689171",
+	"timestamp": "09:25:27",
+	"type": "user_id"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main",
+	"timestamp": "09:25:27",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/Condition",
+	"timestamp": "09:25:27",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/Condition/FadeOut",
+	"timestamp": "09:25:27",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/WaitForButton",
+	"timestamp": "09:25:30",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/ThunderSound",
+	"timestamp": "09:25:49",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/FadeIn",
+	"timestamp": "09:25:49",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_FirstScreen/Fn_Main/Transition",
+	"timestamp": "09:25:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main",
+	"timestamp": "09:25:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/TextReset",
+	"timestamp": "09:25:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/FadeOut",
+	"timestamp": "09:25:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/StartMusic",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/PrintText",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/ShowImg1",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/Text",
+	"timestamp": "09:25:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/Text2",
+	"timestamp": "09:26:05",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/Text3",
+	"timestamp": "09:27:02",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/Text4",
+	"timestamp": "09:27:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part1/HideImg1",
+	"timestamp": "09:27:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2",
+	"timestamp": "09:27:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/ShowImg2",
+	"timestamp": "09:27:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/Text5",
+	"timestamp": "09:27:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/Text6",
+	"timestamp": "09:27:15",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/Text7",
+	"timestamp": "09:27:29",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/Text8",
+	"timestamp": "09:27:38",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/Text9",
+	"timestamp": "09:27:44",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part2/HideImg2",
+	"timestamp": "09:27:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3",
+	"timestamp": "09:27:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/ClearText",
+	"timestamp": "09:27:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/Wait",
+	"timestamp": "09:27:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/Text10",
+	"timestamp": "09:27:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/Text11",
+	"timestamp": "09:27:59",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/Text12",
+	"timestamp": "09:28:02",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/Part3/Text13",
+	"timestamp": "09:28:05",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Text/HideTheDot",
+	"timestamp": "09:28:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/FadeIn",
+	"timestamp": "09:28:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Intro/Fn_Main/Transition",
+	"timestamp": "09:28:12",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main",
+	"timestamp": "09:28:12",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FadeIn",
+	"timestamp": "09:28:12",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial",
+	"timestamp": "09:28:14",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/ShowFigure",
+	"timestamp": "09:28:14",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/Text",
+	"timestamp": "09:28:16",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/Call_WaitForSubmittion",
+	"timestamp": "09:28:28",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:28:28",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:28:28",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:28:28",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye2",
+	"timestamp": "09:28:34",
+	"type": "add_part"
+}, {
+	"part": "Iris2",
+	"timestamp": "09:28:40",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow5",
+	"timestamp": "09:28:48",
+	"type": "add_part"
+}, {
+	"part": "Pupil4",
+	"timestamp": "09:28:54",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow5",
+	"timestamp": "09:28:59",
+	"type": "add_part"
+}, {
+	"part": "Eye2",
+	"timestamp": "09:29:00",
+	"type": "add_part"
+}, {
+	"part": "Eye2",
+	"timestamp": "09:29:02",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye2",
+	"eyebrow": "Eyebrow5",
+	"iris": "Iris2",
+	"pupil": "Pupil4",
+	"question_idx": 0,
+	"timestamp": "09:29:06",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:29:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/T_GiveMoney",
+	"timestamp": "09:29:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/AddMoney",
+	"timestamp": "09:29:09",
+	"type": "dialog_node_start"
+}, {
+	"amount": 11,
+	"new_balance": 21,
+	"original_balance": 10,
+	"timestamp": "09:29:09",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial/HideFigure",
+	"timestamp": "09:29:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2",
+	"timestamp": "09:29:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/ShowFigure",
+	"timestamp": "09:29:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/Text",
+	"timestamp": "09:29:13",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/Call_WaitForSubmittion",
+	"timestamp": "09:29:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:29:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:29:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:29:21",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:29:25",
+	"type": "add_part"
+}, {
+	"part": "Iris6",
+	"timestamp": "09:29:27",
+	"type": "add_part"
+}, {
+	"part": "Pupil3",
+	"timestamp": "09:29:30",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow6",
+	"timestamp": "09:29:34",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye1",
+	"eyebrow": "Eyebrow6",
+	"iris": "Iris6",
+	"pupil": "Pupil3",
+	"question_idx": 1,
+	"timestamp": "09:29:37",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:29:37",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/T_GiveMoney",
+	"timestamp": "09:29:37",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/AddMoney",
+	"timestamp": "09:29:51",
+	"type": "dialog_node_start"
+}, {
+	"amount": 35,
+	"new_balance": 56,
+	"original_balance": 21,
+	"timestamp": "09:29:51",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Tutorial2/HideFigure",
+	"timestamp": "09:29:51",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid",
+	"timestamp": "09:29:53",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/ShowFigure",
+	"timestamp": "09:29:53",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/Text",
+	"timestamp": "09:29:55",
+	"type": "dialog_node_start"
+}, {
+	"object": "Mask",
+	"original_placement": "<nil>",
+	"timestamp": "09:29:56",
+	"type": "grab_object"
+}, {
+	"balance_before_purchase": 56,
+	"price": 50,
+	"timestamp": "09:29:56",
+	"type": "purchase",
+	"what": "Mask"
+}, {
+	"destination": "P2",
+	"object": "Mask",
+	"timestamp": "09:29:56",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/Call_WaitForSubmittion",
+	"timestamp": "09:30:03",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:30:03",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:30:03",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:30:03",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:30:31",
+	"type": "add_part"
+}, {
+	"part": "Iris4",
+	"timestamp": "09:30:33",
+	"type": "add_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:30:36",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow3",
+	"timestamp": "09:30:42",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow3",
+	"timestamp": "09:30:44",
+	"type": "remove_part"
+}, {
+	"part": "Eyebrow1",
+	"timestamp": "09:30:45",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow1",
+	"timestamp": "09:30:48",
+	"type": "remove_part"
+}, {
+	"part": "Eyebrow5",
+	"timestamp": "09:30:49",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye3",
+	"eyebrow": "Eyebrow5",
+	"iris": "Iris4",
+	"pupil": "Pupil1",
+	"question_idx": 2,
+	"timestamp": "09:30:52",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:30:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/T_GiveMoney",
+	"timestamp": "09:30:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/AddMoney",
+	"timestamp": "09:30:56",
+	"type": "dialog_node_start"
+}, {
+	"amount": 7,
+	"new_balance": 13,
+	"original_balance": 6,
+	"timestamp": "09:30:56",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/NeedsToForgetWhatHeDid/HideFigure",
+	"timestamp": "09:30:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight",
+	"timestamp": "09:30:58",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/ShowFigure",
+	"timestamp": "09:30:58",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/Text",
+	"timestamp": "09:31:00",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/Call_WaitForSubmittion",
+	"timestamp": "09:31:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:31:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:31:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:31:06",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye6",
+	"timestamp": "09:31:18",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow4",
+	"timestamp": "09:31:20",
+	"type": "add_part"
+}, {
+	"part": "Iris1",
+	"timestamp": "09:31:23",
+	"type": "add_part"
+}, {
+	"part": "Pupil6",
+	"timestamp": "09:31:27",
+	"type": "add_part"
+}, {
+	"part": "Eye6",
+	"timestamp": "09:31:29",
+	"type": "remove_part"
+}, {
+	"part": "Eyebrow4",
+	"timestamp": "09:31:30",
+	"type": "remove_part"
+}, {
+	"part": "Eyebrow1",
+	"timestamp": "09:31:31",
+	"type": "add_part"
+}, {
+	"part": "Eye4",
+	"timestamp": "09:31:35",
+	"type": "add_part"
+}, {
+	"part": "Eye4",
+	"timestamp": "09:31:37",
+	"type": "remove_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:31:38",
+	"type": "add_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:31:43",
+	"type": "add_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:31:44",
+	"type": "remove_part"
+}, {
+	"part": "Pupil6",
+	"timestamp": "09:31:45",
+	"type": "remove_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:31:47",
+	"type": "add_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:31:50",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye1",
+	"eyebrow": "Eyebrow1",
+	"iris": "Iris1",
+	"pupil": "Pupil1",
+	"question_idx": 3,
+	"timestamp": "09:31:53",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:31:53",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/T_GiveMoney",
+	"timestamp": "09:31:53",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/AddMoney",
+	"timestamp": "09:31:57",
+	"type": "dialog_node_start"
+}, {
+	"amount": 45,
+	"new_balance": 58,
+	"original_balance": 13,
+	"timestamp": "09:31:57",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/LoyalKnight/HideFigure",
+	"timestamp": "09:31:57",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain",
+	"timestamp": "09:31:59",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/ShowFigure",
+	"timestamp": "09:31:59",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/Text",
+	"timestamp": "09:32:01",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/Call_WaitForSubmittion",
+	"timestamp": "09:32:10",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:32:10",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:32:10",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:32:10",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:15",
+	"type": "add_part"
+}, {
+	"part": "Iris5",
+	"timestamp": "09:32:18",
+	"type": "add_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:20",
+	"type": "add_part"
+}, {
+	"part": "Pupil3",
+	"timestamp": "09:32:22",
+	"type": "add_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:24",
+	"type": "remove_part"
+}, {
+	"part": "Pupil3",
+	"timestamp": "09:32:25",
+	"type": "remove_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:26",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow5",
+	"timestamp": "09:32:29",
+	"type": "add_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:32:32",
+	"type": "add_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:34",
+	"type": "add_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:35",
+	"type": "add_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:36",
+	"type": "remove_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:32:37",
+	"type": "remove_part"
+}, {
+	"part": "Eye3",
+	"timestamp": "09:32:38",
+	"type": "add_part"
+}, {
+	"part": "Pupil4",
+	"timestamp": "09:32:41",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye3",
+	"eyebrow": "Eyebrow5",
+	"iris": "Iris5",
+	"pupil": "Pupil4",
+	"question_idx": 4,
+	"timestamp": "09:32:44",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:32:44",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/T_GiveMoney",
+	"timestamp": "09:32:44",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/AddMoney",
+	"timestamp": "09:32:50",
+	"type": "dialog_node_start"
+}, {
+	"amount": 10,
+	"new_balance": 68,
+	"original_balance": 58,
+	"timestamp": "09:32:50",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Vain/HideFigure",
+	"timestamp": "09:32:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf",
+	"timestamp": "09:32:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/ShowFigure",
+	"timestamp": "09:32:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Text",
+	"timestamp": "09:32:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Wait",
+	"timestamp": "09:32:58",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Text2",
+	"timestamp": "09:32:59",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion3",
+	"original_placement": "<nil>",
+	"timestamp": "09:32:59",
+	"type": "grab_object"
+}, {
+	"balance_before_purchase": 68,
+	"price": 30,
+	"timestamp": "09:32:59",
+	"type": "purchase",
+	"what": "Potion3"
+}, {
+	"destination": "P9",
+	"object": "Potion3",
+	"timestamp": "09:32:59",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "<nil>",
+	"timestamp": "09:33:02",
+	"type": "grab_object"
+}, {
+	"balance_before_purchase": 38,
+	"price": 10,
+	"timestamp": "09:33:02",
+	"type": "purchase",
+	"what": "Potion"
+}, {
+	"destination": "P2",
+	"object": "Potion",
+	"timestamp": "09:33:02",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Wait2",
+	"timestamp": "09:33:03",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Text3",
+	"timestamp": "09:33:04",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/Call_WaitForSubmittion",
+	"timestamp": "09:33:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:33:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:33:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:33:08",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion",
+	"original_placement": "P2",
+	"timestamp": "09:33:27",
+	"type": "grab_object"
+}, {
+	"destination": "P2",
+	"object": "Potion",
+	"timestamp": "09:33:27",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P2",
+	"timestamp": "09:33:27",
+	"type": "grab_object"
+}, {
+	"destination": "P2",
+	"object": "Potion",
+	"timestamp": "09:33:28",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P2",
+	"timestamp": "09:33:28",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf",
+	"object": "Potion",
+	"timestamp": "09:33:29",
+	"type": "place_object"
+}, {
+	"object": "Potion3",
+	"original_placement": "P9",
+	"timestamp": "09:33:32",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf2",
+	"object": "Potion3",
+	"timestamp": "09:33:32",
+	"type": "place_object"
+}, {
+	"part": "Pupil4",
+	"timestamp": "09:33:44",
+	"type": "add_part"
+}, {
+	"part": "Pupil2",
+	"timestamp": "09:33:45",
+	"type": "add_part"
+}, {
+	"part": "Pupil4",
+	"timestamp": "09:33:47",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow6",
+	"timestamp": "09:33:49",
+	"type": "remove_part"
+}, {
+	"part": "Eyebrow6",
+	"timestamp": "09:33:50",
+	"type": "add_part"
+}, {
+	"part": "Iris3",
+	"timestamp": "09:33:52",
+	"type": "add_part"
+}, {
+	"part": "Eye5",
+	"timestamp": "09:33:56",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye5",
+	"eyebrow": "Eyebrow6",
+	"iris": "Iris3",
+	"pupil": "Pupil4",
+	"question_idx": 5,
+	"timestamp": "09:34:01",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:34:01",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/T_GiveFlower",
+	"timestamp": "09:34:01",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/GiveFlower",
+	"timestamp": "09:34:07",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/ShowFlower",
+	"timestamp": "09:34:07",
+	"type": "dialog_node_start"
+}, {
+	"object": "WerewolfFlower",
+	"original_placement": "MainShelf2",
+	"timestamp": "09:34:07",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf2",
+	"object": "WerewolfFlower",
+	"timestamp": "09:34:07",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/GentleWerewolf/HideFigure",
+	"timestamp": "09:34:08",
+	"type": "dialog_node_start"
+}, {
+	"object": "WerewolfFlower",
+	"original_placement": "MainShelf2",
+	"timestamp": "09:34:09",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf2",
+	"object": "WerewolfFlower",
+	"timestamp": "09:34:09",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler",
+	"timestamp": "09:34:10",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/ShowFigure",
+	"timestamp": "09:34:10",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion3",
+	"original_placement": "MainShelf2",
+	"timestamp": "09:34:11",
+	"type": "grab_object"
+}, {
+	"destination": "P13",
+	"object": "Potion3",
+	"timestamp": "09:34:11",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/Text",
+	"timestamp": "09:34:12",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion3",
+	"original_placement": "P13",
+	"timestamp": "09:34:12",
+	"type": "grab_object"
+}, {
+	"destination": "P13",
+	"object": "Potion3",
+	"timestamp": "09:34:12",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "MainShelf",
+	"timestamp": "09:34:14",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:34:14",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/Call_WaitForSubmittion",
+	"timestamp": "09:34:17",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:34:17",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:34:17",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:34:17",
+	"type": "dialog_node_start"
+}, {
+	"object": "WerewolfFlower",
+	"original_placement": "MainShelf2",
+	"timestamp": "09:34:19",
+	"type": "grab_object"
+}, {
+	"destination": "P9",
+	"object": "WerewolfFlower",
+	"timestamp": "09:34:19",
+	"type": "place_object"
+}, {
+	"part": "Eye6",
+	"timestamp": "09:34:25",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow4",
+	"timestamp": "09:34:26",
+	"type": "add_part"
+}, {
+	"part": "Pupil6",
+	"timestamp": "09:34:27",
+	"type": "add_part"
+}, {
+	"part": "Iris2",
+	"timestamp": "09:34:29",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye6",
+	"eyebrow": "Eyebrow4",
+	"iris": "Iris2",
+	"pupil": "Pupil6",
+	"question_idx": 6,
+	"timestamp": "09:34:31",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:34:31",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/T_GiveMoney",
+	"timestamp": "09:34:31",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/AddMoney",
+	"timestamp": "09:34:36",
+	"type": "dialog_node_start"
+}, {
+	"amount": 6,
+	"new_balance": 34,
+	"original_balance": 28,
+	"timestamp": "09:34:36",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Gambler/HideFigure",
+	"timestamp": "09:34:36",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant",
+	"timestamp": "09:34:38",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/ShowFigure",
+	"timestamp": "09:34:38",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/Text",
+	"timestamp": "09:34:40",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/Call_WaitForSubmittion",
+	"timestamp": "09:34:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:34:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:34:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:34:46",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye4",
+	"timestamp": "09:34:50",
+	"type": "add_part"
+}, {
+	"part": "Iris4",
+	"timestamp": "09:34:51",
+	"type": "add_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:34:56",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow2",
+	"timestamp": "09:34:57",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye4",
+	"eyebrow": "Eyebrow2",
+	"iris": "Iris4",
+	"pupil": "Pupil1",
+	"question_idx": 7,
+	"timestamp": "09:34:59",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:34:59",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/T_GiveMoney",
+	"timestamp": "09:34:59",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/AddMoney",
+	"timestamp": "09:35:06",
+	"type": "dialog_node_start"
+}, {
+	"amount": 3,
+	"new_balance": 37,
+	"original_balance": 34,
+	"timestamp": "09:35:06",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/PoorPeasant/HideFigure",
+	"timestamp": "09:35:06",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock",
+	"timestamp": "09:35:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/ShowFigure",
+	"timestamp": "09:35:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/Text",
+	"timestamp": "09:35:10",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/Call_WaitForSubmittion",
+	"timestamp": "09:35:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:35:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:35:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:35:23",
+	"type": "dialog_node_start"
+}, {
+	"part": "Pupil5",
+	"timestamp": "09:35:29",
+	"type": "add_part"
+}, {
+	"object": "Potion3",
+	"original_placement": "P13",
+	"timestamp": "09:35:30",
+	"type": "grab_object"
+}, {
+	"destination": "P13",
+	"object": "Potion3",
+	"timestamp": "09:35:30",
+	"type": "place_object"
+}, {
+	"part": "Eyebrow3",
+	"timestamp": "09:35:33",
+	"type": "add_part"
+}, {
+	"part": "Iris6",
+	"timestamp": "09:35:36",
+	"type": "add_part"
+}, {
+	"part": "Eye5",
+	"timestamp": "09:35:38",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye5",
+	"eyebrow": "Eyebrow3",
+	"iris": "Iris6",
+	"pupil": "Pupil5",
+	"question_idx": 8,
+	"timestamp": "09:35:41",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:35:41",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/T_GiveMoney",
+	"timestamp": "09:35:41",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/AddMoney",
+	"timestamp": "09:35:44",
+	"type": "dialog_node_start"
+}, {
+	"amount": 66,
+	"new_balance": 103,
+	"original_balance": 37,
+	"timestamp": "09:35:44",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Warlock/HideFigure",
+	"timestamp": "09:35:44",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer",
+	"timestamp": "09:35:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/ShowFigure",
+	"timestamp": "09:35:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/Text",
+	"timestamp": "09:35:48",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/Call_WaitForSubmittion",
+	"timestamp": "09:35:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:35:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:35:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:35:56",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye5",
+	"timestamp": "09:36:13",
+	"type": "add_part"
+}, {
+	"part": "Eye5",
+	"timestamp": "09:36:14",
+	"type": "remove_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:36:15",
+	"type": "add_part"
+}, {
+	"part": "Iris6",
+	"timestamp": "09:36:17",
+	"type": "remove_part"
+}, {
+	"part": "Iris1",
+	"timestamp": "09:36:20",
+	"type": "add_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:36:22",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow1",
+	"timestamp": "09:36:25",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye1",
+	"eyebrow": "Eyebrow1",
+	"iris": "Iris1",
+	"pupil": "Pupil1",
+	"question_idx": 9,
+	"timestamp": "09:36:27",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:36:27",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/T_GiveMoney",
+	"timestamp": "09:36:27",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/AddMoney",
+	"timestamp": "09:36:35",
+	"type": "dialog_node_start"
+}, {
+	"amount": 14,
+	"new_balance": 117,
+	"original_balance": 103,
+	"timestamp": "09:36:35",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/BookEnjoyer/HideFigure",
+	"timestamp": "09:36:35",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier",
+	"timestamp": "09:36:37",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/ShowFigure",
+	"timestamp": "09:36:37",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/Text",
+	"timestamp": "09:36:39",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/Call_WaitForSubmittion",
+	"timestamp": "09:36:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:36:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:36:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:36:50",
+	"type": "dialog_node_start"
+}, {
+	"part": "Iris3",
+	"timestamp": "09:36:59",
+	"type": "add_part"
+}, {
+	"part": "Pupil4",
+	"timestamp": "09:37:01",
+	"type": "add_part"
+}, {
+	"part": "Eye6",
+	"timestamp": "09:37:04",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow4",
+	"timestamp": "09:37:06",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye6",
+	"eyebrow": "Eyebrow4",
+	"iris": "Iris3",
+	"pupil": "Pupil4",
+	"question_idx": 10,
+	"timestamp": "09:37:09",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:37:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/T_GiveMoney",
+	"timestamp": "09:37:09",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/AddMoney",
+	"timestamp": "09:37:14",
+	"type": "dialog_node_start"
+}, {
+	"amount": 25,
+	"new_balance": 142,
+	"original_balance": 117,
+	"timestamp": "09:37:14",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FormerVizier/HideFigure",
+	"timestamp": "09:37:14",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist",
+	"timestamp": "09:37:16",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/ShowFigure",
+	"timestamp": "09:37:16",
+	"type": "dialog_node_start"
+}, {
+	"object": "Glasses",
+	"original_placement": "<nil>",
+	"timestamp": "09:37:17",
+	"type": "grab_object"
+}, {
+	"balance_before_purchase": 142,
+	"price": 120,
+	"timestamp": "09:37:17",
+	"type": "purchase",
+	"what": "Glasses"
+}, {
+	"destination": "P2",
+	"object": "Glasses",
+	"timestamp": "09:37:17",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/Text",
+	"timestamp": "09:37:18",
+	"type": "dialog_node_start"
+}, {
+	"object": "Glasses",
+	"original_placement": "P2",
+	"timestamp": "09:37:19",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf",
+	"object": "Glasses",
+	"timestamp": "09:37:20",
+	"type": "place_object"
+}, {
+	"object": "Glasses",
+	"original_placement": "MainShelf",
+	"timestamp": "09:37:20",
+	"type": "grab_object"
+}, {
+	"destination": "P7",
+	"object": "Glasses",
+	"timestamp": "09:37:21",
+	"type": "place_object"
+}, {
+	"object": "Mask",
+	"original_placement": "P2",
+	"timestamp": "09:37:23",
+	"type": "grab_object"
+}, {
+	"destination": "P2",
+	"object": "Mask",
+	"timestamp": "09:37:23",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/Call_WaitForSubmittion",
+	"timestamp": "09:37:30",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:37:30",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:37:30",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:37:30",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye4",
+	"timestamp": "09:37:37",
+	"type": "add_part"
+}, {
+	"part": "Iris4",
+	"timestamp": "09:37:44",
+	"type": "add_part"
+}, {
+	"part": "Pupil2",
+	"timestamp": "09:37:46",
+	"type": "remove_part"
+}, {
+	"part": "Pupil1",
+	"timestamp": "09:37:47",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow1",
+	"timestamp": "09:37:49",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye4",
+	"eyebrow": "Eyebrow1",
+	"iris": "Iris4",
+	"pupil": "Pupil1",
+	"question_idx": 11,
+	"timestamp": "09:37:50",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:37:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/T_GivePotion",
+	"timestamp": "09:37:50",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/GivePotion",
+	"timestamp": "09:38:02",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/MadScientist/HideFigure",
+	"timestamp": "09:38:03",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:04",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:04",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:05",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:05",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:05",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:05",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:05",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:05",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage",
+	"timestamp": "09:38:05",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/ShowFigure",
+	"timestamp": "09:38:05",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:05",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:05",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:06",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf",
+	"object": "Potion",
+	"timestamp": "09:38:06",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "MainShelf",
+	"timestamp": "09:38:08",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:08",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:10",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:11",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/Text",
+	"timestamp": "09:38:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/Call_WaitForSubmittion",
+	"timestamp": "09:38:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:38:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:38:21",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:38:21",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:22",
+	"type": "grab_object"
+}, {
+	"destination": "P11",
+	"object": "Potion",
+	"timestamp": "09:38:22",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P11",
+	"timestamp": "09:38:23",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:23",
+	"type": "place_object"
+}, {
+	"part": "Iris6",
+	"timestamp": "09:38:26",
+	"type": "add_part"
+}, {
+	"part": "Eye5",
+	"timestamp": "09:38:29",
+	"type": "add_part"
+}, {
+	"part": "Pupil2",
+	"timestamp": "09:38:34",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow5",
+	"timestamp": "09:38:37",
+	"type": "add_part"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:39",
+	"type": "grab_object"
+}, {
+	"destination": "P18",
+	"object": "Potion",
+	"timestamp": "09:38:41",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P18",
+	"timestamp": "09:38:43",
+	"type": "grab_object"
+}, {
+	"destination": "MainShelf",
+	"object": "Potion",
+	"timestamp": "09:38:44",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "MainShelf",
+	"timestamp": "09:38:45",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:46",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:49",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:49",
+	"type": "place_object"
+}, {
+	"object": "Potion",
+	"original_placement": "P6",
+	"timestamp": "09:38:49",
+	"type": "grab_object"
+}, {
+	"destination": "P6",
+	"object": "Potion",
+	"timestamp": "09:38:49",
+	"type": "place_object"
+}, {
+	"eye_shape": "Eye5",
+	"eyebrow": "Eyebrow5",
+	"iris": "Iris6",
+	"pupil": "Pupil2",
+	"question_idx": 12,
+	"timestamp": "09:39:04",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:39:04",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/T_GiveMoney",
+	"timestamp": "09:39:04",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/AddMoney",
+	"timestamp": "09:39:11",
+	"type": "dialog_node_start"
+}, {
+	"amount": 80,
+	"new_balance": 102,
+	"original_balance": 22,
+	"timestamp": "09:39:11",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Archmage/HideFigure",
+	"timestamp": "09:39:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared",
+	"timestamp": "09:39:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/ShowFigure",
+	"timestamp": "09:39:11",
+	"type": "dialog_node_start"
+}, {
+	"object": "Potion2",
+	"original_placement": "<nil>",
+	"timestamp": "09:39:16",
+	"type": "grab_object"
+}, {
+	"balance_before_purchase": 102,
+	"price": 100,
+	"timestamp": "09:39:16",
+	"type": "purchase",
+	"what": "Potion2"
+}, {
+	"destination": "P9",
+	"object": "Potion2",
+	"timestamp": "09:39:16",
+	"type": "place_object"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/Text",
+	"timestamp": "09:39:17",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/Call_WaitForSubmittion",
+	"timestamp": "09:39:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion",
+	"timestamp": "09:39:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/EnablePiedestalCollider",
+	"timestamp": "09:39:23",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/WaitForSubmission",
+	"timestamp": "09:39:23",
+	"type": "dialog_node_start"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:39:27",
+	"type": "add_part"
+}, {
+	"part": "Iris5",
+	"timestamp": "09:39:29",
+	"type": "add_part"
+}, {
+	"part": "Pupil3",
+	"timestamp": "09:39:30",
+	"type": "add_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:39:31",
+	"type": "add_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:39:32",
+	"type": "remove_part"
+}, {
+	"part": "Pupil3",
+	"timestamp": "09:39:33",
+	"type": "remove_part"
+}, {
+	"part": "Pupil5",
+	"timestamp": "09:39:35",
+	"type": "add_part"
+}, {
+	"part": "Eye1",
+	"timestamp": "09:39:39",
+	"type": "add_part"
+}, {
+	"part": "Eyebrow3",
+	"timestamp": "09:39:41",
+	"type": "add_part"
+}, {
+	"eye_shape": "Eye1",
+	"eyebrow": "Eyebrow3",
+	"iris": "Iris5",
+	"pupil": "Pupil5",
+	"question_idx": 13,
+	"timestamp": "09:39:42",
+	"type": "submit_answer"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_HandleEyeSubmittion/DisablePiedestalCollider",
+	"timestamp": "09:39:42",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/T_GiveMoney",
+	"timestamp": "09:39:42",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/AddMoney",
+	"timestamp": "09:39:46",
+	"type": "dialog_node_start"
+}, {
+	"amount": 20,
+	"new_balance": 22,
+	"original_balance": 2,
+	"timestamp": "09:39:46",
+	"type": "add_money"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Scared/HideFigure",
+	"timestamp": "09:39:46",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Wait",
+	"timestamp": "09:39:47",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/FadeOut",
+	"timestamp": "09:39:52",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "Control/DialogSystem_Main/Fn_Main/Transition",
+	"timestamp": "09:39:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Main",
+	"timestamp": "09:39:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Main/TextReset",
+	"timestamp": "09:39:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Main/FadeOut",
+	"timestamp": "09:39:54",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Main/PrintText",
+	"timestamp": "09:39:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text",
+	"timestamp": "09:39:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text",
+	"timestamp": "09:39:56",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text2",
+	"timestamp": "09:40:05",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text4",
+	"timestamp": "09:40:08",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text5",
+	"timestamp": "09:40:11",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text6",
+	"timestamp": "09:40:13",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text7",
+	"timestamp": "09:40:15",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/Text8",
+	"timestamp": "09:40:18",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/OnWeb",
+	"timestamp": "09:40:20",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/OnWeb/Text10",
+	"timestamp": "09:40:20",
+	"type": "dialog_node_start"
+}, {
+	"node_path": "IntroText/DialogSystem_Outro/Fn_Text/OnWeb/DoExportTheLog",
+	"timestamp": "09:40:31",
+	"type": "dialog_node_start"
+}]
