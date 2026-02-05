@@ -7515,7 +7515,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -7666,7 +7666,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">questionnaire_raw</span> <span class="o">=</span> <span class="n">load_main_questionnaire</span><span class="p">()</span>
@@ -7677,8 +7677,8 @@ a.anchor-link {
 
 <span class="n">questionnaire</span> <span class="o">=</span> <span class="p">[</span><span class="n">questionnaire_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">matching_ids</span><span class="p">]</span>
 <span class="n">gamelogs</span> <span class="o">=</span> <span class="p">[</span><span class="n">game_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">matching_ids</span><span class="p">]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">MultiData</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">game_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span><span class="o">.</span><span class="n">answers</span><span class="p">,</span> <span class="n">questionnaire_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span><span class="o">.</span><span class="n">answers</span> <span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">matching_ids</span><span class="p">]</span>
-<span class="n">QUESTIONS_COUNT</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">game</span><span class="p">)</span>
+<span class="n">multidata</span> <span class="o">=</span> <span class="p">[</span><span class="n">MultiData</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">game_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span><span class="o">.</span><span class="n">answers</span><span class="p">,</span> <span class="n">questionnaire_ids</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span><span class="o">.</span><span class="n">answers</span> <span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">matching_ids</span><span class="p">]</span>
+<span class="n">QUESTIONS_COUNT</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">multidata</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">game</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7700,7 +7700,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">QUESTIONS_COUNT</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
@@ -8112,7 +8112,7 @@ Archmage
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_Nplets</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span> <span class="n">N</span><span class="p">:</span><span class="nb">int</span><span class="p">):</span>
@@ -8781,7 +8781,7 @@ Prompt: 'Archmage'
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">shape_type</span><span class="p">,</span> <span class="n">shape_name</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[(</span><span class="n">EYE_SHAPE_TR</span><span class="p">,</span> <span class="s2">"eye_shape"</span><span class="p">),</span> <span class="p">(</span><span class="n">EYEBROW_TR</span><span class="p">,</span> <span class="s2">"eyebrow"</span><span class="p">),</span> <span class="p">(</span><span class="n">IRIS_TR</span><span class="p">,</span> <span class="s2">"iris"</span><span class="p">),</span> <span class="p">(</span><span class="n">PUPIL_TR</span><span class="p">,</span> <span class="s2">"pupil"</span><span class="p">)]:</span>
@@ -8956,6 +8956,468 @@ Prompt: 'Archmage'
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="No description has been provided for this image" class="" src="data:image/png;base64,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K3Xr1pUtW7a4XQMAAGRtloYbHenkcDgSfFwDTkxvvPGG2QAAAGzboRgAACAmwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVS8PN9u3bpWvXrlKyZEnx8fGRNWvWJPmc0NBQadCggfj6+krlypVl0aJFmVJWAADgHSwNN1FRURIYGCizZs1K1vlnzpyRLl26yMMPPywHDhyQl19+WQYOHCibNm3K8LICAADvkMPKF+/cubPZkmvu3LlSoUIFmTp1qtmvUaOG/PDDDzJ9+nTp2LFjBpYUAAB4C6/qc7Nz505p166d2zENNXocAADA8pqblAoPDxd/f3+3Y7ofGRkpf//9t+TJkyfOc6Kjo83mpOcCAAD78qpwkxqTJk2ScePGZdrrhbYZK1ZoE5r46461plhJvranlsuTJfVvnXG884ZZ9f+ktf9W3vn/RpKv67EFg6fxqmapgIAAuXjxotsx3ffz84u31kYFBwdLRESEawsLC8uk0gIAACt4Vc1Ns2bNZP369W7HQkJCzPGE6JBx3QAAQNZgac3NjRs3zJBu3ZxDvfX7c+fOuWpd+vbt6zr/pZdektOnT8sbb7whx44dk9mzZ8tXX30lr7zyimXvAQAAeBZLw83evXulfv36ZlMjR440348ePdrsX7hwwRV0lA4DX7dunamt0flxdEj4Z599xjBwAADgGc1Sbdq0EYfDkeDj8c0+rM/Zv39/BpcMAAB4K6/qUAwAAJAUwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAVwg0AALAV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"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2079d194">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Answer-similarities-between-Game-and-Questionnaire">Answer similarities between Game and Questionnaire<a class="anchor-link" href="#Answer-similarities-between-Game-and-Questionnaire">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f6c4352a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">multidata</span><span class="p">:</span>
+	<span class="n">id_was_printed</span> <span class="o">=</span> <span class="kc">False</span>
+	<span class="n">last_idx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+	<span class="k">def</span><span class="w"> </span><span class="nf">print_id</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+		<span class="k">global</span> <span class="n">id_was_printed</span>
+		<span class="k">global</span> <span class="n">last_idx</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="n">id_was_printed</span><span class="p">:</span>
+			<span class="n">id_was_printed</span> <span class="o">=</span> <span class="kc">True</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
+		<span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="n">last_idx</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">()</span>
+			<span class="n">last_idx</span> <span class="o">=</span> <span class="n">idx</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span>
+
+	<span class="k">for</span> <span class="n">question_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">QUESTIONS_COUNT</span><span class="p">):</span>
+		<span class="k">for</span> <span class="n">shape</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"eye_shape"</span><span class="p">,</span> <span class="s2">"eyebrow"</span><span class="p">,</span> <span class="s2">"pupil"</span><span class="p">,</span> <span class="s2">"iris"</span><span class="p">]:</span>
+			<span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">game</span><span class="p">[</span><span class="n">question_idx</span><span class="p">],</span> <span class="n">shape</span><span class="p">)</span>
+			<span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">questionnaire</span><span class="p">[</span><span class="n">question_idx</span><span class="p">],</span> <span class="n">shape</span><span class="p">):</span>
+				<span class="n">print_id</span><span class="p">(</span><span class="n">question_idx</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"q.</span><span class="si">{</span><span class="n">question_idx</span><span class="si">}</span><span class="s2"> - corresponding </span><span class="si">{</span><span class="n">shape</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>3074537546996689171...
+
+	q.0 - corresponding pupil: Pupil1
+
+	q.2 - corresponding eye_shape: Eye3
+	q.2 - corresponding eyebrow: Eyebrow5
+
+	q.3 - corresponding eyebrow: Eyebrow6
+	q.3 - corresponding pupil: Pupil4
+
+	q.5 - corresponding eye_shape: Eye4
+	q.5 - corresponding eyebrow: Eyebrow2
+	q.5 - corresponding pupil: Pupil1
+	q.5 - corresponding iris: Iris4
+
+	q.7 - corresponding eye_shape: Eye1
+	q.7 - corresponding eyebrow: Eyebrow1
+	q.7 - corresponding pupil: Pupil1
+
+	q.9 - corresponding eyebrow: Eyebrow1
+
+	q.10 - corresponding eye_shape: Eye5
+	q.10 - corresponding pupil: Pupil2
+	q.10 - corresponding iris: Iris6
+
+	q.11 - corresponding pupil: Pupil5
+776907782364667392...
+
+	q.2 - corresponding iris: Iris6
+
+	q.4 - corresponding eye_shape: Eye4
+	q.4 - corresponding iris: Iris2
+
+	q.5 - corresponding iris: Iris1
+
+	q.6 - corresponding iris: Iris3
+
+	q.7 - corresponding iris: Iris6
+
+	q.8 - corresponding eye_shape: Eye6
+	q.8 - corresponding eyebrow: Eyebrow1
+	q.8 - corresponding pupil: Pupil1
+
+	q.9 - corresponding eyebrow: Eyebrow2
+9047749499404765005...
+
+	q.0 - corresponding eyebrow: Eyebrow3
+	q.0 - corresponding iris: Iris3
+
+	q.1 - corresponding eyebrow: Eyebrow6
+
+	q.3 - corresponding iris: Iris3
+
+	q.5 - corresponding pupil: Pupil1
+	q.5 - corresponding iris: Iris1
+
+	q.6 - corresponding pupil: Pupil4
+
+	q.7 - corresponding eye_shape: Eye3
+	q.7 - corresponding iris: Iris6
+
+	q.8 - corresponding pupil: Pupil2
+	q.8 - corresponding iris: Iris6
+
+	q.9 - corresponding eye_shape: Eye2
+
+	q.10 - corresponding eyebrow: Eyebrow6
+	q.10 - corresponding iris: Iris6
+
+	q.11 - corresponding eye_shape: Eye1
+	q.11 - corresponding iris: Iris3
+1866945996361516431...
+
+	q.1 - corresponding eye_shape: Eye4
+
+	q.2 - corresponding eye_shape: Eye2
+	q.2 - corresponding eyebrow: Eyebrow1
+	q.2 - corresponding pupil: Pupil4
+
+	q.3 - corresponding eyebrow: Eyebrow3
+	q.3 - corresponding pupil: Pupil6
+
+	q.4 - corresponding pupil: Pupil5
+
+	q.6 - corresponding eyebrow: Eyebrow5
+	q.6 - corresponding iris: Iris3
+
+	q.7 - corresponding eye_shape: Eye3
+	q.7 - corresponding pupil: Pupil1
+
+	q.8 - corresponding eyebrow: Eyebrow1
+	q.8 - corresponding pupil: Pupil4
+	q.8 - corresponding iris: Iris6
+
+	q.9 - corresponding eyebrow: Eyebrow2
+
+	q.10 - corresponding iris: Iris6
+
+	q.11 - corresponding eye_shape: Eye5
+	q.11 - corresponding iris: Iris5
+8186985820126921263...
+
+	q.0 - corresponding iris: Iris4
+
+	q.1 - corresponding pupil: Pupil1
+	q.1 - corresponding iris: Iris6
+
+	q.2 - corresponding eye_shape: Eye3
+	q.2 - corresponding eyebrow: Eyebrow1
+	q.2 - corresponding pupil: Pupil1
+	q.2 - corresponding iris: Iris6
+
+	q.4 - corresponding eyebrow: Eyebrow2
+
+	q.7 - corresponding eye_shape: Eye2
+	q.7 - corresponding pupil: Pupil2
+	q.7 - corresponding iris: Iris6
+
+	q.8 - corresponding eye_shape: Eye6
+	q.8 - corresponding eyebrow: Eyebrow4
+	q.8 - corresponding pupil: Pupil4
+	q.8 - corresponding iris: Iris3
+
+	q.9 - corresponding eye_shape: Eye5
+	q.9 - corresponding pupil: Pupil5
+
+	q.11 - corresponding iris: Iris4
+8357365588655156805...
+
+	q.0 - corresponding eye_shape: Eye1
+	q.0 - corresponding eyebrow: Eyebrow1
+	q.0 - corresponding pupil: Pupil1
+	q.0 - corresponding iris: Iris6
+
+	q.1 - corresponding eyebrow: Eyebrow6
+	q.1 - corresponding pupil: Pupil1
+	q.1 - corresponding iris: Iris2
+
+	q.2 - corresponding eye_shape: Eye3
+	q.2 - corresponding eyebrow: Eyebrow1
+	q.2 - corresponding iris: Iris6
+
+	q.3 - corresponding eyebrow: Eyebrow1
+	q.3 - corresponding iris: Iris6
+
+	q.4 - corresponding eye_shape: Eye5
+	q.4 - corresponding eyebrow: Eyebrow4
+	q.4 - corresponding pupil: Pupil3
+
+	q.5 - corresponding eye_shape: Eye4
+	q.5 - corresponding eyebrow: Eyebrow1
+
+	q.6 - corresponding iris: Iris3
+
+	q.7 - corresponding eye_shape: Eye1
+	q.7 - corresponding iris: Iris2
+
+	q.8 - corresponding eyebrow: Eyebrow1
+
+	q.10 - corresponding eye_shape: Eye3
+	q.10 - corresponding iris: Iris6
+4881715645086325763...
+
+	q.1 - corresponding eye_shape: Eye1
+	q.1 - corresponding eyebrow: Eyebrow6
+
+	q.2 - corresponding eye_shape: Eye3
+	q.2 - corresponding eyebrow: Eyebrow1
+	q.2 - corresponding pupil: Pupil2
+
+	q.4 - corresponding iris: Iris2
+
+	q.5 - corresponding eye_shape: Eye2
+
+	q.6 - corresponding pupil: Pupil4
+
+	q.8 - corresponding eyebrow: Eyebrow6
+
+	q.11 - corresponding pupil: Pupil3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2cb58062">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">question_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">QUESTIONS_COUNT</span><span class="p">):</span>
+	<span class="n">last_id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+	<span class="n">last_idx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+	<span class="k">def</span><span class="w"> </span><span class="nf">print_id</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+		<span class="k">global</span> <span class="n">last_id</span>
+		<span class="k">global</span> <span class="n">last_idx</span>
+		<span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="n">last_idx</span><span class="p">:</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Question </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
+			<span class="n">last_idx</span> <span class="o">=</span> <span class="n">idx</span>
+		<span class="k">if</span> <span class="nb">id</span> <span class="o">!=</span> <span class="n">last_id</span><span class="p">:</span>
+			<span class="n">last_id</span> <span class="o">=</span> <span class="nb">id</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\t</span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t\t</span><span class="s2">"</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span>
+
+	<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">multidata</span><span class="p">:</span>
+		<span class="k">for</span> <span class="n">shape</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"eye_shape"</span><span class="p">,</span> <span class="s2">"eyebrow"</span><span class="p">,</span> <span class="s2">"pupil"</span><span class="p">,</span> <span class="s2">"iris"</span><span class="p">]:</span>
+			<span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">game</span><span class="p">[</span><span class="n">question_idx</span><span class="p">],</span> <span class="n">shape</span><span class="p">)</span>
+			<span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">questionnaire</span><span class="p">[</span><span class="n">question_idx</span><span class="p">],</span> <span class="n">shape</span><span class="p">):</span>
+				<span class="n">print_id</span><span class="p">(</span><span class="n">question_idx</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">shape</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Question 0...
+	3074537546996689171...
+		pupil: Pupil1
+	9047749499404765005...
+		eyebrow: Eyebrow3
+		iris: Iris3
+	8186985820126921263...
+		iris: Iris4
+	8357365588655156805...
+		eye_shape: Eye1
+		eyebrow: Eyebrow1
+		pupil: Pupil1
+		iris: Iris6
+Question 1...
+	9047749499404765005...
+		eyebrow: Eyebrow6
+	1866945996361516431...
+		eye_shape: Eye4
+	8186985820126921263...
+		pupil: Pupil1
+		iris: Iris6
+	8357365588655156805...
+		eyebrow: Eyebrow6
+		pupil: Pupil1
+		iris: Iris2
+	4881715645086325763...
+		eye_shape: Eye1
+		eyebrow: Eyebrow6
+Question 2...
+	3074537546996689171...
+		eye_shape: Eye3
+		eyebrow: Eyebrow5
+	776907782364667392...
+		iris: Iris6
+	1866945996361516431...
+		eye_shape: Eye2
+		eyebrow: Eyebrow1
+		pupil: Pupil4
+	8186985820126921263...
+		eye_shape: Eye3
+		eyebrow: Eyebrow1
+		pupil: Pupil1
+		iris: Iris6
+	8357365588655156805...
+		eye_shape: Eye3
+		eyebrow: Eyebrow1
+		iris: Iris6
+	4881715645086325763...
+		eye_shape: Eye3
+		eyebrow: Eyebrow1
+		pupil: Pupil2
+Question 3...
+	3074537546996689171...
+		eyebrow: Eyebrow6
+		pupil: Pupil4
+	9047749499404765005...
+		iris: Iris3
+	1866945996361516431...
+		eyebrow: Eyebrow3
+		pupil: Pupil6
+	8357365588655156805...
+		eyebrow: Eyebrow1
+		iris: Iris6
+Question 4...
+	776907782364667392...
+		eye_shape: Eye4
+		iris: Iris2
+	1866945996361516431...
+		pupil: Pupil5
+	8186985820126921263...
+		eyebrow: Eyebrow2
+	8357365588655156805...
+		eye_shape: Eye5
+		eyebrow: Eyebrow4
+		pupil: Pupil3
+	4881715645086325763...
+		iris: Iris2
+Question 5...
+	3074537546996689171...
+		eye_shape: Eye4
+		eyebrow: Eyebrow2
+		pupil: Pupil1
+		iris: Iris4
+	776907782364667392...
+		iris: Iris1
+	9047749499404765005...
+		pupil: Pupil1
+		iris: Iris1
+	8357365588655156805...
+		eye_shape: Eye4
+		eyebrow: Eyebrow1
+	4881715645086325763...
+		eye_shape: Eye2
+Question 6...
+	776907782364667392...
+		iris: Iris3
+	9047749499404765005...
+		pupil: Pupil4
+	1866945996361516431...
+		eyebrow: Eyebrow5
+		iris: Iris3
+	8357365588655156805...
+		iris: Iris3
+	4881715645086325763...
+		pupil: Pupil4
+Question 7...
+	3074537546996689171...
+		eye_shape: Eye1
+		eyebrow: Eyebrow1
+		pupil: Pupil1
+	776907782364667392...
+		iris: Iris6
+	9047749499404765005...
+		eye_shape: Eye3
+		iris: Iris6
+	1866945996361516431...
+		eye_shape: Eye3
+		pupil: Pupil1
+	8186985820126921263...
+		eye_shape: Eye2
+		pupil: Pupil2
+		iris: Iris6
+	8357365588655156805...
+		eye_shape: Eye1
+		iris: Iris2
+Question 8...
+	776907782364667392...
+		eye_shape: Eye6
+		eyebrow: Eyebrow1
+		pupil: Pupil1
+	9047749499404765005...
+		pupil: Pupil2
+		iris: Iris6
+	1866945996361516431...
+		eyebrow: Eyebrow1
+		pupil: Pupil4
+		iris: Iris6
+	8186985820126921263...
+		eye_shape: Eye6
+		eyebrow: Eyebrow4
+		pupil: Pupil4
+		iris: Iris3
+	8357365588655156805...
+		eyebrow: Eyebrow1
+	4881715645086325763...
+		eyebrow: Eyebrow6
+Question 9...
+	3074537546996689171...
+		eyebrow: Eyebrow1
+	776907782364667392...
+		eyebrow: Eyebrow2
+	9047749499404765005...
+		eye_shape: Eye2
+	1866945996361516431...
+		eyebrow: Eyebrow2
+	8186985820126921263...
+		eye_shape: Eye5
+		pupil: Pupil5
+Question 10...
+	3074537546996689171...
+		eye_shape: Eye5
+		pupil: Pupil2
+		iris: Iris6
+	9047749499404765005...
+		eyebrow: Eyebrow6
+		iris: Iris6
+	1866945996361516431...
+		iris: Iris6
+	8357365588655156805...
+		eye_shape: Eye3
+		iris: Iris6
+Question 11...
+	3074537546996689171...
+		pupil: Pupil5
+	9047749499404765005...
+		eye_shape: Eye1
+		iris: Iris3
+	1866945996361516431...
+		eye_shape: Eye5
+		iris: Iris5
+	8186985820126921263...
+		iris: Iris4
+	4881715645086325763...
+		pupil: Pupil3
+</pre>
 </div>
 </div>
 </div>
