@@ -8976,7 +8976,7 @@ Prompt: 'Archmage'
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">multidata</span><span class="p">:</span>
@@ -8985,12 +8985,12 @@ Prompt: 'Archmage'
 	<span class="k">def</span><span class="w"> </span><span class="nf">print_id</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
 		<span class="k">global</span> <span class="n">id_was_printed</span>
 		<span class="k">global</span> <span class="n">last_idx</span>
-		<span class="k">if</span> <span class="ow">not</span> <span class="n">id_was_printed</span><span class="p">:</span>
-			<span class="n">id_was_printed</span> <span class="o">=</span> <span class="kc">True</span>
-			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
 		<span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="n">last_idx</span><span class="p">:</span>
 			<span class="nb">print</span><span class="p">()</span>
 			<span class="n">last_idx</span> <span class="o">=</span> <span class="n">idx</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="n">id_was_printed</span><span class="p">:</span>
+			<span class="n">id_was_printed</span> <span class="o">=</span> <span class="kc">True</span>
+			<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">..."</span><span class="p">)</span>
 		<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span>
 
 	<span class="k">for</span> <span class="n">question_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">QUESTIONS_COUNT</span><span class="p">):</span>
@@ -9010,8 +9010,8 @@ Prompt: 'Archmage'
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>3074537546996689171...
-
+<pre>
+3074537546996689171...
 	q.0 - corresponding pupil: Pupil1
 
 	q.2 - corresponding eye_shape: Eye3
@@ -9036,8 +9036,8 @@ Prompt: 'Archmage'
 	q.10 - corresponding iris: Iris6
 
 	q.11 - corresponding pupil: Pupil5
-776907782364667392...
 
+776907782364667392...
 	q.2 - corresponding iris: Iris6
 
 	q.4 - corresponding eye_shape: Eye4
@@ -9054,8 +9054,8 @@ Prompt: 'Archmage'
 	q.8 - corresponding pupil: Pupil1
 
 	q.9 - corresponding eyebrow: Eyebrow2
-9047749499404765005...
 
+9047749499404765005...
 	q.0 - corresponding eyebrow: Eyebrow3
 	q.0 - corresponding iris: Iris3
 
@@ -9081,8 +9081,8 @@ Prompt: 'Archmage'
 
 	q.11 - corresponding eye_shape: Eye1
 	q.11 - corresponding iris: Iris3
-1866945996361516431...
 
+1866945996361516431...
 	q.1 - corresponding eye_shape: Eye4
 
 	q.2 - corresponding eye_shape: Eye2
@@ -9110,8 +9110,8 @@ Prompt: 'Archmage'
 
 	q.11 - corresponding eye_shape: Eye5
 	q.11 - corresponding iris: Iris5
-8186985820126921263...
 
+8186985820126921263...
 	q.0 - corresponding iris: Iris4
 
 	q.1 - corresponding pupil: Pupil1
@@ -9137,8 +9137,8 @@ Prompt: 'Archmage'
 	q.9 - corresponding pupil: Pupil5
 
 	q.11 - corresponding iris: Iris4
-8357365588655156805...
 
+8357365588655156805...
 	q.0 - corresponding eye_shape: Eye1
 	q.0 - corresponding eyebrow: Eyebrow1
 	q.0 - corresponding pupil: Pupil1
@@ -9171,8 +9171,8 @@ Prompt: 'Archmage'
 
 	q.10 - corresponding eye_shape: Eye3
 	q.10 - corresponding iris: Iris6
-4881715645086325763...
 
+4881715645086325763...
 	q.1 - corresponding eye_shape: Eye1
 	q.1 - corresponding eyebrow: Eyebrow6
 
