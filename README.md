@@ -14,3 +14,4 @@ Used third-party assets:
 	- https://freesound.org/people/LittleRobotSoundFactory/sounds/276197/
 	- https://freesound.org/people/LittleRobotSoundFactory/sounds/276195/
 	- https://freesound.org/people/LittleRobotSoundFactory/sounds/276191/
+- music sound font: [MuseScore Muse Sounds](https://handbook.musescore.org/sound-and-playback/musesounds) - Violin, Acoustic Guitar
